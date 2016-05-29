@@ -1,0 +1,118 @@
+<include file='Common:header'/>
+<!-- 搜索部分 -->
+<form action='' method='get'>
+    <div class='search'>
+        <div class='search-header'>
+            <h5 style='float:left;'>搜索其实很简单</h5>
+            <div class='hide-search' style='float:right;cursor:pointer;margin-right:20px;line-height:40px;'><span style='font-size:11px;' class='glyphicon glyphicon-chevron-up '></span>隐藏</div>
+        </div>
+        
+        <div class='search-inner'>
+            <dl>
+                <dt>主机名：</dt>
+                <dd>
+                    <input style='width:60px;' placeholder='主机名' type='text' value='<{$tmp.name}>' name='name' />
+                </dd>
+            </dl>
+           <dl>
+                <dt>用户名称：</dt>
+                <dd>
+                    <input style='width:60px;' placeholder='用户名' type='text' value='<{$tmp.username}>' name='username' />
+                </dd>
+            </dl>
+            <dl>
+                <dt>创建时间：</dt>
+                <dd>
+                    <input id="min_date" placeholder='开始时间' value='<{$tmp.min_start_time}>' class="laydate-icon length2" type='text' name='min_start_time' />
+                    -<input id='max_date' placeholder='结束' class="laydate-icon length2" value='<{$tmp.max_start_time}>' type='text' name='max_start_time' />
+                </dd>
+            </dl>
+            
+            <dl>
+                <dt>外网IP：</dt>
+                <dd><input type='text' name='wan_ip' value='<{$tmp.wan_ip}>' /></dd>
+            </dl>
+
+            <dl>
+                <dt>状态：</dt>
+                <dd><{:goods_status( 1 ,$tmp['status'],'status')}></dd>
+            </dl>
+        </div>
+
+        <div class='search-bottom'>
+            <p style='float:right;margin-right:10px;'>
+                <a class='btn btn-danger' href="<{:U()}>">清空</a>
+                <input type='submit' name='search' class='btn btn-primary' value='搜索' />
+            </p>
+        </div>
+    </div>
+</form>
+
+    <table class="table table-condensed table-hover " >
+        <thead>
+            <tr class='active'>
+                <td  colspan="2" >
+                    <a class="btn btn-info" href="<{:U('index')}>">服务器列表</a>
+                </td>
+                <td colspan="8">
+                    <div class="page-code"><{$fpage}></div>
+                </td>
+            </tr>
+        </thead>
+
+        <tbody>
+            <tr>
+                <th data-sort="true" data-field="id">ID</th>
+                <th data-sort="true" data-field="region_id">名称</th>
+                <th>用户名称</th>
+                <th data-sort="true" data-field="lan_netmask">外网IP</th>
+                <th data-sort="true" data-field="lan_gateway">内网IP</th> 
+                <th data-sort="true" data-field="status">状态</th>
+                <th data-sort="true" data-field="time">创建时间</th>
+                <th>到期时间</th>
+                <th data-sort="true" data-field="wan_netmask">性能</th>
+                <th>操作</th>
+            </tr>
+
+            <foreach name="data" item="row">
+            <tr>
+                <td><{$row.id}></td>
+                <td><{$row.name}></td>
+                <td><{$row.username}></td>
+                <td><{$row.wan_ip}></td>
+                <td><{$row.lan_ip}></td>
+                <td><{$row.status|goods_status=1,###}></td>
+                <td><{$row.start|date='Y-m-d H:i',###}></td>
+                <td><{$row.end|date='Y-m-d H:i',###}></td>
+                <td>
+                    CPU :<{$row.cpu}>核<br/>
+                    内存:<if condition="$row['memory']"><{$row.memory}>G<else/>512M</if> <br/>
+                    带宽:<{$row.band}>M
+                </td>
+                <td>
+             <!--    <authority>
+                    <a class="btn-icon" href="<{:U('update',array('id'=>$row['id']))}>"><i class="fa fa-edit"></i>管理</a>
+                </authority>
+                <authority>
+                    <a onclick="return confirm('确认删除？');" class="btn-icon" href="<{:U('delete',array('id'=>$row['id']))}>"><i class="fa fa-times"></i>删除</a>
+                </authority> -->
+        
+                </td>
+            </tr>
+            </foreach>
+            
+        </tbody>
+        
+        <tfoot>
+            <tr class='active'>
+                <td colspan="10" class="td-right">
+                    <div class="page">
+                        <div class="page-info"><{$pageInfo}></div>
+                        <div class="page-code"><{$fpage}></div>
+                   </div>
+                </td>
+            </tr>
+        </tfoot>
+    </table>
+
+<include file='Common:footer'/>

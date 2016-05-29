@@ -1,0 +1,45 @@
+.cloud{
+    margin: 55px 0 10px;
+}
+.domainfw .cloud td{
+    width: 50%;
+    vertical-align: top;
+    padding: 0;
+}
+.domainfw .cloud td h3{
+    font-size: 20px;
+    color: #333333;
+    margin: 0 0 15px 0;
+    font-weight: n;
+}
+.gm{
+    margin: 0;
+    position: relative;
+}
+a.a_cart{
+    margin: 0;
+}
+.domainfw .cloud_jg{
+    position: absolute;
+    right: 0;
+    font-size: 15px;
+}
+.domainfw .cloud_jg font{
+    font-size: 35px;
+}
+.tjgm{
+    margin-bottom: 20px;
+}
+.tjgm table,.tjgm table td,.tjgm table th{
+    border: 1px solid #e3e3e3;
+}
+.tjgm table td,.tjgm table th{
+    padding: 15px 0;
+    text-align: center;
+}
+.tjgm table th{
+    color: #333333;
+}
+.tjgm table td font{
+    font-size: 20px;
+}

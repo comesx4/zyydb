@@ -1,0 +1,54 @@
+<include file='Common:header'/>    
+   <table class="table table-condensed table-hover table-active">
+        <thead>
+            <tr class="active">
+                <td colspan="2">
+                    <a class="btn btn-info" href="<{:U('index')}>">命令日志列表</a>
+                </td>
+                <td colspan="8">
+                    <div class="page-code"><{$fpage}></div>
+                </td>
+            </tr>
+        </thead>
+        
+        <tbody>
+            <tr>
+                <td>命令ID:</td>
+                <td><{$data.command_id}></td>
+                <td>命令名:</td>
+                <td><{$data.name}></td>
+            </tr>
+            <tr>
+                <td>命令状态:</td>
+                <td><if condition="$data['command_status']">启用<else/>停用</if></td>
+                <td>加密串:</td>
+                <td><{$data.secret_key}></td>
+            </tr>
+            <tr>
+                <td>客户IP:</td>
+                <td><{$data.client_ip}></td>
+                <td>服务器IP:</td>
+                <td><{$data.server_ip}></td>
+            </tr>
+            <tr>
+                <td>发送数据:</td>
+                <td><{$data.content}></td>
+                <td>标准格式:</td>
+                <td><{$data.rule|htmlentities=###}></td>
+            </tr>
+            <tr>
+                <td>解析返回数据:</td>
+                <td colspan='3'><{$data.result}></td>
+            </tr>
+             <tr>
+                <td>处理时长:</td>
+                <td><{$data.process_time}></td>
+                <td>记录时间:</td>
+                <td><{$data.time|date='Y-m-d H:i:s',###}></td>
+            </tr>
+            
+        </tbody>
+        
+     
+    </table>
+<include file='Common:footer'/>

@@ -1,0 +1,499 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+<head>
+  <meta http-equiv="Content-Type" content="text/html;charset=UTF-8" />
+   <title><{$infor.goods|makwebtitle}></title>
+  <link rel='stylesheet' href='__PUBLIC__/Css/bottom.css' />
+   <link rel='stylesheet' href='__PUBLIC__/Css/max-header.css' />
+  <link rel='stylesheet' href='__PUBLIC__/Css/buy.css' />
+
+  <js file='__PUBLIC__/Js/jquery-1.7.2.min.js'/>
+  <js file='__PUBLIC__/Js/nav.js'/>  
+   <js file='__PUBLIC__/Js/bottom.js'/>  
+  <js file='__PUBLIC__/Js/buy.js'/>
+  <script type="text/javascript">
+    var getPrice='<{:U('getPrice')}>';
+    var getMirr='<{:U('getMirr')}>';
+  </script>
+  
+</head>
+<body>
+<!--顶部头-->
+<include file='Common:p-header'/>
+	<!--顶部头结束-->
+
+  <!-- 产品名称 -->
+  <div class="y-page-title">
+    <div class='y-row '>
+           <div class='title'>
+               <h2><{$goodsName}></h2>
+               <span>关联产品：<a href="">独立云磁盘</a> <span>其他产品</span></span>
+           </div>
+
+     </div>
+  </div>
+  <!-- 产品名称结束 -->
+
+  <form action='<{:U('Shopping/index')}>' method='post'>
+
+  <!-- 主体内容 -->
+  <div class='main'>
+    <div class='main-content y-row'>
+        <div class='favourable'>
+           <img style='width:100%;' src='//gtms01.alicdn.com/tps/i1/TB1lQhzHpXXXXa4XFXXjRvS5XXX-1200-40.jpg'></img>
+        </div>
+
+        <div class='y-tab'>
+           <ul>
+             <li class='button down'>包年包月</li>
+            
+             <li class='buy'><a  href="<{:U('/product/index')}>">购买独立云磁盘</a></li>
+             <li class='right'><a href="#">购买须知</a></li>
+             <li class='right'><a href="#">选型推荐</a></li>
+           </ul>
+        </div>
+
+        <!-- 订购信息 -->
+        <div class='info'>
+          <!-- 左半部分 -->
+            <div class='info-left'>
+               <div class="ng-isolate-scope">
+                若ECS用于网站web访问，请及时备案。
+               </div>
+
+             <!-- 基本配置开始 -->
+               <dl class='config jiben'>
+                  <dt class="explain">
+                     <span>基本配置</span>
+                  </dt>
+                  
+                  <dd class='conts'>
+                    <!-- 地域 -->
+                      <div class="bk-form-row caos">
+                           <div class='remark'>地域：</div>
+                          
+                           <div class='select'>
+                               <div class='top'>
+                                <ul class='region'>
+                               <foreach name='city' item='v'>
+                                  <li value='<{$v.id}>' <if condition="$key eq 0">class='down'</if>><{$v.city}></li>
+                                </foreach>
+                                </ul>
+                               </div>
+                               <div class='bottom'>
+                                不同地域之间的产品内网不互通；订购后不支持更换地域，请谨慎选择 <a href="#">教我选择>></a> <a href="#">查看我的产品地域</a>
+                               </div>                               
+                           </div>
+                           <input type='hidden' name='goodsId' id='goodsId' value='<{$Think.get.id}>'/>
+                           <input type='hidden' name='region'id='region' value='<{$city.0.id}>'/>
+                      </div>
+                       <!-- 地域 结束-->
+                      
+                      <!-- 可用区 -->
+                      <div class="bk-form-row caos">
+                           <div class='remark'>可用区：</div>
+                          
+                           <div class='select'>
+                               <div class='top option'>
+                                  <select>
+                                      <option>随机分配</option>
+                                  </select>
+                                
+                               </div>
+                            
+                               
+                           </div>
+
+                      </div>
+                       <!-- 可用区结束 -->
+
+                        <!-- CPU -->
+                      <div class="bk-form-row caos">
+                           <div class='remark'>CPU：</div>
+                          
+                           <div class='select'>
+                               <div class='top'>
+                                <ul class='cpu'>
+                                  <li value='1' class='down'>1核</li>
+                                  <li value='2'>2核</li>
+                                  <li value='4'>4核</li>
+                                  <li value='8'>8核</li>
+                                  <li value=16''>16核</li>
+                                </ul>
+                               </div>
+                              
+                               
+                           </div>
+                           <input type='hidden' name='cpu' id='cpu' value='1'/>
+
+                      </div>
+                       <!-- CPU结束-->
+
+                         <!-- 内存 -->
+                      <div class="bk-form-row caos">
+                           <div class='remark'>内存 ：</div>
+                          
+                           <div class='select'>
+                               <div class='top'>
+                                <ul class='memory'>
+                                  <li value='0' class='down'>512MB</li>
+                                  <li value='1'>1GB</li>
+                                  <li value='2'>2GB</li>
+                                  <li value='4'>4GB</li>
+                                  <li value='8'>8GB</li>
+                                  <li style='display:none;' value='16'>16GB</li>
+                                  <li style='display:none;' value='32'>32GB</li>
+                                </ul>
+                               </div>
+                               <div class='bottom'>
+                                为保证性能体验，512MB内存不提供Windows操作系统。
+                               </div>
+                               
+                           </div>
+                           <input type='hidden' name='memory' id='memory' value='0'/>
+
+                      </div>
+                       <!-- 内存结束-->
+                  </dd>
+
+               </dl>
+               <!-- 基本配置结束 -->
+
+               <!-- 网络开始 -->
+               <dl class="config wangluo1">
+                <dt  class="explain "><span>网络</span></dt>
+                <dd class="conts">
+                    <div class="bk-form-row caos">
+                        <div class='remark'>公网带宽：</div>
+                          
+                            <div class='select'>
+                               <div class='top'>
+                                <ul>
+                                  <li class='down'>按固定带宽</li>
+                                 
+                                 
+                                </ul>
+                               </div>                              
+                               
+                           </div>
+
+                      </div>
+                   <div class="bk-form-row caos">
+                    <div class='remark'>带宽值：</div>
+                      <div class='remark select'>
+                          
+                            <div class='daikuan'>
+                               <div class='top'>
+                               <span class="bk-slider-range">&nbsp;
+                                <div class='bg bg1'></div>
+                                <div class='handle handle1'>
+                                  <i></i>
+                                  <i></i>
+                                </div>
+                              </span><input class='daikuans' type='text' name='daikuans' value='1'/>
+                               <span style='position:relative;left:-65px;font-size:13px;top:-2px;color:#ccc;'>MPS</span><div class='jiajian'><span class='jia jia1'></span><span class='jian jian1'></span></div>
+                               </div>    
+                                                        
+                               
+                             </div>
+                         </div>
+                       </div>
+                  <!--   <div class="bk-form-row caos">
+                      <div class='remark'>硬盘大小：</div>
+                      <div class='remark select'>
+                          
+                            <div class='daikuan'>
+                               <div class='top'>
+                               <span class="bk-slider-range">&nbsp;
+                                <div class='bg bg2'></div>
+                                <div class='handle handle2'>
+                                  <i></i>
+                                  <i></i>
+                                </div>
+                              </span><input id='hard' type='text' name='hard' value='5'/>
+                               <span style='position:relative;left:-65px;font-size:13px;top:-2px;color:#ccc;'>GB</span><div class='jiajian'><span class='jia jia2'></span><span class='jian jian2'></span></div>
+                               </div>    
+                                                        
+                               
+                             </div>
+                         </div>
+                       </div> -->
+                </dd>
+               </dl>
+               <!-- 网络结束 -->
+
+               <!-- 存储开始 -->
+               <dl class="config cunchu">
+                <dt  class="explain "><span>存储</span></dt>
+                <dd class="conts">
+                    <div class="bk-form-row caos">
+                        <div class='remark'>系统盘：</div>
+                          
+                            <div class='select'>
+                               <div class='top'>
+                                <ul>
+                                  <li class='down'>普通云盘</li>
+                                </ul>
+                               </div>  
+                           </div>
+
+                      </div>
+                   <div class="bk-form-row caos">
+
+                      
+                           <div class='remark'>数据盘：</div>
+                          
+                            <div class='select'>
+                               <div class='top option'>
+                                   <div class='mirroring'>
+                                       <img class='add_disk' src='__PUBLIC__/Images/add.png' /> <span class='add_disk disk_text'>增加一块</span>&nbsp;&nbsp;&nbsp;您还可以选配<em  class='disk_sum'>4</em>块
+                                           
+                                   </div>
+                              
+                               </div>   
+                              
+                           </div>
+                        
+                   </div>
+                       <div class="bk-form-row caos">
+                   
+                       </div>
+                </dd>
+               </dl>
+               <!-- 存储结束 -->
+
+               <!-- 镜像开始 -->
+               <dl class="config wangluo">
+                <dt  class="explain "><span>镜像</span></dt>
+                <dd class="conts">
+                    <div class="bk-form-row caos">
+                           <div class='remark'>镜像类型：</div>
+                          
+                            <div class='select'>
+                               <div class='top'>
+                                <ul class='jingxiang'>
+                                  <li class='down'>公共镜像</li>
+                                  <li>镜像市场</li>
+                                  <if condition="!empty($customImage)">
+                                      <li>自定义镜像</li>
+                                  </if>
+                                </ul>
+                               </div>                              
+                               
+                           </div>
+                            <div class='ismirroring'>
+                               <div class='remark'>公共镜像：</div>
+                              
+                                <div class='select'>
+                                   <div class='top option xitong'>
+
+                                    <span class='xz'>请选择操作系统</span>
+                                    <div class='hidden'>
+                                        <foreach name='os' item='v'>
+                                           <span value='<{$v.id}>'><{$v.name}> </span>
+                                        </foreach>
+                                    </div>        
+                                  
+                                   </div>   
+
+                                   <div class='bottom'>
+                                    选Linux送20GB系统盘，选Windows送40GB系统盘。
+                                   </div>                           
+                                   
+                               </div>
+                            </div>
+                            <div class='ismirroring hidden'>
+                               <div class='remark'>镜像市场：</div>
+                              
+                                <div class='select'>
+                                   <div class='top option'>
+                                       <div class='mirroring'>
+                                           <img class='showmirr' src='__PUBLIC__/Images/mirr.png' /> <span class='showmirr'>从镜像市场选择</span>
+                                               
+                                       </div>
+                                  
+                                   </div>   
+
+                                   <div class='bottom xuanmirr'>
+                                    请选择一个镜像市场。
+                                   </div>                           
+                                   
+                               </div>
+                            </div>
+                          <if condition="!empty($customImage)">
+                            <div class='ismirroring hidden'>
+                               <div class='remark'>镜像：</div>
+                              
+                                <div class='select'>
+                                   <div class='top option xitong'>
+
+                                    <span class='xz'>请选择自定义镜像</span>
+                                    <div class='hidden'>
+                                        <foreach name='customImage' item='v'>
+                                           <span value='<{$v.id}>'><{$v.name}> </span>
+                                        </foreach>
+                                    </div>        
+                                  
+                                   </div>   
+
+                                   <div class='bottom'>
+                                    选Linux送20GB系统盘，选Windows送40GB系统盘。
+                                   </div>                           
+                                   
+                               </div>
+                            </div>
+                          </if>
+                      </div>
+                  
+
+                </dd>
+               </dl>
+
+               <!-- 镜像结束 -->
+               <input type='hidden' name='xitong' value='0'/>
+
+               <!-- 购买量开始 -->
+               <dl class="config wangluo">
+                <dt  class="explain "><span>购买量</span></dt>
+                <dd class="conts">
+                    <div class="bk-form-row caos">
+                           <div class='remark'>购买时长</div>
+                          
+                            <div class='select'>
+                               <div class='top'>
+                                <ul class='time'>
+                                  <li value='1' class='down'>1个月</li>
+                                  <li value='2'>2个月</li>
+                                  <li value='3'>3个月</li>
+                                  <li value='5'>半年</li>
+                                  <li value='12'>1年</li>
+                                  <li value='24'>2年</li>
+                                  <li value='36'>3年</li>
+                                  <li value='48'>4年</li>
+                                  <li value='60'>5年</li>                                 
+                                </ul>
+                               </div>  
+                               <input type='hidden' name='time' id='time' value='1'/>                            
+                               
+                           </div>
+                           <div class='remark'>购买数量：</div>
+                          
+                            <div class='select'>
+                               <div class='top'>
+                                <input type='text' id='num' class='num' name='num' value='1'/><span style='position:relative;left:-23px;'>台</span>
+                              
+                               </div>   
+                              
+
+                                                    
+                               
+                           </div>
+                          
+
+                      </div>
+                  
+
+                </dd>
+               </dl>
+
+               <!-- 购买量结束 -->
+
+
+
+            </div>
+            <!-- 左半部分结束 -->
+
+            <!-- 右边部分 -->
+            <div class='info-right'>
+              <div class='right-fiexd'>
+                 <div class="bk-orders-menu">
+                     购买清单<span>0</span>台
+                 </div>
+                 <div class="bk-scope">
+                   <dl class='configure'>
+                    <dt><span>当前配置</span></dt>
+                    <dd>
+                      <div class='infos'>
+                          <dl>
+                            <dt>地域：</dt>
+                            <dd id='diyu'>杭州（可用区随机分配）</dd>
+                          </dl>
+                           <dl>
+                            <dt>配置：</dt>
+                            <dd id='peizhi'>CPU4核、内存8GB</dd>
+                          </dl>
+                           <dl>
+                            <dt>网络：</dt>
+                            <dd id='wangluo'>带宽130Mbps（经典网络）</dd>
+                          </dl>
+                           <dl>
+                            <dt>购买量：</dt>
+                            <dd id='goumailiang'>1个月 x 1台</dd>
+                          </dl>
+                           <dl>
+                            <dl>
+                              <dt>配置费用:</dt>
+                            </dl>
+                            <p id='money'>￥55.00</p>
+                             <input type='hidden' id='countPrice' name='countPrice' value='0'/>
+
+                          
+                      </div>
+                            <p class='over'>
+                              <input type='submit' class='goumai' name='goumai' value='立即购买'/>
+                              <input type='submit' class='jiaru' name='jiaru' value='加入清单'/>
+                            </p>
+                      
+
+                    </dd>
+                   </dl>
+                 </div>
+               </div>
+
+            </div>
+            <!-- 右半部分结束 --> 
+
+        </div>
+        <!-- 订购信息结束 -->
+    </div>
+
+  </div>
+  <!-- 主体内容结束 -->
+</form>
+
+<!-- 镜像市场的弹出框 -->
+<div id='mirroring'>
+   <h3>镜像市场<span class='close'></span></h3>
+   <div class='mirr-left'>
+      <dl id='cat'>
+        <dd cid='0' class='down'>所有分类</dd>
+        <foreach name='cat' item='v'>
+            <dd cid='<{$v.id}>'><{$v.cat}></dd>
+        </foreach>
+       
+      </dl>
+     
+   </div>
+   <!-- 存放镜像市场信息 -->
+   <div class='mirr-right'>     
+    
+   </div>
+    <!-- 存放镜像市场信息 -->
+</div>
+<!-- 弹出框结束 -->
+
+  <include file='Common:bottom'/>
+
+<!-- 判断是否是从镜像市场过来 -->
+  <if condition="!empty($mirrInfo['id'])">
+    <i cid='<{$mirrInfo.cid}>' mid='<{$mirrInfo.id}>' name='<{$mirrInfo.name}>' id='mirrInfo' class='hidden'></i>
+  </if>
+
+  <!-- 错误提示框 -->
+  <div id='error' class='hidden'>
+
+
+  </div>
+
+</body>
+</html>

@@ -1,0 +1,217 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : 2016-4-7, 10:52:13
+    Author     : 范利丰 <feiyufly001@hotmail.com>
+*/
+
+#sever-prev{
+    left: -120px;
+    top: 0px;
+    background: none;
+}
+#sever-next{
+    top:0px;
+    right: -120px;
+    background: none;
+}
+
+/*合作单位*/
+
+.row-fluid {
+    width: 100%;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.row-fluid:before,
+.row-fluid:after {
+    content: "";
+    display: table;
+    line-height: 0;
+}
+
+.row-fluid:after {
+    clear: both;
+}
+
+.row-fluid:before,
+.row-fluid:after {
+    content: "";
+    display: table;
+    line-height: 0;
+}
+
+.row-fluid [class*="span"]:first-child {
+    margin-left: 0;
+}
+
+.row-fluid .slide {
+    width: 100%;
+}
+
+.row-fluid [class*="span"] {
+    box-sizing: border-box;
+    display: block;
+    float: left;
+    margin-left: 2.12766%;
+    min-height: 30px;
+    width: 100%;
+}
+
+.span12 {
+    width: 940px;
+}
+
+[class*="span"] {
+    float: left;
+    margin-left: 20px;
+    min-height: 1px;
+}
+
+.thumbnails:before,
+.thumbnails:after {
+    content: "";
+    display: table;
+    line-height: 0;
+}
+
+.thumbnails:after {
+    clear: both;
+}
+
+.thumbnails:before,
+.thumbnails:after {
+    content: "";
+    display: table;
+    line-height: 0;
+}
+
+.row-fluid .thumbnails {
+    margin-left: 0;
+}
+
+.thumbnails {
+    list-style: outside none none;
+    margin-left: -20px;
+}
+
+.row-fluid .span3 {
+    width: 23.4043%;
+}
+/* Carousel Control */
+
+.thumbnails li {
+    background: #fff;
+    -moz-box-shadow: 3px 4px 7px #555;
+    -webkit-box-shadow: 3px 4px 7px #555;
+    box-shadow: 3px 4px 7px #555;
+}
+
+.thumbnails li:hover {
+    background: #0075b1;
+}
+
+.thumbnails li:hover .caption h3,
+.thumbnails li:hover .caption p,
+.thumbnails li:hover .caption span,
+.thumbnails li:hover .caption a,
+.thumbnails li:hover .caption a i {
+    color: #fff;
+}
+
+.thumbnail {
+    background: no-repeat;
+    border: none;
+    border-radius: none;
+    padding: 16px;
+}
+/* Thumbnail Box */
+
+.caption {
+    padding: 0 13px 30px;
+}
+
+.caption h3 {
+    color: #0075b1;
+}
+
+.caption p {
+    line-height: 30px;
+    color: #444;
+}
+
+.caption span,
+.caption a {
+    color: #666;
+    text-decoration: none;
+}
+
+.caption a i {
+    color: #0075b1;
+}
+
+.glyphiconleft2 {
+    top: 3px;
+}
+
+.pull-right2 {
+    margin-left: 30px;
+}
+
+.tu2 {
+    border-top: 1px solid #ccc;
+    padding: 10px 0;
+}
+
+.tu2-p {
+    padding-bottom: 30px;
+}
+
+.tu2-p p {
+    line-height: 36px;
+    margin: 20px 0 30px;
+}
+
+.tu3 {
+    zoom: 1;
+    overflow: hidden;
+    margin: 20px 0;
+}
+
+.tu3 p {
+    font-size: 14px;
+}
+
+.tu-imga {
+    width: 9%;
+    height: 73px;
+    text-align: center;
+}
+
+.tu-imga img {
+    max-width: 100%;
+    max-height: 100%;
+}
+
+.tu-kuai {
+    width: 90%;
+    padding: 0 20px;
+    background: #eee;
+}
+
+.tu-kuai h5 {
+    position: relative;
+    color: #0075b1;
+    line-height: 30px;
+}
+
+.tu-kuai h5 span {
+    position: absolute;
+    right: 0;
+    color: #666;
+}
+/*服务点评 end*/

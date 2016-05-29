@@ -1,0 +1,142 @@
+*{
+	margin:0;
+	padding:0;
+	color: #666;
+    font-size:12px;    
+}
+ul{
+	list-style: none;
+}
+img{
+	border:none;
+}
+input[type=text]:focus,input[type=password]:focus{
+    background-color: #e9fbfe;
+    border-color: #69c5dd !important;
+    box-shadow: 0px 0px 6px 6px #e9fbfe;
+}
+
+#content{	
+	width:1024px;
+	height:400px;
+	margin-top:40px;
+	margin-left: auto;
+    margin-right: auto;
+    padding:32px;
+    margin-bottom: 50px;
+}
+
+#content div.login-banner{
+	float:left;
+	
+}
+#content div.login-right{
+	float:right;
+	margin-right:40px;
+	min-height: 300px;
+    min-width: 260px;
+    padding:27px;
+    border:1px solid #ccc;
+}
+#content div.login-right .login-title{
+	width:230px;
+	/*text-align:center;	*/
+	font-size:13px;
+	border-bottom:1px solid #ccc;
+	margin-bottom:17px;
+
+}
+#content div.login-right dl{
+	margin-top:12px;
+}
+#content div.login-right dl dt label{
+	float:left;
+	font-weight:700;
+	margin-bottom:10px;
+
+}
+#content div.login-right dl dt a{
+	float:right;
+	margin-bottom:10px;
+	color: #00a2ca;
+
+}
+#content div.login-right dl  dd{
+	clear:both;
+
+}
+#content div.login-right dl  dd input{
+	width:100%;
+	height:29px;
+	border:1px solid #ccc;
+	border-radius:4px;
+	color:#ccc;
+	padding-left: 5px;
+	font-size: 12px;
+	color: #000;
+}
+#content div.login-right div.other{
+	margin:16px 0;
+
+}
+#content div.login-right div.other input.do-submit{
+	width:90%;
+	background:red;
+	cursor: pointer;
+    display: inline-block;
+    font-size: 14px;
+   
+    color:#fff;
+    height:36px;
+    border: medium none;
+    border-radius:6px;
+    background: none repeat scroll 0 0 #00a2ca;
+	
+}
+
+#content div.login-right div.login-other a{
+	float: right;
+	margin-bottom: 12px;
+	
+}
+
+#content div.login-right div.login-other a.zhifu{
+	width:120px;
+	margin-bottom: 12px;
+	background: url('../Images/alipay-icon-small.gif') no-repeat right center;
+	float:left;
+
+}
+#content div.login-right div.agreement{
+	clear:both;
+	
+}
+#content div.login-right a{
+	color: #00a2ca;
+	text-decoration: none;
+}
+div#copyright{
+	border-top:1px solid #ccc;
+}
+div#copyright p{
+	text-align: center;
+	
+	padding:5px 0;
+}
+div#copyright a{
+	color:#ccc;
+	display: inline-block;
+	padding-left:12px;
+}
+div.error{
+	background:  #FCEEE8 url('../Images/unchecked.gif') no-repeat 2% center;
+	color:#666;
+	border:1px solid #F6C8B5;
+	padding:5px 0px 5px 28px;
+}
+.code{
+	position: relative;
+	top:9px;
+	margin-left: 8px;
+}
+

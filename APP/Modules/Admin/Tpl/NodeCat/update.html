@@ -1,0 +1,45 @@
+<include file="Common:header"/>
+
+<form action='<{:U('save')}>' method='post'>
+    <table class="table table-condensed table-hover table-active">
+        <thead>
+            <tr class="active">
+                <td colspan="2">
+                    <a class="btn btn-info" href="<{:U('index')}>">修改应用分类</a>
+                </td>
+            </tr>
+        </thead>
+		<tr>
+			<td>上级分类</td>
+			<td><{$cat}></td>
+		</tr>
+		<tr>
+			<td>分类名称</td>
+			<td><input type='text' name='cat' value='<{$data.cat}>' /></td>
+		</tr>
+	    <tr>
+			<td>类名称</td>
+			<td><input type='text' name='class' value='<{$data.class}>' /></td>
+		</tr>
+              <tr>
+			<td>是否开启:</td>
+			<td><input type='radio' <if condition='$data["status"]'>checked</if> name='status' value='1'/>开启<input <if condition='!$data["status"]'>checked</if> type='radio' name='status' value='0'/>关闭</td>
+		</tr>
+		<tr>
+			<td>排序</td>
+			<td><input type='text' name='sort' value='<{$data.sort}>' /></td>
+		</tr>
+			
+		<tfoot>
+            <tr>
+                <td class='first'></td>
+                <td>
+                	<input type='hidden' name='id' value='<{$data.id}>'/>
+                	<input class="btn btn-success" type="submit" value="保 存"/>
+                    <a class="btn btn-default" href="<{:U('index')}>">取 消</a>
+               </td> 
+           </tr>
+        </tfoot>
+    </table>
+</form>
+<include file="Common:footer"/>

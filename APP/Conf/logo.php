@@ -1,0 +1,1 @@
+<?php	return array ( 'logo' => '551116d2a51e7.png', 'img1' => '55dac70078a43.jpg', 'img2' => '55dac7008032c.jpg', 'img3' => '55dac70080bd2.jpg', 'img4' => '55dac700816fe.jpg', 'img5' => '55d56b9c46743.jpg', );?>

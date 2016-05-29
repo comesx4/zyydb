@@ -1,0 +1,126 @@
+  .main .main-right .intruduction{
+	float:left;
+	width: 100%;
+	margin-bottom:20px;
+	padding-bottom:10px;
+	border-bottom:1px dashed #ccc;
+
+}
+.main .main-right .intruduction dl{
+	float: left;
+	width: 100%;
+}
+.main .main-right .intruduction dl dt{
+	float: left;
+	margin-right:15px;
+}
+.main .main-right .intruduction dl dt img{
+	width: 190px;
+	
+}
+.main .main-right .intruduction dl dd .h1{
+	font-size: 19px;
+	color: #000;
+}
+.main .main-right .intruduction dl dd{
+	padding:7px 0; 
+	color: #666;
+}
+.main .main-right .intruduction dl dd span{
+	color: red;
+}
+.main .main-right .intruduction dl dd span.appraise{
+	display: inline-block;
+	padding-left: 80px;
+	height:25px;
+	background: url('../Images/pingfen.png') no-repeat left 0%;
+	
+}
+.main .main-right .ng-scope{
+	float: left;
+	width: 100%;
+	margin-bottom:30px;
+}
+.main .main-right .ng-scope dl{
+	float: left;
+	padding:6px 0;
+	width: 100%;	
+}
+.main .main-right .ng-scope dl dt{
+	float: left;
+	color: #B6B6B6;
+}
+.main .main-right .ng-scope dl dd{
+
+}
+
+.main .main-right .ng-scope .ng-left{
+    float: left;
+    width: 30%;
+
+}
+.main .main-right .ng-scope .ng-right{
+	float: left;
+    width: 69%;
+}
+.main .main-right  .ng-scope  .ng-right dl{
+	line-height: 30px;
+	padding:4px 0;
+}
+.main .main-right  .ng-scope  .ng-right dl.type2{
+    display: none;
+}
+.main .main-right  .ng-scope  .ng-right dl dt{
+	width:90px;
+	display:block;
+}
+.main .main-right .ng-scope .ng-right dl dd ul li{
+	float: left;
+	display: inline-block;
+	height:30px;
+	padding:0 10px;
+	background: #F9F9F9;
+	border:1px solid #E7E7E7;
+	margin-right:10px;
+	text-align: center;
+	cursor: pointer;
+	line-height: 30px;
+}
+.main .main-right .ng-scope .ng-right dl dd ul li.down{
+	border:2px solid #00A2C9;
+	height:28px;
+	padding:0 9px;
+	background:#F9F9F9 url('../Images/gouxuan.png') no-repeat right bottom;
+}
+.main .main-right  .ng-scope .ng-right dl dd span.no-money{
+	text-decoration: line-through;
+	color: #999999;
+
+}
+.main .main-right  .ng-scope .ng-right dl dd em{
+	display: inline-block;
+	padding:0 7px;
+	height:20px;
+	line-height: 19px;
+	color: #fff;
+	border-radius: 4px;
+	margin-right:9px;
+	background: #FF6600;
+}
+.main .main-right  .ng-scope .ng-right dl dd span.price{
+	font-size: 19px;
+	font-weight:700;
+	color: #FF6600;
+}
+
+.main .main-right  .ng-scope .ng-right dl dd input{
+	display: inline-block;
+	width: 170px;
+	background: #00A2C9;
+	height:35px;
+	line-height: 35px;
+	border:none;
+	color: #fff;
+	border-radius: 4px;
+	cursor: pointer;
+}

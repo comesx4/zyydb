@@ -1,0 +1,35 @@
+<include file="Common:header"/>
+
+<form action='<{:U('save')}>' method='post'>
+    <table class="table table-condensed table-hover table-active">
+        <thead>
+            <tr class="active">
+                <td colspan="2">
+                    <a class="btn btn-info" href="<{:U('index')}>">镜像信息列表</a>
+                </td>
+            </tr>
+        </thead>
+	
+		<tr>
+			<td class='first'>所属镜像:</td>
+			<td><{$jx}></td>
+		</tr>
+		<tr>
+			<td class='first'>信息:</td>
+			<td><textarea style='width:800px;height:370px;' name='content'><{$mirr.content}></textarea></td>
+		</tr>
+		
+		<tfoot>
+            <tr>
+                <td class='first'></td>
+                <td>
+                	<input type='hidden' name='id' value='<{$mirr.id}>'/>
+                	<input class="btn btn-success" type="submit" value="保 存"/>
+                    <a class="btn btn-default" href="<{:U('index')}>">取 消</a>
+               </td> 
+           </tr>
+        </tfoot>
+    </table>
+</form>
+<include file="Common:footer"/>
+</html>

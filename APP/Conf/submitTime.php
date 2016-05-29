@@ -1,0 +1,1 @@
+<?php	return array ( 'submit6' => 22372, 'submit18' => 62322, );?>

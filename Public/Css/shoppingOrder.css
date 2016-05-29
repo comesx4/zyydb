@@ -1,0 +1,135 @@
+.y-page-title {
+    border-bottom: 1px solid #ccc;
+    float: left;
+    margin-bottom: 20px;
+    padding: 10px 0;
+    width: 100%;
+}
+.y-page-title .title h2 {
+    border-left: 3px solid #00a2ca;
+    color: #00a2ca;
+    float: left;
+    font-size: 16px;
+    padding-left: 8px;
+}
+.y-page-title .title > span {
+    float: right;
+}
+.y-page-title .title > span a {
+    color: #00a2ca;
+}
+.p-row {
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 1000px;
+    min-width: 800px;
+}
+#main{
+    overflow: hidden;
+    clear: both;
+    padding:20px 0;
+    background: #FBFAF8;
+}
+#main div.content{
+    overflow: hidden;
+    border:1px solid #ccc;
+    margin-bottom:20px;
+
+}
+#main table{
+    width: 100%;
+    border-collapse:collapse;
+
+
+}
+#main p{
+     text-align: right;
+     padding-right:20px;
+     padding-top:4px;
+     padding-bottom: 9px;
+
+}
+#main p .submit{
+    display: inline-block;
+    padding:8px 9px;
+    background: #FF9C00;
+    border:1px solid #EC7F13;
+    border-radius: 4px;
+    color: #fff;
+    margin-left: 30px;
+    cursor: pointer;
+}
+#main p span.money{
+    font-size: 17px;
+}
+#main table th{
+    height:30px;
+    background: none repeat scroll 0 0 #fbfbfb;
+    border-bottom:1px solid #EDF2F8;
+
+}
+#main table td{
+     height:30px;
+     border-bottom:1px solid #EDF2F8;
+     text-align: center;
+}
+#main table td.red,#main p .red{
+    color: red;
+}
+#main   dl.first{
+    border-bottom:1px solid #ccc;
+    padding-bottom:30px;
+    margin-bottom:15px;
+    margin-left: 20px;
+    margin-right: 20px;
+}
+#main   dl.first  dt{
+    font-weight: 700;
+    margin-bottom:10px;
+    
+}
+#main  dl dd{
+    padding:10px 0;
+    clear: both;
+}
+#main dl dd label{
+    padding-left:4px;
+}
+#main dl.first dd span{
+    float: left;
+    margin-right:30px;
+}
+#main dl.first dd textarea{
+    box-shadow: 0 1px 2px #f4f4f4 inset;
+    width:600px;
+    height:90px;
+    border:1px solid #ccc;
+    border-radius: 4px;
+}
+#main .brick-form{
+    clear: both;   
+    padding:20px 0;
+     padding-left:40px;
+}
+#main .brick-form dl{
+    float: left;
+    width: 100%;
+}
+#main .brick-form dl dt{
+    float: left;
+    margin-right: 20px;
+    color:#999999;
+     padding:10px 0;
+    width: 80px;
+}
+#main .brick-form dl dd{
+    float:left;
+    clear: none;
+}
+#main .brick-form dl dd input{
+    box-shadow: 0 1px 2px #f4f4f4 inset;
+    height:25px;
+    width: 130px;
+    border:1px solid #ccc;
+    border-radius: 4px;
+}

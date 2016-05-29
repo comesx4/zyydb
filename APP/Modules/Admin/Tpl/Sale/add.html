@@ -1,0 +1,37 @@
+<include file="Common:header"/>
+
+<form action='<{:U('insert')}>' method='post'>
+    <table class="table table-condensed table-hover table-active">
+        <thead>
+            <tr class="active">
+                <td colspan="2">
+                    <a class="btn btn-info" href="<{:U('index')}>">打折列表</a>
+                </td>
+            </tr>
+        </thead>
+	
+		<tr>
+			<td class='first'>所属产品:</td>
+			<td><{$goods}></td>
+		</tr>
+		<tr>
+			<td class='first'>打折条件(按月份输入):</td>
+			<td><input type='text' name='month' value='12' /></td>
+		</tr>
+		<tr>
+			<td class='first'>打折数:</td>
+			<td><input type='text' name='sale' value='0.9' /></td>
+		</tr>
+		
+		<tfoot>
+            <tr>
+                <td class='first'></td>
+                <td>
+                	<input class="btn btn-success" type="submit" value="保 存"/>
+                    <a class="btn btn-default" href="<{:U('index')}>">取 消</a>
+               </td> 
+           </tr>
+        </tfoot>
+    </table>
+</form>
+<include file="Common:footer"/>

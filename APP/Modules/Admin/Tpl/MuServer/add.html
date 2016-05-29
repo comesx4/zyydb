@@ -1,0 +1,78 @@
+<include file="Common:header"/>
+
+<form action='<{:U('insert')}>' method='post'>
+    <table class="table table-condensed table-hover table-active">
+        <thead>
+            <tr class="active">
+                <td colspan="2">
+                    <a class="btn btn-info" href="<{:U('index')}>">母服务器列表</a>
+                </td>
+            </tr>
+        </thead>
+        
+        <tbody>
+		    <tr>
+                <td class='first'>所属区域：</td>
+                <td>
+				    <{$region}>
+				</td>
+            </tr>
+            <tr>
+                <td class='first'>服务器IP：</td>
+                <td><input type="text" name="server_ip" maxlength="32" placeholder="服务器IP"/></td>
+            </tr>
+			<tr>
+                <td class='first'>服务器端口：</td>
+                <td><input type="text" name="server_port" maxlength="32" placeholder="服务器端口"/></td>
+            </tr>
+            <tr>
+                <td class='first'>加密串：</td>
+                <td><input type="text" name="secret_key" maxlength="32" placeholder="加密串"/></td>
+            </tr>
+			<tr>
+                <td class='first'>可建云服务器数量：</td>
+                <td><input type="text" name="server_can_sum" maxlength="32" placeholder="可建云服务器数量"/></td>
+            </tr>
+            <tr>
+                <td class='first'>已建云服务器数量：</td>
+                <td><input type="text" name="server_sum" maxlength="32" value="" placeholder="已建云服务器数量"/></td>
+            </tr>
+             <tr>
+                <td class='first'>内存(G)：</td>
+                <td><input type="text" name="memory" maxlength="32" value="" placeholder="内存(G)"/></td>
+            </tr>
+             <tr>
+                <td class='first'>CPU：</td>
+                <td><input type="text" name="cpu" maxlength="32" value="" placeholder="CPU(核)"/></td>
+            </tr>
+            <tr>
+                <td class='first'>状态：</td>
+                <td>
+                    <label><input type="radio" name="status" value="1" checked="checked"/>开启</label>
+                    <label><input type="radio" name="status" value="0"/>关闭</label>
+                </td>
+            </tr>
+			<tr>
+                <td class='first'>版本号：</td>
+                <td><input type="text" name="version" maxlength="32" placeholder="版本号"/></td>
+            </tr>
+            <tr>
+                <td class='first'>备注：</td>
+                <td>
+                    <textarea class="command" name="remark" maxlength="2048" placeholder=""></textarea>
+                </td>
+            </tr>
+        </tbody>
+        
+        <tfoot>
+            <tr>
+                <td class='first'></td>
+                <td>
+                    <input class="btn btn-success" type="submit" value="保 存"/>
+                    <a class="btn btn-default" href="<{:U('index')}>">取 消</a>
+               </td> 
+           </tr>
+        </tfoot>
+    </table>
+</form>
+<include file="Common:footer"/>

@@ -1,0 +1,44 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+<head>
+    <meta http-equiv="Content-Type" content="text/html;charset=UTF-8" />
+    <title>修改问题</title>
+    <link rel="stylesheet" href="__PUBLIC__/Css/common.css" />   
+    <script type="text/javascript" src='__PUBLIC__/Js/jquery-1.8.2.min.js'></script>
+    <{$ueditor}>
+   
+</head>
+<body >
+	<form action='<{:U('save')}>' method='post' >
+	<table class='table'>
+		 <tr>
+            <td colspan="2" class="td-left">
+            <authority>
+            	<a class="btn btn-add" href="<{:U('problem')}>">问题列表</a>
+            </authority>
+            </td>
+            <td colspan="5" class="td-right">
+            	<div class="page-code"><{$fapge}></div>
+            </td>
+        </tr>
+		<tr>
+			<td>问题标题：</td>
+			<td><input type='text' name='title' value='<{$problem.title}>'/></td>
+		</tr>
+		<tr>
+			<td>回答：</td>
+			<td><textarea id='content' name='content'><{$problem.content}></textarea></td>
+		</tr>
+		<tr>
+			<td>排序</td>
+			<td><input type='text' name='sort' value='<{$problem.sort}>'/></td>
+			<input type='hidden' name='id' value='<{$problem.id}>'/>
+		</tr>
+		
+		<tr>
+			<td  colspan='2'><input class='submit' type='submit' value='修改问题'/></td>
+		</tr>
+	</table>
+   </form>
+</body>
+</html>

@@ -1,0 +1,14 @@
+<!--左半部分-->
+			<div class='main-left'>
+				<dl>
+					<dt>管理我的工单</dt>
+					<dd>
+						<a <if condition="ACTION_NAME eq index || ACTION_NAME eq scenceinfo">class='down'</if> href="<{:U('Scence/index')}>">我的工单</a>
+					</dd>
+					<dd>
+						<a <if condition="ACTION_NAME eq selecttype || ACTION_NAME eq add || ACTION_NAME eq scence || ACTION_NAME eq service">class='down'</if> href="<{:U('Scence/selectType')}>">提交工单</a>
+					</dd>
+					
+				</dl>
+			</div>
+<!--左半部分结束-->	

@@ -1,0 +1,55 @@
+<include file="Common:header"/>
+    <script type="text/javascript" src='__PUBLIC__/Js/user_add.js'></script>
+
+<form action='<{:U('save')}>' method='post' >
+	<table class="table table-condensed table-hover table-active">
+        <thead>
+            <tr class="active">
+                <td colspan="2">
+                    <a class="btn btn-info" href="<{:U('index')}>">管理员列表</a>
+                </td>
+                <td colspan="12"></td>
+            </tr>
+        </thead>
+		<tr>
+			<th colspan='12'>用户账号：<{$user.username}></th>			
+		</tr>
+		
+		<tr>
+			<td class='first'>是否锁定:</td>
+			<td><input type='radio' <if condition='!$user["lock"]'>checked</if>  name='lock' value='0'/>否<input  <if condition='$user["lock"]'>checked</if>  type='radio' name='lock' value='1'/>锁定</td>
+		</tr>
+     <if condition='is_array($group)'>
+
+		<foreach name='group' item='v'>	
+		<tr class='group'>
+			<td class='first'>所属用户组:</td>
+                        <td><{$v}><span style='float:right;margin-right:250px;' class='btn btn-primary adds' onclick="addrole()">增加</span>
+                            <span style='float:right;margin-right:20px;' class='btn btn-primary dels' onclick="delerole()">删除</span>
+                      
+                        </td>
+		</tr>
+		</foreach>
+		<else/>
+		<tr class='group'>
+			<td class='first'>所属用户组:</td>
+			<td><{$group}><span style='float:right;margin-right:250px;' class='btn btn-primary adds' onclick="addrole()">增加</span>
+                            <span style='float:right;margin-right:20px;' class='btn btn-primary dels' onclick="delerole()">删除</span>
+                        </td>
+		</tr>
+
+	</if>
+		
+		<tfoot>
+            <tr>
+                <td class='first'></td>
+                <td>
+                	<input  type='hidden' name='user_id' value='<{$user.id}>'/>
+                	<input class="btn btn-success"  type="submit" value="保 存"/>
+                    <a class="btn btn-default" href="<{:U('index')}>">取 消</a>
+               </td> 
+           </tr>
+        </tfoot>
+    </table>
+</form>
+<include file="Common:footer"/>

@@ -1,0 +1,73 @@
+
+body{
+	font-size:12px;
+}
+div.uc-nv{
+	overflow: hidden;
+	clear: both;
+	background:#fff;
+	border-bottom:2px solid #ccc;
+}
+div.uc-nv div.uc-layer{
+	clear:both;
+	height:100%;
+	font-size:14px;
+
+}
+div.uc-nv div.uc-layer div.left{
+	width:230px;
+	float:left;
+	height:100%;
+	line-height:55px;
+	
+
+}
+div.uc-nv div.uc-layer div.left h3{
+    float:left;
+    margin-right:20px;
+    color:#00A1CA;
+    font-size:19px;
+}
+div.uc-nv div.uc-layer div.left a{
+    float:left;
+    font-size:12px;
+}
+
+div.uc-nv div.uc-layer div.right{
+	height:100%;
+	line-height:55px;
+	width:730px;
+	float:left;
+}
+div.uc-nv div.uc-layer div.right ul{
+	float:right;
+   
+}
+div.uc-nv div.uc-layer div.right ul li{
+	float:left;
+	padding:0 10px;
+	
+}
+
+
+div.uc-nv div.uc-layer div.right ul li a{
+	font-size:14px;
+	display: inline-block;
+	width: 100%;
+	height: 100%;
+}
+div.uc-nv div.uc-layer div.right ul li:hover,div.uc-nv div.uc-layer div.right ul li.on{
+	background: #f8f8f8;
+}
+
+
+
+.y-row {
+    margin-left: auto;
+    margin-right: auto;
+   width:1000px;
+}
+
+.hidden{
+	display:none;
+}

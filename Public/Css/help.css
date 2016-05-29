@@ -1,0 +1,288 @@
+#mian{
+	float: left;
+	width: 100%;
+	height: 800px;
+}
+#mian .y-row{
+	
+	height:100%;
+	overflow: hidden;
+
+}
+#mian .y-row .main-left{
+	
+	width:16%;
+	margin-right:4%;
+	background:#EDF0F2;
+	float: left;
+	height: 100%;
+	
+
+}
+#mian .y-row .main-left .max-width{ 
+	
+	width:300%; 
+	float: left;
+   height: 100%;
+
+}
+#mian .y-row .main-left .hnavbar{
+	background:#EDF0F2;
+	height:100%;
+	width: 33%;
+	float: left;
+	border-right:1px solid #ccc;
+	
+}
+
+#mian .y-row .main-left .hnavbar dl{
+	padding-top:10px;
+	cursor:default;
+	border-bottom:1px dashed #ccc;
+	padding-left: 5%;
+
+}
+
+#mian .y-row .main-left .hnavbar dl dt{
+	color: #999999;
+	padding-left:2px;
+}
+#mian .y-row .main-left .hnavbar dl dd{
+padding:12px 0;
+}
+#mian .y-row .main-left .hnavbar dl dd.dian{
+	
+	background: url('../Images/helpright.png')no-repeat 95% center;
+}
+#mian .y-row .main-left .hnavbar dl dd:hover{
+	color: #00A2CA;
+}
+#mian .y-row .main-left .hnavbar1{
+	position: relative;
+	z-index: 2;
+	height: 100%;
+	display: none;
+}
+#mian .y-row .main-left .hnavbar1 dl{
+	border-bottom:none;
+    
+}
+#mian .y-row .main-left .hnavbar dl dd a{
+	color:#000;
+}
+
+
+ 
+#mian .y-row .main-right{
+	float: left;
+	width: 80%;
+	height: 100%;
+	padding-top:35px;
+
+} 
+#mian .y-row .main-right .logined{
+	height:65px;
+
+}
+#mian .y-row .main-right .logined .logined-left{
+	width: 41%;
+	float: left;
+	margin-right: 1%;
+	background: #F1F6FA;
+	border:1px solid #ccc;
+	height: 100%;
+	padding:15px 1%;
+}
+#mian .y-row .main-right .logined .logined-left dl{
+}
+#mian .y-row .main-right .logined .logined-left dl dt{
+	float: left;
+	margin-right: 2%;
+	width: 50px;
+	height:50px;
+	overflow: hidden;
+	border:2px solid #fff;
+	border-radius: 40px;
+}
+#mian .y-row .main-right .logined .logined-left dl dt img{
+	width:60px;
+	
+
+}
+#mian .y-row .main-right .logined .logined-left dl dd{
+	padding:3px 0;
+}
+#mian .y-row .main-right .logined .logined-left dl dd a{
+	margin-right:2%;
+	color: #00A2CA;
+}
+#mian .y-row .main-right .logined .logined-right{
+	width: 53.5%;
+	float: left;
+	background: #F1F6FA;
+	border:1px solid #ccc;
+	height: 100%;
+	padding:15px 0 15px 2%;
+	
+
+}
+#mian .y-row .main-right .logined .logined-right span{
+	font-size:16px;
+	padding-bottom:5px;
+	display: inline-block;
+}
+#mian .y-row .main-right .logined .logined-right  a{
+	float: left;
+	padding:3px 0;
+	padding-right:4%;
+	display: inline-block;
+	width: 26%
+}
+#mian .y-row .main-right .title{
+	float: left;
+	width: 100%;
+	height:40px;
+	border-bottom:1px solid #ccc;
+	line-height: 40px;
+	margin-bottom: 30px;
+
+}
+
+#mian .y-row .main-right h2{
+	float: left;
+	font-size: 16px;
+	position: relative;
+	top:20px;
+	background: #fff;
+	font-weight:500;
+	padding-right:1%;
+
+}
+#mian .y-row .main-right .section{
+	float: left;
+	width: 100%;
+
+}
+#mian .y-row .main-right .section ul{
+	float: left;
+	width: 100%;
+}
+#mian .y-row .main-right .section ul li{
+	float: left;
+	width: 15%;
+	margin-right:2%;
+}
+#mian .y-row .main-right .section ul li h2{
+	width: 100%;
+	float: left;
+	clear: both;
+	margin-bottom:30px;
+	height:25px;
+}
+
+#mian .y-row .main-right .section ul li a{
+	float: left;
+	color: #00A2CA;
+	width: 100%;
+	padding:5px 0;
+}
+#mian .y-row .main-right .section ul li.one{
+	width: 45%;
+}
+#mian .y-row .main-right .section ul li.one a{
+	width: 50%;
+	float: left;
+
+}
+#mian .y-row .main-right .wizard{
+	float: left;
+	width: 100%;
+}
+#mian .y-row .main-right .wizard .box{
+	float:left;
+	width:100%;
+    border:1px solid #ccc;
+    border-top: none;
+    left: -2px;
+    position: relative;
+
+}
+#mian .y-row .main-right .wizard  ul{
+	width:100%;
+	float: left;
+	
+}
+#mian .y-row .main-right .wizard  ul li{
+	float:left;
+	min-width:25%;
+	height:50px;
+	text-align: center;
+	background: #FBFAF8;
+	line-height: 50px;
+    border-top:1px solid #ccc;
+	border-bottom:1px solid #ccc;
+	border-left:1px solid #ccc;
+	margin-right: -1px;
+	cursor:pointer;
+}
+#mian .y-row .main-right .wizard  ul li.down{
+	background: #fff;	
+	border-top:2px solid #00A2CA;
+	height:49px;
+	border-left:none;
+}
+#mian .y-row .main-right .wizard  .bd{
+	float: left;
+	
+	width: 100%;
+}
+#mian .y-row .main-right .wizard  .bd dl{
+	float: left;
+	width: 20%;
+	text-align: center;
+	padding:40px 0;
+	position: relative;
+}
+#mian .y-row .main-right .wizard  .bd dl a{
+	color: #00A2CA;
+}
+#mian .y-row .main-right .wizard  .bd dl div.dotted{
+	position: absolute;
+	right: -5%;
+	top:30%;
+    width: 40px;
+    height:40px;
+    background: url('../Images/diandian.png') no-repeat;
+}
+#mian .y-row .main-right .wizard  .bd dl dt{
+
+}
+#mian .y-row .main-right .wizard  .bd dl dd{
+}
+
+
+#mian .y-row .main-right .message{
+	background: #F1F6FA;
+	border:1px solid #ccc;
+	height: 30px;
+	line-height: 30px;
+}
+#mian .y-row .main-right .message i{
+	font-style:normal;
+	font-weight: 700;
+	font-size: 14px;
+	color: #00A2CA;
+	border:2px solid #00A2CA;
+	display: inline-block;
+	width:15px;
+	height:15px;
+	text-align: center;
+	border-radius: 30px;
+	line-height: 15px;
+	margin:0 15px;
+
+}
+#mian .y-row .main-right .message a{
+	color:#00A2CA;
+}
+

@@ -1,0 +1,56 @@
+<include file="Common:header"/>
+
+<form action='<{:U('insert')}>' method='post'>
+    <table class="table table-condensed table-hover table-active">
+        <thead>
+            <tr class="active">
+                <td colspan="2">
+                    <a class="btn btn-info" href="<{:U('index')}>">IP地址列表</a>
+                </td>
+            </tr>
+        </thead>
+        
+        <tbody>
+		    <tr>
+                <td class='first'>所属网关：</td>
+                <td>
+					<{$gateway}>
+				</td>
+            </tr>
+            <tr>
+                <td class='first'>IP地址：</td>
+                <td><input type="text" name="ipduan" maxlength="32" placeholder="如：192.168.1"/>.<input type="text" name="ipduan_from"  style="width:50px" maxlength="6" placeholder="如：1"/>-<input type="text" name="ipduan_to" style="width:50px" maxlength="6" placeholder="如：200"/></td>
+            </tr>
+			<tr>
+                <td class='first'>IP类型：</td>
+                <td><label><input type="radio" name="type" value="lan"/>内网</label>
+                    <label><input type="radio" checked name="type" value="wan"/>外网</label></td>
+            </tr>
+            <tr>
+                <td class='first'>状态：</td>
+                <td>
+					<label><input type="radio" name="status" value="0" checked="checked"/>未使用</label>
+                    <label><input type="radio" name="status" value="1"/>已使用</label>
+					<label><input type="radio" name="status" value="2"/>预留</label>
+                </td>
+            </tr>
+            <tr>
+                <td class='first'>备注：</td>
+                <td>
+                    <textarea class="command" name="remark" maxlength="2048" placeholder=""></textarea>
+                </td>
+            </tr>
+        </tbody>
+        
+        <tfoot>
+            <tr>
+                <td class='first'></td>
+                <td>
+                    <input class="btn btn-success" type="submit" value="保 存"/>
+                    <a class="btn btn-default" href="<{:U('index')}>">取 消</a>
+               </td> 
+           </tr>
+        </tfoot>
+    </table>
+</form>
+<include file="Common:footer"/>

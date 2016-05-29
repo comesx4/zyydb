@@ -1,0 +1,113 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+<head>
+  <meta http-equiv="Content-Type" content="text/html;charset=UTF-8" />
+ <title><{$stitle|makwebtitle}></title>
+  <link rel='stylesheet' href='__PUBLIC__/Css/bottom.css' />
+  <link rel='stylesheet' href='__PUBLIC__/Css/p-header.css' />
+  <link rel='stylesheet' href='__PUBLIC__/Css/shoppingOrder.css' />
+
+  <js file='__PUBLIC__/Js/jquery-1.7.2.min.js'/>
+  <js file='__PUBLIC__/Js/nav.js'/>  
+  <js file='__PUBLIC__/Js/bottom.js'/>  
+  <js file='__PUBLIC__/Js/shoppingOrder.js'/>
+  
+</head>
+<body>
+
+<!--顶部头-->
+<include file='Common:p-header'/>
+  <!--顶部头结束-->
+
+  <!-- 产品名称 -->
+  <div class="y-page-title">
+    <div class='y-row '>
+           <div class='title'>
+               <h2>确认订单</h2>
+               <span>关联产品：<a href="">独立云磁盘</a> <span>其他产品</span></span>
+           </div>
+
+     </div>
+  </div>
+  
+  <!-- 主体部分 -->
+  <div id='main'>
+       <div class='p-row'>
+        <!-- 订单信息 -->
+        <div class='content'>
+          <div class='content-box'>
+                <table>
+                     <tr>
+                         <th>商品</th>
+                         <th>金额（元）</th>
+                         <th>规格</th>
+                         <th>购买周期</th>
+                     </tr>
+                     
+                     <tr>
+                        <td><{$service['title']}></td>
+                        <td class='red'>￥<{$service['price']}></td>
+                        <td><{$service['spec']}></td>
+                        <td>
+                             <select name='cycle'>
+                                 <option value='1'>单次</option>
+                             </select>
+                        </td>
+                     </tr>
+                </table>
+            </div>
+            <p><span class='red'>1</span>件商品 总计：<span class='red'>￥<{$service['price']}></span></p>
+            
+            <dl class='first'>
+                <dt>发票信息</dt>
+                <dd>
+                    <span><input type='radio' id='receiptNo' name='receipt' value='0'/><label for='receiptNo'>不开发票</label></span>
+                    <span><input type='radio' id='receiptYes' name='receipt' value='1'/><label for='receiptYes'>普通发票</label></span>
+                </dd>
+                
+                <div class='brick-form hidden'>
+                      <dl>
+                         <dt>发票抬头：</dt>
+                         <dd><input type='text' name=''/></dd>
+                      </dl>
+                      <dl>
+                         <dt>收　件 人：</dt>
+                         <dd><input type='text' name=''/></dd>
+                      </dl>
+                      <dl>
+                         <dt>联系手机：</dt>
+                         <dd><input type='text' name=''/></dd>
+                      </dl>
+                      <dl>
+                         <dt>邮寄地址：</dt>
+                         <dd><input type='text' name=''/></dd>
+                      </dl>
+                </div>
+
+                <dd>
+                     <input type='checkbox' name='isphone' value='1'/><label for='isphone'>提供当前下单帐号所绑定的联系方式，以便服务商为您提供服务</label>
+                </dd>
+                <dd>
+                     <input type='checkbox' id='remark'/>
+                     <label for='remark'>订单备注</label>
+                </dd>
+                <dd class='remark hidden' >
+                     <textarea name='remark'></textarea>
+                </dd>
+            </dl>
+            <p>总计金额<span class='red money'>￥<{$service['price']}></span></p>
+           
+          </div>
+           <!-- 订单信息 end -->
+           <p>
+            <input type='checkbox' name='protocol' value='1'/>同意<a href="">商品在线协议</a>及<a href="">工具与镜像平台服务协议</a>
+            <a href="<{:U('payWay',array('order'=>$service['oid']))}>"><input type='submit' class='submit' value='去支付'/></a>
+           </p>
+       </div>
+  </div>
+  <!-- 主图部分 end -->
+
+  <include file='Common:bottom'/>
+
+</body>
+</html> 

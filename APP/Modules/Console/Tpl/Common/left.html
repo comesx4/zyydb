@@ -1,0 +1,51 @@
+<!-- 左半部分 -->
+		<div class='main-left'>
+			<dl>
+				<dt>云产品与服务</dt>
+				<dd>
+					<a class='list-child'>
+					<span class='glyphicon glyphicon-tasks'></span> 
+					云服务器 <span class='glyphicon glyphicon-menu-right'></span>
+					</a>
+					<ul>
+						<listGoods>
+							<li <if condition="$_GET['gid'] eq $v['id']">class='on'</if>>
+								<a href="<{:C("href_goods{$v['id']}")}>"><{$v.goods}></a>
+							</li>
+						</listGoods>						
+					</ul>
+				</dd>
+				<dd>
+					<a class='list-child'>
+					<span class='glyphicon glyphicon-hdd'></span> 
+					云虚拟主机 <span class='glyphicon glyphicon-menu-right'></span>
+					</a>
+				</dd>
+				<dd>
+					<a class='list-child'>
+					<span class='glyphicon glyphicon-inbox'></span> 
+					云主机 <span class='glyphicon glyphicon-menu-right'></span>
+					</a>
+				</dd>
+				<dd>
+					<a href="">
+					<span class='glyphicon glyphicon-globe'></span>
+					云解析
+					 <span class='glyphicon'></span>
+					</a> 
+				</dd>
+				<dd>
+					<a href="">
+					<span class='glyphicon glyphicon-cd'></span>
+				    镜像服务
+				    <span class='glyphicon'></span>
+					</a>
+				</dd>
+			</dl>
+		</div>
+
+
+<!-- 提示框 -->
+   <div id='position'>
+   		加载中...
+   </div>

@@ -1,0 +1,44 @@
+<include file="Common:header"/>
+
+<form action='<{:U('insert')}>' method='post'>
+    <table class="table table-condensed table-hover table-active">
+        <thead>
+            <tr class="active">
+                <td colspan="2">
+                    <a class="btn btn-info" href="<{:U('index')}>">服务规格列表</a>
+                </td>
+                <td colspan="12"></td>
+            </tr>
+        </thead>
+		<tr>
+			<td class='first'>所属服务:</td>
+			<td><{$service}></td>
+		</tr>
+		<tr class='nname'>
+			<td class='first'>规格:</td>
+			<td><input type='text' name='spec' value='' /></td>
+		</tr>		
+		<tr>
+			<td class='first'>价钱:</td>
+			<td><input type='text' name='price' value='0' /></td>
+		</tr>
+		<tr>
+			<td class='first'>折后价:</td>
+			<td><input type='text' name='discount' value='0' /></td>
+		</tr>
+		<tr>
+			<td class='first'>时间(月):</td>
+			<td><input type='text' name='time' value='0' /></td>
+		</tr>
+		<tfoot>
+            <tr>
+                <td class='first'></td>
+                <td>
+                	<input class="btn btn-success" type="submit" value="保 存"/>
+                    <a class="btn btn-default" href="<{:U('index')}>">取 消</a>
+               </td> 
+           </tr>
+        </tfoot>
+    </table>
+</form>
+<include file="Common:footer"/>

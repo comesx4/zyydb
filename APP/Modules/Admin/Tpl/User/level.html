@@ -1,0 +1,35 @@
+<head>
+    <meta http-equiv="Content-Type" content="text/html;charset=UTF-8" />
+    <title>用户组列表</title>
+    <link rel="stylesheet" href="__PUBLIC__/Css/node.css" />
+   
+    <script type="text/javascript" src='__PUBLIC__/Js/jquery-1.8.2.min.js'></script>
+    <script type="text/javascript" src='__PUBLIC__/Js/level.js'></script>
+
+    
+</head>
+<body>
+ <form action='<{:U('insertLevel')}>' method='post'>
+	<foreach name='node' item='v'>
+		<h3 ><{$v.name}>[<{$v.remark}>]<input type='checkbox' <if condition="$v['checked']">checked</if> class='level level1' checked name='node[]'value='<{$v.id}>_<{$v.level}>'/></h3>
+		
+       <div>
+		<foreach name='v.node' item='data'>
+			<dl>
+			<dt><{$data.name}>[<{$data.remark}>]<input type='checkbox' <if condition="$data['checked']">checked</if> class='level level2' name='node[]'value='<{$data.id}>_<{$data.level}>'/></dt>
+			<foreach name='data.node' item='values'>
+				<dd><span><{$values.name}>[<{$values.remark}>]</span><input type='checkbox' <if condition="$values['checked']">checked</if> class='level level3' name='node[]' value='<{$values.id}>_<{$values.level}>'/></dd>
+			</foreach>
+			</dl>
+		</foreach>
+	</div>
+
+		
+	</foreach>
+	<input type='hidden' name='rid' value='<{$Think.get.rid}>'/>
+	<input type='submit' style='border:none; background:#00A2CA;width:50px;height:30px;border-radius:4px;color:#fff;' value='保存'/>
+</form>
+
+
+</body>
+</html>

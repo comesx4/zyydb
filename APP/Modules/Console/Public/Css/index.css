@@ -1,0 +1,92 @@
+
+
+
+#main .main-right > div,#main .main-right > p{
+	padding-left: 15px;	
+}
+#main .main-right p.max{
+	text-align: center;
+	font-size: 13px;
+	margin:20px 0;
+}
+#main .main-right .notice{
+	background: #F2FFEA;
+	width: 100%;
+	padding:10px 0 10px 15px;
+	color: #369900;
+
+}
+#main .main-right .info{
+	background: #fff;
+	height:150px;
+	padding: 0;
+	margin-bottom: 30px;
+}
+#main .main-right .info dl{
+	
+	overflow: hidden;
+	height: 100%;
+}
+#main .main-right .info dl dt{
+	line-height: 150px;
+	background: #F9FAFC;
+	float: left;
+	height:100%;
+	width: 180px;
+	text-align: center;
+	margin-right: 20px;
+}
+#main .main-right .info dl dd{
+	float: left;
+}
+#main .main-right .info dl dd h3{
+	margin-bottom: 30px;
+}
+#main .main-right .service{
+	background: #fff;
+	padding:20px 10px 10px 20px;
+}
+#main .main-right .service h4{
+	font-size: 13px;
+	border-bottom:1px solid #ccc;
+	margin-bottom: 20px;
+	padding-bottom: 10px;
+}
+#main .main-right .service h4 strong{
+	margin-right:7px;
+
+}
+#main .main-right .service .use{
+	margin-bottom: 20px;
+	overflow: hidden;
+}
+#main .main-right .service .use ul li{
+	float: left;
+	width: 30%;
+	padding:10px 0;
+	padding-left: 2%;
+	background: #F9FAFC;
+	margin-right: 3%;
+	margin-bottom: 10px;
+}
+#main .main-right .service .use ul li span:first-child,#main .main-right .service .no-use dl dd span:first-child{
+	margin-right: 6px;
+}
+#main .main-right .service .no-use{
+	clear: both;
+	overflow: hidden;
+}
+#main .main-right .service .no-use dl{
+	float: left;
+	width: 27%;
+	margin-left: 3%;
+	margin-right: 3%;
+	font-size: 13px;
+}
+#main .main-right .service .no-use dl dt{
+	color: #999999;
+	font-weight: 700;
+	margin-bottom: 10px;
+}
+#main .main-right .service .no-use dl dd{
+}

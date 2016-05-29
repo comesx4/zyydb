@@ -1,0 +1,54 @@
+<include file="Common:header"/>
+
+<form action='<{:U('insert')}>' method='post'>
+    <table class="table">
+        <thead>
+            <tr>
+                <td colspan="2">
+                    <a class="btn btn-info" href="<{:U('index')}>">存储池列表</a>
+                </td>
+            </tr>
+        </thead>
+        
+        <tbody>
+		    <tr>
+                <td class='first'>存储池名称：</td>
+                <td>
+					<input type='text' name='pool_name' placeholder='存储池名称' value=''/>
+				</td>
+            </tr>
+            <tr>
+                <td class='first'>唯一标识：</td>
+                <td>
+                    <input type="text" name="code" maxlength="32" placeholder="唯一标识" value=''/>
+                </td>
+            </tr>
+		
+            <tr>
+                <td class='first'>状态：</td>
+                <td>
+					<label><input type="radio" name="status" value="1" checked="checked"/>开启</label>
+                    <label><input type="radio" name="status" value="2"/>关闭</label>
+				
+                </td>
+            </tr>
+            <tr>
+                <td class='first'>备注：</td>
+                <td>
+                    <textarea class="command" name="remark" maxlength="2048" placeholder=""></textarea>
+                </td>
+            </tr>
+        </tbody>
+        
+        <tfoot>
+            <tr>
+                <td class='first'></td>
+                <td>
+                	<input class="btn btn-success" type="submit" value="保 存"/>
+                    <a class="btn btn-default" href="<{:U('index')}>">取 消</a>
+               </td> 
+           </tr>
+        </tfoot>
+    </table>
+</form>
+<include file="Common:footer"/>

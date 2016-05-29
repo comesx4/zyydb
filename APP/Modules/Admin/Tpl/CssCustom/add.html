@@ -1,0 +1,40 @@
+<include file="Common:header"/>
+
+<form action='<{:U('insert')}>' method='post'>
+    <table class="table table-condensed table-hover table-active">
+        <thead>
+            <tr class="active">
+                <td colspan="2">
+                    <a class="btn btn-info" href="<{:U('index')}>">样式列表</a>
+                </td>
+            </tr>
+        </thead>
+		
+		<tr>
+			<td>样式名称</td>
+			<td><input type='text' name='name' /></td>
+		</tr>
+		<tr>
+			<td>样式内容</td>
+			<td><textarea style='width:800px;height:300px;' name='content'></textarea></td>
+		</tr>
+		<tr>
+			<td>是否为标题</td>
+			<td><input type='radio' name='istitle' value='1' />是<input type='radio' checked name='istitle' value='0' />否</td>
+		</tr>
+		<tr>
+			<td>排序</td>
+			<td><input type='text' name='sort' value='1'/></td>
+		</tr>
+		<tfoot>
+            <tr>
+                <td class='first'></td>
+                <td>
+                	<input class="btn btn-success" type="submit" value="保 存"/>
+                    <a class="btn btn-default" href="<{:U('index')}>">取 消</a>
+               </td> 
+           </tr>
+        </tfoot>
+    </table>
+</form>
+<include file="Common:footer"/>

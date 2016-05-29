@@ -1,0 +1,256 @@
+*{
+	margin:0;
+	padding:0;
+	font-size:12px;
+	font-family:'微软雅黑';
+
+}
+ul{
+	list-style:none;
+}
+a{
+	text-decoration:none;
+	color:#666;
+	
+}
+a:hover{
+	color:#6FCAFF;
+}
+body{
+	min-width:1000px;
+}
+img{
+	border:none;
+}
+div.body{
+	min-width:1000px;
+}
+div.ay-global-topbar{
+	height:37px;
+	background:#00A2CA;
+	font-size:12px;
+	color:#fff;
+
+}
+div.ay-global-topbar div.y-topbar-row{
+	max-width:1200px;
+	min-width:1000px;
+	
+	height:37px;
+	margin: 0 auto;
+	line-height:37px;
+}
+div.ay-global-topbar div.y-topbar-row div.left{
+	float:left;
+	width:34.5%;
+}
+div.ay-global-topbar div.y-topbar-row div.left span.name{
+	font-size:14px;
+	display:inline-block;
+	position:relative;
+	z-index:2;
+	width:150px;
+	cursor:pointer;
+}
+div.ay-global-topbar div.y-topbar-row div.left span.name:hover{
+	background:#fff;
+	
+	color:#333;
+
+}
+div.ay-global-topbar div.y-topbar-row div.left span.name div.userinfo{
+	background:#fff;
+	opacity:0.95;
+	color:#333;
+	width:100%;
+	position:absolute;
+	z-index:2;
+	padding-bottom:10px;
+	display:none;
+	
+
+}
+div.ay-global-topbar div.y-topbar-row div.left span.name div.userinfo dl{
+	font-size:12px;
+
+
+
+}
+div.ay-global-topbar div.y-topbar-row div.left span.name div.userinfo dl dt{
+	float:left;
+
+
+}
+div.ay-global-topbar div.y-topbar-row div.left span.name div.userinfo dl dd{
+	line-height: 25px;
+    padding-right:10px;    
+	float:left;
+
+}
+div.ay-global-topbar div.y-topbar-row div.left span.name div.userinfo dl dd a{
+	color:#666;
+}
+div.ay-global-topbar div.y-topbar-row div.left span.name div.userinfo ul{
+	font-size:13px;
+	clear:both;
+	margin-left:10px;
+
+}
+div.ay-global-topbar div.y-topbar-row div.left span.name div.userinfo ul li{
+	height:25px;
+}
+div.ay-global-topbar div.y-topbar-row div.left span.name div.userinfo ul li a{
+	color:#666;
+}
+div.ay-global-topbar div.y-topbar-row div.left span.name div.userinfo ul li:hover,div.ay-global-topbar div.y-topbar-row div.left span.name div.userinfo ul li a:hover{
+	color:#5394D7;
+}
+
+
+div.ay-global-topbar div.y-topbar-row div.right{
+	float:right;
+	width:57.5%;
+}
+
+div.ay-global-topbar div.y-topbar-row div.right a.ban{
+	display:inline-block;
+	background:#FFCC00;
+	height:18px;
+	line-height:18px;
+	margin-top:8px;
+	color: #302600 !important;
+	float:left;
+}
+div.ay-global-topbar div.y-topbar-row div.right span.lnk-newuser-t{
+	display:inline-block;
+	width:76px;	
+	text-align:center;
+	margin-left:6px;
+	margin-right:6px;
+	float:left;
+	position:relative;
+	z-index:4;
+	cursor:pointer;
+
+}
+div.ay-global-topbar div.y-topbar-row div.right span.lnk-newuser-t:hover{
+	background:#fff;
+	color:#000;
+}
+div.ay-global-topbar div.y-topbar-row div.right span.lnk-newuser-t div.both{
+	position:absolute;
+	background:#fff;
+	color:#333;
+	z-index:2;
+	width:180px;
+	display:none;
+}
+div.ay-global-topbar div.y-topbar-row div.right span.lnk-newuser-t div.top{
+	width:90%;
+	margin:0 auto;
+    border-bottom:1px dashed #666;
+    height:33px;
+      
+
+}
+div.ay-global-topbar div.y-topbar-row div.right span.lnk-newuser-t div.bottom{
+	width:90%;
+	margin:0 auto;
+	padding:0;
+	padding-left:15px;
+	background:url('../Images/dian.png')no-repeat 6% center;
+	border:none;
+
+
+}
+div.ay-global-topbar div.y-topbar-row div.right span.lnk-newuser-t div a{
+	color:#666;
+
+}
+div.ay-global-topbar div.y-topbar-row div.right ul{
+
+	float:right;
+	width:70%;
+
+
+}
+div.ay-global-topbar div.y-topbar-row div.right ul li{
+
+	float:right;
+	margin-right:6px;
+}
+
+div.ay-global-topbar div.y-topbar-row a{
+	color:#fff;
+}
+.y-page-title{
+	float:left;
+	width:100%;
+	padding:10px 0;
+	border-bottom:1px solid #ccc;
+	margin-bottom:20px;
+
+}
+
+.y-page-title .title h2{
+	float:left;
+	font-size:16px;
+	color:#00A2CA;
+	border-left:3px solid #00A2CA;
+	padding-left:8px;
+}
+.y-page-title .title > span{
+	float:right;
+}
+.y-page-title .title > span a{
+	color:#00A2CA;
+}
+.y-row{
+	min-width:1000px;
+	max-width:1200px;
+	margin-right:auto;
+	margin-left:auto;
+}
+.hidden{
+	display:none;
+}
+#main{
+	background:#FBFAF8;
+	float: left;
+	width:100%;
+	 
+
+}
+#main #main-content{
+	height:100%;
+	padding:20px 0;
+	width:100%;
+}
+#main #main-content #fix{
+	height:100%;
+}
+#main #main-content .uc-process{
+	 margin-bottom:15px;
+	 float:left;
+	 width: 100%;
+
+
+}
+#main #main-content .uc-process ul{
+	float:left;
+	width:100%;
+	
+}
+#main #main-content .uc-process ul li{
+	float:left;
+	width:33.3%;
+	text-align:center;
+	background: #CCCCCC;
+	color:#fff;
+	padding:5px 0;
+	font-size:14px;
+	
+}
+#main #main-content .uc-process ul li.down{
+	background: #00A2CA;
+}

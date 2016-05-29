@@ -1,0 +1,53 @@
+<include file="Common:header"/>
+<{$content}>
+<form action='<{:U('save')}>' method='post'>
+    <table class="table table-condensed table-hover table-active">
+        <thead>
+            <tr class="active">
+                <td colspan="2">
+                    <a class="btn btn-info" href="<{:U('index')}>">公司动态列表</a>
+                </td>
+            </tr>
+        </thead>
+        
+        <tbody>
+		    <tr>
+                <td class='first'>所属类别：</td>
+                <td>
+					<{$cat}>
+				</td>
+            </tr>
+            <tr>
+                <td class='first'>标题：</td>
+                <td><input type='text' required name='title' value='<{$data.title}>'/></td>
+            </tr>
+			<tr>
+                <td class='first'>来源：</td>
+                <td><input type='text' name='source' value='中电云集' value='<{data.source}>'/></td>
+            </tr>
+            <tr>
+                <td class='first'>排序：</td>
+                <td><input type='text' name='sort' value='<{$data.sort}>' /></td>
+            </tr>
+
+            <tr>
+                <td class='first'>内容：</td>
+                <td>
+                    <textarea  name="content" id='content' ><{$data.content}></textarea>
+                </td>
+            </tr>
+        </tbody>
+        
+        <tfoot>
+            <tr>
+                <td class='first'></td>
+                <td>
+                    <input type='hidden' name='id' value='<{$data.id}>'/>
+                	<input class="btn btn-success" type="submit" value="保 存"/>
+                    <a class="btn btn-default" href="<{:U('index')}>">取 消</a>
+               </td> 
+           </tr>
+        </tfoot>
+    </table>
+</form>
+<include file="Common:footer"/>

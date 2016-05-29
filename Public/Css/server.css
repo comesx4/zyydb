@@ -1,0 +1,96 @@
+.htype{
+    width: 100%;
+    text-align: center;
+}
+.htype a{
+    width: 238px;
+}
+.tjgm td{
+    background: #FCFCFC;
+}
+.jfjs .cont{
+    height: 430px;
+}
+.jfjs .cont ul li{
+    float: left;
+    margin-right: 10px;
+    line-height: 30px;
+    width: 464px;
+    border: 1px solid #e3e3e3;
+    border-bottom: 2px solid #39D025;
+    text-align: center;
+    height: 430px;
+}
+.jfjs .cont ul li.last{
+    border-bottom: 2px solid #FFA633;
+    margin: 0;
+}
+.jfjs .cont ul li h4{
+    text-align: left;
+    color: #333333;
+    font-size: 15px;
+    font-weight: normal;
+    margin: 20px 10px 5px;
+
+}
+.jfjs .cont ul li p{
+   text-align: left;
+   margin-bottom: 20px;
+   padding:0 10px;
+   overflow: hidden;
+   line-height: 25px;
+}
+.yxbz .cont ul li{
+    float: left;
+    text-align: center;
+    color: #333333;
+    width: 16.6%;
+    height: 120px;
+    margin: 15px 0;
+    line-height: 40px;
+    font-size: 15px;
+    position: relative;
+}
+.yxbz .cont ul li img{
+    height: 68px;;
+}
+.yxbz .cont ul li .bs{
+    position: absolute;
+    bottom: -16px;
+    left: 55px;
+    height: auto;
+}
+.bzousm{
+    clear: both;
+    padding: 20px;
+    line-height: 30px;
+    background: #F8F8F8;
+    border-radius:4px;
+}
+.fbt .cont table{
+    background: #F8F8F8;
+}
+.fbt .cont table td{
+    vertical-align: top;
+}
+.fbt .cont table td.td-r{
+    padding: 10px 0;
+    width: 20%;
+}
+.fbt .cont table td li {
+    background: url("../../18images/li.png") no-repeat scroll 0 5px transparent;
+    line-height: 20px;
+    padding-left: 10px;
+}
+.fbt .cont table td li ul li {
+    background: none;
+    color: #ff9900;
+    font-family: simsun;
+    list-style-position: inside;
+    list-style-type: square;
+}
+.comment {
+    line-height: 25px !important;
+    border-bottom-width: 0px !important;
+    margin-left: 20px;
+}

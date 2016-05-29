@@ -1,0 +1,48 @@
+<include file='Common:header' />
+
+<form action='<{:U('mountCloudDisk')}>' method='post'>
+    <table class="table table-condensed table-hover table-active">
+        <thead>
+            <tr class="active">
+                <td colspan="2">
+                    <a class="btn btn-info" href="<{:U('index')}>">云磁盘列表</a>
+                </td>
+            </tr>
+        </thead>
+        
+        <tbody>
+		    <tr>
+                <td class='first'>服务器名称：</td>
+                <td>
+					<input type='text' name='name' placeholder='服务器名称' value=''/>
+				</td>
+            </tr>
+            <tr>
+                <td class='first'>uid：</td>
+                <td>
+                    <input type='text' name='uid' placeholder='目标uid(可不填)' value=''/>
+                </td>
+            </tr>
+
+            <tr>
+                <td class='first'>备注：</td>
+                <td>
+                    <textarea class="command" name="remark" maxlength="2048" placeholder=""></textarea>
+                </td>
+            </tr>
+        </tbody>
+        
+        <tfoot>
+            <tr>
+                <td class='first'></td>
+                <td>
+                    <input type='hidden' name='id' value='<{$Think.get.id}>'/>
+                	<input class="btn btn-success" type="submit" value="保 存"/>
+                    <a class="btn btn-default" href="<{:U('index')}>">取 消</a>
+               </td> 
+           </tr>
+        </tfoot>
+    </table>
+</form>
+
+<include file='Common:footer' />

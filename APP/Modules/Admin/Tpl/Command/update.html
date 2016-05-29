@@ -1,0 +1,66 @@
+<include file='Common:header'/>
+<form action='<{:U('save')}>' method='post'>
+	<table class="table table-condensed table-hover table-active">
+        <thead>
+            <tr class="active">
+                <td colspan="2">
+                    <a  class="btn btn-info" href="<{:U('index')}>">命令列表</a>
+                </td>
+            </tr>
+        </thead>
+        
+        <tbody>
+            <tr>
+                <td class='first' >命令名：</td>
+                <td><input type="text" name="name" maxlength="32" value='<{$data.name}>' placeholder="英文表示"/></td>
+            </tr>
+            <tr>
+                <td class='first' >描述：</td>
+                <td><input type="text" name="title" maxlength="32" value='<{$data.title}>' placeholder="中文表示"/></td>
+            </tr>
+            <tr>
+                <td class='first' >状态：</td>
+                <td>
+                    <label><input type="radio" <if condition="$data['status'] eq 1">checked</if> name="status" value="1" />启用</label>
+                    <label><input type="radio" <if condition="$data['status'] eq 0">checked</if>  name="status" value="0"/>禁用</label>
+                </td>
+            </tr>
+            <tr>
+                <td class='first' >标签/产品：</td>
+                <td>
+                	<{$checkbox}>
+                </td>
+            </tr>
+            <tr>
+                <td class='first' >标签/标记：</td>
+                <td>
+                	<{$checkbox2}>
+                </td>
+            </tr>
+            <tr>
+                <td class='first' >规则/结构：</td>
+                <td>
+                    <textarea class="command" name="rule" maxlength="2048" placeholder="<command><name>START<name></command>"><{$data.rule}></textarea>
+                </td>
+            </tr>
+            <tr>
+                <td class='first' >备注/说明：</td>
+                <td>
+                    <textarea class="command" name="remark" maxlength="2048" placeholder="1.用于服务器启动"><{$data.remark}></textarea>
+                </td>
+            </tr>
+        </tbody>
+        
+        <tfoot>
+            <tr>
+                <td class='first' ></td>
+                <td>
+                    <input type='hidden' name='id' value='<{$data.id}>'/>
+                	<input class="btn btn-success" type="submit" value="保 存"/>
+                    <a class="btn btn-default" href="<{:U('index')}>">取 消</a>
+               </td> 
+           </tr>
+        </tfoot>
+    </table>
+</form>
+<include file='Common:footer'/

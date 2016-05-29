@@ -1,0 +1,122 @@
+<include file="Common:header"/>
+
+<form action='<{:U('insert')}>' method='post'>
+    <table class="table table-condensed table-hover table-active">
+        <thead>
+            <tr class="active">
+                <td colspan="2">
+                    <a class="btn btn-info" href="<{:U('index')}>">服务器列表</a>
+                </td>
+                <td colspan="12"></td>
+            </tr>
+        </thead>
+        
+        <tbody>
+		    <tr>
+                <td class='first'>母服务器：</td>
+                <td>
+					<{$mu_server}>
+				</td>
+            </tr>
+             <tr>
+                <td class='first'>IP线路：</td>
+                <td>
+                    <{$ipLine}>
+                </td>
+            </tr>
+             <tr>
+                <td class='first'>操作系统：</td>
+                <td>
+                    <select name='image_id'>
+                        <foreach name='os' item='v'>
+                            <option value='<{$v.id}>'><{$v.name}></option>
+                        </foreach>
+                    </select>
+                </td>
+            </tr>
+           
+            <tr>
+                <td class='first'>CPU:</td>
+                <td>
+                    <label>1核:<input checked type='radio' name='cpu' value='1'/></label>
+                    <label>2核:<input type='radio' name='cpu' value='2'/></label>
+                    <label>4核:<input type='radio' name='cpu' value='4'/></label>
+                    <label>8核:<input type='radio' name='cpu' value='8'/></label>
+                    <label>16核:<input type='radio' name='cpu' value='16'/></label>
+                </td>
+            </tr>
+            <tr>
+                <td class='first'>内存:</td>
+                <td>
+                    <label>512M:<input checked type='radio' name='memory' value='0'/></label>
+                    <label>1G:<input type='radio' name='memory' value='1'/></label>
+                    <label>2G:<input type='radio' name='memory' value='2'/></label>
+                    <label>4G:<input type='radio' name='memory' value='4'/></label>
+                    <label>8G:<input type='radio' name='memory' value='8'/></label>
+                    <label>16G:<input type='radio' name='memory' value='16'/></label>
+                </td>
+            </tr>
+             <tr>
+                <td class='first'>时长(月):</td>
+                <td><input type='text' name='month' value ='1'/></td>
+            </tr>
+            <tr>
+                <td class='first'>内网上行带宽:</td>
+                <td><input type='text' name='lan_upload_bandwidth' value='100'/></td>
+            </tr>
+            <tr>
+                <td class='first'>内网下行带宽:</td>
+                <td><input type='text' name='lan_download_bandwidth' value='100'/></td>
+            </tr>
+            <tr>
+                <td class='first'>外网上行带宽:</td>
+                <td><input type='text' name='wan_upload_bandwidth' value=''/></td>
+            </tr>
+            <tr>
+                <td class='first'>外网下行带宽:</td>
+                <td><input type='text' name='wan_download_bandwidth' value='5'/></td>
+            </tr>
+			<tr>
+                <td class='first'>数据盘(G)：</td>
+                <td>
+                    <input type='text' placeholder='多个用","隔开' name='disk' value='' />
+                </td>
+            </tr>
+            <tr>
+                <td class='first'>uid：</td>
+                <td>
+                    <input type='text' name='uid'  value='' />
+                </td>
+            </tr>
+            <tr>
+                <td class='first'>IPOS：</td>
+                <td>
+                    <input type='text' name='ipos'  value='1000' />
+                </td>
+            </tr>
+            <tr>
+                <td class='first'>IO：</td>
+                <td>
+                    <input type='text' name='io'  value='100' />
+                </td>
+            </tr>
+            <tr>
+                <td class='first'>备注：</td>
+                <td>
+                    <textarea class="command" name="remark" maxlength="2048" placeholder=""></textarea>
+                </td>
+            </tr>
+        </tbody>
+        
+        <tfoot>
+            <tr>
+                <td class='first'></td>
+                <td>
+                	<input class="btn btn-success" type="submit" value="保 存"/>
+                    <a class="btn btn-default" href="<{:U('index')}>">取 消</a>
+               </td> 
+           </tr>
+        </tfoot>
+    </table>
+</form>
+<include file="Common:footer"/>

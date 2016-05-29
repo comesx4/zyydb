@@ -1,0 +1,119 @@
+body{
+	min-width:1000px;
+}
+div.main{
+	background:#FBFAF8;
+	height:400px;
+    
+}
+div.main div.cont{
+	position:relative;
+	padding-top:20px;
+	height:100%;
+
+}
+div.main div.cont div.cont-left{
+	padding:0px;
+	margin-right:252px;
+	 background:#fff;
+	height:100%;
+	overflow:hidden;
+
+}
+div.main div.cont div.cont-left div.left-top{
+	height:40px;
+	display:block;
+	padding:0;
+	border-bottom:1px solid #ccc;
+	background:#FBFAF8;
+
+}
+div.main div.cont div.cont-left div.left-top span{
+	display:inline-block;
+	height:38px;
+    border:1px solid #ccc;
+    border-bottom:none;
+    position: absolute;
+    background:#fff;
+    width:250px;
+    text-align:center;
+    line-height:38px;
+    border-top:3px solid #00A1CA;
+}
+div.main div.cont div.cont-left div.left-bottom{
+	padding:15px 15px 15px 15px;
+	
+	height:360px;
+	border:1px solid #ccc;
+	border-top:none;
+	font-size:12px;
+}
+div.main div.cont div.cont-left div.left-bottom div.row{
+	background:#F1F6FA url('../Images/i.png.png') no-repeat 1% center;
+	padding:16px 0;
+	padding-left:30px;
+	height:auto;
+
+}
+div.main div.cont div.cont-left div.left-bottom div.rows{
+	color:#999999;
+	padding:15px 0;
+	font-size:14px;
+	float:left;
+	width:100%;
+}
+div.main div.cont div.cont-left div.left-bottom div.rows a{
+	font-size:12px;
+	color:#00A2CA;
+
+}
+div.main div.cont div.cont-left div.left-bottom div.rows label{
+	display:inline-block;
+	width:100px;
+	float:left;
+	text-align:right;
+	height:25px;
+	line-height:25px;
+}
+div.main div.cont div.cont-left div.left-bottom div.rows div.boy{
+	width:80%;
+	float:left;
+}
+div.main div.cont div.cont-left div.left-bottom div.rows div.rows-top{
+	width:100%;
+	float:left;
+	margin-bottom:10px;
+	height:25px;
+
+}
+div.main div.cont div.cont-left div.left-bottom div.rows div.rows-top a{
+	font-size:13px;
+	display:inline-block;
+	height:25px;
+	width:100px;
+	background:#F9F9F9;
+	border:1px solid #EEEEEE;
+	text-align:center;
+	line-height:25px;
+	border-radius:4px;
+	margin-right:10px;
+	color:#A7A7BD;
+}
+
+div.main div.cont div.cont-left div.left-bottom div.rows div.rows-top a.adown,div.main div.cont div.cont-left div.left-bottom div.rows div.rows-top a:hover{
+	background:#EAFBFE;
+	border:1px solid #6DC5DC;
+	color:#000;
+
+}
+div.main div.cont div.cont-left div.left-bottom div.rows div.rows-bottom{
+	float:left;
+	font-size:12px;
+
+}
+div.main div.cont div.cont-right{
+ position:absolute;
+ right:20px;
+ top:40px;
+}
+

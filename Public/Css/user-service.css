@@ -1,0 +1,27 @@
+div.main .main-right .ayorder-box{
+	background: #FFFFCC;
+	overflow: hidden;
+	border:1px solid #FFCC00;
+	padding:15px;
+	margin-bottom:20px;
+
+}
+div.main .main-right .ayorder-box dl{
+	height:80px;
+
+}
+div.main .main-right .ayorder-box dl dt{
+	float: left;
+	height: 100%;
+	margin-right:15px;
+}
+div.main .main-right .ayorder-box dl dd{
+	padding:5px 0;
+}
+div.main .main-right .ayorder-box dl dd.red{
+	color: red;
+	font-size: 15px;
+}
+div.main .main-right .ayorder-box dl dd a{
+	margin-right:10px;
+}

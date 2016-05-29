@@ -1,0 +1,57 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+<head>
+    <meta http-equiv="Content-Type" content="text/html;charset=UTF-8" />
+    <title>镜像列表</title>
+    <link rel="stylesheet" href="__PUBLIC__/Css/Common.css" />     
+    <script type="text/javascript">
+    	window.onload = function(){
+    		var type = document.getElementsByName('type')['0'];
+
+ 			type.onchange = function(){
+ 				document.getElementsByName('form')['0'].submit();
+ 			}
+    	}
+    </script>
+<body>
+	<form name='form' action='<{:U('index')}>' method='post'>
+	<table class='table'>
+		<tr>
+			<th>ID</th>
+			<th>云服务器镜像名称 </th>
+			<th>系统名称</th>
+			<th>创建时间</th>
+			<th>
+				<select name='type'>
+					<option <if condition="$_POST['type'] eq 2">selected</if> value='2'>公共镜像</option>
+					<option <if condition="$_POST['type'] eq 1">selected</if> value='1'>私有镜像</option>
+					<option <if condition="$_POST['type'] eq 3">selected</if> value='3'>服务市场</option>
+				</select>
+			</th>
+			<th>状态</th>	
+
+		</tr>
+	<foreach name='data.imageSet' item='v'>
+		<tr>
+			<td><{$v.imageId}></td>
+			<td><{$v.imageName}></td>
+			<td><{$v.osName}></td>
+			<td><{$v.createTime}></td>		
+			<td>
+				<if condition="$v['imageType'] eq 1">
+					私有镜像
+				<elseif condition="$v['imageType'] eq 2"/>
+					公有镜像
+				<else/>
+					服务市场
+				</if>
+			</td>
+			<td><{$v.status}></td>		
+		</tr>
+	</foreach>
+	   
+	</table>
+    </form>
+	
+</body>
+</html

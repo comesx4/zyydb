@@ -1,0 +1,263 @@
+
+#main .main-right .title{
+	float: left;
+	width: 100%;
+	height:15px;
+	border-bottom: 1px solid #ccc;
+	margin-bottom:35px;
+}
+#main .main-right .title h1{
+	float: left;
+	background: #fff;
+	padding-right:5px;	
+}
+#main .main-right .title a{
+	display: inline-block;
+	float: right;
+	background: #fff;
+	height:30px;
+	width:60px;
+	line-height: 30px;
+}
+#main .main-right .status{
+	float: left;
+	width: 100%;
+	margin-bottom:55px;
+	position: relative;
+}
+#main .main-right .status .detail{
+	position: absolute;
+    background: none repeat scroll 0 0 #f1f6fa;
+    border: 1px solid #e1ebec;
+    height:25px;
+    padding:0 8px;
+    bottom:-35px;
+    line-height: 25px;
+
+
+}
+#main .main-right .status .atop{
+	top:-14px;
+	position: absolute;
+	display: inline-block;
+	width: 20px;
+	height: 20px;
+	left: 40%;
+	background: url('../Images/atop.png') no-repeat left center;
+
+}
+#main .main-right .status ul{ 
+	float: left;
+	width: 100%;
+}
+#main .main-right .status ul li{
+	float: left;
+	width:25%;
+    background: #f8f8f8;
+	height:30px;
+	line-height: 30px;
+	text-align: center;
+	border-left:2px solid #fff;
+	margin-right:-2px;
+
+}
+#main .main-right .status ul li.down{
+	background: #9CDDF5;
+
+	color: #fff;
+
+}
+#main .main-right .workorder{
+	padding:20px;
+	overflow: hidden;
+	background:#F4F4F4;
+	border:1px solid #ccc;
+
+}
+#main .main-right .workorder p{
+	margin-bottom:10px;
+}
+#main .main-right .workorder p font{
+	font-weight:700;
+}
+#main .main-right .workorder p span{
+	float: left;
+	margin-right:6%;
+}
+#main .main-right .workorder p a{
+	float: right;
+	margin-right:2%;
+}
+#main .main-right h2{
+	font-size: 16px;
+	padding:13px 0;
+}
+#main .main-right .take{
+	border:1px solid #ccc;
+	overflow: hidden;
+	padding:25px;
+	margin-bottom:25px;
+}
+#main .main-right .take dl{
+	float: left;   
+    border-bottom: 1px dashed #ccc;
+    margin-bottom:15px;
+	width: 100%;
+}
+#main .main-right .take dl dt{
+	float: left;
+	height: 100%;
+	 padding-bottom: 15px;
+}
+#main .main-right .take dl dt img{
+	width: 50px;
+	margin-right: 10px;
+}
+#main .main-right .take dl dd{
+	float: right;
+	width:90%;
+	text-align: left;
+	padding:6px 0;
+	color: #999;
+
+}
+
+#main .main-right .take dl dd span.hei{
+	color: #000;
+}
+#main .main-right .take dl dd.date{
+	color: #ccc;
+}
+#main .main-right .words{
+	background: #f4f4f4;
+	padding:0 15px;
+	overflow: hidden;
+	padding-bottom:20px;
+	border:1px solid #ccc;
+	border-radius:4px;
+
+}
+#main .main-right .words h4{
+	padding:15px 0;
+}
+#main .main-right .words textarea{
+	width: 99%;
+	height:80px;
+	font-size: 12px;
+	padding-left:1%;
+
+}
+#main .main-right .words p{
+	margin:10px 0;
+
+}
+#main .main-right .words p.file{	
+	height:25px;
+	line-height: 25px;
+}
+#main .main-right .words p.file input{
+	float: left;
+	clear: left;
+	
+}
+#main .main-right .words p.file span{
+	color:#9CDDF5;
+	cursor: pointer;
+	float: left;
+}
+#main .main-right .words .error{
+	color:red;
+	padding-left:18px;
+	background: url('../Images/unchecked.gif') no-repeat left center;
+	margin-left:7px;
+}
+#main .main-right .words p.submit{
+	clear: both;
+}
+#main .main-right .words p.submit input{
+	display: inline-block;
+	width:150px;
+	height:35px;
+	background: #00A2CA;
+	color: #fff;
+	border:none;
+	border-radius:4px;
+	margin-top:15px;
+	cursor: pointer;
+	
+}
+
+#complaint{
+	position: fixed;
+	width:400px;
+	background: #FFF;	
+	overflow: hidden;
+	padding:15px;
+	padding-top:5px;
+	left:30%;
+	top:30%;
+	border:4px solid #ccc;
+	border-radius:4px;
+	z-index:15;
+	display: none;
+
+
+}
+#complaint #title{
+	height:30px;
+	line-height: 20px;
+	border-bottom:2px solid #000;
+	margin-bottom:10px;
+
+}
+#complaint #title span.close{
+	display: inline-block;
+	width: 20px;
+	height: 20px;
+	background: url('../Images/bclose.png')no-repeat left center;
+	float: right;
+	cursor:pointer;
+}
+#complaint .content{
+   margin-bottom:10px;
+}
+#complaint .content p{
+	margin:9px 0;
+	
+}
+#complaint .content textarea{
+	font-size: 12px;
+	width: 95%;
+	height:90px;
+	padding:1%;
+}
+#complaint .bottom{
+   border-top:1px dashed #ccc;
+   padding-top:10px;
+   text-align: center;
+}
+#complaint .bottom input{
+	display: inline-block;
+	width: 80px;
+	height:25px;	
+	border:1px solid #ccc;
+	border-radius:4px;
+	margin-right:5px;
+	background:#FFCC00;
+	color:#fff;
+	cursor: pointer;
+}
+#complaint .bottom input.close{
+	color: #000;
+	border:1px solid #9CDDF5;
+	background: #fff;
+}
+
+
+
+
+
+
+
+
+

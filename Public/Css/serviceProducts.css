@@ -1,0 +1,112 @@
+
+#main .main-content .main-inner {
+    float: left;
+    height: 100%;
+    margin-right: 2%;
+    padding-left: 1%;
+    padding-top:20px;
+    width: 64%;
+}
+#main .main-content .main-inner a{
+	color: #00A2CA;
+}
+#main .main-content .main-inner .level{
+	float: left;
+	width: 100%;
+	padding:5px 0;
+	border-bottom:1px solid #ccc;
+	margin-bottom:20px;
+}
+#main .main-content .main-inner .level a{
+	color:#00A2CA;
+}
+#main .main-content .main-inner .product{
+	float: left;
+	padding-bottom:20px;
+	border-bottom:1px dashed #ccc;
+	width: 100%;
+	color: #999999;
+	margin-bottom:30px;
+
+}
+#main .main-content .main-inner .product dl{
+	float: left;
+	width: 100%;
+	margin-bottom:15px;
+}
+#main .main-content .main-inner .product dl dt{
+	float: left;
+	margin-right:20px;
+	
+}
+#main .main-content .main-inner .product dl dd{
+	padding:4px 0;
+	
+	
+}
+#main .main-content .main-inner .product dl dd .h1{
+	font-size:19px;
+	color:#666;
+}
+#main .main-content .main-inner .product dl dd img{
+	position: relative;
+	top:4px;
+	margin-left: 15px;
+}
+#main .main-content .main-inner .product dl dd span{
+	color: red;
+	margin-right:10px;
+}
+#main .main-content .main-inner .fapge{
+    padding-top:25px;
+    padding-bottom:40px;
+    text-align: right;
+    margin-bottom:30px;
+    border-bottom:1px solid #ccc;
+}
+#main .main-content .main-inner .asked{
+
+}
+#main .main-content .main-inner .asked  h4{
+
+	margin-bottom:7px;
+}
+#main .main-content .main-inner .asked .asked-left{
+	float: left;
+	width: 80%;
+}
+
+#main .main-content .main-inner .asked .asked-left ul li{
+	float: left;
+	width: 49%;
+	padding:2px 0;
+}
+#main .main-content .main-inner .asked .asked-right{
+	float: left;
+	width: 20%;
+}
+#main .main-content .main-right {
+    float: left;
+    height: 100%;
+    padding-top: 40px;
+    position: relative;
+    width: 15%;
+}
+#main .main-content .main-right .ds-iwant{
+	text-align: center;
+	border:1px solid #ccc;
+	padding:10px 0;
+}
+#main .main-content .main-right .ds-iwant p{
+	padding:5px 0;
+}
+#main .main-content .main-right .ds-iwant a{
+	display: inline-block;
+	width: 80%;
+	height:35px;
+	color: #fff;
+	background: #00A2C9;
+	border:none;
+	border-radius:4px;
+	line-height: 35px;
+}

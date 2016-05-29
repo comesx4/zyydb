@@ -1,0 +1,315 @@
+body{
+	min-width: 1000px;
+	
+
+}
+.y-row{
+	min-width: 1000px;
+	max-width: 1200px;
+	margin-right: auto;
+	margin-left: auto;
+}
+#main{
+    
+    overflow:hidden;
+    font-size: 12px;
+}
+#main a{
+	color:#00A2CA;
+}
+#main-cents{
+	margin-top:30px;
+	border-top:1px solid #ccc;
+	float: left;
+	width: 100%;
+	height: 100%;
+	padding-top:35px;
+
+}
+#main-cents #main-left{
+	width: 66%;
+	float: left;
+	height: 100%;	
+	margin-right:2%;
+	padding-top:10px;
+}
+#main-cents #main-left .remark{
+	float: left;
+	width: 100%;
+	margin-bottom:20px;
+}
+#main-cents #main-left .remark h1{
+	float:left;
+	margin-right:20px;
+}
+#main-cents #main-left .remark h1 img{
+	width: 170px;
+}
+#main-cents #main-left .remark dl{
+	padding-top:10px;
+	float: left;
+	width:75%;
+    color:#999999;
+}
+#main-cents #main-left .remark dl dt{
+	font-size:21px;
+	color: #000;
+	
+} 
+#main-cents #main-left .remark dl dd{
+	margin:8px 0;
+} 
+#main-cents #main-left .remark dl dd a{
+	margin-right:15%;
+}
+#main-cents #main-left .remark dl dd.pf{
+	color:red;
+	background: url("../Images/pingfen.png") no-repeat left center;
+	padding-left:15%;
+}
+#main-cents #main-left .remark dl dd span{
+    color:#666;
+    margin-right:15%;
+}
+#main-cents #main-left .remark dl dd span{
+} 
+#main-cents #main-left .goods-info{
+	float:left;
+	width: 100%;
+
+}
+#main-cents #main-left .goods-info h1{
+	height:40px;
+	clear:both;
+	border-left:2px solid #00A2C9;
+	background: #F5F5F5;
+	font-weight:500;
+	padding-left:2%;
+	font-size: 18px;
+	line-height: 40px;
+	margin-bottom:20px;
+}
+#main-cents #main-left .goods-info .info{
+	float: left;	
+	padding-left:6%;
+
+}
+#main-cents #main-left .goods-info .info dl{
+	margin-bottom:20px;
+}
+#main-cents #main-left .goods-info .info dl dt{
+	color:#333333;
+}
+#main-cents #main-left .goods-info .info dl dd{
+	padding:7px 0;
+}
+#main-cents #main-left .goods-info .info p{
+    padding:30px 0;
+}
+#main-cents #main-left .goods-info .line-dot{
+ 	height:2px;
+ 	border-bottom: 2px dotted #eee;
+ 	width: 100%;
+ 	float: left;
+ 	margin:30px 0;
+}
+#main-cents #main-left .goods-info h2{
+	font-weight: 500;
+	margin-bottom:15px;
+}
+#main-cents #main-left .goods-info .padd{
+	padding-left:4%;
+}
+#main-cents #main-left .goods-info .zhinan{
+	padding-bottom:40px;
+	display: inline-block;
+}
+#main-cents #main-left .goods-info ul li{
+	padding:6px 0;
+}
+#main-cents #main-left .goods-info .appraise{
+	float: left;
+	width: 100%;
+}
+#main-cents #main-left .goods-info .appraise dl{
+	float:left;
+	margin-left:1%;
+	padding-left:3%;
+	margin-right:2%;
+	border-bottom:1px solid #ccc;
+	width:94%;
+	margin-bottom:15px;
+}
+#main-cents #main-left .goods-info .appraise dl dt{
+	
+}
+#main-cents #main-left .goods-info .appraise dl dt i{
+	color:#39A2D2;
+	margin-right:55px;
+
+}
+#main-cents #main-left .goods-info .appraise dl dt span{
+	color:#999999;
+}
+#main-cents #main-left .goods-info .appraise dl dt em{
+	display: inline-block;
+	width:25px;
+	background: url('../Images/pingfen.png') no-repeat left center ;
+	color:red;
+	margin-right:20px;
+	padding-left:85px;
+}
+#main-cents #main-left .goods-info .appraise dl dd{
+	padding:20px 0;
+
+}
+#main-cents #main-left .goods-info .appraise p{
+	padding:45px 0;
+	text-align: right;
+	clear: both;
+	width: 87%;
+}
+#main-cents #main-right{
+	width: 32%;
+	float: left;	
+	height: 100%;
+    position: relative;
+}
+#main-cents #right-fixed{
+	float: left;
+	top:0;
+	border:1px solid #ccc;
+	padding:25px;
+	
+}
+#main-cents #right-fixed div.line-dot{
+	width: 100%;
+	height:2px;
+	border-bottom: 2px dotted #eee;
+	clear: both;
+	margin-bottom:15px;
+
+}
+#main-cents #right-fixed div.logo{
+	width:100%;
+	height:70px;
+}
+#main-cents #right-fixed div.logo img{
+	float:left;
+	margin-right:7%;
+	cursor:pointer;
+	width:70px;
+	
+}
+#main-cents #right-fixed dl{
+	float: left;
+	margin-bottom:10px;
+	width: 100%;
+}
+#main-cents #right-fixed dl dt{
+	color:#999999;
+	font-size: 14px;
+	float: left;
+}
+#main-cents #right-fixed dl dd{
+	float: left;
+	width: 100%;
+}
+
+#main-cents #right-fixed dl dd.fudong span.banben{
+	display: inline-block;
+	width:140px;
+    height:25px;
+    line-height: 25px;
+    padding-left:7px;
+    border:1px solid #6DC5DC;
+    border-radius:4px;
+    background:#EAFBFE url('../Images/topss.png') no-repeat 95% center;
+    cursor:pointer;
+    position: relative;
+}
+#main-cents #right-fixed dl dd.fudong span.red{
+	border:1px solid red;
+	background: #FFF8F3 url('../Images/topss.png') no-repeat 95% center;;
+}
+#main-cents #right-fixed dl dd.fudong  div{
+	position: absolute;
+	border:1px solid #ccc;
+	width: 147px;
+	background: #fff;
+}
+#main-cents #right-fixed dl dd.fudong div span{
+	display: inline-block;
+	padding-left:5%;
+	float: left;
+	width: 95%;
+	cursor:pointer;
+	height:30px;
+	line-height: 30px;	
+}
+
+#main-cents #right-fixed dl dd.fudong div span:hover{
+	background: #F5F5F5;
+}
+
+#main-cents #right-fixed dl dd.button1 button{
+	border:1px solid #6DC5DC;
+	width:20%;
+	height:25px;
+	line-height: 20px;
+	text-align: center;
+	background:#F9F9F9;
+	margin-right:8px;
+	border-radius: 4px;
+	font-size:12px;
+	color:#999999;
+}
+#main-cents #right-fixed dl dd button.down{
+	background: #EAFBFE ;
+	color:#000;
+
+}
+#main-cents #right-fixed h3{
+	font-weight: 500;
+	margin-bottom:10px;
+}
+#main-cents #right-fixed dl dd.button2 button{
+	width:50px;
+}
+#main-cents #right-fixed p{
+     color:#999999;
+     clear: both;
+     padding:10px 0;
+}
+#main-cents #right-fixed p span{
+	color:red;
+}
+#main-cents #right-fixed p span#price{
+	font-size:18px;
+}
+#main-cents #right-fixed p .button{
+    display: inline-block;
+    border: none;
+    width:45%;
+    margin-right:8px;
+    height:40px;
+    line-height: 40px;
+    border-radius: 4px;
+    background: #00A2C9;
+    color:#fff;
+    font-size: 14px;
+    text-align: center;
+    cursor:pointer;
+}
+#main-cents #right-fixed p a.free{
+	color: #00A2CA;
+	border:1px solid #00A2CA;
+	background: #fff;
+}
+.hidden{
+	display: none;
+}
+img.down{
+	border:1px solid pink;
+
+}

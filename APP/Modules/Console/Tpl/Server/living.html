@@ -1,0 +1,189 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+<head>
+	<meta http-equiv="Content-Type" content="text/html;charset=UTF-8" />
+	<title></title>
+	<link href="__ROOT__/Public/Bootstrap/css/bootstrap.min.css" rel="stylesheet">
+	<link rel="stylesheet" href="__PUBLIC__/Css/header.css" />
+	<link rel="stylesheet" href="__PUBLIC__/Css/left.css" /> 	
+	<link rel="stylesheet" href="__PUBLIC__/Css/server.css" />
+	<link rel="stylesheet" href="__PUBLIC__/Css/server_living.css" />
+	<!--[if lt IE 9]>
+	    <script src="//cdn.bootcss.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      	<script src="//cdn.bootcss.com/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->   
+    <script src="//cdn.bootcss.com/jquery/1.11.3/jquery.min.js"></script>    
+	<script src="__ROOT__/Public/Bootstrap/js/bootstrap.min.js"></script>
+	<script type="text/javascript" src='__PUBLIC__/Js/left.js'></script>
+	<script type="text/javascript" src='__PUBLIC__/Js/server_index.js'></script>
+    <script type="text/javascript">
+    	var datas = <{$monitor['data']}>;
+    	var time  = '<{$time}>';    
+    	var month = '<{:date('H')-1}>';	
+    	var pointInterval = 60*1000;
+    	var requestAction = '<{:U('chart_data')}>';
+    	var requestType = 1;
+		var timeType	= 1;
+		var dimensions_value = '<{$Think.get.tid}>';
+		var server_name		 = '<{$living.name}>';
+		var pointStart		 = Date.UTC(<{$monitor.year}> , <{$monitor.month}> , <{$monitor.day}> , <{$monitor.hour}> , <{$monitor.minute}>);
+
+	</script>
+</head>
+<body>
+	<!-- ========头部========= -->
+	<include file='Common:header'/>
+	<!-- ==========头部 end=========== -->
+
+	<!-- =========主体内容======= -->
+	<div id='main'>
+		<!-- 左半部分 -->
+		<include file='Common:left'/>
+		
+		<!-- 右半部分 -->
+		<div class='main-right'>
+			<div class='position'>
+				<span class='glyphicon glyphicon-home'></span> <a href="">会员中心</a>/ <a href="">云服务器</a>  <a href=""><span class='glyphicon glyphicon-refresh'></span></a>
+			</div>
+			
+			<!-- 导航 -->
+			<div class='living'>
+				<include file='Common:server_nav'/>
+			</div>
+			
+			<!-- 实例信息 -->
+			<div class='living-info'>
+
+				<!-- 左边参数信息 -->
+				<div class='living-info-left'>
+					<div class="img-circle">
+						<img  src="__ROOT__/Public/Images/cc.png">
+					</div>
+					<dl>
+						<dt>主机名：<{$living.name}> ( <{$living.server_alias}> )  <span style='background:green;' class="badge"><{$living.status|goods_status=$living['gid'],###}></span></dt>
+						<dd>操作系统：<{$living.os_code}></dd>
+						<dd>端口：<{$living.port}></dd>
+						<dd>内网IP：<{$living.lan_ip}>&nbsp;&nbsp;外网IP：<{$living.wan_ip}></dd>
+						<dd>购买时间：<{$living.start|date='Y-m-d H:i',###}> </dd>
+						<dd>到期时间：<{$living.end|date='Y-m-d H:i',###}></dd>
+					</dl>
+				</div>
+				
+				<!-- 中间警报信息 -->
+				<div class='living-info-middle'>
+					<dl>
+						<dt>健康度</dt>
+						<dd class='no-alert'>暂无警报</dd>
+						<dd></dd>
+					</dl>
+				</div>
+				
+				<!-- 右边参数信息 -->
+				<div class='living-info-right'>
+					<ul>
+						<li>
+							<b>CPU:</b> <{$living.cpu}>核
+							<div class="progress">
+							  <div class="progress-bar <{$new_monitor.cpu.class}> progress-bar-striped active" role="progressbar" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100" style="width: <{$new_monitor.cpu.avg}>%">
+							    <span class="sr-only"><{$new_monitor.cpu.avg}>% Complete (success)</span>
+							  </div>
+							</div>
+						</li>
+						<li><b>内存:</b> <if condition="$living['memory']"><{$living.memory}>G<else/>512M</if></li>
+						<li><b>系统盘:</b> 8核</li>
+					</ul>
+					<ul>
+						<li><b>区域:</b> <{$living.city_name}></li>
+						<li><b>状态:</b> <{$living.status|goods_status=$living['gid'],###}></li>
+						<li>
+							<b>外网上行带宽:</b> <{$living.band}>M
+							<div class="progress">
+							  <div class="progress-bar <{$new_monitor.wan_tx_rate.class}> progress-bar-striped active" role="progressbar" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100" style="width: <{$new_monitor.wan_tx_rate.avg}>%">
+							    <span class="sr-only"><{$new_monitor.wan_tx_rate.avg}>% Complete (success)</span>
+							  </div>
+							</div>
+						</li>
+					</ul>
+					<ul>
+						<li>
+							<b>外网下行带宽:</b> <{$living.wan_download_bandwidth}>M
+							<div class="progress">
+							  <div class="progress-bar <{$new_monitor.wan_rx_rate.class}> progress-bar-striped active" role="progressbar" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100" style="width: <{$new_monitor.wan_rx_rate.avg}>%">
+							    <span class="sr-only"><{$new_monitor.wan_rx_rate.avg}>% Complete (success)</span>
+							  </div>
+							</div>
+						</li>
+						<li>
+							<b>内网上行带宽:</b> <{$living.lan_upload_bandwidth}>M
+							<div class="progress">
+							  <div class="progress-bar <{$new_monitor.lan_tx_rate.class}> progress-bar-striped active" role="progressbar" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100" style="width: <{$new_monitor.lan_tx_rate.avg}>%">
+							    <span class="sr-only"><{$new_monitor.lan_tx_rate.avg}>% Complete (success)</span>
+							  </div>
+							</div>
+						</li>
+						<li>
+							<b>内网下行带宽:</b> <{$living.lan_download_bandwidth}>M
+							<div class="progress">
+							  <div class="progress-bar <{$new_monitor.lan_rx_rate.class}> progress-bar-striped active" role="progressbar" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100" style="width: <{$new_monitor.lan_rx_rate.avg}>%">
+							    <span class="sr-only"><{$new_monitor.lan_rx_rate.avg}>% Complete (success)</span>
+							  </div>
+							</div>
+						</li>
+					</ul>
+				</div>
+
+			</div>
+			
+			<!-- 图标区域 -->
+			<div class='info'>
+				<!-- 选择参数 -->
+				<div class='detail'>
+					<div hidden class="dropdown">
+						<button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+						    	<{$living.0.instance_name}>
+						 	<span class="caret"></span>
+						</button>
+						<ul class="dropdown-menu host" aria-labelledby="dropdownMenu1">
+							<foreach name='living' item='v'>
+						    	<li><a dimensions_value='<{$v.instance_id}>' href="#"><{$v.instance_name}></a></li>
+						    </foreach>
+						</ul>
+					</div>	
+
+					<div class="btn-group requestType" role="group" aria-label="...">
+					  	<button value='1' type='button' class="btn btn-primary">CPU使用情况</button>
+					  	<button value='2' type='button' class="btn btn-default">内网下行带宽</button>
+					  	<button value='3' type='button' class="btn btn-default">内网上行带宽</button>
+					  	<button value='4' type='button' class="btn btn-default">外网下行带宽</button>
+					  	<button value='5' type='button' class="btn btn-default">外网上行带宽</button>
+					  	
+					</div>
+
+					<div class="btn-group btn-group2 timeType" role="group" aria-label="...">
+					  	<button value='1' type='button' class="btn btn-primary">实时</button>	
+					  	<button value='3' type='button' class="btn btn-default">今天</button>
+					  	<button value='2' type='button' class="btn btn-default">昨天</button>
+					  	<button value='4' type='button' class="btn btn-default">30天</button>
+
+					 
+					</div>
+				</div>
+
+				<!-- 图表 -->
+				<div class='chart'>
+					<script src="__PUBLIC__/Js/highcharts.js"></script>
+					<script src="__PUBLIC__/Js/exporting.js"></script>
+
+					<div id="container" style="min-width: 310px; height: 400px; margin: 0 auto"></div>
+				</div>
+			</div>
+		
+			<p class='more-detail'><span class='glyphicon glyphicon-menu-down'></span> 数据明细</p>
+		</div>	
+	</div>
+   <!-- =========主体内容 end======= -->
+
+   
+
+</body>
+

@@ -1,0 +1,68 @@
+<include file="Common:header"/>
+
+   
+<form action='<{:U('save')}>' method='post' enctype='multipart/form-data'>
+	 <table class="table table-condensed table-hover table-active">
+        <thead>
+            <tr class="active">
+                <td colspan="2">
+                    <a class="btn btn-info" href="<{:U('index')}>">服务列表</a>
+                </td>
+                <td colspan="12"></td>
+            </tr>
+        </thead>
+		<tr>
+			<td class='first'>所属分类:</td>
+			<td><{$cat}></td>
+		</tr>
+		<tr>
+			<td class='first'>所属工单类型:</td>
+			<td><{$scence}></td>
+		</tr>
+		<tr>
+			<td class='first'>所属产品:</td>
+			<td><{$goods}></td>
+		</tr>
+		<tr >
+			<td class='first'>服务商:</td>
+			<td><{$service}></td>
+		</tr>
+		<tr  class='jx'>
+			<td class='first'>标题:</td>
+			<td><input type='text' name='title' value='<{$data.title}>'/></td>
+		</tr>
+
+		<tr class='jx'>
+			<td class='first'>适用系统版本:</td>
+			<td><input type='text' name='os' value='<{$data.os}>'/></td>
+		</tr>	
+		<tr class='jx'>
+			<td class='first'>质保时间(天):</td>
+			<td><input type='text' name='warrantyTime' value='<{$data.warrantyTime}>' /></td>
+		</tr  class='jx'>
+		<tr>
+			<td class='first'>交付时间(天):</td>
+			<td><input type='text' name='payTime' value='<{$data.payTime}>' /></td>
+		</tr>
+		<tr class='jx'>
+			<td class='first'>服务图标:</td>
+			<td><input type='file' class='file' name='img'  /></td>
+		</tr>
+		<tr class='jx'>
+			<td class='first'>描述:</td>
+			<td><textarea name='remark'><{$data.remark}></textarea></td>
+		</tr>
+
+		<tfoot>
+            <tr>
+                <td class='first'></td>
+                <td>
+                	<input type='hidden' name='id' value='<{$data.id}>'/>
+                	<input class="btn btn-success" type="submit" value="保 存"/>
+                    <a class="btn btn-default" href="<{:U('index')}>">取 消</a>
+               </td> 
+           </tr>
+        </tfoot>
+    </table>
+</form>
+<include file="Common:footer"/>

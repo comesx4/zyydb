@@ -1,0 +1,83 @@
+*{
+	margin:0;
+	padding:0;
+	font-size:12px;
+}
+body{
+	min-width:1000px;
+	min-height:600px;
+
+}
+div.header{
+	height:110px;
+    border-bottom:1px solid #ccc;
+	position:relative;
+	margin-bottom:2px;
+}
+div.header p{
+	font-size:40px;
+	line-height:110px;	
+	text-align:center;
+	
+}
+div.header p span{
+	display:inline-block;
+	position:absolute;
+	right:1%;
+	bottom:1%;
+	height:30px;
+	line-height:20px;
+}
+div.left{
+	display:block;
+	
+	width:16%;
+	float:left;
+	min-height:500px;
+	
+
+}
+div.left ul{
+	list-style:none;
+
+}
+div.left ul.list > li{
+
+padding:8px 0;
+text-align:center;
+
+border-bottom:1px dashed #ccc;
+cursor:pointer;
+}
+div.left ul.list > li span{
+	display:inline-block;
+	font-size:14px;
+	height:25px;
+	padding-left:20px;
+}
+
+div.left ul.list li ul.list-ul{
+	display:none;
+}
+div.left ul.list li ul.list-ul li{
+	padding:6px 0;
+
+}
+div.left ul.list  li span.jia{
+	background:url('../Images/+.png') no-repeat left 30%;
+}
+div.left ul.list li span.jian{
+	background:url('../Images/-.png') no-repeat left 30%;
+}
+div.right{
+	display:block;
+	border-left:1px solid #ccc;
+	 width:83.5%;
+	float:left;
+	min-height:525px;	
+}
+iframe{
+	width:100%;
+	border:none;
+	min-height:525px;	
+}

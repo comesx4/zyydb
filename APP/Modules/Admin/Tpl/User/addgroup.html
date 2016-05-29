@@ -1,0 +1,37 @@
+<include file="Common:header"/>
+
+	<form action='<{:U('insertGroup')}>' method='post' >
+	 <table class="table table-condensed table-hover table-active">
+        <thead>
+            <tr class="active">
+                <td colspan="2">
+                    <a class="btn btn-info" href="<{:U('group')}>">用户组列表</a>
+                </td>
+                <td colspan="12"></td>
+            </tr>
+        </thead>
+		<tr>
+			<td class='first'>用户组名称：</td>
+			<td><input type='text' name='name'/></td>
+		</tr>
+		<tr>
+			<td class='first'>用户描述</td>
+			<td><input type='text' name='remark'/></td>
+		</tr>
+		<tr>
+			<td class='first'>是否开启</td>
+			<td><input type='radio' checked name='status' value='1'/>开启<input type='radio' name='status' value='0'/>关闭</td>
+		</tr>
+		
+		<tfoot>
+            <tr>
+                <td class='first'></td>
+                <td>
+                	<input class="btn btn-success" type="submit" value="保 存"/>
+                    <a class="btn btn-default" href="<{:U('group')}>">取 消</a>
+               </td> 
+           </tr>
+        </tfoot>
+    </table>
+</form>
+<include file="Common:footer"/>

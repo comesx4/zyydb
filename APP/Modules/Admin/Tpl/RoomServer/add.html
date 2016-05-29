@@ -1,0 +1,116 @@
+<include file="Common:header"/>
+
+<form action='<{:U('insert')}>' method='post'>
+    <table class="table table-condensed table-hover table-active">
+        <thead>
+            <tr class="active">
+                <td colspan="2">
+                    <a class="btn btn-info" href="<{:U('index')}>">机房服务器列表</a>
+                </td>
+            </tr>
+        </thead>
+        
+        <tbody>
+		    <tr>
+                <td class='first'>状态：</td>
+                <td>
+					<select name='status'>
+                        <option value='0'>库存</option>
+                        <option value='1'>已上架</option>
+                        <option value='2'>已发走</option>
+                    </select>
+				</td>
+            </tr>
+            <tr>
+                <td class='first'>类型：</td>
+                <td>
+                    <select name='status'>
+                        <option value='0'>存储服务器</option>
+                        <option value='1'>母服务器</option>
+                        <option value='2'>租用</option>
+                        <option value='3'>托管</option>
+                    </select>
+                </td>
+            </tr>
+            
+            <tr>
+                <td class='first'>所属机房：</td>
+                <td>
+                    <{$region}>
+                </td>
+            </tr>
+            
+            <tr>
+                <td class='first'>服务器名称：</td>
+                <td><input type='text' name='server_name' value=''/></td>
+            </tr>
+
+            <tr>
+                <td class='first'>服务器编号：</td>
+                <td><input type='text' name='server_code' value=''/></td>
+            </tr>
+
+            <tr>
+                <td class='first'>CPU：</td>
+                <td><input type='text' name='cpu' value=''/></td>
+            </tr>
+
+            <tr>
+                <td class='first'>内存：</td>
+                <td><input type='text' name='memory' value=''/></td>
+            </tr>
+
+            <tr>
+                <td class='first'>硬盘：</td>
+                <td><input type='text' name='disk' value=''/></td>
+            </tr>
+
+            <tr>
+                <td class='first'>网卡：</td>
+                <td><input type='text' name='network' value=''/></td>
+            </tr>
+
+            <tr>
+                <td class='first'>其他硬件：</td>
+                <td><input type='text' name='other' value=''/></td>
+            </tr>
+            
+            <tr>
+                <td class='first'>尺寸：</td>
+                <td><input type='text' name='size' value=''/></td>
+            </tr>
+
+            <tr>
+                <td class='first'>快递单号：</td>
+                <td><input type='text' name='express_code' value=''/></td>
+            </tr>
+
+            <tr>
+                <td class='first'>机器所有者：</td>
+                <td><input type='text' name='owner' value=''/></td>
+            </tr>
+
+            <tr>
+                <td class='first'>机柜位置：</td>
+                <td><input type='text' name='position' value=''/></td>
+            </tr>
+            <tr>
+                <td class='first'>备注：</td>
+                <td>
+                    <textarea class="command" name="remark" maxlength="2048" placeholder=""></textarea>
+                </td>
+            </tr>
+        </tbody>
+        
+       <tfoot>
+            <tr>
+                <td class='first'></td>
+                <td>
+                    <input class="btn btn-success" type="submit" value="保 存"/>
+                    <a class="btn btn-default" href="<{:U('index')}>">取 消</a>
+               </td> 
+           </tr>
+        </tfoot>
+    </table>
+</form>
+<include file="Common:footer"/>

@@ -1,0 +1,65 @@
+  <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+<head>
+    <title><{$stitle|makwebtitle}></title>
+ <include file='Common:com-header'/>
+<link rel="stylesheet" href="__PUBLIC__/Css/about.css" />  
+</head>
+<body>
+   <div id='body'>
+  <!-- 顶部公共部分 -->
+    <include file='Common:home-header'/>
+    <!-- 顶部公共结束 -->
+    
+  <div id='slides'>
+    <div style="background-color:#fff6dd;padding:0;"class="tab-pannel">
+                <img  src="__ROOT__/Uploads/Logo/<{$Think.config.img4}>" >                
+            </div>
+  </div>
+
+
+  
+   <div class='body-content'>
+
+        <div class="y-row content-wrapper">
+        <include file='Common:about-left'/>
+            <div class='content-right'>
+               <div class='nav-wei'>
+                        <ul> <li><a  target='_self' href="<{:U('/index/index')}>">首页</a></li>     
+                            <li><a  target='_self' href="<{:U('contact')}>">联系我们</a></li>                            
+                        </ul>
+                                   
+                </div>
+                <div class='right-main'>
+                    <div class='fiexd'>
+                  
+                    <div class='inner'>
+                                   
+                 <h2 class="blog-post-title">杭州智御网络科技有限公司</h2>
+                 <ul>
+                     <li>电话：+86571 88288888</li>
+                      <li>传真：+86571 88288888</li>
+                       <li>地址：杭州市滨江区秋溢路东冠高新科技园1幢 603室</li>
+                       <li>网站：http://www.supwall.com</li>
+                 </ul>
+                    </div>
+                   
+                </div>
+                </div>                    
+
+                </div>
+               
+            </div>
+        </div>
+
+
+    </div>
+
+    <!--底部版权开始-->
+    <include file='Common:bottom'/>
+    <!--底部版权结束-->
+
+  </div>
+</body>
+</html>
+

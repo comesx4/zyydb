@@ -1,0 +1,74 @@
+<include file="Common:header"/> 
+    <script type="text/javascript" src='__PUBLIC__/Js/help.js'></script>
+    <script type="text/javascript">
+    	var get_info='<{:U('NodeCat/get_info')}>';
+    </script>
+
+<form action='<{:U('insertNode')}>' method='post' >
+	 <table class="table table-condensed table-hover table-active">
+        <thead>
+            <tr class="active">
+                <td colspan="2">
+                    <a class="btn btn-info" href="<{:U('node')}>"><{$mess}>列表</a>
+                </td>
+                <td colspan="12"></td>
+            </tr>
+        </thead>
+		<tr>
+			<td class='first'>所属类别:</td>
+			<td class='addCat'><{$cat}></td>
+		</tr>
+		<tr>
+			<td class='first'><{$mess}>名称:</td>
+			<td><input type='text' name='name' value='<{$data.name}>'/></td>
+		</tr>
+	<if condition="$mess eq '方法'">
+	    <tr>
+			<td class='first'>方法全名:</td>
+			<td><input type='text' name='title' value='<{$data.name}>/'/></td>
+		</tr>
+		<tr>
+			<td class='first'>是否显示:</td>
+			<td >
+				<input type='radio' checked id='is0' name='type' value='0'/><label for='is0'>显示</label>
+				<input type='radio' id='is1' name='type' value='1'/><label for='is1'>不显示</label>
+			</td>
+		</tr>
+	</if>
+		<tr>
+			<td class='first'><{$mess}>描述:</td>
+			<td><input type='text' name='remark'/></td>
+		</tr>
+	<if condition="$mess eq '控制器'">
+		<tr>
+			<td class='first'>常用属性:</td>
+			<td>
+				<input type='checkbox' checked id='attr' name='attr' value='1'/><label for='attr'>添加常用方法</label>
+			</td>
+		</tr>
+	</if>
+		<tr>
+			<td class='first'>是否开启:</td>
+			<td>
+				<input type='radio' checked name='status' value='1'/>开启<input type='radio' name='status' value='0'/>关闭
+			</td>
+		</tr>
+		<tr>
+			<td class='first'>排序:</td>
+			<td><input type='text'  name='sort' value='0'/></td>
+			   <input type="hidden" name="pid" value="<{$pid}>"/>
+               <input type="hidden" name="level" value="<{$level}>"/>
+		</tr>
+		
+		<tfoot>
+            <tr>
+                <td class='first'></td>
+                <td>
+                	<input class="btn btn-success" type="submit" value="保 存"/>
+                    <a class="btn btn-default" href="<{:U('node')}>">取 消</a>
+               </td> 
+           </tr>
+        </tfoot>
+    </table>
+</form>
+<include file="Common:footer"/>

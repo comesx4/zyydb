@@ -1,0 +1,152 @@
+*{
+	margin:0;
+	padding:0;
+	font-size:12px;
+	font-weight:300;
+}
+.login-tip {
+    color: #666;
+    display: block;
+    font-size: 12px;
+    margin: 20px auto;
+    text-align: right;
+    width: 990px;
+}
+.steps {
+    border-bottom: 2px solid #e6e6e6;
+    width:100%;
+    height: 46px;
+    position: relative;
+}
+.reg-iframe{
+	margin:10px auto;
+	width:768px;
+	height:500px;
+
+}
+div.steps ul{
+	padding:0;
+    padding-left: 79px;
+}
+div.steps ul li{
+	float:left;
+	display:inline;
+	margin-left:36px;
+	font-size:21px;
+
+	height:100%;
+
+
+}
+div.steps ul li i{
+
+	display:inline-block;
+	width:25px;
+	height:25px;
+	background:blue;
+	line-height:25px;
+	text-align: center;
+	border-radius:25px;
+}
+div.steps ul li span,div.steps ul li i{
+	font-size:17px;
+	font-weight:700;
+
+}
+iframe{
+	width:100%;
+	height:100%;
+}
+
+div.lang-zh-S div.from-group{
+	margin-top:20px;
+
+}
+div.lang-zh-S div.from-group p,div.lang-zh-S div.from-group h3{
+	width: 400px;
+	margin:10px auto;
+	margin-bottom:10px;
+	position:relative;
+
+}
+div.lang-zh-S div.from-group p label{
+	display:inline-block;
+	width:100px;
+	text-align:right;
+	font-size:14px;
+	margin-right:12px;	
+}
+div.lang-zh-S div.from-group p span{
+	position:absolute;
+	display: inline-block;
+	width: 200px;
+	top:10px;
+}
+div.lang-zh-S div.from-group p input[type=text],div.lang-zh-S div.from-group p input[type=password]{
+	background: none repeat scroll 0 0 #fff;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    color: #000;
+    height: 17px;
+    line-height: 17px;
+    outline: medium none;
+    padding: 9px;
+    transition: all 0.3s ease 0s;
+    width: 202px;
+}
+div.lang-zh-S div.from-group p input[name=verify]{
+	width: 122px;
+}
+div.lang-zh-S div.from-group p input[name=verify] + span{
+	left:350px;
+}
+div.lang-zh-S div.from-group p input[name=code] + span{
+	left:500px;
+}
+div.lang-zh-S div.from-group p input#information{
+	display: inline-block;
+	height:38px;
+	line-height: 30px; 
+	text-align: center;
+	width: 80px;
+	border:1px solid #008FB2;
+	background: #fff;
+	border-radius: 4px;
+	cursor: pointer;
+}
+div.lang-zh-S div.zun p{
+	text-align:center;
+
+}
+div.lang-zh-S div.form-item{
+	text-align:center;
+	margin-top:20px;
+
+}
+div.lang-zh-S div.form-item input{
+	background: none repeat scroll 0 0 #008fb2;
+    color: #fff;
+    border:none;
+    border-radius:5px;
+    display: inline-block;
+    font-size: 14px;
+    height: 33px;
+    line-height: 33px;
+    min-width: 180px;
+    outline: medium none;
+    padding: 0 30px 1px;
+    text-align: center;
+    cursor:pointer;
+    
+}
+
+span.error{
+	background : url(../Images/unchecked.gif) no-repeat 0 0;
+	padding-left: 16px;
+	margin-left: 8px;
+	color: #f00;
+}
+span.succ{
+	background : url(../Images/checked.gif) no-repeat 0 0;
+	margin-left: 8px;
+}

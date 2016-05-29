@@ -1,0 +1,56 @@
+<include file="Common:header"/>
+
+<form action='<{:U('insert')}>' method='post' enctype='multipart/form-data'>
+	 <table class="table table-condensed table-hover table-active">
+        <thead>
+            <tr class="active">
+                <td colspan="2">
+                    <a class="btn btn-info" href="<{:U('index')}>">产品列表</a>
+                </td>
+            </tr>
+        </thead>
+		<tr>
+			<td class='first'>所属分类:</td>
+			<td><{$cat}></td>
+		</tr>
+		<tr>
+			<td class='first'>产品名称:</td>
+			<td><input type='text' name='goods' /></td>
+		</tr>
+		<tr>
+			<td class='first'>表名:</td>
+			<td><input type='text' name='table_name' value='' /></td>
+		</tr>
+		<tr>
+			<td class='first'>是否审核:</td>
+			<td><input type='radio' checked name='goodstype' value='0'/>否<input type='radio' name='goodstype' value='1'/>是</td>
+		</tr>
+		<tr>
+			<td class='first'>是否上架:</td>
+			<td><input type='radio' checked name='grounding' value='0'/>否<input type='radio' checked name='grounding' value='1'/>是</td>
+		</tr>
+		<tr>
+			<td class='first'>产品LOGO:</td>
+			<td><input type='file' class='file' name='img' /></td>
+		</tr>
+		<tr>
+			<td class='first'>产品介绍图:</td>
+			<td><input type='file' class='file' name='introduction_img' /></td>
+		</tr>		
+		<tr>
+			<td class='first'>产品样式:</td>
+			<td><{$css}></td>
+		</tr>
+		
+	  <tfoot>
+            <tr>
+                <td class='first'></td>
+                <td>
+                	<input class="btn btn-success" type="submit" value="保 存"/>
+                    <a class="btn btn-default" href="<{:U('index')}>">取 消</a>
+               </td> 
+           </tr>
+        </tfoot>
+    </table>
+</form>
+<include file="Common:footer"/>

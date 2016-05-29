@@ -1,0 +1,187 @@
+
+
+div.main{
+	width:100%;
+	height:600px;
+	background:#fff;
+}
+
+div.main div.main-right{
+	margin-left:2%;
+	margin-top:2%;
+	float:left;
+	width:65%;
+	height:80%;
+	border:1px solid #ccc;
+	border-radius:4px;
+	padding:2%;
+	background:url('../Images/userinfobackground.png') repeat-x;
+}
+div.main div.main-right h3{
+	font-size:15px;
+	padding-bottom:10px;
+	border-bottom:1px solid #ccc;
+	margin-bottom:10px;
+
+}
+ div.main div.main-right a{
+	color:#6FCAFF;
+}
+ div.main div.main-right a:hover{
+	text-decoration:underline;
+}
+div.main div.main-right p{
+	padding:12px 20px;
+	font-size:14px;
+	
+}
+div.main div.main-right p span{
+	font-size:14px;
+
+	
+}
+div.main div.main-right p.right-one span.right-account span{
+	color:red;
+	font-size:21px;
+	font-weight:800;
+	margin:0 4px;
+	
+}
+div.main div.main-right p.right-two{
+	padding:12px 50px;
+}
+div.main div.main-right p.right-two input{
+	background:#fff;
+	border:1px solid #ccc;
+	border-radius:3px;
+	height:25px;
+	width:60px;
+	margin:0 8px;
+}
+div.main div.main-right div.online-list{
+	padding-left:20px;
+	padding-top:10px;
+}
+div.main div.main-right div.online-list dl{
+	float:left;
+	height:37px;
+	width:30%;
+	margin-bottom:10px;
+	
+
+}
+div.main div.main-right div.online-list dl dt{
+	float:left;
+	height:37px;
+	line-height:37px;
+	margin-right:10px;
+
+
+}
+div.main div.main-right div.online-list dl dd{
+	float:left;
+
+}
+div.main div.main-right p.right-for{
+	clear:both;
+	padding-left:100px;
+    padding-top:25px;
+}
+div.main div.main-right p.right-for input{
+	border:none;
+	background:#FFC500;
+	width:70px;
+	height:25px;
+	border-radius:4px;
+	color:#fff;
+	margin:0 6px;
+	cursor:pointer;
+
+}
+.hidden{
+	display:none;
+}
+ .fix-bottom .cons {
+    background: none repeat scroll 0 0 red;
+    margin: 0 auto;
+    width: 95%;
+}
+.fix-bottom .cons .title {
+    background: none repeat scroll 0 0 #f7f7f7;
+    border-left: 2px solid #ff9a00;
+    float: left;
+    width: 100%;
+}
+ .fix-bottom .cons .title i {
+    display: inline-block;
+    float: left;
+    padding: 10px 7px;
+    width: 120px;
+}
+.fix-bottom .cons .title ul {
+    float: left;
+}
+ .fix-bottom .cons .title ul li {
+    cursor: pointer;
+    float: left;
+    padding: 10px 25px;
+}
+.fix-bottom .cons .title ul li.show {
+    background: none repeat scroll 0 0 #fff;
+    border-top: 2px solid #ff9a00;
+    padding: 10px 7px;
+}
+.fix-bottom .cons .title span {
+    display: inline-block;
+    float: right;
+    font-size: 14px;
+    padding: 10px 25px;
+}
+.fix-bottom .cons .title span em {
+    color: #ff6600;
+    font-size: 15px;
+}
+ .fix-bottom .pros {
+    border-bottom: 1px dashed #ccc;
+    float: left;
+    padding: 20px 0;
+    width: 100%;
+}
+.fix-bottom .pros dl {
+    float: left;
+    height: 37px;
+    margin-bottom: 10px;
+    width: 30%;
+}
+ .fix-bottom .pros dl dt {
+    float: left;
+    height: 37px;
+    line-height: 37px;
+    margin-left: 20px;
+    margin-right: 10px;
+}
+#fix .pros dl dd {
+    float: left;
+}
+.submit-box {
+    float: left;
+    padding: 60px 10px 60px 40px;
+    text-align: right;
+    width: 90%;
+}
+.submit {
+    background: none repeat scroll 0 0 #ff6600;
+    border: medium none;
+    border-radius: 4px;
+    color: #fff;
+    display: inline-block;
+    font-size: 14px;
+    height: 40px;
+    line-height: 40px;
+    width: 120px;
+}
+
+
+
+
+

@@ -1,0 +1,16 @@
+<!--左半部分-->
+		<div class='main-left'>
+			<ul>
+				<li>会员信息管理</li>
+                                
+                                <li <if condition="ACTION_NAME  eq userinfo"> class='two'</if> ><a href="<{:U('User/userinfo')}>">安全设置</a></li>
+                         <li <if condition="ACTION_NAME  eq dindan"> class='two'</if> ><a href="<{:U('User/dindan')}>">我要下单</a></li>
+                        <li <if condition="ACTION_NAME  eq dindanlist"> class='two'</if> ><a href="<{:U('User/dindanlist')}>">我的订单</a></li>
+                                <li <if condition="ACTION_NAME  eq info"> class='two'</if>><a href="<{:U('User/info')}>">基本资料</a></li>								
+				<li <if condition="ACTION_NAME  eq contacter"> class='two'</if>><a href="<{:U('User/contacter')}>">联系人管理</a></li>
+				<!--<li><a href="">账户绑定</a></li>
+				<li><a href="">实名认证</a></li>-->
+			</ul>
+			
+		</div>
+		<!--左半部分结束-->

@@ -1,0 +1,78 @@
+<include file="Common:header"/>
+
+<form action='<{:U('ddosSave')}>' method='post'>
+    <table class="table table-condensed table-hover table-active">
+        <thead>
+            <tr class="active">
+                <td colspan="2">
+                    <a class="btn btn-info" href="<{:U('index')}>">产品列表</a>
+                </td>
+                <td colspan="12"></td>
+            </tr>
+        </thead>
+        
+        <tbody>
+		  
+            <tr>
+                <td class='first'>状态:</td>
+                <td>
+					<{:goods_status($data['gid'],$data['status'],'status')}>
+                </td>
+            </tr>
+            <tr>
+                <td class='first'>外网IP:</td>
+                <td><input type='text' name='wan_ip' value='<{$data.wan_ip}>'/></td>
+            </tr>
+
+            <tr>
+                <td class='first'>CPU:</td>
+                <td><input type='text' name='cpu' value='<{$data.cpu}>'/></td>
+            </tr>
+
+            <tr>
+                <td class='first'>内存:</td>
+                <td><input type='text' name='memory' value='<{$data.memory}>'/></td>
+            </tr>
+
+            <tr>
+                <td class='first'>带宽:</td>
+                <td><input type='text' name='band' value='<{$data.band}>'/></td>
+            </tr>
+
+            <tr>
+                <td class='first'>机柜位置:</td>
+                <td><input type='text' name='cabinet_position' value='<{$data.cabinet_position}>'/></td>
+            </tr>
+
+             <tr>
+                <td class='first'>机柜大小:</td>
+                <td><input type='text' name='cabinet_size' value='<{$data.cabinet_size}>'/></td>
+            </tr>
+
+            <tr>
+                <td class='first'>资产编号:</td>
+                <td><input type='text' name='assets_code' value='<{$data.assets_code}>'/></td>
+            </tr>
+            <tr>
+                <td class='first'>备注:</td>
+                <td>
+                    <textarea class="command" name="remark" maxlength="2048" placeholder=""><{$data.remark}></textarea>
+                </td>
+            </tr>
+        </tbody>
+        
+        <tfoot>
+            <tr >
+                <td class='first'></td>
+                <td>
+                    <input type='hidden' name='gid' value='<{$data.gid}>'/>
+                    <input type='hidden' name='tid' value='<{$data.tid}>'/>
+                    <input type='hidden' name='id' value='<{$data.id}>'/>
+                	<input class="btn btn-success" type="submit" value="保 存"/>
+                    <a class="btn btn-default" href="<{:U('index')}>">取 消</a>
+               </td> 
+           </tr>
+        </tfoot>
+    </table>
+</form>
+<include file="Common:footer"/>

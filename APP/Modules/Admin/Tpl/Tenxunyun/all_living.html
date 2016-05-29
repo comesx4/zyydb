@@ -1,0 +1,37 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+<head>
+    <meta http-equiv="Content-Type" content="text/html;charset=UTF-8" />
+    <title>所有实例</title>
+    <link rel="stylesheet" href="__PUBLIC__/Css/Common.css" />     
+  
+<body>
+	<form name='form' action='<{:U('index')}>' method='post'>
+	<table class='table'>
+		<tr>
+			<th>别名</th>
+			<th>ID</th>
+			<th>内网IP</th>
+			<th>外网IP</th>
+			<th>镜像ID</th>
+			<th>状态</th>
+			<th>可用区</th>
+
+		</tr>
+	<foreach name='data.instanceSet' item='v'>
+		<tr>
+			<td><{$v.instanceName}></td>
+			<td><{$v.instanceId}></td>
+			<td><{$v.lanIp}></td>
+			<td><{$v.wanIpSet.0}></td>
+			<td><{$v.imageId}></td>	
+			<td><{$v.status|tenxunyun_status=###}></td>	
+			<td><{$v.Region}></td>	
+		</tr>
+	</foreach>
+	   
+	</table>
+    </form>
+	
+</body>
+</html

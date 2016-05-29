@@ -1,0 +1,155 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+<head>
+  <meta http-equiv="Content-Type" content="text/html;charset=UTF-8" />
+<title><{$stitle|makwebtitle}></title>
+   <link rel='stylesheet' href='__PUBLIC__/Css/userinfo-left.css' />
+  <link rel="stylesheet" href="__PUBLIC__/Css/userinfo.css" />
+  <link rel='stylesheet' href='__PUBLIC__/Css/max-header.css' />
+  <link rel='stylesheet' href='__PUBLIC__/Css/nav.css' />
+  <link rel='stylesheet' href='__PUBLIC__/Css/bottom.css' />
+  <js file='__PUBLIC__/Js/jquery-1.7.2.min.js'/>
+  <js file='__PUBLIC__/Js/nav.js'/>
+  <js file='__PUBLIC__/Js/float.js'/>
+  <js file='__PUBLIC__/Js/userinfo.js'/>
+  <js file='__PUBLIC__/Js/bottom.js'/>
+  <script type="text/javascript">
+    var setFace='<{:U('User/setFace')}>';
+  </script>
+
+</head>
+<body>
+  <!--顶部头-->
+ <include file='Common:p-header'/>
+  <!--顶部头结束-->
+  
+  <!--头部公共部分-->
+  <include file='Common:nav'/>
+  <!--头部公共部分结束--> 
+  
+
+    <!--主题内容-->
+	<div class='main'>
+	<!--左半部分-->
+	<include file='Common:userinfo-left'/>
+	<!--左半部分结束-->
+
+        <!--右半部分-->
+		<div class='main-right'>
+			<h3>安全设置</h3>
+			<dl>
+				<dt>
+					<ul>
+						<li><img width='120' src=<if condition="$phone['face'] neq ''">
+							'__ROOT__/Uploads/Face/<{$phone.face}>'
+							<else/>'__PUBLIC__/Images/datou.png'</if>/></li>
+						<li><span style='cursor:pointer;' class='showface' href="">修改头像</span></li>
+					</ul>
+				</dt>
+
+				<dd class='username'>登陆账号：<{$userinfo.username|replace_email=###}> <a href=''>修改</a>（<span>未认证，</span><a href="">点击实名认证</a>）</dd>
+				<dd>账号ID：<span><{$userinfo.id}></span></dd>
+                <dd>注册时间： <span><{$userinfo.register|date='Y-m-d H:i:s',###}></span></dd>
+			</dl>
+			<div class='secure-level'>
+				您当前的账号安全程度<span style='display:inline-block;width:279px;height:25px;background:url("__PUBLIC__/Images/anquan.gif") no-repeat 0 -25px;position:relative;top:8px;margin: 0 10px;'>&nbsp;</span>安全级别：<span>中</span>继续努力
+
+
+
+			</div>
+
+			<ul class='secure-status'>
+				<li>
+					<dl>
+						<dt>登陆密码</dt>
+						<dd class='content'>安全性高的密码可以使帐号更安全。建议您定期更换密码，设置一个包含字母，符号或数字中至少两项且长度超过6位的密码。</dd>
+						<dd class='success'>已设置</dd>
+						<dd><a href="">修改</a></dd>
+					</dl>
+				</li>
+				<li>
+					<dl>
+						<dt>手机绑定</dt>
+						<dd class='content'>您已绑定了手机<{$phone.telephone|replace_email=###}>。[您的手机为安全手机，可以找回密码，但不能用于登录]</dd>
+						<dd class='success'>已设置</dd>
+						<dd><a href="">更换</a></dd>
+					</dl>
+				</li>
+				<li>
+					<dl class='first'>
+						<dt>密保问题</dt>
+						<dd class='content'>是您找回登录密码的方式之一。建议您设置三个容易记住，且最不容易被他人获取的问题及答案，更有效保障您的密码安全。</dd>
+						<dd class='error'>未设置</dd>
+						<dd><a href="">设置</a></dd>
+					</dl>
+				</li>
+
+			</ul>
+			
+		</div>
+	</div>
+	 <!--右半部分结束-->
+	<include file='Common:bottom' />
+	<!--主题内容结束-->
+
+	<!--修改头像对话框-->
+	<div id='setface'>
+		<div id='setface-top'>
+		  <ul class='list-face'>
+			<li style='background:#fff;'>本地头像上传</li>
+			<li>头像个性编辑</li>
+		  </ul>
+		  <span class='close'>&nbsp;</span>
+		</div>
+	
+		<div class='setface-content faceshow'>
+			<form action='<{:U('User/setFace')}>' method='post' enctype='multipart/form-data'>
+			<div class='setface-small'>
+				<p>
+					从电脑中挑选一张好图作为图片吧
+				</p>
+				<p>
+					<input type='file' name='face' value='选择图片文件'/>
+				</p>
+				<p>
+				支持jpg/gif/png格式图片，文件需小于2M
+			    </p>
+
+			</div>
+			<div class='buttons'>
+				<input class='close' type='button' value='返回'/>
+				<input type='submit' value='修改'/>
+			</div>
+			</form>
+		</div>
+
+		<div class='setface-content faceshow hidden'>
+			<div class='setavatar-container'>
+			   <p>
+				  从个性头像库里选择一张图片作为头像
+			   </p>
+			   <div class='setface-pic'>
+			   	<img class='border' sr='face1.jpg' src='__ROOT__/Uploads/Face/face1.jpg'/>
+			   	<img sr='face2.jpg' src='__ROOT__/Uploads/Face/face2.jpg'/>
+			   	<img sr='face3.jpg' src='__ROOT__/Uploads/Face/face3.jpg'/>
+			   	<img sr='face4.jpg' src='__ROOT__/Uploads/Face/face4.jpg'/>
+			   	<img sr='face5.jpg' src='__ROOT__/Uploads/Face/face5.jpg'/>
+			   	<img sr='face6.jpg' src='__ROOT__/Uploads/Face/face6.jpg'/>
+
+			   </div>
+			   <dl class='setface-right'>
+			   	   <dt><img class='liulang' src='__ROOT__/Uploads/Face/face1.jpg'/></dt>
+			   	   <dd>头像浏览</dd>
+			   </dl>
+
+		    </div>
+		    <div class='buttons'>
+				<input class='close' type='button' value='返回'/>
+				<input type='button' class='save-face' value='修改'/>
+			</div>
+		</div>
+	
+	</div>
+	<!--修改头像对话框结束-->
+</body>
+</html>

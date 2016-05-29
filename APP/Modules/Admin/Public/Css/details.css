@@ -1,0 +1,60 @@
+body{
+	font-family:'微软雅黑';
+	font-size: 12px;
+}
+.take{
+	border:1px solid #ccc;
+	overflow: hidden;
+	padding:25px;
+	margin-bottom:25px;
+}
+.take p.fpage{
+	text-align: center;
+}
+.take dl{
+	float: left;   
+    border-bottom: 1px dashed #ccc;
+    margin-bottom:15px;
+	width: 100%;
+}
+.take dl dt{
+	float: left;
+	height: 100%;
+	padding-bottom: 15px;
+
+}
+ .take dl dt img{
+	width: 50px;
+	
+}
+.take dl dd{
+	float: right;
+	width:92%;
+	overflow: hidden;
+	padding:6px 0;
+	text-align: left;
+	color: #999;
+	margin:0;
+
+}
+.take dl dd span.hei{
+	color: #000;
+}
+.take dl dd.date{
+	color: #ccc;
+}
+textarea{
+	width: 90%;
+	height:100px;
+}
+.submit{
+	display: inline-block;
+	width: 120px;
+	height:30px;
+	color: #fff;
+	border:none;
+	background: #00A2CA;
+	border-radius: 4px;
+	cursor: pointer;
+
+}

@@ -1,0 +1,38 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+<head>
+ <title><{$stitle|makwebtitle}></title>
+ <include file='Common:com-header'/>
+ <link rel='stylesheet' href='__PUBLIC__/Css/notice.css' />  
+<body>
+    <!-- 顶部公共部分 -->
+    <include file='Common:home-header'/>
+    <!-- 顶部公共结束 -->
+    <div class='back'>
+        <img src="__ROOT__/Uploads/Goods/55d5951010a45.jpg">
+    </div>
+
+    <div class='body-content y-row'>
+        <include file='Common:notice-left'/>
+
+        <div class='right'>
+            <div class='right-title'>
+                <h2><{$data.title}></h2>
+                <p>发表于：<{$data.create_time|date='Y-m-d H:i',###}>&nbsp;&nbsp;来源：<{$data.source}>&nbsp;&nbsp;分享到:</p>
+            </div>      
+
+            <div class='right-content'><{$data.content|htmlspecialchars_decode=###}></div>
+            
+            <!-- 底部信息 -->
+            <div class='right-bottom'>
+                <p class='key'><{$data2.username}></p>
+                <p class='key'><{$data.create_time|date='Y年m月d日',###}></p>
+            </div>
+            <!-- 底部信息end -->
+        </div>
+    </div>
+
+
+    <include file='Common:bottom'/>
+</body>
+</html>

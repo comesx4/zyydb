@@ -1,0 +1,268 @@
+  <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+<head>
+    <title><{$stitle|makwebtitle}></title>
+ <include file='Common:com-header'/>
+  <link rel="stylesheet" href="__PUBLIC__/Css/index_1.css" /> 
+  <link rel="stylesheet" href="__PUBLIC__/Css/index.css" /> 
+    <link rel="stylesheet" href="__PUBLIC__/Css/index/hzdw.css" /> 
+</head>
+<body>
+   <div id='body'>
+  <!-- 顶部公共部分 -->
+    <include file='Common:home-header'/>
+    <!-- 顶部公共结束 -->
+
+  <!--图片轮播-->
+  <div id="myCarousel" class="carousel slide carousel-fade "  data-ride="carousel" data-interval="2000">
+   <!-- 轮播（Carousel）指标 -->
+   <ol class="carousel-indicators">
+      <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+      <li data-target="#myCarousel" data-slide-to="1"></li>
+      <li data-target="#myCarousel" data-slide-to="2"></li>
+      <li data-target="#myCarousel" data-slide-to="3"></li>
+      <li data-target="#myCarousel" data-slide-to="4"></li>
+      <li data-target="#myCarousel" data-slide-to="5"></li>
+      <li data-target="#myCarousel" data-slide-to="6"></li>
+   </ol>   
+   <!-- 轮播（Carousel）项目 -->
+   <div class="carousel-inner">
+      
+      <div class="item active"  style="background:#201f2d">
+          <div class="bannerImg" style="background:url('__PUBLIC__/Images/home/banner_img1.jpg') no-repeat center center"> 
+              <div class="carousel-caption"></div>                  
+          </div>
+      </div>
+      <div class="item"  style="background:#201f2d">
+          <div class="bannerImg" style="background:url('__PUBLIC__/Images/home/banner_img2.jpg') no-repeat center center"> 
+              <div class="carousel-caption"></div>                  
+          </div>
+      </div>
+    <div class="item"  style="background:#201f2d">
+          <div class="bannerImg" style="background:url('__PUBLIC__/Images/home/banner_img3.jpg') no-repeat center center"> 
+              <div class="carousel-caption"></div>                  
+          </div>
+      </div>
+       <div class="item"  style="background:#201f2d">
+          <div class="bannerImg" style="background:url('__PUBLIC__/Images/home/banner_img4.jpg') no-repeat center center"> 
+              <div class="carousel-caption"></div>                  
+          </div>
+      </div>
+        <div class="item"  style="background:#201f2d">
+          <div class="bannerImg" style="background:url('__PUBLIC__/Images/home/banner_img5.jpg') no-repeat center center"> 
+              <div class="carousel-caption"></div>                  
+          </div>
+      </div>
+        <div class="item"  style="background:#201f2d">
+          <div class="bannerImg" style="background:url('__PUBLIC__/Images/home/banner_img6.jpg') no-repeat center center"> 
+              <div class="carousel-caption"></div>                  
+          </div>
+      </div>
+        <div class="item"  style="background:#201f2d">
+          <div class="bannerImg" style="background:url('__PUBLIC__/Images/home/banner_img7.jpg') no-repeat center center"> 
+              <div class="carousel-caption"></div>                  
+          </div>
+      </div>
+   </div>
+   <!-- 轮播（Carousel）导航 -->
+   <a class="carousel-control left" href="#myCarousel" 
+      data-slide="prev"> </a>
+   <a class="carousel-control right" href="#myCarousel" 
+      data-slide="next"> </a>
+</div>
+  <!--图片轮播结束-->
+
+  <!--公告区域-->
+  <div class="home-notice y-row">
+    <foreach name='notice' item='v'>
+    <div class="y-span3 ">                
+                <span class="icon icon-bullhorn">&nbsp;</span>
+                <span>·</span>                
+            <a href="<{:U('Notice/detail',array('id' => $v['id']))}>" target="" class="home-grey">
+                <span class="date">[<{$v.create_time|date='Y-m-d',###}>]</span>
+                <{$v.title}>
+            </a>
+    </div>
+  </foreach>     
+        <div class="y-span3 ">
+            <img width="260" style="max-width:100%;position:relative;top:10px" src="http://gtms04.alicdn.com/tps/i4/TB153fzFVXXXXc.XpXXGdSuUVXX-520-24.png">
+        </div>
+  </div>
+  <!--公告区域结束-->
+   <!--服务开通-->
+  <div class="row y-row">
+        <div class="col-lg-4">
+          <h2>单机租用托管</h2>
+          <p class="text-danger">与优秀IDC服务商合作，打造高性能DDOS防御云清洗平台云架构智能调度中心，
+              可快速跨机房调度防御资源灵活API扩展更多合作渠道，防御资源不断增加
+          <p><a class="btn btn-default" href="<{:U('Pinfo/dj')}>" role="button">查看详情 &raquo;</a></p>
+        </div>
+        <div class="col-lg-4">
+          <h2>整柜租用托管</h2>
+          <p>针对网络7层协议全方位层级防御；防御策略设置全面、灵活、精准；
+                  专业的攻击分析，可有效防御未知种类攻击；高级体验，客户可灵活自调整防御策略</p>
+          <p><a class="btn btn-default" href="<{:U('Pinfo/zg')}>" role="button">查看详情 &raquo;</a></p>
+       </div>
+        <div class="col-lg-4">
+          <h2>普防</h2>
+          <p>DDoS防御最前沿技术人员和多年防御运维经验是服务最宝贵的核心力量；
+                  源站监控告警服务，时刻关心客户资源异常；7*24小时全心全意全方位服务
+          </p>
+          <p><a class="btn btn-default" href="<{:U('Pinfo/pf')}>" role="button">查看详情 &raquo;</a></p>
+        </div>
+     
+        <div class="col-lg-4">
+          <h2>高防</h2>
+          <p >与优秀IDC服务商合作，打造高性能DDOS防御云清洗平台云架构智能调度中心，
+              可快速跨机房调度防御资源灵活API扩展更多合作渠道，防御资源不断增加
+          <p><a class="btn btn-default" href="<{:U('Pinfo/gf')}>" role="button">查看详情 &raquo;</a></p>
+        </div>  
+        <div class="col-lg-4">
+          <h2>促俏活动</h2>
+          <p>DDoS防御最前沿技术人员和多年防御运维经验是服务最宝贵的核心力量；
+                  源站监控告警服务，时刻关心客户资源异常；7*24小时全心全意全方位服务
+          </p>
+          <p><a class="btn btn-default" href="<{:U('cuxiao/index')}>" role="button" target="_blank">查看详情 &raquo;</a></p>
+        </div>
+      </div>
+    <!--服务开通结束-->
+  
+     <!--合作单位-->
+     <div class="" style="background: #ccc;">
+    <div class="container">
+        <div class="row-fluid">
+            <div class="span12">
+                <div class="carousel slide" id="myCarouse2">
+                    <div class="carousel-inner">
+                        <div class="item active">
+                            <ul class="thumbnails">
+                                <li class="span3">
+                                    <div class="thumbnail">
+                                        <a href="#" ><img src="__PUBLIC__/default/images/cnert.jpg" alt=""></a>
+                                    </div>
+                                    <div class="caption">
+                                        <h3>国家互联网应急中心</h3>
+                                        <p>CNCERT是国内第一批具有一级风险评估资质的单位之一。自2008年对外提供风险评估服务以来，共承担了229个风险评估项目，项目遍及全国31个省市自治区，积累了丰富的经验。同时，CNCERT拥有一支国内顶尖的渗透测试团队，可针对各种架构的web系统、通信网络、信息系统提供渗透测试服务。
+                                        </p>
+                                        <span class="pull-left"></span>
+                                        <a class="pull-right " href="#"><i class="glyphicon glyphicon-heart glyphicon2"></i></a>
+                                    </div>
+                                </li>
+                                <li class="span3">
+                                    <div class="thumbnail">
+                                        <a href="#"><img src="__PUBLIC__/default/images/ca.png"  alt=""></a>
+                                    </div>
+                                    <div class="caption">
+                                        <h3>长安通信科技有限责任公司</h3>
+                                        <p>长安通信科技有限责任公司（简称“长安通信”）成立于2002年，是国家互联网应急中心全资公司。长安通信具有定向保密资质、软件企业认定证书、软件产品登记证书、高新技术企业证书、通信信息网络系统集成企业资质证书等资质，是工业和信息化部、国家互联网应急中心及各省分中心、各省通信管理局、专用通信局、电信运营商、网络服务商以及专网客户等单位在网络信息安全方面的重要技术支撑单位。
+                                        </p>
+                                    <span class="pull-left"></span>
+                                        <a class="pull-right " href="#"><i class="glyphicon glyphicon-heart glyphicon2"></i></a>   
+                                    </div>
+                                </li>
+                                <li class="span3">
+                                    <div class="thumbnail">
+                                        <a href="#"><img src="__PUBLIC__/default/images/hzjc.jpg"  alt=""></a>
+                                    </div>
+                                    <div class="caption">
+                                        <h3>杭州市基础信息安全测评认证中心</h3>
+                                        <p>杭州市基础信息安全测评认证中心（简称HZTEC）是浙江省内第一家专业从事信息安全测试、评估业务的第三方权威测评机构。中心具有中国合格评定国家认可委员会（CNAS）颁发的“A类检查机构”的认可资质，可出具各类信息安全评估报告。
+                                        </p>
+                                         <span class="pull-left"></span>
+                                        <a class="pull-right " href="#"><i class="glyphicon glyphicon-heart glyphicon2"></i></a>   
+                                    </div>
+                                </li>
+                                <li class="span3">
+                                    <div class="thumbnail">
+                                        <a href="#" ><img src="__PUBLIC__/default/images/cnert.jpg" alt=""></a>
+                                    </div>
+                                    <div class="caption">
+                                        <h3>国家互联网应急中心</h3>
+                                        <p>CNCERT是国内第一批具有一级风险评估资质的单位之一。自2008年对外提供风险评估服务以来，共承担了229个风险评估项目，项目遍及全国31个省市自治区，积累了丰富的经验。同时，CNCERT拥有一支国内顶尖的渗透测试团队，可针对各种架构的web系统、通信网络、信息系统提供渗透测试服务。
+                                        </p>
+                                        <span class="pull-left"></span>
+                                        <a class="pull-right " href="#"><i class="glyphicon glyphicon-heart glyphicon2"></i></a>
+                                    </div>
+                                </li>
+                              </ul>
+                        </div><!-- /Slide1 -->
+                        <div class="item">
+                             <ul class="thumbnails">
+                                <li class="span3">
+                                    <div class="thumbnail">
+                                        <a href="#" ><img src="__PUBLIC__/default/images/cnert.jpg" alt=""></a>
+                                    </div>
+                                    <div class="caption">
+                                        <h3>国家互联网应急中心</h3>
+                                        <p>CNCERT是国内第一批具有一级风险评估资质的单位之一。自2008年对外提供风险评估服务以来，共承担了229个风险评估项目，项目遍及全国31个省市自治区，积累了丰富的经验。同时，CNCERT拥有一支国内顶尖的渗透测试团队，可针对各种架构的web系统、通信网络、信息系统提供渗透测试服务。
+                                        </p>
+                                        <span class="pull-left"></span>
+                                        <a class="pull-right " href="#"><i class="glyphicon glyphicon-heart glyphicon2"></i></a>
+                                    </div>
+                                </li>
+                                <li class="span3">
+                                    <div class="thumbnail">
+                                        <a href="#"><img src="__PUBLIC__/default/images/ca.png"  alt=""></a>
+                                    </div>
+                                    <div class="caption">
+                                        <h3>长安通信科技有限责任公司</h3>
+                                        <p>长安通信科技有限责任公司（简称“长安通信”）成立于2002年，是国家互联网应急中心全资公司。长安通信具有定向保密资质、软件企业认定证书、软件产品登记证书、高新技术企业证书、通信信息网络系统集成企业资质证书等资质，是工业和信息化部、国家互联网应急中心及各省分中心、各省通信管理局、专用通信局、电信运营商、网络服务商以及专网客户等单位在网络信息安全方面的重要技术支撑单位。
+                                        </p>
+                                    <span class="pull-left"></span>
+                                        <a class="pull-right " href="#"><i class="glyphicon glyphicon-heart glyphicon2"></i></a>   
+                                    </div>
+                                </li>
+                                <li class="span3">
+                                    <div class="thumbnail">
+                                        <a href="#"><img src="__PUBLIC__/default/images/hzjc.jpg"  alt=""></a>
+                                    </div>
+                                    <div class="caption">
+                                        <h3>杭州市基础信息安全测评认证中心</h3>
+                                        <p>杭州市基础信息安全测评认证中心（简称HZTEC）是浙江省内第一家专业从事信息安全测试、评估业务的第三方权威测评机构。中心具有中国合格评定国家认可委员会（CNAS）颁发的“A类检查机构”的认可资质，可出具各类信息安全评估报告。
+                                        </p>
+                                         <span class="pull-left"></span>
+                                        <a class="pull-right " href="#"><i class="glyphicon glyphicon-heart glyphicon2"></i></a>   
+                                    </div>
+                                </li>
+                                <li class="span3">
+                                    <div class="thumbnail">
+                                        <a href="#" ><img src="__PUBLIC__/default/images/cnert.jpg" alt=""></a>
+                                    </div>
+                                    <div class="caption">
+                                        <h3>国家互联网应急中心</h3>
+                                        <p>CNCERT是国内第一批具有一级风险评估资质的单位之一。自2008年对外提供风险评估服务以来，共承担了229个风险评估项目，项目遍及全国31个省市自治区，积累了丰富的经验。同时，CNCERT拥有一支国内顶尖的渗透测试团队，可针对各种架构的web系统、通信网络、信息系统提供渗透测试服务。
+                                        </p>
+                                        <span class="pull-left"></span>
+                                        <a class="pull-right " href="#"><i class="glyphicon glyphicon-heart glyphicon2"></i></a>
+                                    </div>
+                                </li>
+                              </ul>
+                        </div><!-- /Slide2 -->
+                        
+                    </div>
+                        <a data-slide="prev" href="#myCarouse2" class="left carousel-control left-bj hidden-xs" id="sever-prev">
+                            <span id="prev-nav" class="glyphicon glyphicon-chevron-left glyphicon-triangle-left" aria-hidden="true"></span>
+                        </a>
+                        <a data-slide="next" href="#myCarouse2" class="right carousel-control left-bj hidden-xs" id="sever-next">
+                            <span id="next-nav" class="glyphicon glyphicon-chevron-right glyphicon-triangle-right" aria-hidden="true"></span>
+                        </a>
+                   <!-- /.control-box -->
+                </div><!-- /#myCarouse2 -->
+
+            </div><!-- /.span12 -->
+        </div><!-- /.row -->
+    </div><!-- /.container -->
+    </div>
+    <!--合作单位--> 
+
+    
+    <!--底部版权开始-->
+    <include file='Common:bottom'/>
+    <!--底部版权结束-->
+
+  </div>
+    
+    
+</body>
+</html>
+

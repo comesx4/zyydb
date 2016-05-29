@@ -1,0 +1,599 @@
+em{
+	font-style:normal
+}
+.y-page-title{
+	float:left;
+	width:100%;
+	padding:10px 0;
+	border-bottom:1px solid #ccc;
+	margin-bottom:20px;
+
+}
+
+.y-page-title .title h2{
+	float:left;
+	font-size:16px;
+	color:#00A2CA;
+	border-left:3px solid #00A2CA;
+	padding-left:8px;
+}
+.y-page-title .title > span{
+	float:right;
+}
+.y-page-title .title > span a{
+	color:#00A2CA;
+}
+.y-row{
+	min-width:1000px;
+	max-width:1200px;
+	margin-right:auto;
+	margin-left:auto;
+}
+.hidden{
+	display:none;
+}
+#main{
+	background:#FBFAF8;
+	float: left;
+	width:100%;
+	 
+
+}
+#main #main-content{
+	height:100%;
+	padding:20px 0;
+	width:100%;
+}
+#main #main-content #fix{
+	height:100%;
+}
+#main #main-content .uc-process{
+	 margin-bottom:15px;
+	 float:left;
+	 width: 100%;
+
+
+}
+#main #main-content .uc-process ul{
+	float:left;
+	width:100%;
+	
+}
+#main #main-content .uc-process ul li{
+	float:left;
+	width:33.3%;
+	text-align:center;
+	background: #CCCCCC;
+	color:#fff;
+	padding:5px 0;
+	font-size:14px;
+	
+}
+#main #main-content .uc-process ul li.down{
+	background: #00A2CA;
+}
+
+div.main{
+	float:left;
+	width:100%;
+}
+div.main .main-content{
+
+}
+div.main .main-content .favourable{
+	margin-bottom:20px;
+
+
+}
+div.main .main-content .y-tab{
+	float:left;
+	
+	width:100%;
+
+}
+div.main .main-content .y-tab ul{
+	float:left;
+	border-bottom:1px solid #ccc;
+	width:100%;
+}
+div.main .main-content .y-tab ul li{
+	float:left;
+	display:inline-block;
+    height:45px;
+   
+     text-align:center;
+}
+div.main .main-content .y-tab ul li.button,div.main .main-content .y-tab ul li.buy{
+     width:180px; 
+    line-height: 45px;
+   
+}
+div.main .main-content .y-tab ul li.button{
+    background:#FBFAF8;
+    color:#666666;
+    font-size:14px;
+    border:1px solid #ccc;
+    border-bottom:none;
+
+}
+div.main .main-content .y-tab ul li.down{
+	background:#fff;
+	border-top:2px solid #00A2CA;
+	position:relative;
+	top:1px;
+
+}
+div.main .main-content .y-tab ul li.buy a{
+	color:#00A2CA;
+
+}
+div.main .main-content .y-tab ul li.right{
+	float:right;
+	width:100px;
+	position:relative;
+}
+div.main .main-content .y-tab ul li.right a{
+	position:absolute;
+	bottom:6%;
+}
+div.main .main-content div.info{
+	float:left;
+	width:100%;
+	overflow:hidden;
+	padding:15px 0;
+	position:relative;
+}
+div.main .main-content div.info .info-left{
+	float:left;	
+	width:74%;
+	overflow:hidden;
+
+}
+div.main .main-content div.info .info-left .ng-isolate-scope{
+	 float:left;
+	width:100%;
+	background:#F1F6FA url('../Images/lvi.png') no-repeat 1% center;
+	padding:7px 30px;
+	margin-bottom:18px;
+}
+div.main .main-content div.info .info-left .config{
+    background:#FAFAFA;
+    float:left;
+    overflow:hidden;
+    width:100%;
+    margin-bottom:13px;
+  
+}
+
+div.main .main-content div.info .info-left  .explain{
+	position: relative;
+
+}
+div.main .main-content div.info .info-left  .explain span{
+	position: absolute;
+	top:35%;
+}
+
+div.main .main-content div.info .info-left .explain{
+
+	float:left;	
+	width:1%;
+	padding:0% 1%;
+	background:#F0F0F0;
+	height:100%;
+
+}
+
+div.main .main-content div.info .info-left .remark{
+	float:left;
+	width:80px;
+	height:40px;
+	line-height: 40px;	
+	font-size:14px;
+
+
+}
+div.main .main-content div.info .info-left .caos{
+	width:94%;
+	float: right;
+	margin:5px 0;
+} 
+div.main .main-content div.info .info-left .select{
+	float:left;
+	width:85%;
+}
+
+div.main .main-content div.info .info-left .select .top{
+	float:left;
+	clear:right;
+	margin-bottom:10px;
+	min-width:90%;
+}
+/*存储的新硬盘*/
+div.main .main-content div.info .info-left .select .new_disk{
+	background:#EEEEEE;
+	padding:5px 0;
+	line-height: 30px;
+	font-size: 13px;
+}
+.disk_sum{
+	margin:0 6px;
+	color:#FF6600;
+	font-size: 14px;
+}
+input[type=text]:focus{
+	box-shadow: 0 1px 1px rgba(0,0,0,0.075) inset,0 0 8px rgba(102,175,233,0.6);
+	
+	border:1px solid #66afe9;
+}
+div.main .main-content div.info .info-left .select .new_disk span:first-child{
+	margin:0 30px 0 40px;
+}
+div.main .main-content div.info .info-left .select .new_disk input[type=text]{
+	height:30px;
+	padding-left: 5px;
+	border:1px solid #ccc;
+	margin:0 40px;
+}
+div.main .main-content div.info .info-left .select .new_disk span.close{
+	background: url('../Images/disk_close.png') no-repeat right center;
+	margin-right: 20px;
+}
+/*end*/
+div.main .main-content div.info .info-left .select .top div.mirroring{ 
+	 font-size:14px;
+	height:40px;
+    color:#666666;    
+	line-height: 40px;
+}
+div.main .main-content div.info .info-left .select .top div.mirroring  span:hover{ 
+	cursor: pointer;
+	color:#43BFE3;
+	 font-size:14px;
+
+}
+div.main .main-content div.info .info-left .select .top div.mirroring img{ 
+	float: left;
+	padding-right:30px;
+	cursor: pointer;
+}
+div.main .main-content div.info .info-left .select .top ul{
+	float:left;
+
+}
+div.main .main-content div.info .info-left .select .top ul.time li{
+   margin-bottom:2px;
+}
+div.main .main-content div.info .info-left .select .top ul li{
+	float: left;
+	display: inline-block;
+	background:#E8E8E8;
+	width:110px;
+	height:40px;
+	line-height:40px;
+	font-size:14px;
+	text-align:center;
+	border-right:1px solid #fff;
+	cursor:pointer;
+	
+}
+div.main .main-content div.info .info-left .select .top ul li.down{
+	color:#fff;
+	background:#43BFE3;
+}
+div.main .main-content div.info .info-left .select .top input.num{
+	height:35px;
+	width:50px;
+    padding-left:10px;
+}
+div.main .main-content div.info .info-left .select .option select{
+	height:40px;
+	color:#43BFE3;
+	width:560px;	
+	border:1px solid #ccc;
+}
+div.main .main-content div.info .info-left .select .option select option{
+	padding:15px 0;
+
+}
+div.main .main-content div.info .info-left .select .bottom{
+	float:left;
+}
+div.main .main-content div.info .info-left .daikuan .bk-slider-range{
+	display:inline-block;
+	background:#EEEEEE;
+	height:35px;
+	width:420px;
+	float:left;
+	/*overflow:hidden;*/
+	position:relative;
+
+}
+div.main .main-content div.info .info-left .daikuan .bk-slider-range .bg{
+	display:inline-block;
+	height:100%;
+	width:0px;
+	background:#43BFE3;
+	position:absolute;
+	left:0;
+}
+div.main .main-content div.info .info-left .daikuan .bk-slider-range .handle{
+	display:inline-block;
+	position:absolute;
+	height:39px;
+	top:-2px;
+	left:0px;
+	width:20px;
+	background:#2DACD1;
+	text-align:center;
+	cursor:pointer;
+
+
+}
+div.main .main-content div.info .info-left .daikuan .bk-slider-range .handle i{
+	display:inline-block;
+	
+	background:#fff;
+	height:10px;
+	width:2px;
+
+}
+div.main .main-content div.info .info-left .daikuan div.jiajian{
+	float:left;
+	height:35px;
+	width:23px;
+	background:#E8E8E8;
+	overflow:hidden;
+	cursor:pointer;
+}
+div.main .main-content div.info .info-left .daikuan span.jia{
+	display:inline-block;
+	height:17.5px;
+	width:23px;
+	background:#E8E8E8 url('../Images/++.png') no-repeat center center;
+}
+div.main .main-content div.info .info-left .daikuan span.jian{
+	display:inline-block;
+	height:17.5px;
+	width:23px;
+	background: #E8E8E8 url('../Images/--.png') no-repeat center center ;
+}
+div.main .main-content div.info .info-left .daikuan input{
+	height:33px;
+	width:70px;
+	float:left;
+	margin-left:5px;
+	padding-left:12px;
+}
+
+
+div.main .main-content div.info .info-right{
+	float:right;
+	position: relative;
+	width:24%;
+	overflow:hidden;
+}
+div.main .main-content div.info .info-right .right-fiexd{
+	position:relative;
+	float: left;
+	/*width: 100%;*/
+	top:0;
+
+}
+div.main .main-content div.info .info-right div.fixed{
+	position:fixed;
+		
+
+}
+div.main .main-content div.info .info-right .bk-orders-menu{
+	
+	padding:7px 8px;
+	background:#FAFAFA;
+	margin-bottom:18px;
+}
+div.main .main-content div.info .info-right .bk-scope{
+	padding:10px 0 30px 0;
+	
+	width:100%;
+	background:#FAFAFA;
+}
+div.main .main-content div.info .info-right .bk-scope  dl.configure{
+	
+	width:93%;
+	margin:0 auto;
+
+
+}
+div.main .main-content div.info .info-right .bk-scope  dl.configure > dt{
+	border-bottom:1px solid #ccc;
+	height:35px;
+	line-height:35px;
+	margin-bottom:8px;
+
+}
+div.main .main-content div.info .info-right .bk-scope  dl.configure > dt  span{
+	margin-left:15px;
+	font-size:14px;
+	color:#666;
+
+}
+div.main .main-content div.info .info-right .bk-scope dl.configure dd div.infos{
+	width:90%;
+	overflow:hidden;
+	margin:0 auto;
+}
+div.main .main-content div.info .info-right .bk-scope dl.configure dd div.infos dl{
+	margin:8px 0;
+}
+div.main .main-content div.info .info-right .bk-scope dl.configure dd div.infos dl dt{
+	float:left;
+	color:#999999;
+	width:22%;
+}
+
+div.main .main-content div.info .info-right .bk-scope dl.configure dd div.infos p#money{
+	font-size:20px;
+	clear:both;
+	color:#FF663A;
+	margin:10px 0;
+}
+div.main .main-content div.info .info-right .bk-scope dl.configure dd p.over input{
+    border:none;
+    height:35px;
+    width:120px;
+    color:#fff;
+    background:#FF6600;
+    margin-left:5px;
+    cursor:pointer;
+    font-size:15px;
+
+}
+div.main .main-content div.info .info-right .bk-scope dl.configure dd p.over input.jiaru{
+	background:#FFDFC9;
+	color:#FF7900;
+}
+
+span.yuanjia{
+	text-decoration: line-through;
+	font-size:14px;
+	margin-right:5px;
+}
+div#mirroring{
+	position: fixed;
+	width:650px;
+	height:500px;
+	background: #FFFFFF;
+	left: 20%;
+	top:10%;
+	z-index: 999;
+	padding: 18px;
+	overflow:hidden;
+	display: none;
+
+}
+div#mirroring h3{
+	float: left;
+	width: 100%;
+	height:30px;
+	font-size:16px;
+	font-weight:500;
+	border-bottom:2px solid #F4F4F4;
+	margin-bottom:5px;
+
+}
+span.close{
+	float:right;
+	display: inline-block;
+	width:30px;
+	height: 30px;
+	background: url('../Images/chacha.png') no-repeat right top;
+	cursor:pointer;
+}
+div#mirroring .mirr-left{
+	margin-top:7%;
+	float: left;
+	width: 16%;
+	height:83%;
+	border-right:1px solid #F4F4F4;
+	margin-right:3px;
+
+}
+
+div#mirroring .mirr-left dl dd{
+	color:#999999;
+	padding:10px 0;
+	cursor:pointer;
+}
+div#mirroring .mirr-left dl dd.down{
+	color:#000;
+	font-size:14px;
+}
+div#mirroring .mirr-right{
+	margin-top:7%;
+	height:83%;
+	float: left;
+	width: 81%;
+	padding-left:2%;
+}
+
+div#mirroring .mirr-right ul li{
+	padding-bottom:25px;
+	overflow: hidden;
+}
+div#mirroring .mirr-right ul li div.li-left{
+	float: left;
+	width: 75%;
+}
+div#mirroring .mirr-right ul li div.li-left p{
+	padding:2px 0;
+}
+div#mirroring .mirr-right ul li div.li-left p select{
+	border:1px solid #ccc;
+	width:60px;
+	height:25px;
+	border-radius:3px;
+}
+div#mirroring .mirr-right ul li div.li-right{
+	float: left;
+	width: 25%;
+}
+div#mirroring .mirr-right ul li div.li-right a{
+	float: left;
+}
+div#mirroring .mirr-right ul li div.li-right button{
+	height:30px;
+	background: #00A2CA;
+	color:#fff;
+	border:none;
+	width:120px;
+	line-height: 30px;
+	margin-bottom:15px;
+
+}
+
+div.main .main-content div.info .info-left .select .xitong{
+	height:40px;
+	line-height: 40px;
+	
+}
+
+
+div.main .main-content div.info .info-left .select .xitong span.xz{
+	font-size: 13px;
+	display: inline-block;
+	border:1px solid #6DC5DC;
+	width:330px;	
+	background: #EAFBFE url("../Images/topss.png") no-repeat scroll 95% center;
+	padding-left:15px;
+	cursor:pointer;
+
+}
+div.main .main-content div.info .info-left .select .xitong div{
+	position: absolute;
+	width:345px;
+	border:1px solid #ccc;
+	
+	background: #fff;
+}
+div.main .main-content div.info .info-left .select .xitong div span{
+	cursor: pointer;
+	width:95%;
+	float: left;
+	padding-left:5%;
+
+}
+div.main .main-content div.info .info-left .select .xitong div span:hover{
+	background: #F5F5F5;
+}
+div#error{
+	background: #FF6600;
+	color:#fff;
+	font-size: 14px;
+	height:30px;
+	line-height: 30px;
+	width:200px;
+	text-align: center;
+	position: fixed;
+	left:40%;
+	top:45%;
+}

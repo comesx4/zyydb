@@ -1,0 +1,41 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+<head>
+    <meta http-equiv="Content-Type" content="text/html;charset=UTF-8" />
+    <title>客户列表</title>
+    <link rel="stylesheet" href="__PUBLIC__/Css/Common.css" />   
+    <script src='__PUBLIC__/Js/jquery-1.8.2.min.js' type="text/javascript"></script>  
+    <script src='__PUBLIC__/Js/client.js' type="text/javascript"></script>  
+    <script type="text/javascript">
+    var delCat='<{:U('delCat')}>';
+
+    </script>
+  
+<body>
+	<form action='<{:U('cat')}>' method='post'>
+	<table class='table'>
+		<tr>
+			<th>ID</th>
+			<th>名称</th>
+			<th>图标</th>
+			<th>所属分类</th>
+			<th>操作</th>
+		</tr>
+	<foreach name='client' item='v'>
+		<tr>
+			<td><{$v.id}></td>
+			<td><{$v.name}></td>
+			<td><img src='/aliyun__ROOT__/Public/Images/<{$v.img}>'/></td>
+			<td><{$v.cat}></td>
+			
+			<td><a href="<{:U('update',array('id'=>$v['id']))}>">[修改]</a><a pid='<{$v.id}>' class='del'></a></td>
+		</tr>
+	</foreach>
+	    <tr>
+	    	<td colspan='5'><input type='submit' class='submit' name='submit' value='排序'/></td>
+	    </tr>
+	</table>
+    </form>
+	
+</body>
+</html>

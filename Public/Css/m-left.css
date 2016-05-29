@@ -1,0 +1,108 @@
+body{
+	min-width:1000px;
+	font-family: '微软雅黑';
+	background:#fff;
+}
+*{
+	margin:0;
+	padding:0;
+}
+#main{
+	width:100%;
+	float:left;
+	/*height:1000px;*/
+    font-size:12px;
+	background:#F3F3F3;
+	margin-bottom:20px;
+
+
+}
+#main .ver-cont{
+	position: relative;
+}
+
+#main .main-content{
+	height:100%;
+	background:#fff;
+	position:relative;
+	overflow:hidden;
+}
+#main .main-content .main-left{
+	padding-top:40px;
+	height:100%;
+	background:#F3F3F3;
+	float:left;
+	width:16%;
+	margin-right:2%;
+	overflow:hidden;
+}
+#main .main-content .main-left h2{
+	font-size:18px;
+	font-weight:500;
+	padding:12px 0;
+}
+#main .main-content .main-left > ul{
+	font-size:13px;
+
+}
+#main .main-content .main-left > ul li{
+	margin-bottom:10px;
+
+}
+#main .main-content .main-left > ul li span.font{
+	color:#999;
+}
+#main .main-content .main-left > ul li dl{
+	
+}
+
+#main .main-content .main-left > ul li dd a{
+	display:inline-block;
+	width:100%;
+	height:100%;
+	padding:10px 0;
+	padding-left:10%;
+	color:#666666;
+}
+#main .main-content .main-left > ul > li  dd > a:hover{
+	background:#ccc;
+}
+
+#main .main-content .main-left ul.cat{
+	width:80%;
+	margin-left:20%;
+	padding-top:10px;
+	border-left:1px dashed #ccc;
+
+}
+#main .main-content .main-left ul.cat li{
+	height:25px;
+
+}
+#main .main-content .main-left ul.cat li a{
+    background:url('../Images/xudian.png') no-repeat left 45%;
+	
+}
+.y-row{
+	min-width:1000px;
+	max-width:1200px;
+	margin-left:auto;
+	margin-right:auto;
+
+}
+.hidden{
+	display:none;
+}
+.down .tt{
+	background-color:#fff;
+	color:#000; 
+
+}
+#max-right{
+	position: absolute;
+    background:#fff;
+	
+	width: 40px;
+	top:0;
+	
+}

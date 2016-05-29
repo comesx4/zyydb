@@ -1,0 +1,55 @@
+<include file="Common:header"/>
+	<script type="text/javascript" src='__PUBLIC__/Js/scenceAttr.js'></script>
+    
+<form action='<{:U('insert')}>' method='post' enctype='multipart/form-data'>
+	 <table class="table table-condensed table-hover table-active">
+        <thead>
+            <tr class="active">
+                <td colspan="2">
+                    <a class="btn btn-info" href="<{:U('index')}>">工单属性列表</a>
+                </td>
+            </tr>
+        </thead>
+		<tr>
+			<td class='first' >所属工单:</td>
+			<td><{$cat}></td>
+		</tr>
+		<tr>
+			<td class='first'>类型:</td>
+			<td>
+				<select name='type'>
+					<option value='0'>文本框</option>
+					<option value='1'>复选框</option>
+					<option value='2'>标题</option>
+					<option value='3'>单选按钮</option>
+				</select>
+			</td>
+		</tr>
+        <tr class='title'>
+        	<td class='first'>标题:</td>
+        	<td><input type='text' name='title' value=''/></td>
+        </tr>
+		<tr class='name hidden'>
+			 <td class='first'>名称:</td>
+			 <td><textarea name='name[]'></textarea><span style='margin-left:25px;'  class='ad'>如果是复选框或单选按钮多个之间用||分隔如：网页游戏||手机游戏||客户端游戏</span></td>
+		</tr>	
+		<tr>
+			 <td class='first'>是否必填:</td>
+			 <td>否<input type='radio' checked	 name='must' value='0' />必填<input type='radio' name='must' value='1' /></td>
+		</tr>			
+		<tr>
+			<td class='first'>排序:</td>
+			<td><input type='text' name='sort' value='1' /></td>
+		</tr>
+		  <tfoot>
+            <tr>
+                <td class='first'></td>
+                <td>
+                	<input class="btn btn-success" type="submit" value="保 存"/>
+                    <a class="btn btn-default" href="<{:U('index')}>">取 消</a>
+               </td> 
+           </tr>
+        </tfoot>
+    </table>
+</form>
+<include file="Common:footer"/>

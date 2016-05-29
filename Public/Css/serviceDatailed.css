@@ -1,0 +1,263 @@
+#main .main-content .main-inner {
+    float: left;
+    height: 100%;
+    margin-right: 2%;
+    padding-left: 1%;
+    padding-top:20px;
+    width: 64%;
+}
+#main .main-content .main-inner a{
+	color: #00A2CA;
+}
+#main .main-content .main-inner .level {
+    border-bottom: 1px solid #ccc;
+    float: left;
+    margin-bottom: 20px;
+    padding: 5px 0;
+    width: 100%;
+}
+#main .main-content .main-inner .intruduction{
+	float:left;
+	width: 100%;
+	margin-bottom:20px;
+	padding-bottom:10px;
+	border-bottom:1px dashed #ccc;
+
+}
+#main .main-content .main-inner .intruduction dl{
+	float: left;
+	width: 100%;
+}
+#main .main-content .main-inner .intruduction dl dt{
+	float: left;
+	margin-right:15px;
+}
+#main .main-content .main-inner .intruduction dl dt img{
+	width: 190px;
+	
+}
+#main .main-content .main-inner .intruduction dl dd .h1{
+	font-size: 19px;
+	color: #000;
+}
+#main .main-content .main-inner .intruduction dl dd{
+	padding:7px 0; 
+	color: #666;
+}
+#main .main-content .main-inner .intruduction dl dd span{
+	color: red;
+}
+#main .main-content .main-inner .intruduction dl dd span.appraise{
+	display: inline-block;
+	padding-left: 80px;
+	height:25px;
+	background: url('../Images/pingfen.png') no-repeat left 0%;
+	
+}
+#main .main-content .main-inner .ng-scope{
+	float: left;
+	width: 100%;
+	margin-bottom:30px;
+}
+#main .main-content .main-inner .ng-scope dl{
+	float: left;
+	padding:6px 0;
+	width: 100%;	
+}
+#main .main-content .main-inner .ng-scope dl dt{
+	float: left;
+	color: #B6B6B6;
+}
+#main .main-content .main-inner .ng-scope dl dd{
+
+}
+
+#main .main-content .main-inner .ng-scope .ng-left{
+    float: left;
+    width: 30%;
+
+}
+#main .main-content .main-inner .ng-scope .ng-right{
+	float: left;
+    width: 69%;
+}
+#main .main-content .main-inner  .ng-scope  .ng-right dl{
+	line-height: 30px;
+	padding:4px 0;
+}
+#main .main-content .main-inner  .ng-scope  .ng-right dl.type2{
+    display: none;
+}
+#main .main-content .main-inner  .ng-scope  .ng-right dl dt{
+	width:90px;
+	display:block;
+}
+#main .main-content .main-inner .ng-scope .ng-right dl dd ul li{
+	float: left;
+	display: inline-block;
+	height:30px;
+	padding:0 10px;
+	background: #F9F9F9;
+	border:1px solid #E7E7E7;
+	margin-right:10px;
+	text-align: center;
+	cursor: pointer;
+	line-height: 30px;
+}
+#main .main-content .main-inner .ng-scope .ng-right dl dd ul li.down{
+	border:2px solid #00A2C9;
+	height:28px;
+	padding:0 9px;
+	background:#F9F9F9 url('../Images/gouxuan.png') no-repeat right bottom;
+}
+#main .main-content .main-inner  .ng-scope .ng-right dl dd span.no-money{
+	text-decoration: line-through;
+	color: #999999;
+
+}
+#main .main-content .main-inner  .ng-scope .ng-right dl dd em{
+	display: inline-block;
+	padding:0 7px;
+	height:20px;
+	line-height: 19px;
+	color: #fff;
+	border-radius: 4px;
+	margin-right:9px;
+	background: #FF6600;
+}
+#main .main-content .main-inner  .ng-scope .ng-right dl dd span.price{
+	font-size: 19px;
+	font-weight:700;
+	color: #FF6600;
+}
+
+#main .main-content .main-inner  .ng-scope .ng-right dl dd input{
+	display: inline-block;
+	width: 170px;
+	background: #00A2C9;
+	height:35px;
+	line-height: 35px;
+	border:none;
+	color: #fff;
+	border-radius: 4px;
+	cursor: pointer;
+}
+#main .main-content .main-inner .introduce{
+	float: left;
+	width: 100%;
+}
+#main .main-content .main-inner .introduce h1{
+    background: none repeat scroll 0 0 #f5f5f5;
+    border-left: 2px solid #00a2c9;
+    clear: both;
+    font-size: 18px;
+    font-weight: 500;
+    height: 40px;
+    line-height: 40px;
+    margin-bottom: 20px;
+    padding-left: 2%;
+    margin-bottom:20px;
+}
+#main .main-content .main-inner .introduce div.table{
+	overflow: hidden;
+	clear: both;
+	margin-bottom:30px;
+}
+#main .main-content .main-inner .introduce div.table  h2{
+	color: red;
+	margin-bottom:15px;
+}
+#main .main-content .main-inner .introduce div.table table{
+	border-collapse: collapse;
+	font-size: 13px;
+}
+
+#main .main-content .main-inner .introduce div.table table tr{
+	border-bottom:1px solid #E9E9E9;
+
+}
+#main .main-content .main-inner .introduce div.table table th{
+	width:25%;
+	padding:12px 0;
+	background: #F6F6F6;
+}
+#main .main-content .main-inner .introduce div.table table td{
+	padding:12px 0;
+	padding-left: 10px;
+	line-height: 25px;
+}
+#main .main-content .main-inner .introduce div.table table td span{
+    color:red;
+}
+#main .main-content .main-inner  .padd {
+    padding-left: 4%;
+}
+#main .main-content .main-inner .zhinan {
+    display: inline-block;
+    padding-bottom: 40px;
+}
+#main .main-content .main-inner ul li {
+    padding: 6px 0;
+}
+#main .main-content .main-inner.appraise {
+    float: left;
+    width: 100%;
+}
+#main .main-content .main-inner .appraise dl {
+    border-bottom: 1px solid #ccc;
+    float: left;
+    margin-bottom: 15px;
+    margin-left: 1%;
+    margin-right: 2%;
+    padding-left: 3%;
+    width: 94%;
+}
+#main .main-content .main-inner .appraise dl dt {
+}
+#main .main-content .main-inner .appraise dl dt i {
+    color: #39a2d2;
+    margin-right: 55px;
+}
+#main .main-content .main-inner .appraise dl dt span {
+    color: #999999;
+}
+#main .main-content .main-inner .appraise dl dt em {
+    background: url("../Images/pingfen.png") no-repeat scroll left center rgba(0, 0, 0, 0);
+    color: red;
+    display: inline-block;
+    margin-right: 20px;
+    padding-left: 85px;
+    width: 25px;
+}
+#main .main-content .main-inner .appraise dl dd {
+    padding: 20px 0;
+}
+#main .main-content .main-inner .appraise p {
+    clear: both;
+    padding: 45px 0;
+    text-align: right;
+    width: 87%;
+}
+#main .main-content .main-right {
+    float: left;
+    height: 100%;
+    padding-top: 40px;
+    position: relative;
+    width: 15%;
+}
+#main .main-content .main-right ul{
+    border:1px solid #ccc;
+    padding:10px;
+}
+#main .main-content .main-right ul li{
+	padding:4px 0;
+	color: #999999;
+}
+#main .main-content .main-right ul li a{
+    color: #00A2CA;
+}
+#main .main-content .main-right ul li img{
+	position: relative;
+	top:3px;
+
+}

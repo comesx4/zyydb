@@ -1,0 +1,131 @@
+<div class='main-left'>
+         
+          <!-- 消息部分 -->
+           <div class='xiangxi '>
+            <helpNav>
+                <h3><{$v.cat}></h3>
+
+                <ul class='left-list'>
+                   <li><a <if condition="$_GET['id'] eq $v['id']">class='down'</if>  href="<{:U('Help/nav',array('id'=>$v['id'],'pid'=>$v['id']))}>">热点问题&知识点导航</a></li>
+                   <foreach name='v.chid' item='vs'>
+                         
+                         <if condition="!empty($vs['chid'])">
+                             <li class='liv'><span><{$vs.cat}></span><br/>
+                               <div class='hidden'>
+
+                                    <foreach name='vs.chid' item='vr'>
+                                      <a <if condition="$_GET['id'] eq $vr['id']">class='down diceng'</if>  href="<{:U('Help/helpList',array('id'=>$vr['id'],'pid'=>$v['id']))}>"><{$vr.cat}></a>
+                                    
+                                    </foreach>
+
+                               </div>
+
+                             </li>
+                          <else/>
+                               <li><a <if condition="$_GET['id'] eq $vs['id']">class='down diceng'</if> href="<{:U('Help/helpList',array('id'=>$vs['id'],'pid'=>$v['id']))}>"><{$vs.cat}></a></li>
+
+                         </if>
+
+                   </foreach>
+                   
+           
+                </ul>
+            </helpNav>
+           </div>
+          <!-- 消息部分结束 -->
+
+           <div class='max-width hidden'>
+                <div class='hnavbar'>
+                  <helpAll>
+                     <dl>
+                        <dt><{$v.cat}></dt>
+                        <foreach name='v.chid' item='vs'>
+                            <if condition="!empty($vs['chid'])">
+                             <dd class='ding dian' value='<{$vs.id}>'><{$vs.cat}></dd>
+                             <else/>
+                              <dd><a href="<{:U('Help/helpList',array('id'=>$vs['id'],'pid'=>$vs['id']))}>"><{$vs.cat}></a></dd>
+
+                           </if>
+                        </foreach>
+                     
+
+                     </dl>
+                  </helpAll>
+                   
+                </div>
+                 
+                 <!-- 中间层 -->
+                <div class='hnavbar hnavbar1 '>              
+                  <helpAll>
+                   
+                        <foreach name='v.chid' item='vs'>
+                           
+                         <if condition="!empty($vs['chid'])">  
+                             <dl value='<{$vs.id}>' class='hidden'>
+                             <dt><{$vs.cat}></dt>
+                             <dd><a href="<{:U('Help/nav',array('id'=>$vs['id'],'pid'=>$vs['id']))}>">热点问题&知识点导航</a></dd>
+                                 
+                                 <foreach name='vs.chid' item='vm'>
+                                  
+                                   <if condition="!empty($vm['chid'])">
+                                   
+                                   <dd value='<{$vm.id}>' class='zhong dian'><{$vm.cat}></dd>
+                                   
+                                   <else/>
+                                  
+                                  <dd class='none'><a href="<{:U('Help/helpList',array('id'=>$vm['id'],'pid'=>$vs['id']))}>"><{$vm.cat}></a></dd>
+
+                                  </if>
+
+                                 </foreach>
+                             </dl>
+                          </if>
+                            
+                        </foreach>
+                     
+
+                
+                   </helpAll>
+                 
+                </div>
+                <!-- 中间层结束 -->
+                
+                <!-- 最右边 -->
+                <div class='hnavbar hnavbar1'>
+                  <helpAll>
+                   
+                      <foreach name='v.chid' item='vs'> 
+                      
+                           <foreach name='vs.chid' item='vm'>
+                                  <dl value='<{$vm.id}>' class='hidden'>
+                                    <dt><{$vm.cat}></dt>
+                                    <dd><a href="<{:U('Help/nav',array('id'=>$vm['id'],'pid'=>$vm['id']))}>">热点问题&知识点导航</a></dd>
+                                      <?php
+                                      foreach($vm['chid'] as $vr){
+                                              
+                                       echo "<dd><a href='".U('Help/helpList',array('id'=>$vr['id'],'pid'=>$vs['id']))."'>{$vr['cat']}</a></dd>";
+                                                 
+                                      }
+
+                                      ?>
+                                   
+
+                                </dl>
+                         
+
+                           </foreach>
+                          
+                      </foreach>
+                   
+
+              
+                  </helpAll>
+
+                  
+                 
+                </div>
+                <!-- 最右边结束 -->
+            </div>
+
+            
+        </div>

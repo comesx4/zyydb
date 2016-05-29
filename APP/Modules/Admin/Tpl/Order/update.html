@@ -1,0 +1,402 @@
+<include file="Common:header"/>
+
+<table class="table table-condensed table-hover " >
+    <thead>
+        <tr class='active'>
+            <td  colspan="2" >
+                <a class="btn btn-primary" >订单明细</a>
+            </td>   
+            <td  colspan="8" > </td>    
+        </tr>
+    </thead>
+    <tr>	
+        <th>订单号</th>
+        <th>产品名称</th>
+        <th>所属用户</th>
+        <th>创建时间</th>
+        <th>支付时间</th>
+        <th>购买时长</th>
+        <th>支付状态</th>
+        <th>订单状态</th>		
+    </tr>
+    <tr>
+        <td><{$oinfo.number}></td>
+        <td><{$row['name']}></td>
+        <td><{$oinfo.username}></td>
+        <td><{$oinfo.createtime|date='Y-m-d H:i',###}></td>
+        <td><if condition="$oinfo['status'] eq 0">暂未支付<else/><{$oinfo.paytime|date='Y-m-d H:i',###}></if></td>
+<td><{$oinfo.time|format_time=###}></td>
+<td> <{$oinfo.status|getkeyname='ZfSatatus'}></td>
+<td><{$oinfo.orderstatus|getkeyname='OrderStatus'}></td>		
+</tr>
+ <tr>	
+        <th>所属客户经理</th>
+         <th>机房</th>
+        <th>机柜号</th>
+        <th>IP</th>
+        <th>起始时间</th>
+        <th>结束时间</th>
+        <th>服务状态</th>
+        <th>订单类型</th>		
+    </tr>
+  
+    <tr>
+        <td><{$oinfo.adminname}></td>
+        <td><{$oinfo.city}></td>
+         <td><{$oinfo.cabinetID}></td>
+         <td><{$oinfo.IP}></td>
+         <td><if condition="$oinfo.startday gt 0"><{$oinfo.startday|date='Y-m-d',###}></if></td>
+  <td><if condition="$oinfo.endday gt 0"><{$oinfo.endday|date='Y-m-d',###}></if></td>
+  <td><{$oinfo.svstatus|getkeyname='StatusList'}></td>
+ <td><{$oinfo.orderType|getkeyname='OrderType'}></td>	
+</tr>
+</table>
+
+<table class="table table-condensed table-hover " >
+    <thead>
+        <tr>
+            <td colspan="2" class="td-left">  <a class="btn btn-primary" >产品明细</a>  </td>
+            <td colspan="10" class="td-right"> </td>
+        </tr>
+    </thead>
+    <switch name="Think.get.gid">
+    <case value='1'>       
+
+    </case>
+    <case value='19'>
+        <tr>
+            <th>名称</th>
+            <th>防御等级</th>
+            <th>线路类型</th>
+            <th>专线租用数量</th>
+            <th data-sort="true" data-field="ip_gateway_id">带宽</th>
+            <th data-sort="true" data-field="time">价格</th>
+        </tr>
+        <tr>
+            <td><{$row['name']}></td>
+            <td><{$row.DefenseGrade|getkeyname='DefenseGradeList'}></td>
+            <td><{$row.LineType|getkeyname='LineList'}></td>
+            <td><{$row.number}></td>
+            <td><{$row.band}></td>
+            <td><{$row.price}></td>
+        </tr>
+    </case>
+    <case value='20'>
+        <tr>
+            <th>套餐名称</th>
+            <th data-sort="true" data-field="ip_gateway_id">类型</th>
+            <th data-sort="true" data-field="ip_gateway_id">设备型号</th>
+            <th data-sort="true" data-field="ip_gateway_id">操作系统</th>
+            <th data-sort="true" data-field="ip_gateway_id">U数</th>
+            <th data-sort="true" data-field="ip_gateway_id">线路类型</th>
+            <th data-sort="true" data-field="ip_gateway_id">带宽</th>
+            <th data-sort="true" data-field="ip_gateway_id">CPU</th>
+            <th data-sort="true" data-field="ip_gateway_id">内存</th>
+            <th data-sort="true" data-field="ip_gateway_id">硬盘</th>
+            <th data-sort="true" data-field="time">价格</th>              
+        </tr>      
+        <tr>
+            <td><{$row['name']}></td>
+            <td><{$row.zytype|getkeyname='Zytype'}></td>
+            <td><{$row.modeid}></td>
+            <td><{$row.system}></td>
+            <td><{$row.Unumber}></td>
+            <td><{$row.LineType|getkeyname='LineList'}></td>
+            <td><{$row.band}></td>
+            <td><{$row.cpu}></td>
+            <td> <if condition="$row['memory']">
+            <{$row.memory}>G
+            <else/>
+            512M
+        </if>
+        </td>
+        <td><{$row.disk}></td>
+        <td><{$row.price}></td>
+
+        </tr>   
+    </case>
+    <case value='22'>
+        <tr>
+
+            <th>机柜名称</th>
+            <th data-sort="true" data-field="ip_gateway_id">带宽</th>
+            <th data-sort="true" data-field="ip_gateway_id">线路类型</th>
+            <th data-sort="true" data-field="time">价格</th>               
+        </tr>
+
+        <tr>
+            <td><{$row['name']}></td>
+            <td><{$row.band}></td>
+            <td><{$row.LineType|getkeyname='LineList'}></td>
+            <td><{$row.price}></td> 
+        </tr>  
+    </case>
+    <case value='23'>
+        <tr>
+            <th>套餐名称</th>
+            <th data-sort="true" data-field="ip_gateway_id">类型</th>
+            <th data-sort="true" data-field="ip_gateway_id">托管等级</th>
+            <th data-sort="true" data-field="ip_gateway_id">U数</th>
+            <th data-sort="true" data-field="ip_gateway_id">线路类型</th>
+            <th data-sort="true" data-field="ip_gateway_id">带宽</th>
+            <th data-sort="true" data-field="ip_gateway_id">机柜大小</th>
+            <th data-sort="true" data-field="time">价格</th>         
+        </tr>
+            <tr>
+                <td><{$row['name']}></td>
+                <td><{$row.zytype|getkeyname='Zytype'}></td>
+                <td><{$row.tggrade|getkeyname='TgGrade'}></td>
+                <td><{$row.Unumber}></td>
+                <td><{$row.LineType|getkeyname='LineList'}></td>
+                <td><{$row.band}></td>
+                <td><{$row.cabinet_size}></td>                
+                <td><{$row.price}></td> 
+            </tr>  
+    </case>
+    </switch>   
+</table>
+ <if condition="$showwo"> 
+ <table class="table table-condensed table-hover " >
+      <thead>
+        <tr>
+            <td colspan="2" class="td-left">  <a class="btn btn-primary" >工单进度</a>  </td>
+            <td colspan="10" class="td-right"> </td>
+        </tr>
+    </thead>
+<tr>
+			<th>编号</th>
+			<th>标题</th>	
+			<th>处理人</th>
+			<th>类别</th>			
+			<th>发布时间</th>	
+			<th>状态	</th>			
+			<th>操作</th>
+		</tr>
+                <foreach name='wol' item='wo'>
+		<tr>
+			<td><{$wo.number}></td>
+			<td>
+				<span id='title'><{$wo.title}><span style='color:red;'>(转发)<if condition="$wo['complaint'] eq 1">(投诉)<elseif condition="$wo['isCharge'] neq 0"/><span style='color:red;'>(收费)</span></if></span>
+			   </span>
+				
+			</td>	
+			<td><{$wo.username}></td>
+			<td><{$wo.cat}></td>				
+			<td><{$wo.time|date='Y-m-d H:i',###}></td>		
+			<td><{$wo.status|getkeyname='WoStatus'}></td>
+                        <td><a target="blank" href="<{:U('wo/details',array('id'=>$wo['id']))}>">[查看]</a></td>
+		</tr>
+                </foreach>
+</table>
+ </if>
+
+
+<form action='<{:U('save')}>' method='post'>
+      
+     <table class="table table-condensed table-hover " >
+    <thead>
+        <tr class='active'>
+            <td  colspan="2" >
+               
+            </td>   
+            <td  colspan="8" > 	<input type='hidden' name='id' value='<{$oinfo.id}>'/></td>    
+        </tr>
+    </thead>
+ <switch name="Think.get.orderstatus">
+ <case value="$ostatus.等待确认">
+      <tr class='active'>
+      <td  colspan="2" > 订单类型：</td>   
+      <td  colspan="8" ><{$odtype}></td>    
+        </tr>
+       <tr class='active'>
+            <td  colspan="2" >订单状态：               
+            </td>   
+            <td  colspan="8" > 
+                <input type="radio" name="orderstatus" required value="<{$ostatus.客户经理确认}>" >是我的试用客户</input>
+                 <input type="radio" name="orderstatus" value="<{$ostatus.等待确认}>" >不是我的客户</input>
+            </td>    
+        </tr>
+         <tr class='active'>
+            <td  colspan="2" ></td>   
+            <td  colspan="8" >          
+             <input class="btn btn-success del" type="submit" value="客户经理确认"/></td>    
+        </tr>  
+ </case>
+  <case value="$ostatus.客户经理确认">
+          <tr class='active'>
+      <td  colspan="2" > 订单类型：</td>   
+      <td  colspan="8" ><{$odtype}></td>    
+        </tr>
+       <tr class='active'>
+            <td  colspan="2" >订单状态：               
+            </td>  
+            <td  colspan="8" > 
+                <input type="radio" name="orderstatus" required value="<{$ostatus.客服确认}>" >有效订单</input>
+                 <input type="radio" name="orderstatus" value="<{$ostatus.客服终止}>" >无效订单</input>
+            </td>    
+        </tr>
+        <tr class='active'>
+            <td  colspan="2" ></td>   
+            <td  colspan="8" >          
+             <input class="btn btn-success del" type="submit" value="客服确认"/></td>    
+        </tr> 
+ </case>
+   <case value="$ostatus.客服确认">  
+       <tr class='active'>
+            <td  colspan="2" >订单状态：               
+            </td> 
+            <td  colspan="8" > 
+                <input type="radio" name="orderstatus" required value="<{$ostatus.订单核查完毕}>" >核查订单，下派工单</input>
+                 <input type="radio" name="orderstatus" value="<{$ostatus.客服确认}>" >等稍后处理</input>
+            </td>    
+        </tr>
+        <tr class='active'>
+            <td  colspan="2" ></td>   
+            <td  colspan="8" >          
+             <input class="btn btn-success del" type="submit" value="资源管理确认"/></td>    
+        </tr> 
+ </case>
+  <case  value='$ostatus.正在施工'>      
+    <tr class='active'>
+            <td  colspan="2" >订单状态：               
+            </td> 
+            <td  colspan="8" > 
+                <input type="radio" name="orderstatus" required value="<{$ostatus.正在回访}>" >进行客户回访</input>
+                <input type="radio" name="orderstatus" value="<{$ostatus.正在施工}>" >等施工完毕再处理</input>
+            </td>    
+        </tr>
+        <tr class='active'>
+            <td  colspan="2" ></td>   
+            <td  colspan="8" >          
+             <input class="btn btn-success del" type="submit" value="现在回访"/></td>    
+        </tr> 
+ </case>
+ <case  value='$ostatus.施工完毕'>      
+   
+       <tr class='active'>
+            <td  colspan="2" >订单状态：               
+            </td> 
+            <td  colspan="8" > 
+                <input type="radio" name="orderstatus" required value="<{$ostatus.正在回访}>" >进行客户回访</input>
+                <input type="radio" name="orderstatus" value="<{$ostatus.施工完毕}>" >等稍后处理</input>
+            </td>    
+        </tr>
+        <tr class='active'>
+            <td  colspan="2" ></td>   
+            <td  colspan="8" >          
+             <input class="btn btn-success del" type="submit" value="现在回访"/></td>    
+        </tr> 
+ </case>
+  <case  value='$ostatus.正在回访'>      
+       <tr class='active'>
+      <td  colspan="2" > 订单类型：</td>   
+      <td  colspan="8" ><{$odtype}></td>    
+        </tr>
+       <tr class='active'>
+            <td  colspan="2" >订单状态：               
+            </td>
+            <td  colspan="8" > 
+                <input type="radio" name="orderstatus" required value="<{$ostatus.正在试用}>" >回访完毕，客户正在试用</input>
+                <input type="radio" name="orderstatus" value="<{$ostatus.正在回访}>" >正在回访，客户尚未试用</input>
+            </td>    
+        </tr>
+        <tr class='active'>
+            <td  colspan="2" ></td>   
+            <td  colspan="8" >          
+             <input class="btn btn-success del" type="submit" value="已经回访过了"/></td>    
+        </tr> 
+ </case>
+<case  value='$ostatus.正在试用'>      
+      <tr class='active'>
+      <td  colspan="2" > 订单类型：</td>   
+      <td  colspan="8" ><{$odtype}></td>    
+        </tr>
+       <tr class='active'>
+            <td  colspan="2" >订单状态：               
+            </td>>   
+            <td  colspan="8" > 
+                <input type="radio" name="orderstatus" required value="<{$ostatus.试用跟进}>" >正在试用跟进，促成付款</input>
+                <input type="radio" name="orderstatus" value="<{$ostatus.试用结束}>" >试用结束，客户没有付款意愿</input>
+            </td>    
+        </tr>
+        <tr class='active'>
+            <td  colspan="2" ></td>   
+            <td  colspan="8" >          
+             <input class="btn btn-success del" type="submit" value="提交回访结果"/></td>    
+        </tr> 
+ </case>
+ <case  value='$ostatus.试用跟进'>     
+
+       <tr class='active'>
+            <td  colspan="2" >订单状态：               
+            </td>   
+            <td  colspan="8" > 
+                <input type="radio" name="orderstatus" required value="<{$ostatus.客户付款}>" >客户已经付款，请求财务确认</input>
+                <input type="radio" name="orderstatus" value="<{$ostatus.试用跟进}>" >正在试用跟进，促成付款</input>
+                <input type="radio" name="orderstatus" value="<{$ostatus.试用结束}>" >试用结束，客户没有付款意愿</input>
+            </td>    
+        </tr>
+        <tr class='active'>
+            <td  colspan="2" ></td>   
+            <td  colspan="8" >          
+             <input class="btn btn-success del" type="submit" value="提交跟进结果"/></td>    
+        </tr> 
+ </case>
+ <case  value='$ostatus.客户付款'>    
+           <tr class='active'>
+      <td  colspan="2" > 订单类型：</td>   
+      <td  colspan="8" ><{$odtype}></td>    
+        </tr>
+       <tr class='active'>
+            <td  colspan="2" >订单状态：               
+            </td> 
+            <td  colspan="8" > 
+                <input type="radio" name="orderstatus" required value="<{$ostatus.财务到帐}>" >确认客户已经付款</input>
+                <input type="radio" name="orderstatus" value="<{$ostatus.客户付款}>" >尚未到帐，稍后再查</input>
+                <input type="radio" name="orderstatus" value="<{$ostatus.试用结束}>" >试用结束，客户没有付款意愿</input>
+            </td>    
+        </tr>
+        <tr class='active'>
+            <td  colspan="2" ></td>   
+            <td  colspan="8" >          
+             <input class="btn btn-success del" type="submit" value="提交跟进结果"/></td>    
+        </tr> 
+ </case>
+ </switch>   
+ <thead>
+        <tr class='active'>
+            <td  colspan="2" >
+             <!--   <a class="btn btn-success" ></a>-->
+            </td>   
+            <td  colspan="8" >              </td>    
+        </tr>        
+    </thead>
+   </table>    
+</form>
+ <table class="table table-condensed table-hover " >
+        <tr>
+            <th colspan="6" class="td-left">  <a class="btn btn-primary" >操作记录</a>  </th>           
+        </tr>
+<tr>
+			<th>编号</th>
+			<th>管理员</th>					
+			<th>时间	</th>
+                        <th>IP	</th>
+                        <th>操作类型</th>
+                         <th>操作明细</th>
+		</tr>
+                <foreach name='olog' item='log'>
+		<tr class='active'>
+			<td><{$log.ID}></td>
+                        <td <if condition="$log.username neq ''"> class="text-danger"</if>>
+                          <{$log.adminname}>
+                <{$log.username}>
+                        </td>			
+			<td><{$log.optime|date='Y-m-d H:i',###}></td>		
+			<td><{$log.opIP}></td>
+                        <td><{$log.userOp|getkeyname='LogOpModel'}></td>
+                        <td><{$log.opdetail}></td>
+		</tr>              
+                </foreach>
+</table>
+<include file="Common:footer"/>

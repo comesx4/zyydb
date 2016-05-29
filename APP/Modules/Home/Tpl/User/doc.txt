@@ -1,0 +1,7 @@
+身份证号/营业执照：     UIDx
+备案号：               ICP
+文网文证               WICP
+国家/地区              country
+省份：                 province
+邮政编码               ZIP
+QQ                    QQ

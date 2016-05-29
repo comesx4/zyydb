@@ -1,0 +1,112 @@
+body{
+	min-width:1000px;
+	font-family: '微软雅黑';
+	font-size: 12px;
+}
+a{
+	color: #00ACD7;
+}
+div.back{
+	overflow: hidden;
+	width: 100%;
+}
+div.back img{
+	width: 100%;
+}
+div.body-content{
+	overflow:hidden;
+	background:#fff;
+	min-height: 500px;
+}
+.body-content .left{
+	font-size:12px;
+	float: left;
+    min-height: 100px;
+    width:20%;
+    /*background:#F4F4F4;*/
+    height:100%;
+}
+.body-content .left h3{
+	padding:10px 0;
+	border-bottom: 1px solid #ddd;
+	font-size: 15px;
+	padding-left: 7px;
+	font-weight: 500;
+}
+.body-content .left ul{
+
+}
+.body-content .left ul li a{
+	line-height: 30px;
+	height:30px;
+	display: inline-block;
+	width: 95%;
+	padding-left: 5%;
+	margin:3px 0;
+}
+.body-content .left ul li a.on,.body-content .left ul li a:hover{
+ 	background: #e4f0fd none repeat scroll 0 0;
+    border-left: 2px solid #00a2ca;
+}
+.body-content .right{
+	padding-left: 2%;
+	width:820px;
+	display:block;
+	width:77%;
+	background:#FFF;
+	float: left;
+	height:100%;
+    position: relative;
+	border-left: 1px solid #ccc;
+	overflow: hidden;
+	min-height: 500px;
+}
+.body-content .right .right-title{
+	overflow: hidden;
+	border-bottom: 1px solid #ddd;
+	padding:10px 0;
+	margin-bottom: 10px;
+
+}
+.body-content .right .right-title h2,.body-content .right .right-title p{
+	text-align: center;
+	padding:10px;
+}
+.body-content .right .right-title p{
+	color:#666;
+}
+.body-content .right .right-content{
+	margin-bottom: 30px;
+	text-indent: 25px;
+}
+.body-content .right .right-bottom{
+
+	padding:30px 0 15px 0;
+}
+.body-content .right .right-bottom p{
+	text-align: right;
+	margin-right:30px;
+	margin-bottom: 10px;
+}
+.body-content .right .right-bottom p.key{
+	font-size: 15px;
+}
+/*列表页面*/
+.body-content .right .right-list{
+	overflow: hidden;
+}
+.body-content .right .right-list dl{
+	border-bottom: 1px dashed #ddd;
+	padding:20px 0;
+
+}
+.body-content .right .right-list dl dt{
+	font-size: 16px;
+}
+.body-content .right .right-list dl dt a{
+	color: #000;
+}
+.body-content .right .right-list dl dd{
+	padding:10px 0;
+	color: #666;
+}

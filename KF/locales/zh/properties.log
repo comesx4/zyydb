@@ -1,0 +1,330 @@
+# Sun, 31 Jan 10 11:13:39 +0800 by 127.0.0.1 using Mozilla/4.0 (compatible; MSIE 6.0; Windows NT 5.1; SV1; .NET CLR 2.0.50727)
+app.descr=SK客服系统是一个免费开放源码的应用程序！
+# Sun, 31 Jan 10 11:14:01 +0800 by 127.0.0.1 using Mozilla/4.0 (compatible; MSIE 6.0; Windows NT 5.1; SV1; .NET CLR 2.0.50727)
+button.delete=删除
+# Sun, 31 Jan 10 11:14:14 +0800 by 127.0.0.1 using Mozilla/4.0 (compatible; MSIE 6.0; Windows NT 5.1; SV1; .NET CLR 2.0.50727)
+button.enter=输入
+# Sun, 31 Jan 10 11:14:28 +0800 by 127.0.0.1 using Mozilla/4.0 (compatible; MSIE 6.0; Windows NT 5.1; SV1; .NET CLR 2.0.50727)
+button.save=保存
+# Sun, 31 Jan 10 11:14:41 +0800 by 127.0.0.1 using Mozilla/4.0 (compatible; MSIE 6.0; Windows NT 5.1; SV1; .NET CLR 2.0.50727)
+button.search=搜索
+# Sun, 31 Jan 10 11:15:00 +0800 by 127.0.0.1 using Mozilla/4.0 (compatible; MSIE 6.0; Windows NT 5.1; SV1; .NET CLR 2.0.50727)
+canned.actions=修改
+# Sun, 31 Jan 10 11:15:24 +0800 by 127.0.0.1 using Mozilla/4.0 (compatible; MSIE 6.0; Windows NT 5.1; SV1; .NET CLR 2.0.50727)
+canned.actions.del=清除
+# Sun, 31 Jan 10 11:15:48 +0800 by 127.0.0.1 using Mozilla/4.0 (compatible; MSIE 6.0; Windows NT 5.1; SV1; .NET CLR 2.0.50727)
+canned.add=添加信息
+# Sun, 31 Jan 10 11:16:02 +0800 by 127.0.0.1 using Mozilla/4.0 (compatible; MSIE 6.0; Windows NT 5.1; SV1; .NET CLR 2.0.50727)
+canned.actions.edit=修改
+# Sun, 31 Jan 10 11:16:50 +0800 by 127.0.0.1 using Mozilla/4.0 (compatible; MSIE 6.0; Windows NT 5.1; SV1; .NET CLR 2.0.50727)
+canned.descr=编辑您聊天常用的话语！
+# Sun, 31 Jan 10 11:17:07 +0800 by 127.0.0.1 using Mozilla/4.0 (compatible; MSIE 6.0; Windows NT 5.1; SV1; .NET CLR 2.0.50727)
+canned.group=组
+# Sun, 31 Jan 10 11:17:24 +0800 by 127.0.0.1 using Mozilla/4.0 (compatible; MSIE 6.0; Windows NT 5.1; SV1; .NET CLR 2.0.50727)
+canned.locale=预制信息
+# Sun, 31 Jan 10 11:17:42 +0800 by 127.0.0.1 using Mozilla/4.0 (compatible; MSIE 6.0; Windows NT 5.1; SV1; .NET CLR 2.0.50727)
+canned.title=预制信息
+# Sun, 31 Jan 10 11:18:01 +0800 by 127.0.0.1 using Mozilla/4.0 (compatible; MSIE 6.0; Windows NT 5.1; SV1; .NET CLR 2.0.50727)
+canned.locale=语言
+# Sun, 31 Jan 10 11:18:20 +0800 by 127.0.0.1 using Mozilla/4.0 (compatible; MSIE 6.0; Windows NT 5.1; SV1; .NET CLR 2.0.50727)
+cannededit.descr=编辑现有的信息
+# Sun, 31 Jan 10 11:18:40 +0800 by 127.0.0.1 using Mozilla/4.0 (compatible; MSIE 6.0; Windows NT 5.1; SV1; .NET CLR 2.0.50727)
+cannededit.done=保存
+# Sun, 31 Jan 10 11:18:52 +0800 by 127.0.0.1 using Mozilla/4.0 (compatible; MSIE 6.0; Windows NT 5.1; SV1; .NET CLR 2.0.50727)
+cannededit.message=消息
+# Sun, 31 Jan 10 11:19:15 +0800 by 127.0.0.1 using Mozilla/4.0 (compatible; MSIE 6.0; Windows NT 5.1; SV1; .NET CLR 2.0.50727)
+cannededit.no_such=没有消息
+# Sun, 31 Jan 10 11:19:30 +0800 by 127.0.0.1 using Mozilla/4.0 (compatible; MSIE 6.0; Windows NT 5.1; SV1; .NET CLR 2.0.50727)
+cannednew.descr=添加新的消息
+# Sun, 31 Jan 10 11:19:44 +0800 by 127.0.0.1 using Mozilla/4.0 (compatible; MSIE 6.0; Windows NT 5.1; SV1; .NET CLR 2.0.50727)
+cannededit.title=编辑留言
+# Sun, 31 Jan 10 11:19:57 +0800 by 127.0.0.1 using Mozilla/4.0 (compatible; MSIE 6.0; Windows NT 5.1; SV1; .NET CLR 2.0.50727)
+cannednew.title=新的消息
+# Sun, 31 Jan 10 11:20:15 +0800 by 127.0.0.1 using Mozilla/4.0 (compatible; MSIE 6.0; Windows NT 5.1; SV1; .NET CLR 2.0.50727)
+char.redirect.operator.online_suff=（在线）
+# Sun, 31 Jan 10 11:20:43 +0800 by 127.0.0.1 using Mozilla/4.0 (compatible; MSIE 6.0; Windows NT 5.1; SV1; .NET CLR 2.0.50727)
+chat.client.spam.prefix=[垃圾邮件]&nbsp;
+# Sun, 31 Jan 10 11:21:17 +0800 by 127.0.0.1 using Mozilla/4.0 (compatible; MSIE 6.0; Windows NT 5.1; SV1; .NET CLR 2.0.50727)
+chat.predefined_answers=您好，请问有什么我可以帮您吗？
+# Sun, 31 Jan 10 11:21:31 +0800 by 127.0.0.1 using Mozilla/4.0 (compatible; MSIE 6.0; Windows NT 5.1; SV1; .NET CLR 2.0.50727)
+chat.redirect.back=回上一页
+# Sun, 31 Jan 10 11:21:47 +0800 by 127.0.0.1 using Mozilla/4.0 (compatible; MSIE 6.0; Windows NT 5.1; SV1; .NET CLR 2.0.50727)
+chat.redirect.cannot=您还没有客人聊天。
+# Sun, 31 Jan 10 11:22:04 +0800 by 127.0.0.1 using Mozilla/4.0 (compatible; MSIE 6.0; Windows NT 5.1; SV1; .NET CLR 2.0.50727)
+chat.redirect.choose=选择：
+# Sun, 31 Jan 10 11:22:16 +0800 by 127.0.0.1 using Mozilla/4.0 (compatible; MSIE 6.0; Windows NT 5.1; SV1; .NET CLR 2.0.50727)
+chat.redirect.group=组：
+# Sun, 31 Jan 10 11:22:28 +0800 by 127.0.0.1 using Mozilla/4.0 (compatible; MSIE 6.0; Windows NT 5.1; SV1; .NET CLR 2.0.50727)
+chat.redirect.operator=操作员：
+# Sun, 31 Jan 10 11:23:32 +0800 by 127.0.0.1 using Mozilla/4.0 (compatible; MSIE 6.0; Windows NT 5.1; SV1; .NET CLR 2.0.50727)
+chat.redirected.group.content=访客中优先的访问者（0）。
+# Sun, 31 Jan 10 11:23:49 +0800 by 127.0.0.1 using Mozilla/4.0 (compatible; MSIE 6.0; Windows NT 5.1; SV1; .NET CLR 2.0.50727)
+chat.visitor.info=信息：（0）
+# Sun, 31 Jan 10 11:24:04 +0800 by 127.0.0.1 using Mozilla/4.0 (compatible; MSIE 6.0; Windows NT 5.1; SV1; .NET CLR 2.0.50727)
+data.saved=保存更改
+# Sun, 31 Jan 10 11:24:27 +0800 by 127.0.0.1 using Mozilla/4.0 (compatible; MSIE 6.0; Windows NT 5.1; SV1; .NET CLR 2.0.50727)
+form.field.groupcommondesc=描述
+# Sun, 31 Jan 10 11:24:40 +0800 by 127.0.0.1 using Mozilla/4.0 (compatible; MSIE 6.0; Windows NT 5.1; SV1; .NET CLR 2.0.50727)
+form.field.groupcommonname=名称
+# Sun, 31 Jan 10 11:41:24 +0800 by 127.0.0.1 using Mozilla/4.0 (compatible; MSIE 6.0; Windows NT 5.1; SV1; .NET CLR 2.0.50727)
+page_agent.tab.avatar=头像
+# Sun, 31 Jan 10 11:41:43 +0800 by 127.0.0.1 using Mozilla/4.0 (compatible; MSIE 6.0; Windows NT 5.1; SV1; .NET CLR 2.0.50727)
+menu.locale=语言
+# Sun, 31 Jan 10 11:42:05 +0800 by 127.0.0.1 using Mozilla/4.0 (compatible; MSIE 6.0; Windows NT 5.1; SV1; .NET CLR 2.0.50727)
+menu.locale.content=更改区域设置
+# Sun, 31 Jan 10 11:42:36 +0800 by 127.0.0.1 using Mozilla/4.0 (compatible; MSIE 6.0; Windows NT 5.1; SV1; .NET CLR 2.0.50727)
+menu.profile=风格
+# Sun, 31 Jan 10 11:43:00 +0800 by 127.0.0.1 using Mozilla/4.0 (compatible; MSIE 6.0; Windows NT 5.1; SV1; .NET CLR 2.0.50727)
+menu.profile.content=您可以更改此页面您的个人信息。
+# Sun, 31 Jan 10 11:43:28 +0800 by 127.0.0.1 using Mozilla/4.0 (compatible; MSIE 6.0; Windows NT 5.1; SV1; .NET CLR 2.0.50727)
+menu.translate=系统语言包
+# Sun, 31 Jan 10 11:43:56 +0800 by 127.0.0.1 using Mozilla/4.0 (compatible; MSIE 6.0; Windows NT 5.1; SV1; .NET CLR 2.0.50727)
+menu.updates=程序更新
+# Sun, 31 Jan 10 11:44:25 +0800 by 127.0.0.1 using Mozilla/4.0 (compatible; MSIE 6.0; Windows NT 5.1; SV1; .NET CLR 2.0.50727)
+menu.updates.content=检查是否有最新的程序。
+# Sun, 31 Jan 10 11:44:47 +0800 by 127.0.0.1 using Mozilla/4.0 (compatible; MSIE 6.0; Windows NT 5.1; SV1; .NET CLR 2.0.50727)
+operator.groups.intro=选择团体根据经营者的技能。
+# Sun, 31 Jan 10 11:45:13 +0800 by 127.0.0.1 using Mozilla/4.0 (compatible; MSIE 6.0; Windows NT 5.1; SV1; .NET CLR 2.0.50727)
+operator.group.no_description=&lt;无描述&gt;
+# Sun, 31 Jan 10 11:45:25 +0800 by 127.0.0.1 using Mozilla/4.0 (compatible; MSIE 6.0; Windows NT 5.1; SV1; .NET CLR 2.0.50727)
+operator.groups.title=操作员组
+# Sun, 31 Jan 10 11:45:36 +0800 by 127.0.0.1 using Mozilla/4.0 (compatible; MSIE 6.0; Windows NT 5.1; SV1; .NET CLR 2.0.50727)
+page.analysis.search.head_browser=浏览器
+# Sun, 31 Jan 10 11:45:54 +0800 by 127.0.0.1 using Mozilla/4.0 (compatible; MSIE 6.0; Windows NT 5.1; SV1; .NET CLR 2.0.50727)
+page.analysis.search.head_group=群组
+# Sun, 31 Jan 10 11:46:32 +0800 by 127.0.0.1 using Mozilla/4.0 (compatible; MSIE 6.0; Windows NT 5.1; SV1; .NET CLR 2.0.50727)
+page.analysis.search.head_time=聊天时间
+# Sun, 31 Jan 10 11:46:49 +0800 by 127.0.0.1 using Mozilla/4.0 (compatible; MSIE 6.0; Windows NT 5.1; SV1; .NET CLR 2.0.50727)
+page.analysis.userhistory.title=访问历史
+# Sun, 31 Jan 10 11:47:03 +0800 by 127.0.0.1 using Mozilla/4.0 (compatible; MSIE 6.0; Windows NT 5.1; SV1; .NET CLR 2.0.50727)
+page.chat.old_browser.close=关闭...
+# Sun, 31 Jan 10 11:48:34 +0800 by 127.0.0.1 using Mozilla/4.0 (compatible; MSIE 6.0; Windows NT 5.1; SV1; .NET CLR 2.0.50727)
+page.chat.old_browser.problem=<p>您的网页浏览器不完全支持,请使用其它网页浏览器:</p>
+# Sun, 31 Jan 10 11:48:54 +0800 by 127.0.0.1 using Mozilla/4.0 (compatible; MSIE 6.0; Windows NT 5.1; SV1; .NET CLR 2.0.50727)
+page.chat.old_browser.title=请使用更新的浏览器
+# Sun, 31 Jan 10 11:49:22 +0800 by 127.0.0.1 using Mozilla/4.0 (compatible; MSIE 6.0; Windows NT 5.1; SV1; .NET CLR 2.0.50727)
+page.gen_button.choose_group=组调用代码
+# Sun, 31 Jan 10 11:49:49 +0800 by 127.0.0.1 using Mozilla/4.0 (compatible; MSIE 6.0; Windows NT 5.1; SV1; .NET CLR 2.0.50727)
+page.gen_button.default_group=-所有运营商-
+# Sun, 31 Jan 10 11:50:07 +0800 by 127.0.0.1 using Mozilla/4.0 (compatible; MSIE 6.0; Windows NT 5.1; SV1; .NET CLR 2.0.50727)
+page.gen_button.title=生成网页调用代码
+# Sun, 31 Jan 10 11:50:22 +0800 by 127.0.0.1 using Mozilla/4.0 (compatible; MSIE 6.0; Windows NT 5.1; SV1; .NET CLR 2.0.50727)
+page.group.create_new=在这里您可以创建新组。
+# Sun, 31 Jan 10 11:50:40 +0800 by 127.0.0.1 using Mozilla/4.0 (compatible; MSIE 6.0; Windows NT 5.1; SV1; .NET CLR 2.0.50727)
+page.group.duplicate_name=请选择其他名称，因为与输入的名称组已经存在。
+# Sun, 31 Jan 10 11:50:55 +0800 by 127.0.0.1 using Mozilla/4.0 (compatible; MSIE 6.0; Windows NT 5.1; SV1; .NET CLR 2.0.50727)
+page.group.intro=在此页面您可以编辑组的详细信息。
+# Sun, 31 Jan 10 11:51:06 +0800 by 127.0.0.1 using Mozilla/4.0 (compatible; MSIE 6.0; Windows NT 5.1; SV1; .NET CLR 2.0.50727)
+page.group.membersnum=运营商
+# Sun, 31 Jan 10 11:51:18 +0800 by 127.0.0.1 using Mozilla/4.0 (compatible; MSIE 6.0; Windows NT 5.1; SV1; .NET CLR 2.0.50727)
+page.group.no_such=没有这样的组
+# Sun, 31 Jan 10 11:51:29 +0800 by 127.0.0.1 using Mozilla/4.0 (compatible; MSIE 6.0; Windows NT 5.1; SV1; .NET CLR 2.0.50727)
+page.group.title=组详细资料
+# Sun, 31 Jan 10 11:51:47 +0800 by 127.0.0.1 using Mozilla/4.0 (compatible; MSIE 6.0; Windows NT 5.1; SV1; .NET CLR 2.0.50727)
+page.groupmembers.intro=查看和编辑的成员名单。
+# Sun, 31 Jan 10 11:52:00 +0800 by 127.0.0.1 using Mozilla/4.0 (compatible; MSIE 6.0; Windows NT 5.1; SV1; .NET CLR 2.0.50727)
+page.groupmembers.title=成员
+# Sun, 31 Jan 10 11:52:20 +0800 by 127.0.0.1 using Mozilla/4.0 (compatible; MSIE 6.0; Windows NT 5.1; SV1; .NET CLR 2.0.50727)
+page.groups.confirm=您确定要删除组"{0}"?
+# Sun, 31 Jan 10 11:52:47 +0800 by 127.0.0.1 using Mozilla/4.0 (compatible; MSIE 6.0; Windows NT 5.1; SV1; .NET CLR 2.0.50727)
+page.groups.intro=本页面显示您公司的组列表。每个小组可以有不同的按钮
+# Sun, 31 Jan 10 11:53:02 +0800 by 127.0.0.1 using Mozilla/4.0 (compatible; MSIE 6.0; Windows NT 5.1; SV1; .NET CLR 2.0.50727)
+page.groups.new=创建新组...
+# Sun, 31 Jan 10 11:53:15 +0800 by 127.0.0.1 using Mozilla/4.0 (compatible; MSIE 6.0; Windows NT 5.1; SV1; .NET CLR 2.0.50727)
+page.groups.title=团体
+# Sun, 31 Jan 10 11:53:28 +0800 by 127.0.0.1 using Mozilla/4.0 (compatible; MSIE 6.0; Windows NT 5.1; SV1; .NET CLR 2.0.50727)
+page.preview.error=错误窗口
+# Sun, 31 Jan 10 11:53:46 +0800 by 127.0.0.1 using Mozilla/4.0 (compatible; MSIE 6.0; Windows NT 5.1; SV1; .NET CLR 2.0.50727)
+page.preview.title=网站风格
+# Sun, 31 Jan 10 11:54:09 +0800 by 127.0.0.1 using Mozilla/4.0 (compatible; MSIE 6.0; Windows NT 5.1; SV1; .NET CLR 2.0.50727)
+page.preview.survey=聊天记录调查
+# Sun, 31 Jan 10 11:54:23 +0800 by 127.0.0.1 using Mozilla/4.0 (compatible; MSIE 6.0; Windows NT 5.1; SV1; .NET CLR 2.0.50727)
+page_agent.cannot_modify=你不能改变这个人的个人资料。
+# Sun, 31 Jan 10 11:54:36 +0800 by 127.0.0.1 using Mozilla/4.0 (compatible; MSIE 6.0; Windows NT 5.1; SV1; .NET CLR 2.0.50727)
+page_agent.tab.groups=团体
+# Sun, 31 Jan 10 11:54:58 +0800 by 127.0.0.1 using Mozilla/4.0 (compatible; MSIE 6.0; Windows NT 5.1; SV1; .NET CLR 2.0.50727)
+page_agents.confirm=您确定要删除操作员"{0}"?
+# Sun, 31 Jan 10 11:55:11 +0800 by 127.0.0.1 using Mozilla/4.0 (compatible; MSIE 6.0; Windows NT 5.1; SV1; .NET CLR 2.0.50727)
+page_agents.isonline=在线
+# Sun, 31 Jan 10 11:55:29 +0800 by 127.0.0.1 using Mozilla/4.0 (compatible; MSIE 6.0; Windows NT 5.1; SV1; .NET CLR 2.0.50727)
+page_agents.status=最后活跃
+# Sun, 31 Jan 10 11:56:05 +0800 by 127.0.0.1 using Mozilla/4.0 (compatible; MSIE 6.0; Windows NT 5.1; SV1; .NET CLR 2.0.50727)
+page_bans.confirm=您确定要删除地址（0）加入禁止的名单？
+# Sun, 31 Jan 10 11:56:17 +0800 by 127.0.0.1 using Mozilla/4.0 (compatible; MSIE 6.0; Windows NT 5.1; SV1; .NET CLR 2.0.50727)
+page_group.tab.main=一般
+# Sun, 31 Jan 10 11:56:26 +0800 by 127.0.0.1 using Mozilla/4.0 (compatible; MSIE 6.0; Windows NT 5.1; SV1; .NET CLR 2.0.50727)
+page_group.tab.members=成员
+# Sun, 31 Jan 10 11:57:04 +0800 by 127.0.0.1 using Mozilla/4.0 (compatible; MSIE 6.0; Windows NT 5.1; SV1; .NET CLR 2.0.50727)
+page_login.intro=输入您的用户名和密码，才能看到您的访客和浏览历史。
+# Sun, 31 Jan 10 11:57:25 +0800 by 127.0.0.1 using Mozilla/4.0 (compatible; MSIE 6.0; Windows NT 5.1; SV1; .NET CLR 2.0.50727)
+pending.menu.hide=隐藏菜单 >>
+# Sun, 31 Jan 10 11:57:52 +0800 by 127.0.0.1 using Mozilla/4.0 (compatible; MSIE 6.0; Windows NT 5.1; SV1; .NET CLR 2.0.50727)
+pending.menu.show=打开菜单 >>
+# Sun, 31 Jan 10 11:58:12 +0800 by 127.0.0.1 using Mozilla/4.0 (compatible; MSIE 6.0; Windows NT 5.1; SV1; .NET CLR 2.0.50727)
+pending.popup_notification=新的游客正在等待..
+# Sun, 31 Jan 10 11:58:31 +0800 by 127.0.0.1 using Mozilla/4.0 (compatible; MSIE 6.0; Windows NT 5.1; SV1; .NET CLR 2.0.50727)
+permission.modifyprofile=修改文件的权限
+# Sun, 31 Jan 10 11:58:49 +0800 by 127.0.0.1 using Mozilla/4.0 (compatible; MSIE 6.0; Windows NT 5.1; SV1; .NET CLR 2.0.50727)
+presurvey.intro=感谢您与我们联系！为了更好地为您服务，请填写下面单击开始聊天按钮。
+# Sun, 31 Jan 10 11:59:00 +0800 by 127.0.0.1 using Mozilla/4.0 (compatible; MSIE 6.0; Windows NT 5.1; SV1; .NET CLR 2.0.50727)
+presurvey.department=选择部门：
+# Sun, 31 Jan 10 11:59:13 +0800 by 127.0.0.1 using Mozilla/4.0 (compatible; MSIE 6.0; Windows NT 5.1; SV1; .NET CLR 2.0.50727)
+presurvey.question=最初的问题：
+# Sun, 31 Jan 10 11:59:24 +0800 by 127.0.0.1 using Mozilla/4.0 (compatible; MSIE 6.0; Windows NT 5.1; SV1; .NET CLR 2.0.50727)
+presurvey.submit=开始聊天
+# Sun, 31 Jan 10 11:59:37 +0800 by 127.0.0.1 using Mozilla/4.0 (compatible; MSIE 6.0; Windows NT 5.1; SV1; .NET CLR 2.0.50727)
+presurvey.title=现场支持
+# Sun, 31 Jan 10 11:59:50 +0800 by 127.0.0.1 using Mozilla/4.0 (compatible; MSIE 6.0; Windows NT 5.1; SV1; .NET CLR 2.0.50727)
+report.bydate.2=聊天主题
+# Sun, 31 Jan 10 12:00:02 +0800 by 127.0.0.1 using Mozilla/4.0 (compatible; MSIE 6.0; Windows NT 5.1; SV1; .NET CLR 2.0.50727)
+report.bydate.1=日期
+# Sun, 31 Jan 10 12:00:32 +0800 by 127.0.0.1 using Mozilla/4.0 (compatible; MSIE 6.0; Windows NT 5.1; SV1; .NET CLR 2.0.50727)
+report.bydate.3=访问者的邮件
+# Sun, 31 Jan 10 12:00:46 +0800 by 127.0.0.1 using Mozilla/4.0 (compatible; MSIE 6.0; Windows NT 5.1; SV1; .NET CLR 2.0.50727)
+report.bydate.title=每个日期使用统计
+# Sun, 31 Jan 10 12:01:02 +0800 by 127.0.0.1 using Mozilla/4.0 (compatible; MSIE 6.0; Windows NT 5.1; SV1; .NET CLR 2.0.50727)
+report.bydate.4=贺辞游客
+# Sun, 31 Jan 10 12:01:15 +0800 by 127.0.0.1 using Mozilla/4.0 (compatible; MSIE 6.0; Windows NT 5.1; SV1; .NET CLR 2.0.50727)
+report.byoperator.1=操作员
+# Sun, 31 Jan 10 12:01:25 +0800 by 127.0.0.1 using Mozilla/4.0 (compatible; MSIE 6.0; Windows NT 5.1; SV1; .NET CLR 2.0.50727)
+report.byoperator.2=聊天主题
+# Sun, 31 Jan 10 12:01:36 +0800 by 127.0.0.1 using Mozilla/4.0 (compatible; MSIE 6.0; Windows NT 5.1; SV1; .NET CLR 2.0.50727)
+report.byoperator.3=邮件
+# Sun, 31 Jan 10 12:01:48 +0800 by 127.0.0.1 using Mozilla/4.0 (compatible; MSIE 6.0; Windows NT 5.1; SV1; .NET CLR 2.0.50727)
+report.no_items=没有足够的数据
+# Sun, 31 Jan 10 12:02:02 +0800 by 127.0.0.1 using Mozilla/4.0 (compatible; MSIE 6.0; Windows NT 5.1; SV1; .NET CLR 2.0.50727)
+report.byoperator.4=平均（在字符信息长度）
+# Sun, 31 Jan 10 12:02:13 +0800 by 127.0.0.1 using Mozilla/4.0 (compatible; MSIE 6.0; Windows NT 5.1; SV1; .NET CLR 2.0.50727)
+report.byoperator.title=线程的操作
+# Sun, 31 Jan 10 12:14:59 +0800 by 127.0.0.1 using Mozilla/4.0 (compatible; MSIE 6.0; Windows NT 5.1; SV1; .NET CLR 2.0.50727)
+topMenu.main=开始
+# Sun, 31 Jan 10 12:15:47 +0800 by 127.0.0.1 using Mozilla/4.0 (compatible; MSIE 6.0; Windows NT 5.1; SV1; .NET CLR 2.0.50727)
+settings.survey.askmail=要求访客填客电子邮件
+# Sun, 31 Jan 10 12:16:00 +0800 by 127.0.0.1 using Mozilla/4.0 (compatible; MSIE 6.0; Windows NT 5.1; SV1; .NET CLR 2.0.50727)
+settings.survey.askmail=要求访客填客写电子邮件
+# Sun, 31 Jan 10 12:16:36 +0800 by 127.0.0.1 using Mozilla/4.0 (compatible; MSIE 6.0; Windows NT 5.1; SV1; .NET CLR 2.0.50727)
+settings.survey.askmail.description=显示/隐藏 填写电子邮件
+# Sun, 31 Jan 10 12:17:14 +0800 by 127.0.0.1 using Mozilla/4.0 (compatible; MSIE 6.0; Windows NT 5.1; SV1; .NET CLR 2.0.50727)
+settings.survey.askmessage.description=显示/隐藏 填写地址
+# Sun, 31 Jan 10 12:17:53 +0800 by 127.0.0.1 using Mozilla/4.0 (compatible; MSIE 6.0; Windows NT 5.1; SV1; .NET CLR 2.0.50727)
+settings.survey.askmessage=需要填写相关内容
+# Sun, 31 Jan 10 12:18:43 +0800 by 127.0.0.1 using Mozilla/4.0 (compatible; MSIE 6.0; Windows NT 5.1; SV1; .NET CLR 2.0.50727)
+settings.wrong.onehostconnections=最多文字！
+# Sun, 31 Jan 10 12:19:30 +0800 by 127.0.0.1 using Mozilla/4.0 (compatible; MSIE 6.0; Windows NT 5.1; SV1; .NET CLR 2.0.50727)
+statistics.description=从网页上可以生成各种报表数据。
+# Sun, 31 Jan 10 12:19:43 +0800 by 127.0.0.1 using Mozilla/4.0 (compatible; MSIE 6.0; Windows NT 5.1; SV1; .NET CLR 2.0.50727)
+statistics.dates=选择日期
+# Sun, 31 Jan 10 12:20:30 +0800 by 127.0.0.1 using Mozilla/4.0 (compatible; MSIE 6.0; Windows NT 5.1; SV1; .NET CLR 2.0.50727)
+statistics.wrong.dates=选择日期错误
+# Sun, 31 Jan 10 12:20:42 +0800 by 127.0.0.1 using Mozilla/4.0 (compatible; MSIE 6.0; Windows NT 5.1; SV1; .NET CLR 2.0.50727)
+tag.pagination.next=下一个
+# Sun, 31 Jan 10 12:21:03 +0800 by 127.0.0.1 using Mozilla/4.0 (compatible; MSIE 6.0; Windows NT 5.1; SV1; .NET CLR 2.0.50727)
+tag.pagination.previous=上一个
+# Sun, 31 Jan 10 12:21:18 +0800 by 127.0.0.1 using Mozilla/4.0 (compatible; MSIE 6.0; Windows NT 5.1; SV1; .NET CLR 2.0.50727)
+time.never=从不
+# Sun, 31 Jan 10 12:21:32 +0800 by 127.0.0.1 using Mozilla/4.0 (compatible; MSIE 6.0; Windows NT 5.1; SV1; .NET CLR 2.0.50727)
+time.today.at=今天
+# Sun, 31 Jan 10 12:21:46 +0800 by 127.0.0.1 using Mozilla/4.0 (compatible; MSIE 6.0; Windows NT 5.1; SV1; .NET CLR 2.0.50727)
+translate.direction=方向：
+# Sun, 31 Jan 10 12:22:00 +0800 by 127.0.0.1 using Mozilla/4.0 (compatible; MSIE 6.0; Windows NT 5.1; SV1; .NET CLR 2.0.50727)
+topMenu.users.nomenu=没有菜单
+# Sun, 31 Jan 10 12:22:17 +0800 by 127.0.0.1 using Mozilla/4.0 (compatible; MSIE 6.0; Windows NT 5.1; SV1; .NET CLR 2.0.50727)
+translate.show=显示：
+# Sun, 31 Jan 10 12:23:08 +0800 by 127.0.0.1 using Mozilla/4.0 (compatible; MSIE 6.0; Windows NT 5.1; SV1; .NET CLR 2.0.50727)
+updates.title=更新
+# Sun, 31 Jan 10 12:23:17 +0800 by 127.0.0.1 using Mozilla/4.0 (compatible; MSIE 6.0; Windows NT 5.1; SV1; .NET CLR 2.0.50727)
+updates.news=新闻：
+# Sun, 31 Jan 10 12:23:26 +0800 by 127.0.0.1 using Mozilla/4.0 (compatible; MSIE 6.0; Windows NT 5.1; SV1; .NET CLR 2.0.50727)
+updates.latest=最新版本：
+# Sun, 31 Jan 10 12:23:36 +0800 by 127.0.0.1 using Mozilla/4.0 (compatible; MSIE 6.0; Windows NT 5.1; SV1; .NET CLR 2.0.50727)
+updates.intro=网路通讯的更新
+# Sun, 31 Jan 10 12:23:46 +0800 by 127.0.0.1 using Mozilla/4.0 (compatible; MSIE 6.0; Windows NT 5.1; SV1; .NET CLR 2.0.50727)
+updates.installed_locales=安装本地化：
+# Sun, 31 Jan 10 12:24:02 +0800 by 127.0.0.1 using Mozilla/4.0 (compatible; MSIE 6.0; Windows NT 5.1; SV1; .NET CLR 2.0.50727)
+updates.env=环境：
+# Sun, 31 Jan 10 12:24:12 +0800 by 127.0.0.1 using Mozilla/4.0 (compatible; MSIE 6.0; Windows NT 5.1; SV1; .NET CLR 2.0.50727)
+updates.current=您正在使用：
+# Sun, 31 Jan 10 12:24:23 +0800 by 127.0.0.1 using Mozilla/4.0 (compatible; MSIE 6.0; Windows NT 5.1; SV1; .NET CLR 2.0.50727)
+translate.sort.lang=源语言的字符串
+# Sun, 31 Jan 10 12:24:33 +0800 by 127.0.0.1 using Mozilla/4.0 (compatible; MSIE 6.0; Windows NT 5.1; SV1; .NET CLR 2.0.50727)
+translate.sort.key=密钥标识符
+# Sun, 31 Jan 10 12:24:45 +0800 by 127.0.0.1 using Mozilla/4.0 (compatible; MSIE 6.0; Windows NT 5.1; SV1; .NET CLR 2.0.50727)
+translate.sort=排序方式：
+# Sun, 31 Jan 10 12:24:57 +0800 by 127.0.0.1 using Mozilla/4.0 (compatible; MSIE 6.0; Windows NT 5.1; SV1; .NET CLR 2.0.50727)
+translate.show.forvisitor=弦乐的访客
+# Sun, 31 Jan 10 12:25:09 +0800 by 127.0.0.1 using Mozilla/4.0 (compatible; MSIE 6.0; Windows NT 5.1; SV1; .NET CLR 2.0.50727)
+translate.show.foroperator=字符串操作员
+# Sun, 31 Jan 10 12:25:18 +0800 by 127.0.0.1 using Mozilla/4.0 (compatible; MSIE 6.0; Windows NT 5.1; SV1; .NET CLR 2.0.50727)
+translate.show.foradmin=弦乐的管理员
+# Sun, 31 Jan 10 12:25:31 +0800 by 127.0.0.1 using Mozilla/4.0 (compatible; MSIE 6.0; Windows NT 5.1; SV1; .NET CLR 2.0.50727)
+translate.show.all=所有字符串
+# Sun, 31 Jan 10 12:25:43 +0800 by 127.0.0.1 using Mozilla/4.0 (compatible; MSIE 6.0; Windows NT 5.1; SV1; .NET CLR 2.0.50727)
+time.yesterday.at=昨天
+# Sun, 31 Jan 10 12:25:58 +0800 by 127.0.0.1 using Mozilla/4.0 (compatible; MSIE 6.0; Windows NT 5.1; SV1; .NET CLR 2.0.50727)
+statistics.title=统计
+# Sun, 31 Jan 10 12:26:18 +0800 by 127.0.0.1 using Mozilla/4.0 (compatible; MSIE 6.0; Windows NT 5.1; SV1; .NET CLR 2.0.50727)
+right.administration=超级管理员
+# Sun, 31 Jan 10 12:26:39 +0800 by 127.0.0.1 using Mozilla/4.0 (compatible; MSIE 6.0; Windows NT 5.1; SV1; .NET CLR 2.0.50727)
+report.total=总计：
+# Sun, 31 Jan 10 12:26:50 +0800 by 127.0.0.1 using Mozilla/4.0 (compatible; MSIE 6.0; Windows NT 5.1; SV1; .NET CLR 2.0.50727)
+right.other=其它
+# Sun, 31 Jan 10 12:27:32 +0800 by 127.0.0.1 using Mozilla/4.0 (compatible; MSIE 6.0; Windows NT 5.1; SV1; .NET CLR 2.0.50727)
+right.main=常用功能
+# Sun, 31 Jan 10 12:27:48 +0800 by 127.0.0.1 using Mozilla/4.0 (compatible; MSIE 6.0; Windows NT 5.1; SV1; .NET CLR 2.0.50727)
+settings.enablegroups.description=用它来有不同的问题分开排队。
+# Sun, 31 Jan 10 12:28:00 +0800 by 127.0.0.1 using Mozilla/4.0 (compatible; MSIE 6.0; Windows NT 5.1; SV1; .NET CLR 2.0.50727)
+settings.enablegroups=启用“组”
+# Sun, 31 Jan 10 12:28:14 +0800 by 127.0.0.1 using Mozilla/4.0 (compatible; MSIE 6.0; Windows NT 5.1; SV1; .NET CLR 2.0.50727)
+settings.enablepresurvey=启用“预聊天调查”
+# Sun, 31 Jan 10 12:28:29 +0800 by 127.0.0.1 using Mozilla/4.0 (compatible; MSIE 6.0; Windows NT 5.1; SV1; .NET CLR 2.0.50727)
+settings.enablepresurvey.description=部队用户填写一份特殊形式，开始聊天。
+# Sun, 31 Jan 10 12:28:43 +0800 by 127.0.0.1 using Mozilla/4.0 (compatible; MSIE 6.0; Windows NT 5.1; SV1; .NET CLR 2.0.50727)
+settings.enablessl.description=请，请注意您的Web服务器应该配置为支持HTTPS请求。
+# Sun, 31 Jan 10 12:28:57 +0800 by 127.0.0.1 using Mozilla/4.0 (compatible; MSIE 6.0; Windows NT 5.1; SV1; .NET CLR 2.0.50727)
+settings.enablessl=允许（SSL安全连接）
+# Sun, 31 Jan 10 12:29:07 +0800 by 127.0.0.1 using Mozilla/4.0 (compatible; MSIE 6.0; Windows NT 5.1; SV1; .NET CLR 2.0.50727)
+settings.enablestatistics=启用“统计”
+# Sun, 31 Jan 10 12:29:26 +0800 by 127.0.0.1 using Mozilla/4.0 (compatible; MSIE 6.0; Windows NT 5.1; SV1; .NET CLR 2.0.50727)
+settings.enablestatistics.description=添加的消息使用报告页面。
+# Sun, 31 Jan 10 12:29:42 +0800 by 127.0.0.1 using Mozilla/4.0 (compatible; MSIE 6.0; Windows NT 5.1; SV1; .NET CLR 2.0.50727)
+settings.forcessl=强制所有的聊天记录是安全的
+# Sun, 31 Jan 10 12:29:54 +0800 by 127.0.0.1 using Mozilla/4.0 (compatible; MSIE 6.0; Windows NT 5.1; SV1; .NET CLR 2.0.50727)
+settings.onehostconnections=线程的最大数目从一个地址
+# Sun, 31 Jan 10 12:30:08 +0800 by 127.0.0.1 using Mozilla/4.0 (compatible; MSIE 6.0; Windows NT 5.1; SV1; .NET CLR 2.0.50727)
+settings.onehostconnections.description=允许任何的连接数
+# Sun, 31 Jan 10 12:30:20 +0800 by 127.0.0.1 using Mozilla/4.0 (compatible; MSIE 6.0; Windows NT 5.1; SV1; .NET CLR 2.0.50727)
+settings.popup_notification=启用“弹出的对话框通知新的旅客”
+# Sun, 31 Jan 10 12:30:33 +0800 by 127.0.0.1 using Mozilla/4.0 (compatible; MSIE 6.0; Windows NT 5.1; SV1; .NET CLR 2.0.50727)
+settings.popup_notification.description=小对话框出现，吸引你的注意。
+# Sun, 31 Jan 10 12:30:45 +0800 by 127.0.0.1 using Mozilla/4.0 (compatible; MSIE 6.0; Windows NT 5.1; SV1; .NET CLR 2.0.50727)
+settings.sendmessagekey=发送邮件：
+# Sun, 31 Jan 10 12:30:56 +0800 by 127.0.0.1 using Mozilla/4.0 (compatible; MSIE 6.0; Windows NT 5.1; SV1; .NET CLR 2.0.50727)
+settings.survey.askgroup=允许旅客选择部门/组
+# Sun, 31 Jan 10 12:31:06 +0800 by 127.0.0.1 using Mozilla/4.0 (compatible; MSIE 6.0; Windows NT 5.1; SV1; .NET CLR 2.0.50727)
+settings.survey.askgroup.description=显示/隐藏在主管单位的实地调查
+# Sun, 31 Jan 10 12:31:27 +0800 by 127.0.0.1 using Mozilla/4.0 (compatible; MSIE 6.0; Windows NT 5.1; SV1; .NET CLR 2.0.50727)
+form.field.groupcommondesc.description=英文说明。
+# Sun, 31 Jan 10 12:31:37 +0800 by 127.0.0.1 using Mozilla/4.0 (compatible; MSIE 6.0; Windows NT 5.1; SV1; .NET CLR 2.0.50727)
+form.field.groupcommonname.description=英文名称。
+# Sun, 31 Jan 10 12:31:45 +0800 by 127.0.0.1 using Mozilla/4.0 (compatible; MSIE 6.0; Windows NT 5.1; SV1; .NET CLR 2.0.50727)
+form.field.groupdesc=描述
+# Sun, 31 Jan 10 12:32:06 +0800 by 127.0.0.1 using Mozilla/4.0 (compatible; MSIE 6.0; Windows NT 5.1; SV1; .NET CLR 2.0.50727)
+form.field.groupdesc.description=组描述
+# Sun, 31 Jan 10 12:32:20 +0800 by 127.0.0.1 using Mozilla/4.0 (compatible; MSIE 6.0; Windows NT 5.1; SV1; .NET CLR 2.0.50727)
+form.field.groupname.description=名称确定组。
+# Sun, 31 Jan 10 12:32:31 +0800 by 127.0.0.1 using Mozilla/4.0 (compatible; MSIE 6.0; Windows NT 5.1; SV1; .NET CLR 2.0.50727)
+form.field.groupname=姓名
+# Sun, 31 Jan 10 12:33:03 +0800 by 127.0.0.1 using Mozilla/4.0 (compatible; MSIE 6.0; Windows NT 5.1; SV1; .NET CLR 2.0.50727)
+install.updatedb=请，运行更新向导来调整您的数据库。
+# Sun, 31 Jan 10 12:33:15 +0800 by 127.0.0.1 using Mozilla/4.0 (compatible; MSIE 6.0; Windows NT 5.1; SV1; .NET CLR 2.0.50727)
+lang.choose=选择语言
+# Sun, 31 Jan 10 12:33:27 +0800 by 127.0.0.1 using Mozilla/4.0 (compatible; MSIE 6.0; Windows NT 5.1; SV1; .NET CLR 2.0.50727)
+localedirection=升
+# Sun, 31 Jan 10 12:33:41 +0800 by 127.0.0.1 using Mozilla/4.0 (compatible; MSIE 6.0; Windows NT 5.1; SV1; .NET CLR 2.0.50727)
+menu.canned=预制信息
+# Sun, 31 Jan 10 12:33:50 +0800 by 127.0.0.1 using Mozilla/4.0 (compatible; MSIE 6.0; Windows NT 5.1; SV1; .NET CLR 2.0.50727)
+menu.groups=团体
+# Sun, 31 Jan 10 12:35:00 +0800 by 127.0.0.1 using Mozilla/4.0 (compatible; MSIE 6.0; Windows NT 5.1; SV1; .NET CLR 2.0.50727)
+statistics.from=开始
+# Sun, 31 Jan 10 12:35:16 +0800 by 127.0.0.1 using Mozilla/4.0 (compatible; MSIE 6.0; Windows NT 5.1; SV1; .NET CLR 2.0.50727)
+statistics.till=结束

@@ -1,0 +1,38 @@
+<include file="Common:header"/>
+
+<form action='<{:U('set_avg')}>' method='post' >
+	 <table class="table table-condensed table-hover table-active">
+        <thead>
+            <tr class="active">
+                <td colspan="2">
+                    <a class="btn btn-info" href="<{:U('index')}>">工单列表</a>
+                </td>
+                <td colspan="12"></td>
+            </tr>
+        </thead>
+		<tr>
+			<td>类型</td>
+			<td>
+				<select name='type'>
+					 <option value='2'>等待回复时间</option>
+					 <option value='3'>处理完成时间</option>
+				</select>
+			</td>
+		</tr>
+		<tr>
+			<td>增加时间(小时)：</td>
+			<td><input type='text' name='time' value='1'/></td>
+		</tr>
+
+		<tfoot>
+            <tr>
+                <td class='first'></td>
+                <td>
+                	<input class="btn btn-success" type="submit" value="保 存"/>
+                    <a class="btn btn-default" href="<{:U('index')}>">取 消</a>
+               </td> 
+           </tr>
+        </tfoot>
+    </table>
+</form>
+<include file="Common:footer"/>

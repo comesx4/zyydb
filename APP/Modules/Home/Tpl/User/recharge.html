@@ -1,0 +1,179 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+<head>
+  <meta http-equiv="Content-Type" content="text/html;charset=UTF-8" />
+<title><{$stitle|makwebtitle}></title>
+  <link rel='stylesheet' href='__PUBLIC__/Css/userinfo-left.css' />
+  <link rel="stylesheet" href="__PUBLIC__/Css/recharge.css" />
+  <link rel='stylesheet' href='__PUBLIC__/Css/max-header.css' />
+  <link rel='stylesheet' href='__PUBLIC__/Css/nav.css' />
+  <link rel='stylesheet' href='__PUBLIC__/Css/bottom.css' />
+  <js file='__PUBLIC__/Js/jquery-1.7.2.min.js'/>
+  <js file='__PUBLIC__/Js/nav.js'/> 
+  <js file='__PUBLIC__/Js/account.js'/>
+   <js file='__PUBLIC__/Js/payWay.js'/>
+  <js file='__PUBLIC__/Js/bottom.js'/>
+  <script type="text/javascript">
+    var setFace='<{:U('User/setFace')}>';
+  </script>
+
+</head>
+<body>
+  <!--顶部头-->
+ <include file='Common:p-header'/>
+  <!--顶部头结束-->
+  
+  <!--头部公共部分-->
+  <include file='Common:nav'/>
+  <!--头部公共部分结束--> 
+  
+
+    <!--主题内容-->
+	<div class='main'>
+		<!--左半部分-->
+    <include file='Common:account-left'/>
+    <!--左半部分结束-->
+     
+        <!--右半部分-->
+		<div class='main-right'>
+		  <form action='<{:U('pay')}>' method='post'>
+			<h3>我的账户 > 充值</h3>
+			<p class='right-one'>
+				<span class='right-account'>现金账户余额:<span><{$price}></span>元</span> 
+			</p>
+			
+			<p class='right-two'>
+				充值金额：<input type='text' name='price'/>元		
+			</p>
+			<p class='right-three'>
+				请选择银行：	
+			</p>
+
+			  
+            <div class='fix-bottom'>
+                <div class='cons'>
+                    <div class='title'>
+                      <i>其他支付方式</i>
+                      <ul class='pay'>
+                         <li class='show'>支付宝</li>
+                         <li>个人网银</li>
+                         <li>企业网银</li>
+                      </ul>
+                      </span>
+                    </div>
+                  
+                  <!-- 支付方式选择 -->
+
+                     <div class='pros'>
+                      <dl>
+                        <dt><input type='radio' checked id='null' name='WIDdefaultbank' value='zhifubao'/></dt>
+                        <dd><label for='null'><img  src='__PUBLIC__/Images/zhifubao.png'/></label></dd>
+                      </dl>
+                    
+                        
+                    </div>
+
+                    <div class='pros hidden'>
+                        <dl>
+                        <dt><input type='radio' id='ICBC-DEBIT' name='WIDdefaultbank' value='ICBC-DEBIT'/></dt>
+                        <dd><label for='ICBC-DEBIT'><img  src='__PUBLIC__/Images/zhongguogongshang.png'/></label></dd>
+                      </dl>
+                      <dl>
+                        <dt><input checked='true' type='radio' id='CMB-DEBIT' name='WIDdefaultbank' value='CMB-DEBIT'/></dt>
+                        <dd><label for='CMB-DEBIT'><img  src='__PUBLIC__/Images/zhaoshang.png'/></label></dd>
+                      </dl>
+                      <dl>
+                        <dt><input type='radio' id='ABC' name='WIDdefaultbank' value='ABC'/></dt>
+                        <dd><label for='ABC'><img  src='__PUBLIC__/Images/nongye.png'/></label></dd>
+                      </dl>
+                      <dl>
+                        <dt><input type='radio' id='BOC-DEBIT' name='WIDdefaultbank' value='BOC-DEBIT'/></dt>
+                        <dd><label for='BOC-DEBIT'><img  src='__PUBLIC__/Images/zhongguo.png'/></label></dd>
+                      </dl>
+                      
+                      <dl>
+                        <dt><input type='radio' id='CCB-DEBIT' name='WIDdefaultbank' value='CCB-DEBIT'/></dt>
+                        <dd><label for='CCB-DEBIT'><img  src='__PUBLIC__/Images/jianshe.png'/></label></dd>
+                      </dl>
+                     
+                      <dl>
+                        <dt><input type='radio' id='CITIC-DEBIT' name='WIDdefaultbank' value='CITIC-DEBIT'/></dt>
+                        <dd><label for='CITIC-DEBIT'><img  src='__PUBLIC__/Images/zhongxin.png'/></label></dd>
+                      </dl>
+                        
+                    </div>
+
+                    <!-- 支付方式选择结束 -->
+
+                   
+
+                    
+                </div>
+                  
+            </div> 	  	
+                   <div class="submit-box">
+                    <!-- 付款金额 -->
+                    <!-- <input type='hidden' name='price' value='0.01'/> -->
+                    <!-- 订单描述 -->
+                    <input type='hidden' name='WIDbody' value='云服务器'/>
+                     <!-- 商品展示地址 -->
+                 <!--    <input type='hidden' name='WIDshow_url' value='www.baidu.com'/> -->
+                     <!-- 商品订单号 -->
+                    <input type='hidden' name='WIDout_trade_no' value='<{$number}>'/>
+                     <!-- 订单名称 -->
+                    <input type='hidden' name='WIDsubject' value='我的订单名称'/>
+                     <!-- 订单描述 -->
+                    <input type='hidden' name=' WIDbody' value=''/>
+                   
+
+                      <input type='submit' class='submit' value='确认支付'/>
+                    </div>
+
+  	      </div>
+          </if>
+        </div>
+        </form>
+	
+			<p class='right-for'>
+		
+		
+			
+			
+		</div>
+
+		<!--确认充值页面-->
+		
+		<!-- <form action="https://www.yeepay.com/app-merchant-proxy/node" method="post">
+		 <h3>我的账户 > 确认充值</h3>
+
+			<input type="hidden" name="p0_Cmd" value="<{$p0_Cmd}>"/>
+			<input type="hidden" name="p1_MerId" value="<{$p1_MerId}>"/>
+			<input type="hidden" name="p2_Order" value="<{$p2_Order}>"/>
+			<input type="hidden" name="p3_Amt" value="<{$p3_Amt}>"/>
+			<input type="hidden" name="p4_Cur" value="<{$p4_Cur}>"/>
+			<input type="hidden" name="p5_Pid" value="<{$p5_Pid}>"/>
+			<input type="hidden" name="p6_Pcat" value="<{$p6_Pcat}>"/>
+			<input type="hidden" name="p7_Pdesc" value="<{$p7_Pdesc}>"/>
+			<input type="hidden" name="p8_Url" value="<{$p8_Url}>"/>
+			<input type="hidden" name="p9_SAF" value="<{$p9_SAF}>"/>
+			<input type="hidden" name="pa_MP" value="<{$pa_MP}>"/>
+			<input type="hidden" name="pd_FrpId" value="<{$pd_FrpId}>"/>
+			<input type="hidden" name="pr_NeedResponse" value="<{$pr_NeedResponse}>"/>
+			<input type="hidden" name="hmac" value="<{$hmac}>"/>
+		 <p class='right-for'>您的订单号为:<span style='font-size:18px;color:red;'><{$p2_Order}></span> <br/>
+		 	充值金额为：<span style='font-size:18px;color:red;'><{$p3_Amt}>
+		 </span>元&nbsp;&nbsp;<input type='submit' value='确认充值'/></p>
+		</form> -->
+		<!--确认充值页面结束-->
+	
+	</div>
+	<!--右半部分结束-->
+
+	 <!--底部版权-->
+	<include file='Common:bottom' />
+	<!--底部版权结束-->
+
+	
+	
+</body>
+</html>

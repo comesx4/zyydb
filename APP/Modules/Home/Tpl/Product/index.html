@@ -1,0 +1,102 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+<head>
+     <meta http-equiv="Content-Type" content="text/html;charset=UTF-8" />
+     <title><{$infor.goods|makwebtitle}></title>
+      <include file='Common:com-header'/>
+     <link rel="stylesheet" href="__PUBLIC__/Css/product.css" />
+     <js file='__PUBLIC__/Js/product.js'/>
+</head>
+<body>  
+     <!-- 顶部公共部分 -->
+    <include file='Common:home-header'/>
+    <!-- 顶部公共结束 -->
+    <div class='back'><a name="ttop"></a>
+      <img src="__ROOT__/Uploads/Goods/<{$infor.introduction_img}>">
+    </div>
+    <!-- 主体内容 -->
+    <div class='body-content'>
+
+        <div class="y-row content-wrapper">
+            <div class='content-left'>
+              <div class='conts'>
+                <span style='font-size: 13px;'>产品首页</span>
+                <foreach name='goodsCat' item='v'>
+                <dl class='content-list'>
+                    <dt><{$v.cat}></dt>
+                    <foreach name='v.goods' item='stmt'>
+                        <dd class='on'><a <if condition="$stmt['id'] eq $_GET['id']">class='down'</if> href="<{:U('Product/index#ttop',array('id'=>$stmt['id']))}>"><{$stmt.name}></a></dd>
+                    
+                   </foreach>
+                </dl>
+              </foreach>
+               
+              </div>
+            </div>
+            <div class='content-right'>
+               <div class='nav-wei'>
+                        <ul>
+                          <foreach name='list' item='v'>
+                            <li><a  target='_self' href="#<{$v}>"><{$v}></a></li>
+                          </foreach>
+                            
+                        </ul>
+                                   
+                </div>
+                <div class='right-main'>
+                    <div class='fiexd'>
+                  
+                    <div class='inner'>
+                      <{$title}>
+                    
+                    <if condition="$package">
+                      <table class='table'>
+                        <switch name="Think.get.id">
+                              <case value='19'>                              
+                                  <{$tbtitle}>
+                                   <{$tbcon}>                                 
+                              </case>
+
+                              <case value='20'>
+                                   <{$tbtitle}>
+                                   <{$tbcon}>  
+                              </case>
+
+                              <case value='22'>
+                                   <{$tbtitle}>
+                                   <{$tbcon}>  
+                              </case>
+
+                              <case value='23'>
+                                <{$tbtitle}>
+                                   <{$tbcon}>                                  
+                              </case>
+                         </switch>
+                      </table>
+                    </if>
+                    </div>
+                   
+                </div>
+               <!-- 遍历内容 -->
+               <foreach name='attr' item='v'>
+                  <{$v.content}>                 
+               </foreach>
+                   
+                </div>                    
+
+                </div>
+               
+            </div>
+        </div>
+
+
+    </div>
+
+
+    <!-- 主体内容结束 -->
+
+    <include file='Common:bottom'/>
+
+    <form action='<{:U('buyPackage')}>' method='post'>
+         <input style='display:none;' type='submit' value=''/>
+    </form>

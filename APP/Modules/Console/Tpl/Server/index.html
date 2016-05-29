@@ -1,0 +1,420 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+<head>
+	<meta http-equiv="Content-Type" content="text/html;charset=UTF-8" />
+	<title></title>
+	<link href="__ROOT__/Public/Bootstrap/css/bootstrap.min.css" rel="stylesheet">
+	<link rel="stylesheet" href="__PUBLIC__/Css/header.css" />
+	<link rel="stylesheet" href="__PUBLIC__/Css/left.css" /> 	
+	<link rel="stylesheet" href="__PUBLIC__/Css/server.css" />
+	<!--[if lt IE 9]>
+	    <script src="//cdn.bootcss.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      	<script src="//cdn.bootcss.com/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->   
+    <script src="//cdn.bootcss.com/jquery/1.11.3/jquery.min.js"></script>    
+	<script src="__ROOT__/Public/Bootstrap/js/bootstrap.min.js"></script>
+	<script type="text/javascript" src='__PUBLIC__/Js/left.js'></script>
+	<script type="text/javascript" src='__PUBLIC__/Js/common.js'></script>
+	<script type="text/javascript" src='__PUBLIC__/Js/server_living.js'></script>
+    <script type="text/javascript">
+    	var dbName 		     = '<{$dbName}>';
+    	var getLivingInfo    = '<{:U('getLivingInfo')}>';
+    	var restartAction    = '<{:U('livingOperation')}>';
+    	var response_timer   = '<{:U('responseTimer')}>';
+    	var sendInformation  = '<{:U('sendInformation')}>';
+    	var sendInformation2 = '<{:U('sendEmail')}>';
+    	var checkVerify		 = '<{:U('checkVerify')}>';
+    	var checkVerify2	 = '<{:U('checkEmail')}>';
+    	var indexHref		 = '<{:U('index')}>';
+    	var publicPath	     = '__PUBLIC__';
+    </script>
+</head>
+<body>
+	<!-- ========头部========= -->
+	<include file='Common:header'/>
+	<!-- ==========头部 end=========== -->
+
+	<!-- =========主体内容======= -->
+	<div id='main'>
+		<!-- 左半部分 -->
+		<include file='Common:left'/>
+		
+		<!-- 右半部分 -->
+		<div class='main-right'>
+			<div class='position'>
+				<span class='glyphicon glyphicon-home'></span> <a href="">会员中心</a>/ <a href="">云服务器</a>  <a href=""><span class='glyphicon glyphicon-refresh'></span></a>
+			</div>
+
+			<div class='living'>
+				<!-- 导航 -->
+				<include file='Common:server_nav'/>
+		
+				<div class='content'>
+					<div class='controller'>
+
+						<a target='_blank' href="<{:U('Home/Product/buy' ,array('id' => 1))}>"><button type="button" class="btn btn-info">新建</button></a>
+						<button type="button" name='restart' class="btn btn-info">重启</button>
+						<button type="button" name='new' class="btn btn-info upgrade">升级</button>
+						<button type="button" class="btn btn-info renew">续费</button>
+						
+						<!-- 下拉菜单 -->
+						<div class="dropdown show">
+						    <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+						   更多操作
+						    <span class="glyphicon glyphicon-menu-down"></span>
+						    </button>
+						    <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
+						        <li class='closeLiving'><a title='只能关闭开机中的实例'>关机</a></li>
+						        <li class='startLiving'><a title='只能开启已关机的实例'>开机</a></li>
+						        <li class='reOs'><a>重装系统</a></li>
+						       	<li class='rePassword'><a title='重置密码前请先关机'>重置密码</a></li>
+						       	<li class='reName'><a>改名</a></li>
+						    </ul>
+						</div>
+
+						
+					<form name='search-form' action='' method='get'>
+						<span  class='alert-search '>
+							<div class='show-search '>
+								<span class="glyphicon glyphicon-search"></span>
+								<span class='milide'>搜索其实很简单</span>
+								<span class='glyphicon glyphicon-triangle-bottom'></span>
+							</div>
+						
+							<!-- 搜索弹出框 -->
+							<div style='display:none;' class='search'>
+								
+								<div class='all-input'>
+									<p>
+										<label>主机名:</label>
+										<input type='text' name='name' value='<{$tmp['name']}>'/>
+									</p>
+
+									<p>
+										<label>别名:</label>
+										<input type='text' name='server_alias' value='<{$tmp['server_alias']}>'/>
+									</p>
+
+									<p>
+										<label>外网IP:</label>
+										<input type='text' name='wan_ip' value='<{$tmp['wan_ip']}>'/>
+									</p>
+
+									<p>
+										<label>状态:</label>
+										<{:goods_status( 1 ,$tmp['status'],'status')}>
+									</p>
+								</div>
+								
+								<div class='all-button'>
+									<p>
+										<input class='btn btn-info submit-search'  type='submit' name='submit' value='搜索'/>
+										<input onclick="window.location=indexHref;" class='btn btn-warning' type='button' name='empty' value='清空'/>
+									</p>
+								</div>
+							</div>
+						</span>
+						
+					</form>
+
+					</div>
+
+					<table class='table table-hover'>
+						<tr>
+							<th><input type='checkbox' name='ids' value='1'/></th>
+							<th>主机名</th>
+							<th>别名</th>
+							<th>状态</th>
+							<th>内网IP</th>
+							<th>公网IP</th>
+							<th>带宽</th>
+							<th>到期时间</th>
+						</tr>
+					<foreach name='living' item='v'>
+							<tr  tid='<{$v.tid}>' class='goods'>
+							<td>
+								<input lid = '<{$v.id}>' status='<{$v.status}>' type='checkbox' 
+								<if condition='$v["status"] eq 7 || $v["status"] eq 8  || $v["status"] eq 10 || $v["status"] eq 11 || $v["status"] eq 14'>
+									class='tid continue ' disabled
+
+								<elseif condition="$v['status'] eq 9" />
+									class='tid continue2 ' disabled								
+								<else/>
+									class='tid'
+								</if>  name='id[]' value='<{$v.tid}>'/>
+							</td>
+							<td>
+								<a href="<{:U('living',array('tid'=>$v['tid']))}>">
+									<{$v.name}>
+								</a>
+							</td>
+							<td>
+								<if condition="$v['server_alias']">
+									<{$v.server_alias}>
+								<else/>
+									未命名
+								</if>
+							</td>
+							<td class='status wait'>
+								<in name="v.status" value="7,8,9,10">
+									<img src='__PUBLIC__/Images/wait.gif'>
+								</in>
+
+								<{$v.status|goods_status=$v['gid'],###}>
+							</td>
+							
+							<td><{$v.lan_ip}></td>
+							<td><{$v.wan_ip}></td>
+							<td><{$v.band}>M</td>
+							<td><{$v.end|date='Y-m-d H:i',###}></td>
+						</tr>
+					</foreach>
+					<tr>
+						<td colspan='9' align='center'><{$fpage}></td>
+					</tr>
+					</table>
+				</div>
+
+			</div>		
+
+			<!-- <div class='info'>		
+			</div> -->
+		</div>	
+
+		</div>	
+	</div>
+   <!-- =========主体内容 end======= -->
+
+<!-- 弹出框 -->
+<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <h4 class="modal-title" id="exampleModalLabel">重置密码</h4>
+      </div>
+      <ul class="nav nav-tabs checkType">
+		  <li role="presentation" class="active"><a>手机验证</a></li>
+		  <li role="presentation"><a>邮箱验证</a></li>
+	  </ul>
+	  <!-- 手机验证 -->
+	<form class='form'  action='<{:U('resetPassword')}>' method='post'>
+      <div class="modal-body">
+		 
+          <div class="form-group">
+          	 	<label for="newPassword" class="control-label">新密码:</label>
+            	<input placeholder='2-12个字符，字母或数字'  name='password' type="text" class="form-control pwd1" id="newPassword">
+            
+          </div>
+          <div class="form-group">
+          		<label for="recipient-name" class="control-label">短信验证码（<{$Think.session.userinfo.telephone|infoMd5=###}>）:</label>
+            	<input placeholder='短信验证码' type="text" name='code' class="form-control code1" id="recipient-name">
+          </div>
+       	
+      </div>
+
+      <div class="modal-footer">
+	      	<span class='error' style='color:red;margin-right:20px;'></span>
+	      	<input type='hidden' name='server_id' value='0'/>
+	      	<input type='hidden' name='type' value='0'/>
+	      	<button class='getTeleCode btn btn-default' type='button' style='float:left;' >获取验证码</button>
+	        <button type="button" class="btn btn-default" data-dismiss="modal">取消</button>
+	        <button type="submit" class='btn btn-primary handerPwd1' >确定</button>
+      </div>
+	</form>	
+	<!-- 邮箱验证 -->
+	<form class='form' style='display:none;' action='<{:U('resetPassword')}>' method='post'>
+       <div  class="modal-body">
+		 
+          <div class="form-group">
+          	 	<label for="newPassword2" class="control-label">新密码:</label>
+            	<input placeholder='2-12个字符，字母或数字'  name='password' type="text" class="form-control pwd2" id="newPassword2">
+            
+          </div>
+          <div class="form-group">
+          		<label for="recipient-name2" class="control-label">邮箱验证码（<{$Think.session.uname|infoMd5=###}>）:</label>
+            	<input placeholder='邮箱验证码'  type="text" name='code' class="form-control code2" id="recipient-name2">
+          </div>
+       
+      </div>
+
+      <div class="modal-footer">
+	      	<span class='error' style='color:red;margin-right:20px;'></span>
+	      	<input type='hidden' name='server_id' value='0'/>
+	      	<input type='hidden' name='type' value='1' />
+	      	<button class='getEmailCode btn btn-default' type='button' style='float:left;' >获取验证码</button>
+	        <button type="button" class="btn btn-default" data-dismiss="modal">取消</button>
+	        <button type="submit" class='btn btn-primary handerPwd2' >确定</button>
+      </div>
+  </form>
+      
+    </div>
+  </div>
+</div>
+
+<!-- 服务器改名弹出框 -->
+<form action='<{:U('reName')}>' method='post'>
+<div class="modal fade" id="reName" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <h4 class="modal-title" id="exampleModalLabel">服务器改名</h4>
+      </div>
+      <div class="modal-body">
+          <div class="form-group">
+          	<h4>您已选择<span style='color:red'class='server_sum'>2</span>台云主机</h4>	
+          </div>
+          <div class="form-group">
+            <label for="newName"  class="control-label">新云主机名称:</label>
+            <input type="text" placeholder='1-16个字符' name='newName' class="form-control" id="newName">
+          </div>
+        
+      </div>
+      <div class='server_id'>
+      	
+      </div>
+      <div class="modal-footer">
+      	<span class='error' style='color:red;margin-right:20px;'></span>
+        <button type="button" class="btn btn-default" data-dismiss="modal">取消</button>
+        <button type="submit" class="btn btn-primary rename_submit">确定</button>
+      </div>
+    </div>
+  </div>
+</div>
+</form>
+
+<!-- 重装系统弹出框 -->
+<form action='<{:U('reInstallOs')}>' method='post'>
+<div class="modal fade" id="reInstallOs" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <h4 class="modal-title" id="exampleModalLabel">重装系统</h4>
+      </div>
+       <ul class="nav nav-tabs osType">
+		  <li role="presentation" class="active"><a>公共操作系统</a></li>
+		  <li role="presentation"><a>自定义镜像</a></li>
+		  <li role="presentation"><a>镜像市场</a></li>
+	  </ul>
+      <div class="modal-body">         
+           <div class="form-group os_type">
+        		<!-- 下拉菜单 -->
+				<div class="dropdown show">
+				    <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+				   	选择公共操作系统
+				    <span class="glyphicon glyphicon-menu-down"></span>
+				    </button>
+				    <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
+
+				    <!-- 遍历数据 -->
+				    <foreach name='public_os' item='v'>
+				        <li osid='<{$v.id}>'><a><{$v.name}></a></li>
+				    </foreach>
+				    </ul>
+				</div>
+          </div>
+           <div style='display:none;' class="form-group os_type">
+           		<!-- 自定义镜像 -->
+				<div class="dropdown show">
+				    <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+				   	选择自定义镜像
+				    <span class="glyphicon glyphicon-menu-down"></span>
+				    </button>
+				    <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
+
+				    <!-- 遍历数据 -->
+				    <foreach name='custom' item='v'>
+				        <li osid='<{$v.id}>'><a><{$v.name}></a></li>
+				    </foreach>
+				    </ul>
+				</div>
+        		
+          </div>
+           <div style='display:none;' class="form-group os_type">
+        
+          </div>
+          <div class="form-group">
+            <label for="password"  class="control-label">新密码:</label>
+            <input type="text" placeholder='2-12个字符,字母和数字' name='newPassword' class="form-control" id="password">
+          </div>
+           <div class="form-group">
+            <label for="repassword"  class="control-label">确认密码:</label>
+            <input type="text" placeholder='确认密码' name='rePassword' class="form-control" id="repassword">
+          </div>
+        
+      </div>
+      <div class='server_id'>
+      	
+      </div>
+      <div class="modal-footer">
+      	<span id='osErrorMsg' style='color:red;margin-right:20px;'></span>
+      	<input type='hidden' name='osid' value='0' />
+      	<input type='hidden' name='server_id' value='0'/>
+        <button type="button" class="btn btn-default" data-dismiss="modal">取消</button>
+        <button type="submit" class="btn btn-primary os-submit">确定</button>
+      </div>
+    </div>
+  </div>
+</div>
+</form>
+
+<!-- 重装系统验证弹出框 -->
+<div class="modal fade" id="alertCheck" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <h4 class="modal-title" id="exampleModalLabel">安全验证</h4>
+      </div>
+      <ul class="nav nav-tabs max-checkType">
+		  <li role="presentation" class="active"><a>手机验证</a></li>
+		  <li role="presentation"><a>邮箱验证</a></li>
+	  </ul>
+	  <!-- 手机验证 -->
+	<div class='unificationCheck' >
+      <div class="modal-body">         
+          <div class="form-group">
+          		<label for="recipient-name" class="control-label">短信验证码（<{$Think.session.userinfo.telephone|infoMd5=###}>）:</label>
+            	<input placeholder='短信验证码' type="text" name='code' class="form-control code1 teleCode" id="recipient-name">
+          </div>
+       	
+      </div>
+
+      <div class="modal-footer">
+	      	<span class='error' style='color:red;margin-right:20px;'></span>
+	      	<input type='hidden' name='snap_id' value='0'/>
+	      	<input type='hidden' name='type' value='0' />
+	      	<button class='getTeleCode btn btn-default' type='button' style='float:left;' >获取验证码</button>
+	        <button type="button" class="btn btn-default" data-dismiss="modal">取消</button>
+	        <button type="button" class=' btn btn-primary handerNext nextCheck' >下一步</button>
+      </div>
+	</div>	
+	<!-- 邮箱验证 -->
+	<div class='unificationCheck' style='display:none;'>
+       <div  class="modal-body">
+        
+          <div class="form-group">
+          		<label for="recipient-name2" class="control-label">邮箱验证码（<{$Think.session.uname|infoMd5=###}>）:</label>
+            	<input placeholder='邮箱验证码'  type="text" name='code' class="form-control code2 emailCode" id="recipient-name2">
+          </div>
+       
+      </div>
+
+      <div class="modal-footer">
+	      	<span class='error' style='color:red;margin-right:20px;'></span>
+	      	<input type='hidden' name='snap_id' value='0'/>
+	      	<input type='hidden' name='type' value='1' />
+	      	<button class='getEmailCode btn btn-default' type='button' style='float:left;' >获取验证码</button>
+	        <button type="button" class="btn btn-default" data-dismiss="modal">取消</button>
+	        <button type="button" class='btn btn-primary handerNext nextCheck' >下一步</button>
+      </div>
+ 	</div>
+      
+    </div>
+  </div>
+</div>
+
+</body>
+</html>

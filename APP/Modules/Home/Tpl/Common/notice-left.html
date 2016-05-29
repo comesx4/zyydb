@@ -1,0 +1,9 @@
+<div class='left'>
+    <h3>信息中心</h3>
+    <ul>
+        <li ><a <if condition="MODULE_NAME eq 'Notice' &&  ACTION_NAME eq 'index' || ACTION_NAME eq 'detail' ">class='on'</if> href="<{:U('index')}>">公司公告</a></li>
+         <notice_cat limit='10'>
+            <li ><a <if  condition="MODULE_NAME eq 'Notice' && $_GET['pid'] eq $v['id'] || ACTION_NAME eq 'dynamicList'  || ACTION_NAME eq 'dynamicDetail' ">class='on'</if> href="<{:U('dynamicList',array('pid' => $v['id']))}>"><{$v.cat_name}></a></li>
+        </notice_cat>
+    </ul>
+</div>

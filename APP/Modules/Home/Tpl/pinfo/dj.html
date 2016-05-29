@@ -1,0 +1,179 @@
+  <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+<head>
+    <title><{$stitle|makwebtitle}></title>
+    <include file='Common:com-header'/>
+    <link rel="stylesheet" href="__PUBLIC__/Css/about.css" />
+    <link rel="stylesheet" href="__PUBLIC__/Css/global.css" />
+    <link rel="stylesheet" href="__PUBLIC__/Css/head.css" />
+    <link rel="stylesheet" href="__PUBLIC__/Css/domain.css" />
+    <link rel="stylesheet" href="__PUBLIC__/Css/host.css" />
+    <link rel="stylesheet" href="__PUBLIC__/Css/cloudsite.css" />
+    <link rel="stylesheet" href="__PUBLIC__/Css/server.css" />
+    <style type="text/css">
+    .htype a{
+       width: 162px;
+    }
+    .site_list ul{
+        height: 652px;
+        margin-top: -1px;
+    }
+    .site_list ul li{
+        width: 285px;
+        height: 623px
+    }
+    </style>
+    
+</head>
+<body>
+    <div id='body'>
+        <!-- 顶部公共部分 -->
+        <include file='Common:home-header'/>
+        <!-- 顶部公共结束 -->
+        
+        <div id='slides'>
+            <div style="background-color:#fff6dd;padding:0;text-align: center;" class="tab-pannel">
+                <img  src="__ROOT__/Uploads/Logo/<{$Think.config.img2}>" >                
+            </div>
+        </div>
+
+
+  
+   <div class='body-content'>
+
+        <div class="y-row content-wrapper">
+        <include file='Common:host-left'/>
+            <div class='content-right'>
+               <div class='nav-wei'>
+                        <ul> <li><a  target='_self' href="<{:U('/index/index')}>">首页</a></li>     
+                            <li><a  target='_self' href="<{:U('/pinfo/dj')}>">单机租用托管</a></li>                            
+                        </ul>                                   
+                </div>
+                <div class='right-main'>
+                    <div class='fiexd'>
+                  
+                    <div class='inner'>
+                        <div class="body_right">
+                            <div class="domainfw">
+                                <div>
+                                    <div>
+                                        <h2>单机服务器租用</h2>
+                                    </div>
+                                    <div class="htype">
+                                        <?php $cur_set = false;?>
+                                        <foreach name="city" item="c">
+                                            <a class="<?php if(!$cur_set){echo 'cur';$cur_set=true;} ?>" get="<{$c.city_code}>" href="javascript:void(0)"><{$c.city}></a>
+                                        </foreach>
+
+                                    </div>
+                                </div>
+                                <div class="site_list">
+                                    <?php $cur_set = false;?>
+                                    <foreach name="city" item="c">
+                                        <div class="ul" id="<{$c.city_code}>" get="<{$c.id}>" <?php if ($cur_set) {echo 'style="display:none"';} else {$cur_set = true;} ?>>
+                                            <ul>
+                                                <foreach name="data" item="d">
+                                                    <if condition="$c.id eq $d.location ">
+                                                        <li class="">
+                                                            <h3><{$d.name}></h3>
+                                                            <img src="__PUBLIC__/Images/pinfo/server1.png">
+                                                            <dl>
+                                                                <dd>CPU:<span><{$d.cpu}></span></dd>
+                                                                <dd>内存:<span><{$d.memory}></span></dd>
+                                                                <dd>硬盘:<span><{$d.disk}></span></dd>
+                                                                <dd>规格:<span><{$d.size}></span></dd>
+                                                                <dd>带宽:<span><{$d.band}></span></dd>
+                                                                <dd>每增加1个IP地址<span><{$d.ip_price}>元/月</span></dd>
+                                                                <dd>流量:<span>BPG端口流量费:<{$d.flow_bgp}>元/月</span></dd>
+                                                                <dd>&nbsp;<span>静态端口流量费:<{$d.flow_static}>元/月</span></dd>
+                                                                <dd>说明:</dd>
+                                                                <{$d.comment|auto_warp}>
+                                                                <dd class="lt">
+
+                                                                    <div class="price">￥<font color="#FF6544"><{$d.price}></font>元/月</div>
+                                                                </dd>
+                                                            </dl>
+                                                        </li>
+                                                    </if>
+
+                                                </foreach>
+
+                                            </ul>
+                                        </div>
+                                    </foreach>
+                                <script type="text/javascript">
+                                    $(".htype a").click(function(){
+                                        $(".htype a").removeClass("cur");
+                                        $(this).addClass('cur');
+                                        $(".site_list .ul").css("display",'none');
+                                        $("#"+$(this).attr('get')).css("display",'');
+                                    });
+
+                                </script>
+                            </div>
+                            <!--
+                            <div class="jfjs" id="jfjs">
+                                <a class="product-anchor"> </a>
+                                <div class="tit"><span>机房<font color="#FF6D4E">介绍</font><em></em></span></div>
+                                <div class="cont">
+                                    <ul>
+                                        <li>
+                                            <img src="__PUBLIC__/Images/pinfo/jf-hangzhou.png">
+                                            <h4>机房介绍：</h4>
+                                            <p>杭州电信网络管理有限公司互联网数据中心一贯秉承“不断将持之以恒的热诚、高效率、高品质服务于客户”的公司理念，
+                                            致力于高标准、专业化、电信级的优质服务，为您全力营造一个良好的服务环境。 互联网数据中心机房位于人杰地灵的浙江杭州，是我国东南部重要的国家骨干节点之一
+                                            </p>
+                                        </li>
+                                        <li class="last">
+                                            <img src="__PUBLIC__/Images/pinfo/jf-ningbo.png">
+                                            <h4>机房介绍：</h4>
+                                            <p>机房按照三星级标准建造，互联网链路由智能策略路由组成，实时采集最新运营商IP段申请数据，线路质量优化率高达80%，可与BGP协议链路相媲美。电信链路分别与浙江省出口CISCO CRS1（450G出口带宽）及城域网（600G出口带宽）骨干设备互联，互联带宽为70G；网通链路与骨干设备互联，互联带宽为20G。架设国内领先的DDOS流量牵引设备及防火墙集群。
+                                            </p>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="domainys" id="productfw">
+                                <a class="product-anchor"> </a>
+                                <div class="tit"><span>我们的<font color="#FF6D4E">服务</font><em>Our Server</em></span></div>
+                                <div class="cont">
+                                    <p style="line-height:28px;padding: 0 10px;">
+                                        1.自主运营机房:全国首家20G集群防火墙，速度稳定、安全可信赖；7×24×365天技术工程师驻机房维护；<br>
+                                         2.全自动的智能监控系统 采用全自动的智能监控系统，确保网站稳定运行；<br>
+                                         3.完善的售后服务体系 客户至上，创新服务! 享用中电云集数据完善的售后服务工单处理系统； <br>
+                                         4.绿色机房倡导者 安全稳定，严格控制客户质量，杜绝ddos攻击/arp/病毒等。
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="cjwt">
+                                <a id="cjwt" class="product-anchor"> </a>
+                                <div class="tit"><span>产品<font color="#FF6D4E">帮助</font><em>Product Help</em></span><a href="http://support.chinaccnet.com" class="more">帮助中心&gt;&gt;</a></div>
+                                <div class="cont">
+                                    <h3>温馨提醒：</h3>
+                                    <ul>
+                                        <li>
+                                            <font color="#FF6D4E">
+                                                1、更多产品优惠，敬请联系公司客服详细咨询，产品最终解释权归杭州云集通信有限公司。1U=4.45cm
+                                                电源限制在350W，超过的，一年加1000费用<br>
+                                                2、同一主体信息，不限备案域名数量，绑定个数，变更或者新增备案主体需收费50元/次。
+                                            </font>
+                                        </li>
+                                    </ul>
+                                </div>
+
+                            </div>
+                    -->
+                        </div>
+                    </div>
+                    </div>
+                </div>                    
+            </div>
+        </div>
+    </div>
+    </div>    
+    <!--底部版权开始-->
+    <include file='Common:bottom'/>
+    <!--底部版权结束-->
+</body>
+</html>
+

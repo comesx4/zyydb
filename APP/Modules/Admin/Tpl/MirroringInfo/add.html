@@ -1,0 +1,72 @@
+<include file="Common:header"/>
+
+<form action='<{:U('insert')}>' method='post'>
+    <table class="table table-condensed table-hover table-active">
+        <thead>
+            <tr class="active">
+                <td colspan="2">
+                    <a class="btn btn-info" href="<{:U('index')}>">镜像信息列表</a>
+                </td>
+            </tr>
+        </thead>
+	
+		<tr>
+			<td class='first'>所属镜像:</td>
+			<td><{$mirr}></td>
+		</tr>
+		<tr>
+			<td class='first'>信息:</td>
+			<td><textarea style='width:800px;height:370px;' name='content'><div class='info'>
+               	    	<p>支持纯ASP/NET环境镜像 支持软件版本：Asp,Asp.NET(2.0/3.5/4.0)+MySql5.1+Ftp</p>
+               	    	<dl>
+               	    		<dt>功能亮点：</dt>               	    		
+               	    		<dd>1. 融合多年windows运维经验以环境搭建。</dd>
+							<dd>2. 针对windows2008系统进行了优化和安全。</dd>
+							<dd>A、采用最小化权限 针对系统磁盘分区以及目录取消危险用户权限</dd>
+							<dd>B、采取最小化服务原则，禁止了一些服务器不常用服务</dd>
+							<dd>C、采用系统原生态《安全策略》开放了常用端口禁止一些漏洞和不常用端口</dd>
+							<dd>3. 默认支持多种Asp.NET2.0/3.5/4.0解析。</dd>
+							<dd>4. 集成了开源的FTP软件 轻松建立ftp用户。</dd>
+               	    	</dl>
+
+               	    	<dl>
+               	    		<dt>专家点评：</dt>
+               	    		<dd>Windows .NET环境，完整的.NET运行时覆盖 2.0/3.5/4.0，支持AJAX，WCF等技术规范。除了ASP.NET网站应用，还可以用于Windows Phone移动开发等场景。已集成MySQL数据库，提供基本的存储解决方案。</dd>
+
+               	    	</dl>
+                       <p>* 使用该镜像服务，还可享受由本服务商提供的数据迁移专属优惠。</p>
+               	    	
+               	    </div>
+               	    <div class="line-dot"> </div>
+               	    
+               	    <h2>产品组成</h2>
+               	    <ul class='padd'>
+               	    	<li>Windows 2008 64位位操作系统</li>
+               	    	<li>Asp,Asp.NET(2.0/3.5/4.0)</li>
+               	    	<li>MySql5.1</li>
+               	    </ul>
+               	      <div class="line-dot"> </div>
+               	    
+               	    <h2>售后支持</h2>
+               	    <ul class='padd'>
+               	    	<li>旺旺：yunjiservice（7×24小时）</li>
+               	    	<li>邮箱：netcn@chinaccnet.cn（7×24小时）</li>
+               	    	<li>电话：400-806-0700（7×24小时）</li>
+               	    </ul>
+               	    <div class="line-dot"> </div>
+
+               	    <h2>使用指南</h2>
+               	    <a class='zhinan padd' href="">ASP.NET运行环境（Windows2008 64位|IIS7.0） 操作文档：</a></textarea></td>
+		</tr>
+		  <tfoot>
+            <tr>
+                <td class='first'></td>
+                <td>
+                  <input class="btn btn-success" type="submit" value="保 存"/>
+                    <a class="btn btn-default" href="<{:U('index')}>">取 消</a>
+               </td> 
+           </tr>
+        </tfoot>
+    </table>
+</form>
+<include file="Common:footer"/>

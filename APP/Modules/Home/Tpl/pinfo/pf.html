@@ -1,0 +1,121 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+<head>
+    <title><{$stitle|makwebtitle}></title>
+    <include file='Common:com-header'/>
+    <link rel="stylesheet" href="__PUBLIC__/Css/about.css"/>
+    <link rel="stylesheet" href="__PUBLIC__/Css/global.css"/>
+    <link rel="stylesheet" href="__PUBLIC__/Css/head.css"/>
+    <link rel="stylesheet" href="__PUBLIC__/Css/domain.css"/>
+    <link rel="stylesheet" href="__PUBLIC__/Css/host.css"/>
+    <link rel="stylesheet" href="__PUBLIC__/Css/cloudsite.css"/>
+    <link rel="stylesheet" href="__PUBLIC__/Css/server.css"/>
+    <link rel="stylesheet" href="__PUBLIC__/Css/cloudesc.css"/>
+    <style type="text/css">
+        .htype a {
+            width: 162px;
+        }
+
+        .site_list ul {
+            height: 652px;
+            margin-top: -1px;
+        }
+
+        .site_list ul li {
+            width: 285px;
+            height: 623px
+        }
+    </style>
+
+</head>
+<body>
+<div id='body'>
+    <!-- 顶部公共部分 -->
+    <include file='Common:home-header'/>
+    <!-- 顶部公共结束 -->
+
+    <div id='slides'>
+        <div style="background-color:#fff6dd;padding:0;text-align: center;" class="tab-pannel">
+            <img src="__ROOT__/Uploads/Logo/<{$Think.config.img2}>">
+        </div>
+    </div>
+
+
+    <div class='body-content'>
+
+        <div class="y-row content-wrapper">
+            <include file='Common:host-left'/>
+            <div class='content-right'>
+                <div class='nav-wei'>
+                    <ul>
+                        <li><a target='_self' href="<{:U('/index/index')}>">首页</a></li>
+                        <li><a target='_self' href="<{:U('/pinfo/pf')}>">普防服务器</a></li>
+                    </ul>
+                </div>
+                <div class='right-main'>
+                    <div class="fixed">
+                        <div class="inner">
+                            <td valign="top">
+                                <div class="body_right">
+                                    <div class="domainfw">
+                                        <a id="buy" class="product-anchor"> </a>
+                                        <h2>网络普防服务器</h2>
+                                        <p class="js">服务器提供99.95%服务可用性，99.999%数据可靠性的稳定服务</p>
+                                        <div class="cloud">
+                                            <table border="0">
+                                                <tbody>
+                                                <tr>
+                                                    <td>
+                                                        <h3>全冗余网络结构，杜绝单点故障</h3>
+                                                        <p>
+                                                            完整的网络安全产品，包括ISS安全漏洞扫描、DDOS攻击入侵检测防护系统，安氏病毒防范系统。同时实现网络集中监控、故障和告警管理、流量性能监控管理等网络管理功能。通过双物理路由连接至本地其他核心节点，能够提供622M/155M/100M/2M等各种速率传输电路
+                                                        </p>
+
+                                                    </td>
+                                                    <td style="text-align:right">
+                                                        <img src="__PUBLIC__/Images/pinfo/pf.png">
+                                                    </td>
+                                                </tr>
+                                                </tbody>
+                                            </table>
+                                        </div>
+                                    </div>
+                                    <div class="tjgm">
+                                        <div class="tit"><span>推荐<font color="#FF6D4E">购买</font><em>Recommmended to
+                                            buy</em></span></div>
+                                        <div class="cont">
+                                            <table border="1">
+                                                <tbody>
+                                                <tr>
+                                                    <th></th>
+                                                    <th>主机类型</th>
+                                                    <th>防护能力</th>
+                                                    <th>价格</th>
+                                                </tr>
+                                                <foreach name="data" item="d">
+                                                    <tr>
+                                                        <th><{$d.name}></th>
+                                                        <td><{$d.type}></td>
+                                                        <td><{$d.ability}></td>
+                                                        <td>￥<font color="#FF6544"><{$d.price}></font>元/月起</td>
+                                                    </tr>
+                                                </foreach>
+                                                </tbody>
+                                            </table>
+                                        </div>
+                                    </div>
+                                </div>
+                            </td>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!--底部版权开始-->
+<include file='Common:bottom'/>
+<!--底部版权结束-->
+</body>
+</html>

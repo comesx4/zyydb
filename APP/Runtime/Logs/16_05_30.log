@@ -1,0 +1,736 @@
+[ 2016-05-30T00:28:10+08:00 ] 127.0.0.1 /admin
+NOTIC: [8] Use of undefined constant __APP__ - assumed '__APP__' D:\xampp\htdocs\ThinkPHP\Common\functions.php 第 256 行.
+NOTIC: [8] Use of undefined constant __APP__ - assumed '__APP__' D:\xampp\htdocs\ThinkPHP\Common\functions.php 第 256 行.
+NOTIC: [8] Use of undefined constant __APP__ - assumed '__APP__' D:\xampp\htdocs\ThinkPHP\Common\functions.php 第 256 行.
+NOTIC: [8] Use of undefined constant __APP__ - assumed '__APP__' D:\xampp\htdocs\ThinkPHP\Common\functions.php 第 256 行.
+NOTIC: [8] Use of undefined constant __APP__ - assumed '__APP__' D:\xampp\htdocs\ThinkPHP\Common\functions.php 第 256 行.
+INFO: [ route_check ] --START--
+INFO: CheckRoute Behavior ::run [ RunTime:0.001000s ]
+INFO: [ route_check ] --END-- [ RunTime:0.001000s ]
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead D:\xampp\htdocs\ThinkPHP\Lib\Core\Dispatcher.class.php 第 132 行.
+
+[ 2016-05-30T00:28:11+08:00 ] 127.0.0.1 /admin/index/welcome.html
+NOTIC: [8] Use of undefined constant __APP__ - assumed '__APP__' D:\xampp\htdocs\ThinkPHP\Common\functions.php 第 256 行.
+NOTIC: [8] Use of undefined constant __APP__ - assumed '__APP__' D:\xampp\htdocs\ThinkPHP\Common\functions.php 第 256 行.
+NOTIC: [8] Use of undefined constant __APP__ - assumed '__APP__' D:\xampp\htdocs\ThinkPHP\Common\functions.php 第 256 行.
+NOTIC: [8] Use of undefined constant __APP__ - assumed '__APP__' D:\xampp\htdocs\ThinkPHP\Common\functions.php 第 256 行.
+NOTIC: [8] Use of undefined constant __APP__ - assumed '__APP__' D:\xampp\htdocs\ThinkPHP\Common\functions.php 第 256 行.
+INFO: [ route_check ] --START--
+INFO: CheckRoute Behavior ::run [ RunTime:0.001001s ]
+INFO: [ route_check ] --END-- [ RunTime:0.001001s ]
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead D:\xampp\htdocs\ThinkPHP\Lib\Core\Dispatcher.class.php 第 132 行.
+
+[ 2016-05-30T00:28:14+08:00 ] 127.0.0.1 /admin/user/node.html
+NOTIC: [8] Use of undefined constant __APP__ - assumed '__APP__' D:\xampp\htdocs\ThinkPHP\Common\functions.php 第 256 行.
+NOTIC: [8] Use of undefined constant __APP__ - assumed '__APP__' D:\xampp\htdocs\ThinkPHP\Common\functions.php 第 256 行.
+NOTIC: [8] Use of undefined constant __APP__ - assumed '__APP__' D:\xampp\htdocs\ThinkPHP\Common\functions.php 第 256 行.
+NOTIC: [8] Use of undefined constant __APP__ - assumed '__APP__' D:\xampp\htdocs\ThinkPHP\Common\functions.php 第 256 行.
+NOTIC: [8] Use of undefined constant __APP__ - assumed '__APP__' D:\xampp\htdocs\ThinkPHP\Common\functions.php 第 256 行.
+INFO: [ route_check ] --START--
+INFO: CheckRoute Behavior ::run [ RunTime:0.000000s ]
+INFO: [ route_check ] --END-- [ RunTime:0.001000s ]
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead D:\xampp\htdocs\ThinkPHP\Lib\Core\Dispatcher.class.php 第 132 行.
+
+[ 2016-05-30T00:28:21+08:00 ] 127.0.0.1 /admin/user/addNode/pid/10/level/2.html
+NOTIC: [8] Use of undefined constant __APP__ - assumed '__APP__' D:\xampp\htdocs\ThinkPHP\Common\functions.php 第 256 行.
+NOTIC: [8] Use of undefined constant __APP__ - assumed '__APP__' D:\xampp\htdocs\ThinkPHP\Common\functions.php 第 256 行.
+NOTIC: [8] Use of undefined constant __APP__ - assumed '__APP__' D:\xampp\htdocs\ThinkPHP\Common\functions.php 第 256 行.
+NOTIC: [8] Use of undefined constant __APP__ - assumed '__APP__' D:\xampp\htdocs\ThinkPHP\Common\functions.php 第 256 行.
+NOTIC: [8] Use of undefined constant __APP__ - assumed '__APP__' D:\xampp\htdocs\ThinkPHP\Common\functions.php 第 256 行.
+INFO: [ route_check ] --START--
+INFO: CheckRoute Behavior ::run [ RunTime:0.001000s ]
+INFO: [ route_check ] --END-- [ RunTime:0.001000s ]
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead D:\xampp\htdocs\ThinkPHP\Lib\Core\Dispatcher.class.php 第 132 行.
+NOTIC: 建议使用I方法替代_get
+NOTIC: 建议使用I方法替代_get
+
+[ 2016-05-30T00:28:23+08:00 ] 127.0.0.1 /admin/node_cat/get_info.html
+NOTIC: [8] Use of undefined constant __APP__ - assumed '__APP__' D:\xampp\htdocs\ThinkPHP\Common\functions.php 第 256 行.
+NOTIC: [8] Use of undefined constant __APP__ - assumed '__APP__' D:\xampp\htdocs\ThinkPHP\Common\functions.php 第 256 行.
+NOTIC: [8] Use of undefined constant __APP__ - assumed '__APP__' D:\xampp\htdocs\ThinkPHP\Common\functions.php 第 256 行.
+NOTIC: [8] Use of undefined constant __APP__ - assumed '__APP__' D:\xampp\htdocs\ThinkPHP\Common\functions.php 第 256 行.
+NOTIC: [8] Use of undefined constant __APP__ - assumed '__APP__' D:\xampp\htdocs\ThinkPHP\Common\functions.php 第 256 行.
+INFO: [ route_check ] --START--
+INFO: CheckRoute Behavior ::run [ RunTime:0.001000s ]
+INFO: [ route_check ] --END-- [ RunTime:0.001000s ]
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead D:\xampp\htdocs\ThinkPHP\Lib\Core\Dispatcher.class.php 第 132 行.
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead D:\xampp\htdocs\ThinkPHP\Lib\Driver\Db\DbMysql.class.php 第 55 行.
+SQL: SHOW COLUMNS FROM `kz_node` [ RunTime:0.079005s ]
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead D:\xampp\htdocs\ThinkPHP\Lib\Core\Db.class.php 第 605 行.
+SQL: SELECT `id` FROM `kz_node` WHERE ( `title` = 'NodeCat/get_info' ) LIMIT 1   [ RunTime:0.001000s ]
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead D:\xampp\htdocs\ThinkPHP\Lib\Core\Db.class.php 第 605 行.
+SQL: SELECT `id`,`pid`,`title`,`remark` FROM `kz_node` ORDER BY sort DESC  [ RunTime:0.002000s ]
+NOTIC: [2] htmlspecialchars() expects parameter 1 to be string, array given D:\xampp\htdocs\ThinkPHP\Common\common.php 第 118 行.
+NOTIC: 建议使用I方法替代_post
+SQL: SHOW COLUMNS FROM `kz_nodecat` [ RunTime:0.003000s ]
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead D:\xampp\htdocs\ThinkPHP\Lib\Core\Db.class.php 第 605 行.
+SQL: SELECT `id`,`pid`,`cat` FROM `kz_nodecat` WHERE ( `pid` = 13 ) ORDER BY sort DESC  [ RunTime:0.001000s ]
+
+[ 2016-05-30T00:28:25+08:00 ] 127.0.0.1 /admin/node_cat/get_info.html
+NOTIC: [8] Use of undefined constant __APP__ - assumed '__APP__' D:\xampp\htdocs\ThinkPHP\Common\functions.php 第 256 行.
+NOTIC: [8] Use of undefined constant __APP__ - assumed '__APP__' D:\xampp\htdocs\ThinkPHP\Common\functions.php 第 256 行.
+NOTIC: [8] Use of undefined constant __APP__ - assumed '__APP__' D:\xampp\htdocs\ThinkPHP\Common\functions.php 第 256 行.
+NOTIC: [8] Use of undefined constant __APP__ - assumed '__APP__' D:\xampp\htdocs\ThinkPHP\Common\functions.php 第 256 行.
+NOTIC: [8] Use of undefined constant __APP__ - assumed '__APP__' D:\xampp\htdocs\ThinkPHP\Common\functions.php 第 256 行.
+INFO: [ route_check ] --START--
+INFO: CheckRoute Behavior ::run [ RunTime:0.001000s ]
+INFO: [ route_check ] --END-- [ RunTime:0.002000s ]
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead D:\xampp\htdocs\ThinkPHP\Lib\Core\Dispatcher.class.php 第 132 行.
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead D:\xampp\htdocs\ThinkPHP\Lib\Driver\Db\DbMysql.class.php 第 55 行.
+SQL: SHOW COLUMNS FROM `kz_node` [ RunTime:0.003000s ]
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead D:\xampp\htdocs\ThinkPHP\Lib\Core\Db.class.php 第 605 行.
+SQL: SELECT `id` FROM `kz_node` WHERE ( `title` = 'NodeCat/get_info' ) LIMIT 1   [ RunTime:0.001000s ]
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead D:\xampp\htdocs\ThinkPHP\Lib\Core\Db.class.php 第 605 行.
+SQL: SELECT `id`,`pid`,`title`,`remark` FROM `kz_node` ORDER BY sort DESC  [ RunTime:0.002000s ]
+NOTIC: [2] htmlspecialchars() expects parameter 1 to be string, array given D:\xampp\htdocs\ThinkPHP\Common\common.php 第 118 行.
+NOTIC: 建议使用I方法替代_post
+SQL: SHOW COLUMNS FROM `kz_nodecat` [ RunTime:0.004000s ]
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead D:\xampp\htdocs\ThinkPHP\Lib\Core\Db.class.php 第 605 行.
+SQL: SELECT `id`,`pid`,`cat` FROM `kz_nodecat` WHERE ( `pid` = 18 ) ORDER BY sort DESC  [ RunTime:0.000000s ]
+
+[ 2016-05-30T00:28:48+08:00 ] 127.0.0.1 /admin/user/insertNode.html
+NOTIC: [8] Use of undefined constant __APP__ - assumed '__APP__' D:\xampp\htdocs\ThinkPHP\Common\functions.php 第 256 行.
+NOTIC: [8] Use of undefined constant __APP__ - assumed '__APP__' D:\xampp\htdocs\ThinkPHP\Common\functions.php 第 256 行.
+NOTIC: [8] Use of undefined constant __APP__ - assumed '__APP__' D:\xampp\htdocs\ThinkPHP\Common\functions.php 第 256 行.
+NOTIC: [8] Use of undefined constant __APP__ - assumed '__APP__' D:\xampp\htdocs\ThinkPHP\Common\functions.php 第 256 行.
+NOTIC: [8] Use of undefined constant __APP__ - assumed '__APP__' D:\xampp\htdocs\ThinkPHP\Common\functions.php 第 256 行.
+INFO: [ route_check ] --START--
+INFO: CheckRoute Behavior ::run [ RunTime:0.001000s ]
+INFO: [ route_check ] --END-- [ RunTime:0.001000s ]
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead D:\xampp\htdocs\ThinkPHP\Lib\Core\Dispatcher.class.php 第 132 行.
+NOTIC: 建议使用I方法替代_post
+NOTIC: 建议使用I方法替代_post
+NOTIC: 建议使用I方法替代_post
+NOTIC: 建议使用I方法替代_post
+NOTIC: 建议使用I方法替代_post
+NOTIC: 建议使用I方法替代_post
+NOTIC: 建议使用I方法替代_post
+NOTIC: 建议使用I方法替代_post
+NOTIC: 建议使用I方法替代_post
+NOTIC: 建议使用I方法替代_post
+NOTIC: 建议使用I方法替代_post
+NOTIC: 建议使用I方法替代_post
+NOTIC: 建议使用I方法替代_post
+NOTIC: 建议使用I方法替代_post
+NOTIC: 建议使用I方法替代_post
+NOTIC: 建议使用I方法替代_post
+NOTIC: 建议使用I方法替代_post
+NOTIC: 建议使用I方法替代_post
+NOTIC: 建议使用I方法替代_post
+
+[ 2016-05-30T00:28:51+08:00 ] 127.0.0.1 /admin/user/group.html
+NOTIC: [8] Use of undefined constant __APP__ - assumed '__APP__' D:\xampp\htdocs\ThinkPHP\Common\functions.php 第 256 行.
+NOTIC: [8] Use of undefined constant __APP__ - assumed '__APP__' D:\xampp\htdocs\ThinkPHP\Common\functions.php 第 256 行.
+NOTIC: [8] Use of undefined constant __APP__ - assumed '__APP__' D:\xampp\htdocs\ThinkPHP\Common\functions.php 第 256 行.
+NOTIC: [8] Use of undefined constant __APP__ - assumed '__APP__' D:\xampp\htdocs\ThinkPHP\Common\functions.php 第 256 行.
+NOTIC: [8] Use of undefined constant __APP__ - assumed '__APP__' D:\xampp\htdocs\ThinkPHP\Common\functions.php 第 256 行.
+INFO: [ route_check ] --START--
+INFO: CheckRoute Behavior ::run [ RunTime:0.001000s ]
+INFO: [ route_check ] --END-- [ RunTime:0.001000s ]
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead D:\xampp\htdocs\ThinkPHP\Lib\Core\Dispatcher.class.php 第 132 行.
+
+[ 2016-05-30T00:28:52+08:00 ] 127.0.0.1 /admin
+NOTIC: [8] Use of undefined constant __APP__ - assumed '__APP__' D:\xampp\htdocs\ThinkPHP\Common\functions.php 第 256 行.
+NOTIC: [8] Use of undefined constant __APP__ - assumed '__APP__' D:\xampp\htdocs\ThinkPHP\Common\functions.php 第 256 行.
+NOTIC: [8] Use of undefined constant __APP__ - assumed '__APP__' D:\xampp\htdocs\ThinkPHP\Common\functions.php 第 256 行.
+NOTIC: [8] Use of undefined constant __APP__ - assumed '__APP__' D:\xampp\htdocs\ThinkPHP\Common\functions.php 第 256 行.
+NOTIC: [8] Use of undefined constant __APP__ - assumed '__APP__' D:\xampp\htdocs\ThinkPHP\Common\functions.php 第 256 行.
+INFO: [ route_check ] --START--
+INFO: CheckRoute Behavior ::run [ RunTime:0.001000s ]
+INFO: [ route_check ] --END-- [ RunTime:0.001000s ]
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead D:\xampp\htdocs\ThinkPHP\Lib\Core\Dispatcher.class.php 第 132 行.
+
+[ 2016-05-30T00:28:53+08:00 ] 127.0.0.1 /admin/index/welcome.html
+NOTIC: [8] Use of undefined constant __APP__ - assumed '__APP__' D:\xampp\htdocs\ThinkPHP\Common\functions.php 第 256 行.
+NOTIC: [8] Use of undefined constant __APP__ - assumed '__APP__' D:\xampp\htdocs\ThinkPHP\Common\functions.php 第 256 行.
+NOTIC: [8] Use of undefined constant __APP__ - assumed '__APP__' D:\xampp\htdocs\ThinkPHP\Common\functions.php 第 256 行.
+NOTIC: [8] Use of undefined constant __APP__ - assumed '__APP__' D:\xampp\htdocs\ThinkPHP\Common\functions.php 第 256 行.
+NOTIC: [8] Use of undefined constant __APP__ - assumed '__APP__' D:\xampp\htdocs\ThinkPHP\Common\functions.php 第 256 行.
+INFO: [ route_check ] --START--
+INFO: CheckRoute Behavior ::run [ RunTime:0.001000s ]
+INFO: [ route_check ] --END-- [ RunTime:0.001000s ]
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead D:\xampp\htdocs\ThinkPHP\Lib\Core\Dispatcher.class.php 第 132 行.
+
+[ 2016-05-30T00:28:57+08:00 ] 127.0.0.1 /admin/normal_protect/index.html
+NOTIC: [8] Use of undefined constant __APP__ - assumed '__APP__' D:\xampp\htdocs\ThinkPHP\Common\functions.php 第 256 行.
+NOTIC: [8] Use of undefined constant __APP__ - assumed '__APP__' D:\xampp\htdocs\ThinkPHP\Common\functions.php 第 256 行.
+NOTIC: [8] Use of undefined constant __APP__ - assumed '__APP__' D:\xampp\htdocs\ThinkPHP\Common\functions.php 第 256 行.
+NOTIC: [8] Use of undefined constant __APP__ - assumed '__APP__' D:\xampp\htdocs\ThinkPHP\Common\functions.php 第 256 行.
+NOTIC: [8] Use of undefined constant __APP__ - assumed '__APP__' D:\xampp\htdocs\ThinkPHP\Common\functions.php 第 256 行.
+INFO: [ route_check ] --START--
+INFO: CheckRoute Behavior ::run [ RunTime:0.000000s ]
+INFO: [ route_check ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead D:\xampp\htdocs\ThinkPHP\Lib\Core\Dispatcher.class.php 第 132 行.
+
+[ 2016-05-30T00:29:00+08:00 ] 127.0.0.1 /admin/cabinet_machine/index.html
+NOTIC: [8] Use of undefined constant __APP__ - assumed '__APP__' D:\xampp\htdocs\ThinkPHP\Common\functions.php 第 256 行.
+NOTIC: [8] Use of undefined constant __APP__ - assumed '__APP__' D:\xampp\htdocs\ThinkPHP\Common\functions.php 第 256 行.
+NOTIC: [8] Use of undefined constant __APP__ - assumed '__APP__' D:\xampp\htdocs\ThinkPHP\Common\functions.php 第 256 行.
+NOTIC: [8] Use of undefined constant __APP__ - assumed '__APP__' D:\xampp\htdocs\ThinkPHP\Common\functions.php 第 256 行.
+NOTIC: [8] Use of undefined constant __APP__ - assumed '__APP__' D:\xampp\htdocs\ThinkPHP\Common\functions.php 第 256 行.
+INFO: [ route_check ] --START--
+INFO: CheckRoute Behavior ::run [ RunTime:0.001001s ]
+INFO: [ route_check ] --END-- [ RunTime:0.001001s ]
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead D:\xampp\htdocs\ThinkPHP\Lib\Core\Dispatcher.class.php 第 132 行.
+
+[ 2016-05-30T00:29:03+08:00 ] 127.0.0.1 /admin/cabinet_machine/add.html
+NOTIC: [8] Use of undefined constant __APP__ - assumed '__APP__' D:\xampp\htdocs\ThinkPHP\Common\functions.php 第 256 行.
+NOTIC: [8] Use of undefined constant __APP__ - assumed '__APP__' D:\xampp\htdocs\ThinkPHP\Common\functions.php 第 256 行.
+NOTIC: [8] Use of undefined constant __APP__ - assumed '__APP__' D:\xampp\htdocs\ThinkPHP\Common\functions.php 第 256 行.
+NOTIC: [8] Use of undefined constant __APP__ - assumed '__APP__' D:\xampp\htdocs\ThinkPHP\Common\functions.php 第 256 行.
+NOTIC: [8] Use of undefined constant __APP__ - assumed '__APP__' D:\xampp\htdocs\ThinkPHP\Common\functions.php 第 256 行.
+INFO: [ route_check ] --START--
+INFO: CheckRoute Behavior ::run [ RunTime:0.001000s ]
+INFO: [ route_check ] --END-- [ RunTime:0.001000s ]
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead D:\xampp\htdocs\ThinkPHP\Lib\Core\Dispatcher.class.php 第 132 行.
+
+[ 2016-05-30T00:31:38+08:00 ] 127.0.0.1 /admin/cabinet_machine/insert.html
+NOTIC: [8] Use of undefined constant __APP__ - assumed '__APP__' D:\xampp\htdocs\ThinkPHP\Common\functions.php 第 256 行.
+NOTIC: [8] Use of undefined constant __APP__ - assumed '__APP__' D:\xampp\htdocs\ThinkPHP\Common\functions.php 第 256 行.
+NOTIC: [8] Use of undefined constant __APP__ - assumed '__APP__' D:\xampp\htdocs\ThinkPHP\Common\functions.php 第 256 行.
+NOTIC: [8] Use of undefined constant __APP__ - assumed '__APP__' D:\xampp\htdocs\ThinkPHP\Common\functions.php 第 256 行.
+NOTIC: [8] Use of undefined constant __APP__ - assumed '__APP__' D:\xampp\htdocs\ThinkPHP\Common\functions.php 第 256 行.
+INFO: [ route_check ] --START--
+INFO: CheckRoute Behavior ::run [ RunTime:0.001000s ]
+INFO: [ route_check ] --END-- [ RunTime:0.001000s ]
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead D:\xampp\htdocs\ThinkPHP\Lib\Core\Dispatcher.class.php 第 132 行.
+
+[ 2016-05-30T00:31:40+08:00 ] 127.0.0.1 /admin/cabinet_machine/index.html
+NOTIC: [8] Use of undefined constant __APP__ - assumed '__APP__' D:\xampp\htdocs\ThinkPHP\Common\functions.php 第 256 行.
+NOTIC: [8] Use of undefined constant __APP__ - assumed '__APP__' D:\xampp\htdocs\ThinkPHP\Common\functions.php 第 256 行.
+NOTIC: [8] Use of undefined constant __APP__ - assumed '__APP__' D:\xampp\htdocs\ThinkPHP\Common\functions.php 第 256 行.
+NOTIC: [8] Use of undefined constant __APP__ - assumed '__APP__' D:\xampp\htdocs\ThinkPHP\Common\functions.php 第 256 行.
+NOTIC: [8] Use of undefined constant __APP__ - assumed '__APP__' D:\xampp\htdocs\ThinkPHP\Common\functions.php 第 256 行.
+INFO: [ route_check ] --START--
+INFO: CheckRoute Behavior ::run [ RunTime:0.001000s ]
+INFO: [ route_check ] --END-- [ RunTime:0.002000s ]
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead D:\xampp\htdocs\ThinkPHP\Lib\Core\Dispatcher.class.php 第 132 行.
+
+[ 2016-05-30T00:32:24+08:00 ] 127.0.0.1 /admin/cabinet_machine/update/id/8.html
+NOTIC: [8] Use of undefined constant __APP__ - assumed '__APP__' D:\xampp\htdocs\ThinkPHP\Common\functions.php 第 256 行.
+NOTIC: [8] Use of undefined constant __APP__ - assumed '__APP__' D:\xampp\htdocs\ThinkPHP\Common\functions.php 第 256 行.
+NOTIC: [8] Use of undefined constant __APP__ - assumed '__APP__' D:\xampp\htdocs\ThinkPHP\Common\functions.php 第 256 行.
+NOTIC: [8] Use of undefined constant __APP__ - assumed '__APP__' D:\xampp\htdocs\ThinkPHP\Common\functions.php 第 256 行.
+NOTIC: [8] Use of undefined constant __APP__ - assumed '__APP__' D:\xampp\htdocs\ThinkPHP\Common\functions.php 第 256 行.
+INFO: [ route_check ] --START--
+INFO: CheckRoute Behavior ::run [ RunTime:0.001000s ]
+INFO: [ route_check ] --END-- [ RunTime:0.001000s ]
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead D:\xampp\htdocs\ThinkPHP\Lib\Core\Dispatcher.class.php 第 132 行.
+
+[ 2016-05-30T00:33:42+08:00 ] 127.0.0.1 /admin
+NOTIC: [8] Use of undefined constant __APP__ - assumed '__APP__' D:\xampp\htdocs\ThinkPHP\Common\functions.php 第 256 行.
+NOTIC: [8] Use of undefined constant __APP__ - assumed '__APP__' D:\xampp\htdocs\ThinkPHP\Common\functions.php 第 256 行.
+NOTIC: [8] Use of undefined constant __APP__ - assumed '__APP__' D:\xampp\htdocs\ThinkPHP\Common\functions.php 第 256 行.
+NOTIC: [8] Use of undefined constant __APP__ - assumed '__APP__' D:\xampp\htdocs\ThinkPHP\Common\functions.php 第 256 行.
+NOTIC: [8] Use of undefined constant __APP__ - assumed '__APP__' D:\xampp\htdocs\ThinkPHP\Common\functions.php 第 256 行.
+INFO: [ route_check ] --START--
+INFO: CheckRoute Behavior ::run [ RunTime:0.001000s ]
+INFO: [ route_check ] --END-- [ RunTime:0.001000s ]
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead D:\xampp\htdocs\ThinkPHP\Lib\Core\Dispatcher.class.php 第 132 行.
+
+[ 2016-05-30T00:33:42+08:00 ] 127.0.0.1 /admin/index/welcome.html
+NOTIC: [8] Use of undefined constant __APP__ - assumed '__APP__' D:\xampp\htdocs\ThinkPHP\Common\functions.php 第 256 行.
+NOTIC: [8] Use of undefined constant __APP__ - assumed '__APP__' D:\xampp\htdocs\ThinkPHP\Common\functions.php 第 256 行.
+NOTIC: [8] Use of undefined constant __APP__ - assumed '__APP__' D:\xampp\htdocs\ThinkPHP\Common\functions.php 第 256 行.
+NOTIC: [8] Use of undefined constant __APP__ - assumed '__APP__' D:\xampp\htdocs\ThinkPHP\Common\functions.php 第 256 行.
+NOTIC: [8] Use of undefined constant __APP__ - assumed '__APP__' D:\xampp\htdocs\ThinkPHP\Common\functions.php 第 256 行.
+INFO: [ route_check ] --START--
+INFO: CheckRoute Behavior ::run [ RunTime:0.002000s ]
+INFO: [ route_check ] --END-- [ RunTime:0.002000s ]
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead D:\xampp\htdocs\ThinkPHP\Lib\Core\Dispatcher.class.php 第 132 行.
+
+[ 2016-05-30T00:33:49+08:00 ] 127.0.0.1 /admin/normal_protect/index.html
+NOTIC: [8] Use of undefined constant __APP__ - assumed '__APP__' D:\xampp\htdocs\ThinkPHP\Common\functions.php 第 256 行.
+NOTIC: [8] Use of undefined constant __APP__ - assumed '__APP__' D:\xampp\htdocs\ThinkPHP\Common\functions.php 第 256 行.
+NOTIC: [8] Use of undefined constant __APP__ - assumed '__APP__' D:\xampp\htdocs\ThinkPHP\Common\functions.php 第 256 行.
+NOTIC: [8] Use of undefined constant __APP__ - assumed '__APP__' D:\xampp\htdocs\ThinkPHP\Common\functions.php 第 256 行.
+NOTIC: [8] Use of undefined constant __APP__ - assumed '__APP__' D:\xampp\htdocs\ThinkPHP\Common\functions.php 第 256 行.
+INFO: [ route_check ] --START--
+INFO: CheckRoute Behavior ::run [ RunTime:0.002000s ]
+INFO: [ route_check ] --END-- [ RunTime:0.002000s ]
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead D:\xampp\htdocs\ThinkPHP\Lib\Core\Dispatcher.class.php 第 132 行.
+
+[ 2016-05-30T00:33:50+08:00 ] 127.0.0.1 /admin/cabinet_machine/index.html
+NOTIC: [8] Use of undefined constant __APP__ - assumed '__APP__' D:\xampp\htdocs\ThinkPHP\Common\functions.php 第 256 行.
+NOTIC: [8] Use of undefined constant __APP__ - assumed '__APP__' D:\xampp\htdocs\ThinkPHP\Common\functions.php 第 256 行.
+NOTIC: [8] Use of undefined constant __APP__ - assumed '__APP__' D:\xampp\htdocs\ThinkPHP\Common\functions.php 第 256 行.
+NOTIC: [8] Use of undefined constant __APP__ - assumed '__APP__' D:\xampp\htdocs\ThinkPHP\Common\functions.php 第 256 行.
+NOTIC: [8] Use of undefined constant __APP__ - assumed '__APP__' D:\xampp\htdocs\ThinkPHP\Common\functions.php 第 256 行.
+INFO: [ route_check ] --START--
+INFO: CheckRoute Behavior ::run [ RunTime:0.001000s ]
+INFO: [ route_check ] --END-- [ RunTime:0.001000s ]
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead D:\xampp\htdocs\ThinkPHP\Lib\Core\Dispatcher.class.php 第 132 行.
+
+[ 2016-05-30T00:33:55+08:00 ] 127.0.0.1 /admin/cabinet_machine/update/id/8.html
+NOTIC: [8] Use of undefined constant __APP__ - assumed '__APP__' D:\xampp\htdocs\ThinkPHP\Common\functions.php 第 256 行.
+NOTIC: [8] Use of undefined constant __APP__ - assumed '__APP__' D:\xampp\htdocs\ThinkPHP\Common\functions.php 第 256 行.
+NOTIC: [8] Use of undefined constant __APP__ - assumed '__APP__' D:\xampp\htdocs\ThinkPHP\Common\functions.php 第 256 行.
+NOTIC: [8] Use of undefined constant __APP__ - assumed '__APP__' D:\xampp\htdocs\ThinkPHP\Common\functions.php 第 256 行.
+NOTIC: [8] Use of undefined constant __APP__ - assumed '__APP__' D:\xampp\htdocs\ThinkPHP\Common\functions.php 第 256 行.
+INFO: [ route_check ] --START--
+INFO: CheckRoute Behavior ::run [ RunTime:0.001000s ]
+INFO: [ route_check ] --END-- [ RunTime:0.001000s ]
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead D:\xampp\htdocs\ThinkPHP\Lib\Core\Dispatcher.class.php 第 132 行.
+
+[ 2016-05-30T00:37:25+08:00 ] 127.0.0.1 /admin
+NOTIC: [8] Use of undefined constant __APP__ - assumed '__APP__' D:\xampp\htdocs\ThinkPHP\Common\functions.php 第 256 行.
+NOTIC: [8] Use of undefined constant __APP__ - assumed '__APP__' D:\xampp\htdocs\ThinkPHP\Common\functions.php 第 256 行.
+NOTIC: [8] Use of undefined constant __APP__ - assumed '__APP__' D:\xampp\htdocs\ThinkPHP\Common\functions.php 第 256 行.
+NOTIC: [8] Use of undefined constant __APP__ - assumed '__APP__' D:\xampp\htdocs\ThinkPHP\Common\functions.php 第 256 行.
+NOTIC: [8] Use of undefined constant __APP__ - assumed '__APP__' D:\xampp\htdocs\ThinkPHP\Common\functions.php 第 256 行.
+INFO: [ route_check ] --START--
+INFO: CheckRoute Behavior ::run [ RunTime:0.001001s ]
+INFO: [ route_check ] --END-- [ RunTime:0.001001s ]
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead D:\xampp\htdocs\ThinkPHP\Lib\Core\Dispatcher.class.php 第 132 行.
+
+[ 2016-05-30T00:37:26+08:00 ] 127.0.0.1 /admin/index/welcome.html
+NOTIC: [8] Use of undefined constant __APP__ - assumed '__APP__' D:\xampp\htdocs\ThinkPHP\Common\functions.php 第 256 行.
+NOTIC: [8] Use of undefined constant __APP__ - assumed '__APP__' D:\xampp\htdocs\ThinkPHP\Common\functions.php 第 256 行.
+NOTIC: [8] Use of undefined constant __APP__ - assumed '__APP__' D:\xampp\htdocs\ThinkPHP\Common\functions.php 第 256 行.
+NOTIC: [8] Use of undefined constant __APP__ - assumed '__APP__' D:\xampp\htdocs\ThinkPHP\Common\functions.php 第 256 行.
+NOTIC: [8] Use of undefined constant __APP__ - assumed '__APP__' D:\xampp\htdocs\ThinkPHP\Common\functions.php 第 256 行.
+INFO: [ route_check ] --START--
+INFO: CheckRoute Behavior ::run [ RunTime:0.001000s ]
+INFO: [ route_check ] --END-- [ RunTime:0.001000s ]
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead D:\xampp\htdocs\ThinkPHP\Lib\Core\Dispatcher.class.php 第 132 行.
+
+[ 2016-05-30T00:37:31+08:00 ] 127.0.0.1 /admin/high_protect/index.html
+NOTIC: [8] Use of undefined constant __APP__ - assumed '__APP__' D:\xampp\htdocs\ThinkPHP\Common\functions.php 第 256 行.
+NOTIC: [8] Use of undefined constant __APP__ - assumed '__APP__' D:\xampp\htdocs\ThinkPHP\Common\functions.php 第 256 行.
+NOTIC: [8] Use of undefined constant __APP__ - assumed '__APP__' D:\xampp\htdocs\ThinkPHP\Common\functions.php 第 256 行.
+NOTIC: [8] Use of undefined constant __APP__ - assumed '__APP__' D:\xampp\htdocs\ThinkPHP\Common\functions.php 第 256 行.
+NOTIC: [8] Use of undefined constant __APP__ - assumed '__APP__' D:\xampp\htdocs\ThinkPHP\Common\functions.php 第 256 行.
+INFO: [ route_check ] --START--
+INFO: CheckRoute Behavior ::run [ RunTime:0.001000s ]
+INFO: [ route_check ] --END-- [ RunTime:0.001000s ]
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead D:\xampp\htdocs\ThinkPHP\Lib\Core\Dispatcher.class.php 第 132 行.
+
+[ 2016-05-30T00:37:32+08:00 ] 127.0.0.1 /admin/cabinet_machine/index.html
+NOTIC: [8] Use of undefined constant __APP__ - assumed '__APP__' D:\xampp\htdocs\ThinkPHP\Common\functions.php 第 256 行.
+NOTIC: [8] Use of undefined constant __APP__ - assumed '__APP__' D:\xampp\htdocs\ThinkPHP\Common\functions.php 第 256 行.
+NOTIC: [8] Use of undefined constant __APP__ - assumed '__APP__' D:\xampp\htdocs\ThinkPHP\Common\functions.php 第 256 行.
+NOTIC: [8] Use of undefined constant __APP__ - assumed '__APP__' D:\xampp\htdocs\ThinkPHP\Common\functions.php 第 256 行.
+NOTIC: [8] Use of undefined constant __APP__ - assumed '__APP__' D:\xampp\htdocs\ThinkPHP\Common\functions.php 第 256 行.
+INFO: [ route_check ] --START--
+INFO: CheckRoute Behavior ::run [ RunTime:0.001000s ]
+INFO: [ route_check ] --END-- [ RunTime:0.001000s ]
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead D:\xampp\htdocs\ThinkPHP\Lib\Core\Dispatcher.class.php 第 132 行.
+
+[ 2016-05-30T00:37:35+08:00 ] 127.0.0.1 /admin/cabinet_machine/update/id/8.html
+NOTIC: [8] Use of undefined constant __APP__ - assumed '__APP__' D:\xampp\htdocs\ThinkPHP\Common\functions.php 第 256 行.
+NOTIC: [8] Use of undefined constant __APP__ - assumed '__APP__' D:\xampp\htdocs\ThinkPHP\Common\functions.php 第 256 行.
+NOTIC: [8] Use of undefined constant __APP__ - assumed '__APP__' D:\xampp\htdocs\ThinkPHP\Common\functions.php 第 256 行.
+NOTIC: [8] Use of undefined constant __APP__ - assumed '__APP__' D:\xampp\htdocs\ThinkPHP\Common\functions.php 第 256 行.
+NOTIC: [8] Use of undefined constant __APP__ - assumed '__APP__' D:\xampp\htdocs\ThinkPHP\Common\functions.php 第 256 行.
+INFO: [ route_check ] --START--
+INFO: CheckRoute Behavior ::run [ RunTime:0.001000s ]
+INFO: [ route_check ] --END-- [ RunTime:0.001000s ]
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead D:\xampp\htdocs\ThinkPHP\Lib\Core\Dispatcher.class.php 第 132 行.
+
+[ 2016-05-30T00:38:00+08:00 ] 127.0.0.1 /admin/cabinet_machine/save.html
+NOTIC: [8] Use of undefined constant __APP__ - assumed '__APP__' D:\xampp\htdocs\ThinkPHP\Common\functions.php 第 256 行.
+NOTIC: [8] Use of undefined constant __APP__ - assumed '__APP__' D:\xampp\htdocs\ThinkPHP\Common\functions.php 第 256 行.
+NOTIC: [8] Use of undefined constant __APP__ - assumed '__APP__' D:\xampp\htdocs\ThinkPHP\Common\functions.php 第 256 行.
+NOTIC: [8] Use of undefined constant __APP__ - assumed '__APP__' D:\xampp\htdocs\ThinkPHP\Common\functions.php 第 256 行.
+NOTIC: [8] Use of undefined constant __APP__ - assumed '__APP__' D:\xampp\htdocs\ThinkPHP\Common\functions.php 第 256 行.
+INFO: [ route_check ] --START--
+INFO: CheckRoute Behavior ::run [ RunTime:0.001000s ]
+INFO: [ route_check ] --END-- [ RunTime:0.001000s ]
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead D:\xampp\htdocs\ThinkPHP\Lib\Core\Dispatcher.class.php 第 132 行.
+
+[ 2016-05-30T00:38:02+08:00 ] 127.0.0.1 /admin/cabinet_machine/index.html
+NOTIC: [8] Use of undefined constant __APP__ - assumed '__APP__' D:\xampp\htdocs\ThinkPHP\Common\functions.php 第 256 行.
+NOTIC: [8] Use of undefined constant __APP__ - assumed '__APP__' D:\xampp\htdocs\ThinkPHP\Common\functions.php 第 256 行.
+NOTIC: [8] Use of undefined constant __APP__ - assumed '__APP__' D:\xampp\htdocs\ThinkPHP\Common\functions.php 第 256 行.
+NOTIC: [8] Use of undefined constant __APP__ - assumed '__APP__' D:\xampp\htdocs\ThinkPHP\Common\functions.php 第 256 行.
+NOTIC: [8] Use of undefined constant __APP__ - assumed '__APP__' D:\xampp\htdocs\ThinkPHP\Common\functions.php 第 256 行.
+INFO: [ route_check ] --START--
+INFO: CheckRoute Behavior ::run [ RunTime:0.001000s ]
+INFO: [ route_check ] --END-- [ RunTime:0.001000s ]
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead D:\xampp\htdocs\ThinkPHP\Lib\Core\Dispatcher.class.php 第 132 行.
+
+[ 2016-05-30T00:38:12+08:00 ] 127.0.0.1 /admin/cabinet_machine/update/id/8.html
+NOTIC: [8] Use of undefined constant __APP__ - assumed '__APP__' D:\xampp\htdocs\ThinkPHP\Common\functions.php 第 256 行.
+NOTIC: [8] Use of undefined constant __APP__ - assumed '__APP__' D:\xampp\htdocs\ThinkPHP\Common\functions.php 第 256 行.
+NOTIC: [8] Use of undefined constant __APP__ - assumed '__APP__' D:\xampp\htdocs\ThinkPHP\Common\functions.php 第 256 行.
+NOTIC: [8] Use of undefined constant __APP__ - assumed '__APP__' D:\xampp\htdocs\ThinkPHP\Common\functions.php 第 256 行.
+NOTIC: [8] Use of undefined constant __APP__ - assumed '__APP__' D:\xampp\htdocs\ThinkPHP\Common\functions.php 第 256 行.
+INFO: [ route_check ] --START--
+INFO: CheckRoute Behavior ::run [ RunTime:0.001000s ]
+INFO: [ route_check ] --END-- [ RunTime:0.001000s ]
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead D:\xampp\htdocs\ThinkPHP\Lib\Core\Dispatcher.class.php 第 132 行.
+
+[ 2016-05-30T00:38:22+08:00 ] 127.0.0.1 /admin/cabinet_machine/save.html
+NOTIC: [8] Use of undefined constant __APP__ - assumed '__APP__' D:\xampp\htdocs\ThinkPHP\Common\functions.php 第 256 行.
+NOTIC: [8] Use of undefined constant __APP__ - assumed '__APP__' D:\xampp\htdocs\ThinkPHP\Common\functions.php 第 256 行.
+NOTIC: [8] Use of undefined constant __APP__ - assumed '__APP__' D:\xampp\htdocs\ThinkPHP\Common\functions.php 第 256 行.
+NOTIC: [8] Use of undefined constant __APP__ - assumed '__APP__' D:\xampp\htdocs\ThinkPHP\Common\functions.php 第 256 行.
+NOTIC: [8] Use of undefined constant __APP__ - assumed '__APP__' D:\xampp\htdocs\ThinkPHP\Common\functions.php 第 256 行.
+INFO: [ route_check ] --START--
+INFO: CheckRoute Behavior ::run [ RunTime:0.001000s ]
+INFO: [ route_check ] --END-- [ RunTime:0.001000s ]
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead D:\xampp\htdocs\ThinkPHP\Lib\Core\Dispatcher.class.php 第 132 行.
+
+[ 2016-05-30T00:38:24+08:00 ] 127.0.0.1 /admin/cabinet_machine/index.html
+NOTIC: [8] Use of undefined constant __APP__ - assumed '__APP__' D:\xampp\htdocs\ThinkPHP\Common\functions.php 第 256 行.
+NOTIC: [8] Use of undefined constant __APP__ - assumed '__APP__' D:\xampp\htdocs\ThinkPHP\Common\functions.php 第 256 行.
+NOTIC: [8] Use of undefined constant __APP__ - assumed '__APP__' D:\xampp\htdocs\ThinkPHP\Common\functions.php 第 256 行.
+NOTIC: [8] Use of undefined constant __APP__ - assumed '__APP__' D:\xampp\htdocs\ThinkPHP\Common\functions.php 第 256 行.
+NOTIC: [8] Use of undefined constant __APP__ - assumed '__APP__' D:\xampp\htdocs\ThinkPHP\Common\functions.php 第 256 行.
+INFO: [ route_check ] --START--
+INFO: CheckRoute Behavior ::run [ RunTime:0.000000s ]
+INFO: [ route_check ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead D:\xampp\htdocs\ThinkPHP\Lib\Core\Dispatcher.class.php 第 132 行.
+
+[ 2016-05-30T00:38:28+08:00 ] 127.0.0.1 /admin/cabinet_machine/update/id/8.html
+NOTIC: [8] Use of undefined constant __APP__ - assumed '__APP__' D:\xampp\htdocs\ThinkPHP\Common\functions.php 第 256 行.
+NOTIC: [8] Use of undefined constant __APP__ - assumed '__APP__' D:\xampp\htdocs\ThinkPHP\Common\functions.php 第 256 行.
+NOTIC: [8] Use of undefined constant __APP__ - assumed '__APP__' D:\xampp\htdocs\ThinkPHP\Common\functions.php 第 256 行.
+NOTIC: [8] Use of undefined constant __APP__ - assumed '__APP__' D:\xampp\htdocs\ThinkPHP\Common\functions.php 第 256 行.
+NOTIC: [8] Use of undefined constant __APP__ - assumed '__APP__' D:\xampp\htdocs\ThinkPHP\Common\functions.php 第 256 行.
+INFO: [ route_check ] --START--
+INFO: CheckRoute Behavior ::run [ RunTime:0.001000s ]
+INFO: [ route_check ] --END-- [ RunTime:0.001000s ]
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead D:\xampp\htdocs\ThinkPHP\Lib\Core\Dispatcher.class.php 第 132 行.
+
+[ 2016-05-30T00:38:47+08:00 ] 127.0.0.1 /admin/cabinet_machine/save.html
+NOTIC: [8] Use of undefined constant __APP__ - assumed '__APP__' D:\xampp\htdocs\ThinkPHP\Common\functions.php 第 256 行.
+NOTIC: [8] Use of undefined constant __APP__ - assumed '__APP__' D:\xampp\htdocs\ThinkPHP\Common\functions.php 第 256 行.
+NOTIC: [8] Use of undefined constant __APP__ - assumed '__APP__' D:\xampp\htdocs\ThinkPHP\Common\functions.php 第 256 行.
+NOTIC: [8] Use of undefined constant __APP__ - assumed '__APP__' D:\xampp\htdocs\ThinkPHP\Common\functions.php 第 256 行.
+NOTIC: [8] Use of undefined constant __APP__ - assumed '__APP__' D:\xampp\htdocs\ThinkPHP\Common\functions.php 第 256 行.
+INFO: [ route_check ] --START--
+INFO: CheckRoute Behavior ::run [ RunTime:0.001000s ]
+INFO: [ route_check ] --END-- [ RunTime:0.001000s ]
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead D:\xampp\htdocs\ThinkPHP\Lib\Core\Dispatcher.class.php 第 132 行.
+
+[ 2016-05-30T00:38:48+08:00 ] 127.0.0.1 /admin/cabinet_machine/index.html
+NOTIC: [8] Use of undefined constant __APP__ - assumed '__APP__' D:\xampp\htdocs\ThinkPHP\Common\functions.php 第 256 行.
+NOTIC: [8] Use of undefined constant __APP__ - assumed '__APP__' D:\xampp\htdocs\ThinkPHP\Common\functions.php 第 256 行.
+NOTIC: [8] Use of undefined constant __APP__ - assumed '__APP__' D:\xampp\htdocs\ThinkPHP\Common\functions.php 第 256 行.
+NOTIC: [8] Use of undefined constant __APP__ - assumed '__APP__' D:\xampp\htdocs\ThinkPHP\Common\functions.php 第 256 行.
+NOTIC: [8] Use of undefined constant __APP__ - assumed '__APP__' D:\xampp\htdocs\ThinkPHP\Common\functions.php 第 256 行.
+INFO: [ route_check ] --START--
+INFO: CheckRoute Behavior ::run [ RunTime:0.000000s ]
+INFO: [ route_check ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead D:\xampp\htdocs\ThinkPHP\Lib\Core\Dispatcher.class.php 第 132 行.
+
+[ 2016-05-30T02:19:43+08:00 ] 127.0.0.1 /admin
+NOTIC: [8] Use of undefined constant __APP__ - assumed '__APP__' D:\xampp\htdocs\ThinkPHP\Common\functions.php 第 256 行.
+NOTIC: [8] Use of undefined constant __APP__ - assumed '__APP__' D:\xampp\htdocs\ThinkPHP\Common\functions.php 第 256 行.
+NOTIC: [8] Use of undefined constant __APP__ - assumed '__APP__' D:\xampp\htdocs\ThinkPHP\Common\functions.php 第 256 行.
+NOTIC: [8] Use of undefined constant __APP__ - assumed '__APP__' D:\xampp\htdocs\ThinkPHP\Common\functions.php 第 256 行.
+NOTIC: [8] Use of undefined constant __APP__ - assumed '__APP__' D:\xampp\htdocs\ThinkPHP\Common\functions.php 第 256 行.
+INFO: [ route_check ] --START--
+INFO: CheckRoute Behavior ::run [ RunTime:0.001000s ]
+INFO: [ route_check ] --END-- [ RunTime:0.001000s ]
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead D:\xampp\htdocs\ThinkPHP\Lib\Core\Dispatcher.class.php 第 132 行.
+
+[ 2016-05-30T02:19:43+08:00 ] 127.0.0.1 /admin/index/welcome.html
+NOTIC: [8] Use of undefined constant __APP__ - assumed '__APP__' D:\xampp\htdocs\ThinkPHP\Common\functions.php 第 256 行.
+NOTIC: [8] Use of undefined constant __APP__ - assumed '__APP__' D:\xampp\htdocs\ThinkPHP\Common\functions.php 第 256 行.
+NOTIC: [8] Use of undefined constant __APP__ - assumed '__APP__' D:\xampp\htdocs\ThinkPHP\Common\functions.php 第 256 行.
+NOTIC: [8] Use of undefined constant __APP__ - assumed '__APP__' D:\xampp\htdocs\ThinkPHP\Common\functions.php 第 256 行.
+NOTIC: [8] Use of undefined constant __APP__ - assumed '__APP__' D:\xampp\htdocs\ThinkPHP\Common\functions.php 第 256 行.
+INFO: [ route_check ] --START--
+INFO: CheckRoute Behavior ::run [ RunTime:0.001000s ]
+INFO: [ route_check ] --END-- [ RunTime:0.001000s ]
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead D:\xampp\htdocs\ThinkPHP\Lib\Core\Dispatcher.class.php 第 132 行.
+
+[ 2016-05-30T02:19:47+08:00 ] 127.0.0.1 /admin/cabinet_machine/index.html
+NOTIC: [8] Use of undefined constant __APP__ - assumed '__APP__' D:\xampp\htdocs\ThinkPHP\Common\functions.php 第 256 行.
+NOTIC: [8] Use of undefined constant __APP__ - assumed '__APP__' D:\xampp\htdocs\ThinkPHP\Common\functions.php 第 256 行.
+NOTIC: [8] Use of undefined constant __APP__ - assumed '__APP__' D:\xampp\htdocs\ThinkPHP\Common\functions.php 第 256 行.
+NOTIC: [8] Use of undefined constant __APP__ - assumed '__APP__' D:\xampp\htdocs\ThinkPHP\Common\functions.php 第 256 行.
+NOTIC: [8] Use of undefined constant __APP__ - assumed '__APP__' D:\xampp\htdocs\ThinkPHP\Common\functions.php 第 256 行.
+INFO: [ route_check ] --START--
+INFO: CheckRoute Behavior ::run [ RunTime:0.001000s ]
+INFO: [ route_check ] --END-- [ RunTime:0.001000s ]
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead D:\xampp\htdocs\ThinkPHP\Lib\Core\Dispatcher.class.php 第 132 行.
+
+[ 2016-05-30T02:19:51+08:00 ] 127.0.0.1 /admin/cabinet_machine/update/id/9.html
+NOTIC: [8] Use of undefined constant __APP__ - assumed '__APP__' D:\xampp\htdocs\ThinkPHP\Common\functions.php 第 256 行.
+NOTIC: [8] Use of undefined constant __APP__ - assumed '__APP__' D:\xampp\htdocs\ThinkPHP\Common\functions.php 第 256 行.
+NOTIC: [8] Use of undefined constant __APP__ - assumed '__APP__' D:\xampp\htdocs\ThinkPHP\Common\functions.php 第 256 行.
+NOTIC: [8] Use of undefined constant __APP__ - assumed '__APP__' D:\xampp\htdocs\ThinkPHP\Common\functions.php 第 256 行.
+NOTIC: [8] Use of undefined constant __APP__ - assumed '__APP__' D:\xampp\htdocs\ThinkPHP\Common\functions.php 第 256 行.
+INFO: [ route_check ] --START--
+INFO: CheckRoute Behavior ::run [ RunTime:0.001000s ]
+INFO: [ route_check ] --END-- [ RunTime:0.001000s ]
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead D:\xampp\htdocs\ThinkPHP\Lib\Core\Dispatcher.class.php 第 132 行.
+
+[ 2016-05-30T02:19:55+08:00 ] 127.0.0.1 /admin/cabinet_machine/save.html
+NOTIC: [8] Use of undefined constant __APP__ - assumed '__APP__' D:\xampp\htdocs\ThinkPHP\Common\functions.php 第 256 行.
+NOTIC: [8] Use of undefined constant __APP__ - assumed '__APP__' D:\xampp\htdocs\ThinkPHP\Common\functions.php 第 256 行.
+NOTIC: [8] Use of undefined constant __APP__ - assumed '__APP__' D:\xampp\htdocs\ThinkPHP\Common\functions.php 第 256 行.
+NOTIC: [8] Use of undefined constant __APP__ - assumed '__APP__' D:\xampp\htdocs\ThinkPHP\Common\functions.php 第 256 行.
+NOTIC: [8] Use of undefined constant __APP__ - assumed '__APP__' D:\xampp\htdocs\ThinkPHP\Common\functions.php 第 256 行.
+INFO: [ route_check ] --START--
+INFO: CheckRoute Behavior ::run [ RunTime:0.001000s ]
+INFO: [ route_check ] --END-- [ RunTime:0.001000s ]
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead D:\xampp\htdocs\ThinkPHP\Lib\Core\Dispatcher.class.php 第 132 行.
+
+[ 2016-05-30T02:19:57+08:00 ] 127.0.0.1 /admin/cabinet_machine/index.html
+NOTIC: [8] Use of undefined constant __APP__ - assumed '__APP__' D:\xampp\htdocs\ThinkPHP\Common\functions.php 第 256 行.
+NOTIC: [8] Use of undefined constant __APP__ - assumed '__APP__' D:\xampp\htdocs\ThinkPHP\Common\functions.php 第 256 行.
+NOTIC: [8] Use of undefined constant __APP__ - assumed '__APP__' D:\xampp\htdocs\ThinkPHP\Common\functions.php 第 256 行.
+NOTIC: [8] Use of undefined constant __APP__ - assumed '__APP__' D:\xampp\htdocs\ThinkPHP\Common\functions.php 第 256 行.
+NOTIC: [8] Use of undefined constant __APP__ - assumed '__APP__' D:\xampp\htdocs\ThinkPHP\Common\functions.php 第 256 行.
+INFO: [ route_check ] --START--
+INFO: CheckRoute Behavior ::run [ RunTime:0.001000s ]
+INFO: [ route_check ] --END-- [ RunTime:0.001000s ]
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead D:\xampp\htdocs\ThinkPHP\Lib\Core\Dispatcher.class.php 第 132 行.
+
+[ 2016-05-30T02:20:37+08:00 ] 127.0.0.1 /admin/single_machine/index.html
+NOTIC: [8] Use of undefined constant __APP__ - assumed '__APP__' D:\xampp\htdocs\ThinkPHP\Common\functions.php 第 256 行.
+NOTIC: [8] Use of undefined constant __APP__ - assumed '__APP__' D:\xampp\htdocs\ThinkPHP\Common\functions.php 第 256 行.
+NOTIC: [8] Use of undefined constant __APP__ - assumed '__APP__' D:\xampp\htdocs\ThinkPHP\Common\functions.php 第 256 行.
+NOTIC: [8] Use of undefined constant __APP__ - assumed '__APP__' D:\xampp\htdocs\ThinkPHP\Common\functions.php 第 256 行.
+NOTIC: [8] Use of undefined constant __APP__ - assumed '__APP__' D:\xampp\htdocs\ThinkPHP\Common\functions.php 第 256 行.
+INFO: [ route_check ] --START--
+INFO: CheckRoute Behavior ::run [ RunTime:0.001000s ]
+INFO: [ route_check ] --END-- [ RunTime:0.001000s ]
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead D:\xampp\htdocs\ThinkPHP\Lib\Core\Dispatcher.class.php 第 132 行.
+
+[ 2016-05-30T02:20:39+08:00 ] 127.0.0.1 /admin/single_machine/add.html
+NOTIC: [8] Use of undefined constant __APP__ - assumed '__APP__' D:\xampp\htdocs\ThinkPHP\Common\functions.php 第 256 行.
+NOTIC: [8] Use of undefined constant __APP__ - assumed '__APP__' D:\xampp\htdocs\ThinkPHP\Common\functions.php 第 256 行.
+NOTIC: [8] Use of undefined constant __APP__ - assumed '__APP__' D:\xampp\htdocs\ThinkPHP\Common\functions.php 第 256 行.
+NOTIC: [8] Use of undefined constant __APP__ - assumed '__APP__' D:\xampp\htdocs\ThinkPHP\Common\functions.php 第 256 行.
+NOTIC: [8] Use of undefined constant __APP__ - assumed '__APP__' D:\xampp\htdocs\ThinkPHP\Common\functions.php 第 256 行.
+INFO: [ route_check ] --START--
+INFO: CheckRoute Behavior ::run [ RunTime:0.001000s ]
+INFO: [ route_check ] --END-- [ RunTime:0.001000s ]
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead D:\xampp\htdocs\ThinkPHP\Lib\Core\Dispatcher.class.php 第 132 行.
+
+[ 2016-05-30T02:20:53+08:00 ] 127.0.0.1 /admin/single_machine/update/id/14.html
+NOTIC: [8] Use of undefined constant __APP__ - assumed '__APP__' D:\xampp\htdocs\ThinkPHP\Common\functions.php 第 256 行.
+NOTIC: [8] Use of undefined constant __APP__ - assumed '__APP__' D:\xampp\htdocs\ThinkPHP\Common\functions.php 第 256 行.
+NOTIC: [8] Use of undefined constant __APP__ - assumed '__APP__' D:\xampp\htdocs\ThinkPHP\Common\functions.php 第 256 行.
+NOTIC: [8] Use of undefined constant __APP__ - assumed '__APP__' D:\xampp\htdocs\ThinkPHP\Common\functions.php 第 256 行.
+NOTIC: [8] Use of undefined constant __APP__ - assumed '__APP__' D:\xampp\htdocs\ThinkPHP\Common\functions.php 第 256 行.
+INFO: [ route_check ] --START--
+INFO: CheckRoute Behavior ::run [ RunTime:0.001000s ]
+INFO: [ route_check ] --END-- [ RunTime:0.001000s ]
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead D:\xampp\htdocs\ThinkPHP\Lib\Core\Dispatcher.class.php 第 132 行.
+
+[ 2016-05-30T02:20:58+08:00 ] 127.0.0.1 /admin/single_machine/save.html
+NOTIC: [8] Use of undefined constant __APP__ - assumed '__APP__' D:\xampp\htdocs\ThinkPHP\Common\functions.php 第 256 行.
+NOTIC: [8] Use of undefined constant __APP__ - assumed '__APP__' D:\xampp\htdocs\ThinkPHP\Common\functions.php 第 256 行.
+NOTIC: [8] Use of undefined constant __APP__ - assumed '__APP__' D:\xampp\htdocs\ThinkPHP\Common\functions.php 第 256 行.
+NOTIC: [8] Use of undefined constant __APP__ - assumed '__APP__' D:\xampp\htdocs\ThinkPHP\Common\functions.php 第 256 行.
+NOTIC: [8] Use of undefined constant __APP__ - assumed '__APP__' D:\xampp\htdocs\ThinkPHP\Common\functions.php 第 256 行.
+INFO: [ route_check ] --START--
+INFO: CheckRoute Behavior ::run [ RunTime:0.001000s ]
+INFO: [ route_check ] --END-- [ RunTime:0.001000s ]
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead D:\xampp\htdocs\ThinkPHP\Lib\Core\Dispatcher.class.php 第 132 行.
+
+[ 2016-05-30T02:21:02+08:00 ] 127.0.0.1 /admin/single_machine/index.html
+NOTIC: [8] Use of undefined constant __APP__ - assumed '__APP__' D:\xampp\htdocs\ThinkPHP\Common\functions.php 第 256 行.
+NOTIC: [8] Use of undefined constant __APP__ - assumed '__APP__' D:\xampp\htdocs\ThinkPHP\Common\functions.php 第 256 行.
+NOTIC: [8] Use of undefined constant __APP__ - assumed '__APP__' D:\xampp\htdocs\ThinkPHP\Common\functions.php 第 256 行.
+NOTIC: [8] Use of undefined constant __APP__ - assumed '__APP__' D:\xampp\htdocs\ThinkPHP\Common\functions.php 第 256 行.
+NOTIC: [8] Use of undefined constant __APP__ - assumed '__APP__' D:\xampp\htdocs\ThinkPHP\Common\functions.php 第 256 行.
+INFO: [ route_check ] --START--
+INFO: CheckRoute Behavior ::run [ RunTime:0.001000s ]
+INFO: [ route_check ] --END-- [ RunTime:0.001000s ]
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead D:\xampp\htdocs\ThinkPHP\Lib\Core\Dispatcher.class.php 第 132 行.
+
+[ 2016-05-30T02:21:15+08:00 ] 127.0.0.1 /admin/single_machine/update/id/12.html
+NOTIC: [8] Use of undefined constant __APP__ - assumed '__APP__' D:\xampp\htdocs\ThinkPHP\Common\functions.php 第 256 行.
+NOTIC: [8] Use of undefined constant __APP__ - assumed '__APP__' D:\xampp\htdocs\ThinkPHP\Common\functions.php 第 256 行.
+NOTIC: [8] Use of undefined constant __APP__ - assumed '__APP__' D:\xampp\htdocs\ThinkPHP\Common\functions.php 第 256 行.
+NOTIC: [8] Use of undefined constant __APP__ - assumed '__APP__' D:\xampp\htdocs\ThinkPHP\Common\functions.php 第 256 行.
+NOTIC: [8] Use of undefined constant __APP__ - assumed '__APP__' D:\xampp\htdocs\ThinkPHP\Common\functions.php 第 256 行.
+INFO: [ route_check ] --START--
+INFO: CheckRoute Behavior ::run [ RunTime:0.001000s ]
+INFO: [ route_check ] --END-- [ RunTime:0.001000s ]
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead D:\xampp\htdocs\ThinkPHP\Lib\Core\Dispatcher.class.php 第 132 行.
+
+[ 2016-05-30T02:21:18+08:00 ] 127.0.0.1 /admin/single_machine/save.html
+NOTIC: [8] Use of undefined constant __APP__ - assumed '__APP__' D:\xampp\htdocs\ThinkPHP\Common\functions.php 第 256 行.
+NOTIC: [8] Use of undefined constant __APP__ - assumed '__APP__' D:\xampp\htdocs\ThinkPHP\Common\functions.php 第 256 行.
+NOTIC: [8] Use of undefined constant __APP__ - assumed '__APP__' D:\xampp\htdocs\ThinkPHP\Common\functions.php 第 256 行.
+NOTIC: [8] Use of undefined constant __APP__ - assumed '__APP__' D:\xampp\htdocs\ThinkPHP\Common\functions.php 第 256 行.
+NOTIC: [8] Use of undefined constant __APP__ - assumed '__APP__' D:\xampp\htdocs\ThinkPHP\Common\functions.php 第 256 行.
+INFO: [ route_check ] --START--
+INFO: CheckRoute Behavior ::run [ RunTime:0.001000s ]
+INFO: [ route_check ] --END-- [ RunTime:0.001000s ]
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead D:\xampp\htdocs\ThinkPHP\Lib\Core\Dispatcher.class.php 第 132 行.
+
+[ 2016-05-30T02:21:21+08:00 ] 127.0.0.1 /admin/single_machine/index.html
+NOTIC: [8] Use of undefined constant __APP__ - assumed '__APP__' D:\xampp\htdocs\ThinkPHP\Common\functions.php 第 256 行.
+NOTIC: [8] Use of undefined constant __APP__ - assumed '__APP__' D:\xampp\htdocs\ThinkPHP\Common\functions.php 第 256 行.
+NOTIC: [8] Use of undefined constant __APP__ - assumed '__APP__' D:\xampp\htdocs\ThinkPHP\Common\functions.php 第 256 行.
+NOTIC: [8] Use of undefined constant __APP__ - assumed '__APP__' D:\xampp\htdocs\ThinkPHP\Common\functions.php 第 256 行.
+NOTIC: [8] Use of undefined constant __APP__ - assumed '__APP__' D:\xampp\htdocs\ThinkPHP\Common\functions.php 第 256 行.
+INFO: [ route_check ] --START--
+INFO: CheckRoute Behavior ::run [ RunTime:0.001000s ]
+INFO: [ route_check ] --END-- [ RunTime:0.001000s ]
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead D:\xampp\htdocs\ThinkPHP\Lib\Core\Dispatcher.class.php 第 132 行.
+
+[ 2016-05-30T02:21:35+08:00 ] 127.0.0.1 /admin/member/index.html
+NOTIC: [8] Use of undefined constant __APP__ - assumed '__APP__' D:\xampp\htdocs\ThinkPHP\Common\functions.php 第 256 行.
+NOTIC: [8] Use of undefined constant __APP__ - assumed '__APP__' D:\xampp\htdocs\ThinkPHP\Common\functions.php 第 256 行.
+NOTIC: [8] Use of undefined constant __APP__ - assumed '__APP__' D:\xampp\htdocs\ThinkPHP\Common\functions.php 第 256 行.
+NOTIC: [8] Use of undefined constant __APP__ - assumed '__APP__' D:\xampp\htdocs\ThinkPHP\Common\functions.php 第 256 行.
+NOTIC: [8] Use of undefined constant __APP__ - assumed '__APP__' D:\xampp\htdocs\ThinkPHP\Common\functions.php 第 256 行.
+INFO: [ route_check ] --START--
+INFO: CheckRoute Behavior ::run [ RunTime:0.001000s ]
+INFO: [ route_check ] --END-- [ RunTime:0.001000s ]
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead D:\xampp\htdocs\ThinkPHP\Lib\Core\Dispatcher.class.php 第 132 行.
+
+[ 2016-05-30T02:21:36+08:00 ] 127.0.0.1 /admin/city/index.html
+NOTIC: [8] Use of undefined constant __APP__ - assumed '__APP__' D:\xampp\htdocs\ThinkPHP\Common\functions.php 第 256 行.
+NOTIC: [8] Use of undefined constant __APP__ - assumed '__APP__' D:\xampp\htdocs\ThinkPHP\Common\functions.php 第 256 行.
+NOTIC: [8] Use of undefined constant __APP__ - assumed '__APP__' D:\xampp\htdocs\ThinkPHP\Common\functions.php 第 256 行.
+NOTIC: [8] Use of undefined constant __APP__ - assumed '__APP__' D:\xampp\htdocs\ThinkPHP\Common\functions.php 第 256 行.
+NOTIC: [8] Use of undefined constant __APP__ - assumed '__APP__' D:\xampp\htdocs\ThinkPHP\Common\functions.php 第 256 行.
+INFO: [ route_check ] --START--
+INFO: CheckRoute Behavior ::run [ RunTime:0.001000s ]
+INFO: [ route_check ] --END-- [ RunTime:0.001000s ]
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead D:\xampp\htdocs\ThinkPHP\Lib\Core\Dispatcher.class.php 第 132 行.
+
+[ 2016-05-30T02:21:40+08:00 ] 127.0.0.1 /admin/city/update/id/4.html
+NOTIC: [8] Use of undefined constant __APP__ - assumed '__APP__' D:\xampp\htdocs\ThinkPHP\Common\functions.php 第 256 行.
+NOTIC: [8] Use of undefined constant __APP__ - assumed '__APP__' D:\xampp\htdocs\ThinkPHP\Common\functions.php 第 256 行.
+NOTIC: [8] Use of undefined constant __APP__ - assumed '__APP__' D:\xampp\htdocs\ThinkPHP\Common\functions.php 第 256 行.
+NOTIC: [8] Use of undefined constant __APP__ - assumed '__APP__' D:\xampp\htdocs\ThinkPHP\Common\functions.php 第 256 行.
+NOTIC: [8] Use of undefined constant __APP__ - assumed '__APP__' D:\xampp\htdocs\ThinkPHP\Common\functions.php 第 256 行.
+INFO: [ route_check ] --START--
+INFO: CheckRoute Behavior ::run [ RunTime:0.000000s ]
+INFO: [ route_check ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead D:\xampp\htdocs\ThinkPHP\Lib\Core\Dispatcher.class.php 第 132 行.
+
+[ 2016-05-30T02:21:49+08:00 ] 127.0.0.1 /admin/city/save.html
+NOTIC: [8] Use of undefined constant __APP__ - assumed '__APP__' D:\xampp\htdocs\ThinkPHP\Common\functions.php 第 256 行.
+NOTIC: [8] Use of undefined constant __APP__ - assumed '__APP__' D:\xampp\htdocs\ThinkPHP\Common\functions.php 第 256 行.
+NOTIC: [8] Use of undefined constant __APP__ - assumed '__APP__' D:\xampp\htdocs\ThinkPHP\Common\functions.php 第 256 行.
+NOTIC: [8] Use of undefined constant __APP__ - assumed '__APP__' D:\xampp\htdocs\ThinkPHP\Common\functions.php 第 256 行.
+NOTIC: [8] Use of undefined constant __APP__ - assumed '__APP__' D:\xampp\htdocs\ThinkPHP\Common\functions.php 第 256 行.
+INFO: [ route_check ] --START--
+INFO: CheckRoute Behavior ::run [ RunTime:0.000000s ]
+INFO: [ route_check ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead D:\xampp\htdocs\ThinkPHP\Lib\Core\Dispatcher.class.php 第 132 行.
+NOTIC: 建议使用I方法替代_post
+
+[ 2016-05-30T02:21:51+08:00 ] 127.0.0.1 /admin/city/index.html
+NOTIC: [8] Use of undefined constant __APP__ - assumed '__APP__' D:\xampp\htdocs\ThinkPHP\Common\functions.php 第 256 行.
+NOTIC: [8] Use of undefined constant __APP__ - assumed '__APP__' D:\xampp\htdocs\ThinkPHP\Common\functions.php 第 256 行.
+NOTIC: [8] Use of undefined constant __APP__ - assumed '__APP__' D:\xampp\htdocs\ThinkPHP\Common\functions.php 第 256 行.
+NOTIC: [8] Use of undefined constant __APP__ - assumed '__APP__' D:\xampp\htdocs\ThinkPHP\Common\functions.php 第 256 行.
+NOTIC: [8] Use of undefined constant __APP__ - assumed '__APP__' D:\xampp\htdocs\ThinkPHP\Common\functions.php 第 256 行.
+INFO: [ route_check ] --START--
+INFO: CheckRoute Behavior ::run [ RunTime:0.000000s ]
+INFO: [ route_check ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead D:\xampp\htdocs\ThinkPHP\Lib\Core\Dispatcher.class.php 第 132 行.
+
+[ 2016-05-30T02:21:52+08:00 ] 127.0.0.1 /admin/city/update/id/2.html
+NOTIC: [8] Use of undefined constant __APP__ - assumed '__APP__' D:\xampp\htdocs\ThinkPHP\Common\functions.php 第 256 行.
+NOTIC: [8] Use of undefined constant __APP__ - assumed '__APP__' D:\xampp\htdocs\ThinkPHP\Common\functions.php 第 256 行.
+NOTIC: [8] Use of undefined constant __APP__ - assumed '__APP__' D:\xampp\htdocs\ThinkPHP\Common\functions.php 第 256 行.
+NOTIC: [8] Use of undefined constant __APP__ - assumed '__APP__' D:\xampp\htdocs\ThinkPHP\Common\functions.php 第 256 行.
+NOTIC: [8] Use of undefined constant __APP__ - assumed '__APP__' D:\xampp\htdocs\ThinkPHP\Common\functions.php 第 256 行.
+INFO: [ route_check ] --START--
+INFO: CheckRoute Behavior ::run [ RunTime:0.001000s ]
+INFO: [ route_check ] --END-- [ RunTime:0.001000s ]
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead D:\xampp\htdocs\ThinkPHP\Lib\Core\Dispatcher.class.php 第 132 行.
+
+[ 2016-05-30T02:21:57+08:00 ] 127.0.0.1 /admin/city/save.html
+NOTIC: [8] Use of undefined constant __APP__ - assumed '__APP__' D:\xampp\htdocs\ThinkPHP\Common\functions.php 第 256 行.
+NOTIC: [8] Use of undefined constant __APP__ - assumed '__APP__' D:\xampp\htdocs\ThinkPHP\Common\functions.php 第 256 行.
+NOTIC: [8] Use of undefined constant __APP__ - assumed '__APP__' D:\xampp\htdocs\ThinkPHP\Common\functions.php 第 256 行.
+NOTIC: [8] Use of undefined constant __APP__ - assumed '__APP__' D:\xampp\htdocs\ThinkPHP\Common\functions.php 第 256 行.
+NOTIC: [8] Use of undefined constant __APP__ - assumed '__APP__' D:\xampp\htdocs\ThinkPHP\Common\functions.php 第 256 行.
+INFO: [ route_check ] --START--
+INFO: CheckRoute Behavior ::run [ RunTime:0.000000s ]
+INFO: [ route_check ] --END-- [ RunTime:0.001000s ]
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead D:\xampp\htdocs\ThinkPHP\Lib\Core\Dispatcher.class.php 第 132 行.
+NOTIC: 建议使用I方法替代_post
+
+[ 2016-05-30T02:21:58+08:00 ] 127.0.0.1 /admin/city/index.html
+NOTIC: [8] Use of undefined constant __APP__ - assumed '__APP__' D:\xampp\htdocs\ThinkPHP\Common\functions.php 第 256 行.
+NOTIC: [8] Use of undefined constant __APP__ - assumed '__APP__' D:\xampp\htdocs\ThinkPHP\Common\functions.php 第 256 行.
+NOTIC: [8] Use of undefined constant __APP__ - assumed '__APP__' D:\xampp\htdocs\ThinkPHP\Common\functions.php 第 256 行.
+NOTIC: [8] Use of undefined constant __APP__ - assumed '__APP__' D:\xampp\htdocs\ThinkPHP\Common\functions.php 第 256 行.
+NOTIC: [8] Use of undefined constant __APP__ - assumed '__APP__' D:\xampp\htdocs\ThinkPHP\Common\functions.php 第 256 行.
+INFO: [ route_check ] --START--
+INFO: CheckRoute Behavior ::run [ RunTime:0.001000s ]
+INFO: [ route_check ] --END-- [ RunTime:0.002000s ]
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead D:\xampp\htdocs\ThinkPHP\Lib\Core\Dispatcher.class.php 第 132 行.
+
+[ 2016-05-30T02:22:01+08:00 ] 127.0.0.1 /admin/city/del/id/5.html
+NOTIC: [8] Use of undefined constant __APP__ - assumed '__APP__' D:\xampp\htdocs\ThinkPHP\Common\functions.php 第 256 行.
+NOTIC: [8] Use of undefined constant __APP__ - assumed '__APP__' D:\xampp\htdocs\ThinkPHP\Common\functions.php 第 256 行.
+NOTIC: [8] Use of undefined constant __APP__ - assumed '__APP__' D:\xampp\htdocs\ThinkPHP\Common\functions.php 第 256 行.
+NOTIC: [8] Use of undefined constant __APP__ - assumed '__APP__' D:\xampp\htdocs\ThinkPHP\Common\functions.php 第 256 行.
+NOTIC: [8] Use of undefined constant __APP__ - assumed '__APP__' D:\xampp\htdocs\ThinkPHP\Common\functions.php 第 256 行.
+INFO: [ route_check ] --START--
+INFO: CheckRoute Behavior ::run [ RunTime:0.001000s ]
+INFO: [ route_check ] --END-- [ RunTime:0.001000s ]
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead D:\xampp\htdocs\ThinkPHP\Lib\Core\Dispatcher.class.php 第 132 行.
+NOTIC: 建议使用I方法替代_get
+
+[ 2016-05-30T02:22:02+08:00 ] 127.0.0.1 /admin/city/index.html
+NOTIC: [8] Use of undefined constant __APP__ - assumed '__APP__' D:\xampp\htdocs\ThinkPHP\Common\functions.php 第 256 行.
+NOTIC: [8] Use of undefined constant __APP__ - assumed '__APP__' D:\xampp\htdocs\ThinkPHP\Common\functions.php 第 256 行.
+NOTIC: [8] Use of undefined constant __APP__ - assumed '__APP__' D:\xampp\htdocs\ThinkPHP\Common\functions.php 第 256 行.
+NOTIC: [8] Use of undefined constant __APP__ - assumed '__APP__' D:\xampp\htdocs\ThinkPHP\Common\functions.php 第 256 行.
+NOTIC: [8] Use of undefined constant __APP__ - assumed '__APP__' D:\xampp\htdocs\ThinkPHP\Common\functions.php 第 256 行.
+INFO: [ route_check ] --START--
+INFO: CheckRoute Behavior ::run [ RunTime:0.001000s ]
+INFO: [ route_check ] --END-- [ RunTime:0.001000s ]
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead D:\xampp\htdocs\ThinkPHP\Lib\Core\Dispatcher.class.php 第 132 行.
+
+[ 2016-05-30T02:22:04+08:00 ] 127.0.0.1 /admin/city/del/id/6.html
+NOTIC: [8] Use of undefined constant __APP__ - assumed '__APP__' D:\xampp\htdocs\ThinkPHP\Common\functions.php 第 256 行.
+NOTIC: [8] Use of undefined constant __APP__ - assumed '__APP__' D:\xampp\htdocs\ThinkPHP\Common\functions.php 第 256 行.
+NOTIC: [8] Use of undefined constant __APP__ - assumed '__APP__' D:\xampp\htdocs\ThinkPHP\Common\functions.php 第 256 行.
+NOTIC: [8] Use of undefined constant __APP__ - assumed '__APP__' D:\xampp\htdocs\ThinkPHP\Common\functions.php 第 256 行.
+NOTIC: [8] Use of undefined constant __APP__ - assumed '__APP__' D:\xampp\htdocs\ThinkPHP\Common\functions.php 第 256 行.
+INFO: [ route_check ] --START--
+INFO: CheckRoute Behavior ::run [ RunTime:0.000000s ]
+INFO: [ route_check ] --END-- [ RunTime:0.001000s ]
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead D:\xampp\htdocs\ThinkPHP\Lib\Core\Dispatcher.class.php 第 132 行.
+NOTIC: 建议使用I方法替代_get
+
+[ 2016-05-30T02:22:05+08:00 ] 127.0.0.1 /admin/city/index.html
+NOTIC: [8] Use of undefined constant __APP__ - assumed '__APP__' D:\xampp\htdocs\ThinkPHP\Common\functions.php 第 256 行.
+NOTIC: [8] Use of undefined constant __APP__ - assumed '__APP__' D:\xampp\htdocs\ThinkPHP\Common\functions.php 第 256 行.
+NOTIC: [8] Use of undefined constant __APP__ - assumed '__APP__' D:\xampp\htdocs\ThinkPHP\Common\functions.php 第 256 行.
+NOTIC: [8] Use of undefined constant __APP__ - assumed '__APP__' D:\xampp\htdocs\ThinkPHP\Common\functions.php 第 256 行.
+NOTIC: [8] Use of undefined constant __APP__ - assumed '__APP__' D:\xampp\htdocs\ThinkPHP\Common\functions.php 第 256 行.
+INFO: [ route_check ] --START--
+INFO: CheckRoute Behavior ::run [ RunTime:0.001000s ]
+INFO: [ route_check ] --END-- [ RunTime:0.002000s ]
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead D:\xampp\htdocs\ThinkPHP\Lib\Core\Dispatcher.class.php 第 132 行.
+
+[ 2016-05-30T02:22:07+08:00 ] 127.0.0.1 /admin/city/del/id/7.html
+NOTIC: [8] Use of undefined constant __APP__ - assumed '__APP__' D:\xampp\htdocs\ThinkPHP\Common\functions.php 第 256 行.
+NOTIC: [8] Use of undefined constant __APP__ - assumed '__APP__' D:\xampp\htdocs\ThinkPHP\Common\functions.php 第 256 行.
+NOTIC: [8] Use of undefined constant __APP__ - assumed '__APP__' D:\xampp\htdocs\ThinkPHP\Common\functions.php 第 256 行.
+NOTIC: [8] Use of undefined constant __APP__ - assumed '__APP__' D:\xampp\htdocs\ThinkPHP\Common\functions.php 第 256 行.
+NOTIC: [8] Use of undefined constant __APP__ - assumed '__APP__' D:\xampp\htdocs\ThinkPHP\Common\functions.php 第 256 行.
+INFO: [ route_check ] --START--
+INFO: CheckRoute Behavior ::run [ RunTime:0.001000s ]
+INFO: [ route_check ] --END-- [ RunTime:0.001000s ]
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead D:\xampp\htdocs\ThinkPHP\Lib\Core\Dispatcher.class.php 第 132 行.
+NOTIC: 建议使用I方法替代_get
+
+[ 2016-05-30T02:22:10+08:00 ] 127.0.0.1 /admin/city/index.html
+NOTIC: [8] Use of undefined constant __APP__ - assumed '__APP__' D:\xampp\htdocs\ThinkPHP\Common\functions.php 第 256 行.
+NOTIC: [8] Use of undefined constant __APP__ - assumed '__APP__' D:\xampp\htdocs\ThinkPHP\Common\functions.php 第 256 行.
+NOTIC: [8] Use of undefined constant __APP__ - assumed '__APP__' D:\xampp\htdocs\ThinkPHP\Common\functions.php 第 256 行.
+NOTIC: [8] Use of undefined constant __APP__ - assumed '__APP__' D:\xampp\htdocs\ThinkPHP\Common\functions.php 第 256 行.
+NOTIC: [8] Use of undefined constant __APP__ - assumed '__APP__' D:\xampp\htdocs\ThinkPHP\Common\functions.php 第 256 行.
+INFO: [ route_check ] --START--
+INFO: CheckRoute Behavior ::run [ RunTime:0.001000s ]
+INFO: [ route_check ] --END-- [ RunTime:0.001000s ]
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead D:\xampp\htdocs\ThinkPHP\Lib\Core\Dispatcher.class.php 第 132 行.
+

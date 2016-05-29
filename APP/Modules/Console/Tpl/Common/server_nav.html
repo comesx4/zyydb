@@ -1,0 +1,22 @@
+<div class='nav'>
+	<ul>
+		<!-- <li <if condition="ACTION_NAME eq index">class='on'</if>>
+			<a href="<{:U('index',array('id'=>$_GET['id']))}>">概括</a>
+		</li> -->
+		<li  <if condition="MODULE_NAME eq 'Server'">class='on'</if>>
+			<a href="<{:U('Server/index',array('gid'=>$_GET['gid']))}>">实例</a>
+		</li>						
+		<li <if condition="MODULE_NAME eq 'Disk' ">class='on'</if>>
+			<a href="<{:U('Disk/index',array('gid'=>$_GET['gid']))}>">全部磁盘</a>
+		</li>
+		<li <if condition="MODULE_NAME eq 'Snapshot' ">class='on'</if>>
+			<a href="<{:U('Snapshot/index',array('gid'=>$_GET['gid']))}>">全部快照</a>
+		</li>
+		<li <if condition="MODULE_NAME eq 'Mirroring' ">class='on'</if>>
+			<a href="<{:U('Mirroring/index',array('gid'=>$_GET['gid']))}>">全部镜像</a>
+		</li>
+		<li <if condition="MODULE_NAME eq 'TaskLogs' ">class='on'</if>>
+			<a href="<{:U('TaskLogs/index',array('gid'=>$_GET['gid']))}>">任务日志</a>
+		</li>
+	</ul>
+</div>

@@ -1,0 +1,22 @@
+.fix-top h3{
+	margin-bottom: 10px !important;
+}
+.buy-info dl{
+	width: 80%;
+	margin:0 auto;
+	background: url('../Images/yes.png') no-repeat left 10%;
+	min-height: 100px;
+	padding-left: 120px;
+	line-height: 40px;
+}
+.buy-info dl.error{
+	background: url('../Images/fail.png') no-repeat left center;
+}
+.buy-info dl.error dt{
+	color: red !important;
+}
+.buy-info dl dt{
+	font-size: 20px;
+	font-weight: 700;
+	padding-top: 10px;
+}

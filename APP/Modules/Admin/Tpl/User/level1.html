@@ -1,0 +1,42 @@
+<include file='Common:header'/>
+    <link rel="stylesheet" href="__PUBLIC__/Css/node.css" />
+    <script type="text/javascript" src='__PUBLIC__/Js/level.js'></script>
+ <form action='<{:U('insertLevel')}>' method='post'>
+ 	
+ 	
+	<foreach name='node' item='v'>
+	<div class='main-body'>	
+		<h4 >
+			<label>
+				<{$v.name}>[<{$v.remark}>]<input type='checkbox' <if condition="$v['checked']">checked</if> class='level level1' checked name='node[]'value='<{$v.id}>_<{$v.level}>'/>
+			</label>
+		</h4>
+		
+       <div>
+		<foreach name='v.node' item='data'>
+			<dl>
+			<dt>
+				<label>
+					<{$data.name}>[<{$data.remark}>]<input type='checkbox' <if condition="$data['checked']">checked</if> class='level level2' name='node[]'value='<{$data.id}>_<{$data.level}>'/>
+				</label>
+			</dt>
+			<foreach name='data.node' item='values'>
+				<dd>
+					<label>
+						<span><{$values.name}>[<{$values.remark}>]</span><input type='checkbox' <if condition="$values['checked']">checked</if> class='level level3' name='node[]' value='<{$values.id}>_<{$values.level}>'/>
+					</label>
+				</dd>
+			</foreach>
+			</dl>
+		</foreach>
+	</div>
+
+	</div>
+	</foreach>
+	<input type='hidden' name='rid' value='<{$Think.get.rid}>'/>
+	<input type='submit' style='border:none; background:#00A2CA;width:50px;height:30px;border-radius:4px;color:#fff;' value='保存'/>
+	
+</form>
+
+
+<include file='Common:footer'/>

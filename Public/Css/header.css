@@ -1,0 +1,57 @@
+#header{
+	border-bottom: 1px solid #e3e3e3;
+    height: 74px;
+    padding: 0;
+    width: 100%;
+	
+}
+#header div.header-layout{
+	padding: 17px 0;
+}
+ul{
+    list-style: none;
+}
+#header div.header-layout h1#logo{
+	height: 50px;
+	width: 140px;
+	background:url('../default/Images/logo2.jpg') no-repeat;
+        background-size:140px;
+	float: left;
+
+}
+#header div.header-layout h1#logo a{
+	display: inline-block; 
+    
+    overflow: hidden;
+    text-indent: -999em;
+    
+	
+
+}
+#header div.header-layout h2.logo-title{
+	color: #3c3c3c;
+    display: inline-block;
+    float: left;
+    font-size: 20px;
+    font-weight: normal;
+    height: 30px;
+    line-height: 30px;
+    margin-top: 2px;
+    width: auto;
+}
+#header div.header-layout ul.header-nav{
+	float:right;
+	margin-top:10px;
+	list-style:none;
+
+}
+#header div.header-layout ul.header-nav li{
+	margin:0 8px;
+	float:left;
+}
+.y-row {
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 1200px;
+    min-width: 1000px;
+}

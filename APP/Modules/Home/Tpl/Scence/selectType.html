@@ -1,0 +1,92 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+<head>
+  <meta http-equiv="Content-Type" content="text/html;charset=UTF-8" />
+  <title>阿里云</title>
+
+  <link rel="stylesheet" href="__PUBLIC__/Css/selectType.css" />
+  <link rel='stylesheet' href='__PUBLIC__/Css/max-header.css' />
+  <link rel='stylesheet' href='__PUBLIC__/Css/nav.css' />
+  <link rel='stylesheet' href='__PUBLIC__/Css/scence-left.css' />
+  <link rel='stylesheet' href='__PUBLIC__/Css/bottom.css' />
+  <js file='__PUBLIC__/Js/jquery-1.7.2.min.js'/>
+  <js file='__PUBLIC__/Js/nav.js'/>
+
+  <js file='__PUBLIC__/Js/bottom.js'/>
+  
+  
+</head>
+<body>
+<!--顶部头-->
+ <include file='Common:p-header'/>
+  <!--顶部头结束-->
+  
+  <!--头部公共部分-->
+  <include file='Common:nav'/>
+  <!--头部公共部分结束-->   
+
+    <!--主题内容-->
+	<div id='main'>
+		<div class='y-row'>
+
+			<!--左半部分-->
+			<include file='Common:scence-left'/>
+			<!--左半部分结束-->
+	        
+	        <!--右半部分-->
+			<div class='main-right'>
+				 <div class='title'><h1>选择问题类型</h1></div>
+                <foreach name='data' item='v' >
+                <if condition="$v['chid']['0']['type'] neq 2">
+					 <div class='uc-laq'>
+					 	
+						 	<h2><{$v.cat}></h2>
+
+						 	<foreach name='v.chid' item='vs'>
+						 		<if condition="$vs['type'] neq 2">
+								 	<dl>
+								 		<dt><img src="__ROOT__/Uploads/ScenceCat/<{$vs.img}>" /></dt>
+								 		<dd class='type'><{$vs.cat}></dd>
+								 		<dd>
+									 		<{$vs.remark}>
+								 	    </dd>
+								 	    <dd>
+								 	    	<if condition="$vs['type'] eq 0">
+								 	    	<a href="<{:U('Scence/scence',array('id'=>$vs['id']))}>">由此提问</a>
+								 	    	<else/>
+								 	    	<a href="<{:U('Scence/add',array('id'=>$vs['id']))}>">由此提问</a>
+
+								 	   	    </if>
+								 	    </dd>
+								 	</dl>
+							   </if>
+						    </foreach>	
+
+					    </div>
+				  </if>
+				  </foreach>
+
+
+				
+                
+
+                <div class='uc-laq'>
+                	<h2>更多产品与服务问题咨询</h2>
+                	 <select name='more'>
+                	 	<option>请选择</option>
+                	 	
+                	 </select>
+                </div>
+
+			
+				
+		    </div>
+		 <!--右半部分结束-->
+		</div>
+	</div>
+	
+
+	<include file='Common:bottom' />
+	<!--主题内容结束-->
+</body>
+</html>

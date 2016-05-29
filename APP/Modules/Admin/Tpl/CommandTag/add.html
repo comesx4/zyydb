@@ -1,0 +1,58 @@
+<include file='Common:header'/>
+<form action='<{:U('insert')}>' method='post' >
+	<table class="table">
+        <thead>
+            <tr class='active'>
+                <td colspan="2">
+                    <a  class="btn btn-info" href="<{:U('index')}>">标签列表</a>
+                </td>
+            </tr>
+        </thead>
+        
+        <tbody>
+            <tr>
+                <td class='first'>类型：</td>
+                <td>
+                    <label><input type="radio" name="type" value="1"/>产品</label>
+                    <label><input type="radio" name="type" value="2" checked="checked"/>标记</label>
+                </td>
+            </tr>
+        	<tr>
+                <td class='first'>名称：</td>
+                <td>
+                	<input type="text" name="name" maxlength="32" placeholder="中文表示"/>
+                </td>
+            </tr>
+            <tr>
+                <td class='first'>颜色：</td>
+                <td>
+                    <input type="color" name="color" maxlength="7" value="#FFFFFF" placeholder="#FFFFFF"/>
+                </td>
+            </tr>
+        	<tr>
+                <td class='first'>状态：</td>
+                <td>
+                	<label><input type="radio" name="status" value="1" checked="checked"/>显示</label>
+                	<label><input type="radio" name="status" value="0"/>隐藏</label>
+                </td>
+            </tr>
+            <tr>
+                <td class='first'>备注：</td>
+                <td>
+                    <textarea name="remark" maxlength="255"></textarea>
+                </td>
+            </tr>
+        </tbody>
+        
+        <tfoot>
+            <tr>
+                <td class='first'></td>
+                <td>
+                   <input class="btn btn-success" type="submit" value="保 存"/>
+                    <a class="btn btn-default" href="<{:U('index')}>">取 消</a>
+               </td> 
+           </tr>
+        </tfoot>
+    </table>
+</form>
+<include file='Common:footer'/>

@@ -1,0 +1,100 @@
+ul{
+	margin:0;
+	border-bottom: 0 !important;
+}
+#main .main-right .living-info{
+	background: #fff;
+	border:1px solid #ddd;
+	overflow: hidden;
+	margin-bottom:15px;
+	height:156px;
+	box-shadow: 0 6px 12px rgba(0, 0, 0, 0.176);
+}
+#main .main-right .living-info .living-info-left,#main .main-right .living-info .living-info-middle{
+	float: left;
+	border-right:1px solid #ddd;
+	padding:10px 0;
+}
+#main .main-right .living-info .living-info-left{
+	width: 43.8%;
+}
+#main .main-right .living-info .living-info-left .img-circle{	
+	float: left;
+	width: 70px;
+	height:70px;
+	overflow: hidden;
+	border:1px solid #ccc;
+	margin:0 10px;	
+	margin-right: 20px;
+	vertical-align: middle;
+	position: relative;
+	top:20px;
+}
+#main .main-right .living-info .living-info-left .img-circle img{	
+	
+	position: relative;
+	width: 70%;
+	left: 10px;
+	top:10px;
+}
+#main .main-right .living-info .living-info-left dl{
+	float: left;
+	width: 70%;
+}
+#main .main-right .living-info .living-info-left dl dt{
+	font-size: 15px;
+}
+#main .main-right .living-info .living-info-left dl dd{
+	color:#666;
+	margin:5px 0;
+}
+#main .main-right .living-info .living-info-middle{
+	width: 14.2%;
+}
+#main .main-right .living-info .living-info-middle dl{
+	height:156px;	
+	padding:0 20px;
+}
+#main .main-right .living-info .living-info-middle dl dt{
+	margin-bottom: 30px;
+	color: #ccc;
+}
+#main .main-right .living-info .living-info-middle dl dd.no-alert{
+	font-size: 17px;
+	
+}
+#main .main-right .living-info .living-info-middle dl dd.alert{
+	color:red;
+	font-size: 17px;
+	font-weight: 700;
+}
+#main .main-right .living-info .living-info-right{
+	float: left;
+	border-right:1px solid #ddd;
+	width: 42%;
+	border-right:0;
+}
+
+#main .main-right .living-info .living-info-right ul{
+	height:100%;
+	float: left;
+	width: 33.3%;
+	border-right:1px solid #ddd;
+}
+#main .main-right .living-info .living-info-right ul:last-child{
+	border:0;
+}
+#main .main-right .living-info .living-info-right ul li{
+	position: relative;
+	text-align: center;
+	border-bottom:1px solid #ddd;
+	height:52px;
+	line-height: 52px;
+}
+#main .main-right .living-info .living-info-right ul li .progress{
+	position: absolute;
+	bottom:-15px;
+	height: 8px;
+	left: 10%;
+	width: 80%;
+}

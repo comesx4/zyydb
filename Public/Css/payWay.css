@@ -1,0 +1,198 @@
+#main{
+	background:#fff;
+}
+#main #main-content{
+	padding-top:10px;
+	background:#fff;
+	margin-bottom: 10px;
+	overflow: hidden;
+
+}
+#main #main-content div{
+
+}
+
+
+#main #main-content .uc-process ul li.finish{
+	background:#9CDDF5;
+}
+#main #main-content .chen{
+	width:940px;
+
+}
+#main #main-content #fix{
+	min-height: 260px;
+	width:100%;
+   float:left;
+   border:1px solid #ccc;
+}
+#main #main-content .uc-order{
+	width:100%;
+	float:left;
+	
+}
+#main #main-content #fix .fix-top{
+	
+	float:left;
+	width: 100%;
+    
+}
+#main #main-content #fix .fix-top  h3,#main #main-content #fix .fix-top  P{
+	font-weight:400;
+	font-size:17px;
+	width:95%;
+	margin:0 auto;
+	padding:8px 1% 8px 1%;
+	border-bottom:1px dashed #ccc;
+
+}
+#main #main-content  #fix .fix-top  h3 span,#main #main-content  #fix .fix-top  p span{
+	font-size:17px;
+	float:right;
+	padding-right:12px;
+}
+#main #main-content #fix .fix-top p{
+	font-size:13px;
+	border:none;
+	padding:20px 0;
+}
+#main #main-content #fix .fix-bottom{
+	float:left;
+    width:100%;
+    padding:20px 0;
+   
+
+}
+#main #main-content #fix .fix-bottom .cons{
+	width:95%;
+	margin:0 auto;
+	background:red;
+	
+
+}
+#main #main-content #fix .fix-bottom .cons .title{
+	float:left;
+	border-left:2px solid #FF9A00;
+	background:#F7F7F7;
+	width:100%;
+}
+#main #main-content #fix .fix-bottom .cons .title i{
+	display:inline-block;
+	/*width:120px;*/
+	padding:10px 7px;
+	float:left;
+	
+
+}
+/*#main #main-content #fix .fix-bottom .cons .title ul{
+	float:left;
+}
+#main #main-content #fix .fix-bottom .cons .title ul li{
+	padding:10px 25px;
+	cursor:pointer;
+	
+	float:left;
+}*/
+#main #main-content #fix .fix-bottom .cons .title ul li.show{
+	padding:10px 7px;
+	background:#fff; 
+	border-top:2px solid #FF9A00;
+
+}
+#main #main-content #fix .fix-bottom .cons .title span{
+	display:inline-block;
+	float:right;
+	padding:10px 25px;
+	font-size:14px;
+}
+#main #main-content #fix .fix-bottom .cons .title span em{
+	color:#FF6600;
+	font-size:15px;
+
+}
+#main #main-content #fix .fix-bottom .pros{
+	float:left;
+	border-bottom:1px dashed #ccc;
+
+	width:100%;
+	padding:20px 0;
+}
+#main #main-content #fix .fix-bottom .pros dl{
+	float:left;
+	height:37px;
+	width:30%;
+	margin-bottom:10px;
+	
+
+}
+#main #main-content #fix .fix-bottom .pros dl dt{
+	float:left;
+	height:37px;
+	line-height:37px;
+	margin-right:10px;
+	margin-left:20px;
+
+
+}
+#main #main-content #fix  .pros dl dd{
+	float:left;
+
+}
+#main #main-content #fix  .submit-box{
+	float:left;
+	width:90%;
+	padding:60px 10px 60px 40px;
+	text-align:right;
+}
+#main #main-content #fix  .submit-box .submit{
+	display:inline-block;
+	background: #FF6600;
+	border:none;
+	width:120px;
+	height:40px;
+	line-height:40px;
+	color:#fff;
+	font-size:14px;
+	border-radius:4px;
+}
+
+#quereng{
+	position:absolute;
+	left:30%;
+	top:40%;
+	width:300px;
+	height:100px;
+	padding:10px;
+	border-radius:4px;
+	border:1px solid #ccc;
+	background: url("../Images/userinfobackground.png") repeat-x  ;
+	z-index:999;
+	background:#fff;
+}
+#quereng .boo{
+	padding-top:35px;
+}
+#quereng .boo button{
+	display:inline-block;
+	border:none;
+	border-radius:4px;
+	width:90px;
+	height:25px;
+	color:#fff;
+	background:#00A2CA;
+	margin-right:7px;
+
+
+}
+
+#quereng .q-header{ 
+	height:25px;
+}
+#quereng .q-header h1{
+  color:666;
+}
+.y-how{
+	width:940px;
+	margin-right:auto;
+	margin-left:auto;
+}

@@ -1,0 +1,57 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+<head>
+  <meta http-equiv="Content-Type" content="text/html;charset=UTF-8" />
+<title><{$stitle|makwebtitle}></title>
+   <link rel='stylesheet' href='__PUBLIC__/Css/userinfo-left.css' />
+  <link rel="stylesheet" href="__PUBLIC__/Css/info.css" />
+   <link rel="stylesheet" href="__PUBLIC__/Css/jsmssage.css" />
+  <link rel='stylesheet' href='__PUBLIC__/Css/max-header.css' />	
+  <link rel='stylesheet' href='__PUBLIC__/Css/nav.css' />
+  <link rel='stylesheet' href='__PUBLIC__/Css/bottom.css' />
+  
+<js file="__PUBLIC__/Bootstrap/js/jquery-1.12.2.min.js"/>
+<js file="__PUBLIC__/Bootstrap/js/bootstrap.min.js"/>
+  <js file='__PUBLIC__/Js/nav.js'/>
+  <js file='__PUBLIC__/Js/bottom.js'/>
+</head>
+<body>
+  <!--顶部头-->
+ <include file='Common:p-header'/>
+  <!--顶部头结束-->
+  
+  <!--头部公共部分-->
+  <include file='Common:nav'/>
+  <!--头部公共部分结束--> 
+  
+
+    <!--主题内容-->
+	<div class='main'>
+	<!--左半部分-->
+	<include file='Common:userinfo-left'/>
+	<!--左半部分结束-->
+        
+        <form id="setinfo" action="<{:U('user/updatadindan')}>"  name='setinfo' method='post'>
+         <!-- 右半部分-->
+		<div class='main-right'>	
+                    <div class='y-tip'>
+			<h3 class='no-border'>修改订单</h3> </div>   
+			
+                            <foreach name='contacter' item='v'>
+                           <dl>  <dt><{$v['des']}>：</dt>
+				<dd><{$v['ck']}></dd> </dl>	
+                            </foreach>		
+                          <dl> <dt>&nbsp;<{$hid}>                                 
+                              </dt>
+                         <dd class='submit'><input type='submit' class="btn" value='提交'/></dd>        
+                        </dl>	
+                    
+		</div>  
+	</form>
+        
+        </div>	 
+        <!--右半部分结束-->
+        
+	<include file='Common:bottom' />
+</body>
+</html>

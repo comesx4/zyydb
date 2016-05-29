@@ -1,0 +1,135 @@
+<!--底部版权开始-->
+  <div class='bottom'>
+    <div class='firstbottom y-row'>
+        <p class='big'>
+            <a href="<{:U('About/index')}>" target="_blank">公司介绍</a>
+              <a href="<{:U('About/statement')}>" target="_blank">法律声明</a>
+                <a href="<{:U('About/contact')}>" target="_blank">联系我们</a>
+                  <a href="<{:U('About/friendlink')}>" target="_blank">友情链接</a>
+  
+        </p>
+      
+        <p>
+           <a>Copyright © 2015-2018 智御云 版权所有</a> 浙ICP备14023229号
+        </p>
+        <p>
+            <a href='' class='img1'></a>
+            <a href='' class='img2'></a> 
+        </p>
+
+    </div>
+  </div>
+
+    <!--底部版权结束-->
+
+    <!--有问题点我-->
+    <div id='float-tool'>
+       <dl>
+          <dt><span class='one issue'>&nbsp;</span><span class='two issue'>&nbsp;</span></dt>
+        
+      <dt>
+          <!-- webim button -->
+          <!--
+          <a href="/kf/client.php?locale=zh" target="_blank" onclick="if(navigator.userAgent.toLowerCase().indexOf('opera') != -1 && window.event.preventDefault) window.event.preventDefault();this.newWindow = window.open('/kf/client.php?locale=zh&amp;url='+escape(document.location.href)+'&amp;referrer='+escape(document.referrer), 'webim', 'toolbar=0,scrollbars=0,location=0,status=1,menubar=0,width=640,height=480,resizable=1');this.newWindow.focus();this.newWindow.opener=window;return false;"><img src="/button.php?image=webim&amp;lang=zh" border="0" width="142" height="78" alt=""/></a>
+          -->
+          <!-- / webim button -->
+        </dt>
+        
+        <dd style ='display:none;' class='autotop'></dd>
+       </dl>
+       <div>&nbsp;</div>
+
+    
+    </div>
+
+    <!--有问题点我结束-->
+
+    <div id='cloud-helper-box'>
+      <div class='clude-relative'>
+      
+        <div style='display:none;'  class='cloud-top cloud-top2 '>
+             <div class='clude-header'>
+                 <h4>小云解答</h4>
+                 <div class='right'>
+                 <span class='clude-redirect2 clude-redirect'>&nbsp;</span>
+                 <span class='close'>&nbsp;</span>
+                 </div>
+            </div>
+            <div class='content xiaoyuncontent'>
+              
+               
+            </div>
+             <h4>问问智慧的小云<span class='unlink'>清空记录</span></h4>
+            <div class='cloud-issue'><input type='text' name='issue' /><button class='tiwen str'>提问</button></div>
+          
+        </div>
+        <div  class='cloud-top cloud-top1'>
+            <div class='clude-header'>
+                 <h4>您可能遇到的问题</h4>
+                 <div class='right'>
+                 <span class='clude-redirect1 clude-redirect'>&nbsp;</span>
+                 <span class='close'>&nbsp;</span>
+                 </div>
+            </div>
+            <!-- 从数据库中遍历出问题 -->
+            <ul class='clude-list'>
+              <problem limit='6'>
+              <li><a><{$v.title}></a>
+                <div>
+                  <{$v.content}>
+                </div>
+
+              </li>
+            </problem>
+              
+            </ul>
+            <h4>问问智慧的小云</h4>
+            <div class='cloud-issue'><input type='text' name='issue' /><button class='tiwen'>提问</button></div>
+        </div>
+
+        <div class='cloud-bottom'>
+            <dl>
+              <dt>备案:</dt>
+              <dd>4006008500转3</dd>
+              
+            </dl>
+
+            <dl>
+              <dt> 帮助:</dt>
+              <dd>智御云帮助中心</dd>
+              
+            </dl>
+
+              <dl>
+              <dt>售前:</dt>
+              <dd>预约服务</dd>
+              
+            </dl>
+
+              <dl>
+              <dt>售后:</dt>
+              <dd>工单0571-85025885</dd>
+              
+            </dl>
+
+              </dl>
+
+              <dl>
+              <dt>论坛:</dt>
+              <dd>去提问</dd>
+              
+            </dl>
+           
+
+        </div>
+
+
+      </div>
+
+
+    </div>
+    <script type="text/javascript">
+     var xiaoyun='<{:U('Index/xiaoyun')}>';
+
+
+    </script>

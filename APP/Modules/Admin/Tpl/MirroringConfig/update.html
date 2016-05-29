@@ -1,0 +1,45 @@
+<include file="Common:header"/>
+
+	<form  action='<{:U('save')}>'  method='post'>
+		 <table class="table table-condensed table-hover table-active">
+        <thead>
+            <tr class="active">
+                <td colspan="2">
+                    <a class="btn btn-info" href="<{:U('index')}>">推荐配置列表</a>
+                </td>
+            </tr>
+        </thead>
+			<tr>
+				<td>套餐类型:</td>
+				<td><input type='text' name='type' value='<{$data.type}>'/></td>
+			</tr>
+			<tr>
+				<td>cpu:</td>
+				<td><input type='text' name='cpu' value='<{$data.cpu}>'/></td>
+			</tr>
+			<tr>
+				<td>内存:</td>
+				<td><input type='text' name='memory' value='<{$data.memory}>'/></td>
+			</tr>
+			<tr>
+				<td>带宽:</td>
+				<td><input type='text' name='daikuans' value='<{$data.daikuans}>'/></td>
+			</tr>
+			<tr>
+				<td>硬盘:</td>
+				<td><input type='text' name='hard' value='<{$data.hard}>'/></td>
+			</tr>
+				
+		<tfoot>
+            <tr>
+                <td class='first'></td>
+                <td>
+                	<input type='hidden' name='id' value='<{$Think.get.id}>'/>
+                	<input class="btn btn-success" type="submit" value="保 存"/>
+                    <a class="btn btn-default" href="<{:U('index')}>">取 消</a>
+               </td> 
+           </tr>
+        </tfoot>
+    </table>
+</form>
+<include file="Common:footer"/>

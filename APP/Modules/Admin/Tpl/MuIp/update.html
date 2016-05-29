@@ -1,0 +1,63 @@
+<include file="Common:header"/>
+
+<form action='<{:U('save')}>' method='post'>
+   <table class="table table-condensed table-hover table-active">
+        <thead>
+            <tr class="active">
+                <td colspan="2">
+                    <a class="btn btn-info" href="<{:U('index')}>">IP地址列表</a>
+                </td>
+            </tr>
+        </thead>
+        
+        <tbody>
+		    <tr>
+                <td class='first'>所属网关：</td>
+                <td>
+					<{$gateway}>
+				</td>
+            </tr>
+            <tr>
+                <td class='first'>IP地址：</td>
+                <td><input type="text" name="ip" maxlength="32" value='<{$data.ip}>' placeholder="如：192.168.1"/></td>
+            </tr>
+            <tr>
+                <td class='first' >mac地址：</td>
+                <td>
+                    <input type="text" placeholder="mac地址"  value="<{$data.mac}>" maxlength="32" name="mac">
+                </td>
+            </tr>
+			<tr>
+                <td class='first'>IP类型：</td>
+                <td><label><input type="radio" <if condition="$data['type'] eq 'lan'">checked</if> name="type" value="lan"/>内网</label>
+                    <label><input type="radio" <if condition="$data['type'] eq 'wan'">checked</if>  name="type" value="wan"/>外网</label></td>
+            </tr>
+            <tr>
+                <td class='first'>状态：</td>
+                <td>
+					<label><input type="radio" <if condition="$data['status'] eq 0">checked</if> name="status" value="0" checked="checked"/>未使用</label>
+                    <label><input type="radio" <if condition="$data['status'] eq 1">checked</if>  name="status" value="1"/>已使用</label>
+					<label><input type="radio" <if condition="$data['status'] eq 2">checked</if>  name="status" value="2"/>预留</label>
+                </td>
+            </tr>
+            <tr>
+                <td class='first'>备注：</td>
+                <td>
+                    <textarea class="command" name="remark" maxlength="2048" placeholder=""><{$data.remark}></textarea>
+                </td>
+            </tr>
+        </tbody>
+        
+        <tfoot>
+            <tr>
+                <td class='first'></td>
+                <td>
+                    <input type='hidden' name='id' value='<{$data.id}>'/>
+                	<input class="btn btn-success" type="submit" value="保 存"/>
+                    <a class="btn btn-default" href="<{:U('index')}>">取 消</a>
+               </td> 
+           </tr>
+        </tfoot>
+    </table>
+</form>
+<include file="Common:footer"/>

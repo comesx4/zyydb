@@ -1,0 +1,107 @@
+<include file="Common:header"/>
+    <link rel="stylesheet" href="__PUBLIC__/Css/mirroring.css" />
+    <script type="text/javascript" src='__PUBLIC__/Js/mirroring.js'></script>
+    <script type="text/javascript">
+        var insert='<{:U('save')}>';
+        var insertOs='<{:U('saveOs')}>';
+        var type = '<{$data.type}>';
+    </script>
+
+<form <if condition="$data['type'] eq 1">action='<{:U('save')}>'<else/>action='<{:U('saveOs')}>'</if> method='post' enctype='multipart/form-data'>
+	 <table class="table table-condensed table-hover table-active">
+        <thead>
+            <tr class="active">
+                <td colspan="2">
+                    <a class="btn btn-info" href="<{:U('index')}>">镜像列表</a>
+                </td>
+            </tr>
+        </thead>
+		<tr>
+			<td class='first'>类型</td>
+			<td>
+				<select name='type'>
+					<option <if condition="$data['type'] eq 1">selected</if>  value='1'>镜像</option>
+					<option <if condition="$data['type'] eq 0">selected</if> value='0'>操作系统</option>					
+				</select>
+			</td>
+		</tr>
+		<tr  class='jx'>
+			<td class='first'>所属分类</td>
+			<td><{$cat}></td>
+		</tr>
+
+		<tr >
+			<td class='first'>操作系统:</td>
+			<td  width='90%'><{$os}></td>
+		</tr>	
+		<tr class='jx'>
+			<td class='first'>服务商</td>
+			<td><{$source}></td>
+		</tr>	
+		<tr class='jx'>
+			<td class='first'>镜像名称</td>
+			<td><input type='text' name='name' value='<{$data.name}>' /></td>
+		</tr  class='jx'>
+		<tr>
+			<td class='first'>镜像标识</td>
+			<td><input type='text' name='image_code' value='<{$data.image_code}>'/></td>
+		</tr>
+		<tr>
+			<td class='first'>镜像存储池</td>
+			<td><input type='text' name='image_pool' value='<{$data.image_pool}>' /></td>
+		</tr>
+		<tr>
+			<td class='first'>默认端口</td>
+			<td><input type='text' name='default_port' value='<{$data.default_port}>' /></td>
+		</tr>
+		<tr >
+			<td class='first'>快照标识</td>
+		    <td><input type='text' name='image_snap_code' value='<{$data.image_snap_code}>'/></td>
+		</tr>
+		<tr >
+			<td class='first'>默认大小</td>
+			<td><input type='text' name='default_size' value='<{$data.default_size}>'/>&nbsp;M</td>
+		</tr>
+	
+			<tr>
+			<td class='first'>状态</td>
+			<td>
+				<label><input type='radio' <if condition="$data['status'] eq 1">checked</if> name='status' value='1'/>开启</label>
+				<label><input type='radio' <if condition="$data['status'] eq 0">checked</if> name='status' value='0'/>关闭</label>
+				<label><input type='radio' <if condition="$data['status'] eq 2">checked</if> name='status' value='2'/>创建中</label>
+				<label><input type='radio'  <if condition="$data['status'] eq 3">checked</if> name='status' value='3'/>失败</label>
+				<label><input type='radio' <if condition="$data['status'] eq 4">checked</if> name='status' value='4'/>删除镜像失败</label>
+				<label><input type='radio' <if condition="$data['status'] eq 5">checked</if> name='status' value='5'/>正在删除镜像</label>
+				<label><input type='radio' <if condition="$data['status'] eq 6">checked</if> name='status' value='6'/>删除镜像成功</label>
+			</td>
+		</tr>
+		<tr class='jx'>
+			<td class='first'>镜像版本</td>
+		    <td><input type='text' name='new' value='<{$data.new}>'/></td>
+		</tr>			
+		<tr class='jx'>
+			<td class='first'>推荐配置</td>
+			<td><input type='text' name='recom' value='<{$data.recom}>' /></td>
+		</tr>
+		<tr class='jx'>
+			<td class='first'>镜像图标</td>
+			<td><input type='file' class='file' name='img'  /></td>
+		</tr>
+		
+		<tr class='jx'>
+			<td class='first'>集成软件</td>
+			<td><input type='text' name='gather' value='<{$data.gather}>' /></td>
+		</tr>		
+		
+            <tr>
+                <td class='first'></td>
+                <td>
+                	<input type='hidden' name='id' value='<{$data.id}>'/>
+                	<input class="btn btn-success" type="submit" value="保 存"/>
+                    <a class="btn btn-default" href="<{:U('index')}>">取 消</a>
+               </td> 
+           </tr>
+        </tfoot>
+    </table>
+</form>
+<include file="Common:footer"/>

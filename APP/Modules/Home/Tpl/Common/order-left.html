@@ -1,0 +1,11 @@
+<!--左半部分-->
+		<div class='main-left'>
+			<ul>
+				<li>我的订单</li>
+				<li <if condition="ACTION_NAME eq index || ACTION_NAME eq minute">class='two'</if>><a  href="<{:U('Order/index')}>">订单</a></li>
+				<!--<li <if condition="ACTION_NAME eq bill">class='two'</if> ><a href="<{:U('Order/bill')}>">账单明细</a></li>-->
+			
+			</ul>
+			
+		</div>
+<!--左半部分结束-->

@@ -1,0 +1,53 @@
+<include file="Common:header"/>
+
+<form action='<{:U('insert')}>' method='post'>
+    <table class="table table-condensed table-hover table-active">
+        <thead>
+            <tr class="active">
+                <td colspan="2">
+                    <a class="btn btn-info" href="<{:U('index')}>">分类列表</a>
+                </td>
+            </tr>
+        </thead>
+		<tr>
+			<td class='first'>分类名称:</td>
+			<td><input type='text' name='cat' value='<{$cat.cat}>' /></td>
+		</tr>
+		<tr>
+			<td class='first'>拥有续费参数:</td>
+			<td>
+                <input <if condition="in_array('cpu',$data)">checked</if>  type='checkbox' id='cpu' name='name[]' value='cpu'/>
+                <label for='cup'>CPU</label>
+                <input <if condition="in_array('city',$data)">checked</if> type='checkbox' id='city' name='name[]' value='city'/>
+                <label  for='city'>地域</label>
+                <input <if condition="in_array('memory',$data)">checked</if> type='checkbox' id='memory' name='name[]' value='memory'/>
+                <label for='memory'>内存</label>
+                <input <if condition="in_array('disk',$data)">checked</if> type='checkbox' id='disk' name='name[]' value='disk'/>
+                <label for='disk'>硬盘</label>
+                <input <if condition="in_array('band',$data)">checked</if> type='checkbox' id='band' name='name[]' value='band'/>
+                <label for='band'>带宽</label>
+			</td>
+		</tr>
+		<tr>
+			<td class='first'>表名:</td>
+			<td><input type='text' name='tablename' value='<{$cat.tablename}>' /></td>
+		</tr>
+		<tr>
+			<td class='first'>排序:</td>
+			<td><input type='text' name='sort' value='<{$cat.sort}>' /></td>
+		</tr>
+	
+			
+	 <tfoot>
+            <tr>
+                <td class='first'></td>
+                <td>
+                	<input type='hidden' name='id' value='<{$cat.id}>'/>
+                	<input class="btn btn-success" type="submit" value="保 存"/>
+                    <a class="btn btn-default" href="<{:U('index')}>">取 消</a>
+               </td> 
+           </tr>
+        </tfoot>
+    </table>
+</form>
+<include file="Common:footer"/>

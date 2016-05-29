@@ -1,0 +1,105 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+<head>
+  <meta http-equiv="Content-Type" content="text/html;charset=UTF-8" />
+ <title><{$stitle|makwebtitle}></title>
+  <link rel="stylesheet" href="__PUBLIC__/Css/user.css" />
+  <link rel='stylesheet' href='__PUBLIC__/Css/max-header.css' />
+  <link rel='stylesheet' href='__PUBLIC__/Css/nav.css' />
+  <link rel='stylesheet' href='__PUBLIC__/Css/bottom.css' />
+  <js file='__PUBLIC__/Js/jquery-1.7.2.min.js'/>
+  <js file='__PUBLIC__/Js/nav.js'/>
+  <js file='__PUBLIC__/Js/user.js'/>
+  <js file='__PUBLIC__/Js/bottom.js'/>
+
+</head>
+<body>
+ <div class='body'>
+  <!--顶部头-->
+ <include file='Common:p-header'/>
+  <!--顶部头结束-->
+  <!--头部公共部分-->
+  <include file='Common:nav'/>
+  <!--头部公共部分结束-->
+
+  <!--主体内容-->
+     <div class='uc-content y-row'>
+      <!--用户信息-->
+       <div class='uc-user'>
+         <div class='uc-userface'><img width='100' src=<if condition="$phone['face'] neq ''">
+              '__ROOT__/Uploads/Face/<{$phone.face}>'
+              <else/>'__PUBLIC__/Images/datou.png'</if>/></div>
+         <div class='uc-userinfo'>
+           <div class='uc-top'>
+            账号名：<{$Think.session.username}> <label class='telephone img'>&nbsp;</label>
+            <label class='shiming img'>&nbsp;</label>
+           </div>
+           <div class='uc-bottom'>
+             安全等级：<span>中</span>  <a href=''>提高</a>&nbsp;&nbsp;资源永不释放：<span class='niwen img'>&nbsp;</span> <span class='xufei img'>&nbsp;</span><span class='zhifu img'>&nbsp;</span>
+           </div>
+
+         </div>
+         <div class='uc-right'><span class='bei'>快速申请备案服务号</span></div>
+       </div>
+
+       <!--用户信息结束-->
+       
+       <!--用户账户信息-->
+       <div class='uc-account y-row'>
+           <div class='uc-account-info'>
+              <h3>账户余额</h3>
+             <div class='uc-bottom'>
+              <span class='money'>￥</span><span class='blance'><{$price}></span>
+              <a href='<{:U('user/recharge')}>' class='recharge'><button>充值</button></a>
+              <ul>
+                <li>&nbsp;<a href="">提现</a>&nbsp;</li>
+                <li>|&nbsp;<a href="">退款</a>&nbsp;</li>
+                <li>|&nbsp;<a href="<{:U('Order/bill')}>">收支明细</a>&nbsp;</li>
+                <li>|&nbsp;<a href="">索取发票</a>&nbsp;</li>
+                <li>|&nbsp;<a href="">申请合同</a>&nbsp;</li>
+  
+              </ul>
+             </div>
+           </div>
+           <div class='uc-user-meg'>
+                <dl class='border'>
+                  <dt>0</dt>
+                  <dd><img src='__PUBLIC__/Images/youjian.png'/></dd>
+                  <dd>代办消息</dd>
+
+                </dl>
+                <dl class='border'>
+                  <dt>0</dt>
+                  <dd><img src='__PUBLIC__/Images/bi.png'/></dd>
+                  <dd>工单消息</dd>
+
+                </dl>
+                <dl>
+                  <dt>0</dt>
+                  <dd><img src='__PUBLIC__/Images/qian.png'/></dd>
+                  <dd>代金劵与活动</dd>
+
+                </dl>
+
+             </div>
+           <div class='uc-app-list'>
+               <span class='app-title'>
+                您还没开通任务服务，请查看<a href=''>产品详情</a>进行选购。
+               </span>
+
+             </div>
+
+            
+       </div>
+        <!--用户账户信息结束-->
+
+      
+      
+     </div>
+     <!--底部内容-->
+      <include file='Common:bottom' />
+      <!--底部内容结束-->
+  <!--主体内容结束-->
+
+    
+ </div>

@@ -1,0 +1,81 @@
+.htype{
+    text-align: center;
+    margin: 20px auto;
+    height: 40px;
+    width: 300px;
+}
+.htype a{
+    float: left;
+    font-size: 13px;
+    line-height: 2;
+    margin: 0;
+    outline: medium none;
+    padding: 5px 0;
+    text-align: center;
+    transition: all 0.3s ease 0s;
+    width: 135px;
+    background: #EEEEEE;
+    color: #666666;
+}
+.htype a.first {
+    border-radius: 4px 0 0 4px;
+}
+.htype a.last{
+     border-radius: 0 4px 4px 0;
+}
+.htype a.cur{
+    background: #FF5733;
+    color: #ffffff;
+}
+.host_list table{
+    
+}
+.host_list table td{
+    padding: 8px 0px;
+    text-align: center;
+    border: 1px solid #e3e3e3;
+}
+.host_list table td.hostlist-t{
+    background:#F8F8F8;
+    text-align: right;
+    padding-right: 10px;
+}
+.host_list table td h3{
+    margin: 10px 0;
+    color: #333333;
+    font-size: 18px;
+    font-family: '';
+}
+.domainfw table td div.td_price{
+    font-size: 13px;
+    margin: 0;
+}
+.domainfw table td div.td_price dfn{
+    color: #FF6544;
+    font-size: 20px;
+    font-style: normal;
+}
+.productgl table td{
+    line-height: 25px;
+    text-align: left;
+    padding:0 20px;
+}
+.productgl table td h3{
+    margin: 10px 0;
+    font-size: 18px;
+}
+.productgl table td ul{
+    margin-top: 20px;
+    padding-left: 15px;
+}
+.productgl table td ul li{
+    list-style: disc;
+}
+.productgl table td a.a_cart{
+    background: #23BE3D;
+    border: 1px solid #23BE3D;
+    margin-left: 0;
+}
+a.a_cart{
+    margin: 15px 0;
+}

@@ -1,0 +1,110 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+<head>
+  <meta http-equiv="Content-Type" content="text/html;charset=UTF-8" />
+<title><{$stitle|makwebtitle}></title>
+  <link rel="stylesheet" href="__PUBLIC__/Css/userinfo-left.css" />
+  <link rel="stylesheet" href="__PUBLIC__/Css/order.css" />
+  <link rel='stylesheet' href='__PUBLIC__/Css/max-header.css' />
+  <link rel='stylesheet' href='__PUBLIC__/Css/nav.css' />
+  <link rel='stylesheet' href='__PUBLIC__/Css/bottom.css' />
+  <js file='__PUBLIC__/Js/jquery-1.7.2.min.js'/>
+  <js file='__PUBLIC__/Js/nav.js'/> 
+  <js file='__PUBLIC__/Js/account.js'/>
+  <js file='__PUBLIC__/Js/bottom.js'/>
+  <script type="text/javascript">
+    var setFace='<{:U('User/setFace')}>';
+  </script>
+
+</head>
+<body>
+  <!--顶部头-->
+ <include file='Common:p-header'/>
+  <!--顶部头结束-->
+  
+  <!--头部公共部分-->
+  <include file='Common:nav'/>
+  <!--头部公共部分结束--> 
+  
+
+    <!--主题内容-->
+	<div class='main'>
+		<!--左半部分-->
+		<include file='Common:userGoods-left'/>
+		<!--左半部分结束-->
+
+        <!--右半部分-->
+		<div class='main-right'>
+			<h3>我的产品</h3>
+		<div class='y-mt'>
+			产品状态：<{$goods.status|goods_status=1,###}>。
+
+		    <if condition="$goods['status'] eq 0"><span class='orang'>您已付款成功，正在提交到后台处理，谢谢您的合作！</span></if>
+		</div>
+		<!-- <div class='price'>
+			订单金额<span class='orang'>￥<{$order.price}></span> <input class='button' type='submit' vlaue='立即支付' /><a href="">作废订单</a>
+		</div> -->
+
+		<div class='minute'>
+			<div class='order-head'><h4>产品详细</h4><span>订单名称：<i><{$goods.name}></i></span>
+			</div>
+
+			<div class='zdg'>
+				<div class='lt'>产品购买时间：<{$goods.start|date='Y-m-d H:i:s',###}></div>
+				
+			</div>
+
+			<table class='table'> 
+				<tr>
+					<th>产品名称</th>
+					<th>购买时间</th>
+					<th>到期时间</th>
+					<th>具体配置</th>	
+					<th>状态</th>
+					<th>备注</th>
+				
+				</tr>
+				<tr>
+					
+						<td><{$goods.name}></td>
+						<td><{$goods.start|date='Y-m-d H:i:s',###}></td>
+						<td><{$goods.end|date='Y-m-d H:i:s',###}></td>
+						<td>
+							<if condition="$goods['gid'] eq C('yunecs')">
+								CPU：<{$goods.cpu}>核<br/>
+								内存：<if condition="$goods['memory']"><{$goods.memory}>G <else/>512M</if><br/>
+								硬盘：<{$goods.disk}>GB<br/>
+								带宽：<{$goods.band}>MPS<br/>
+								所在城市：<{$goods.city|get_city=###}><br/>
+							<elseif condition="$goods['gid'] eq C('ddos_yun')" />
+								带宽：<{$goods.band}>
+							<elseif condition="$goods['gid'] eq C('rent_yun')" />
+								CPU：<{$goods.cpu}>核<br/>
+								内存：<if condition="$goods['memory']"><{$goods.memory}>G <else/>512M</if><br/>
+								硬盘：<{$goods.disk}>GB<br/>
+								带宽：<{$goods.band}>MPS<br/>
+							<elseif condition="$goods['gid'] eq C('storage_yun')" />
+								CPU：<{$goods.cpu}>核<br/>
+								内存：<if condition="$goods['memory']"><{$goods.memory}>G <else/>512M</if><br/>
+								硬盘：<{$goods.disk}>GB<br/>
+								带宽：<{$goods.band}>MPS<br/>
+							</if>
+								
+						</td>
+						<td><{$goods.status|goods_status= $goods['gid'],###}></td>					
+						<td><{$goods.remark}></td>
+					
+				</tr>
+			</table>
+		</div>
+
+		</div>
+	</div>
+	 <!--底部版权-->
+	<include file='Common:bottom' />
+	<!--底部版权结束-->
+
+	
+	
+</body>
+</html>	

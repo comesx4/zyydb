@@ -1,0 +1,104 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+<head>
+  <meta http-equiv="Content-Type" content="text/html;charset=UTF-8" />
+  <title><{$stitle|makwebtitle}></title>
+  <link rel='stylesheet' href='__PUBLIC__/Css/bottom.css' />
+  <link rel='stylesheet' href='__PUBLIC__/Css/p-header.css' />
+  <link rel='stylesheet' href='__PUBLIC__/Css/shopping.css' />
+  <js file='__PUBLIC__/Js/jquery-1.7.2.min.js'/>
+  <js file='__PUBLIC__/Js/nav.js'/>  
+   <js file='__PUBLIC__/Js/bottom.js'/>  
+  
+</head>
+<body>
+
+<!--顶部头-->
+<include file='Common:p-header'/>
+	<!--顶部头结束-->
+
+  <!-- 产品名称 -->
+  <div class="y-page-title">
+    <div class='y-row '>
+           <div class='title'>
+               <h2>确认订单</h2>
+               <span>关联产品：<a href="">独立云磁盘</a> <span>其他产品</span></span>
+           </div>
+
+     </div>
+  </div>
+  <!-- 产品名称结束 -->
+  
+  <!-- 主体内容 -->
+  <div id='main'>
+  	  <div id='main-content' class='y-row'>
+  	  	<div id='fix'>
+  	  	<div class="uc-process">
+  	  		<ul>
+  	  			<li class='down'>确认订单</li>
+  	  			<li>支付</li>
+  	  			<li>支付成功</li>
+  	  		</ul>
+  	  	</div>
+
+  	  	<div class='table'>
+  	  		<table  cellspacing="0" cellpadding="0" >
+  			<tr>
+  	  			<th width='2%'></th>
+  	  			<th>产品名称</th>
+  	  			<th width='50%'>实例配置</th>
+  	  			<th>时长</th>
+  	  			<th>单价</th>
+  	  			<th>数量</th>
+  	  			<th>优惠</th>
+  	  			<th>小计</th>
+  	  		</tr>
+  	  		<tr class='zhong'>
+  	  			<td></td>
+  	  			<td colspan='7'> 服务商：阿里云计算有限公司</td>
+  	  		</tr>
+
+  	  		<tr>
+  	  			<td></td>
+  	  			<td>1. <{$Think.post.goodsId}>（包年包月）</td>
+  	  			<td>地域：<{$Think.post.region}><br/>
+			   	可用区：美西可用区1A<br/>
+  				CPU：<{$Think.post.cpu}>核<br/>
+  				内存：<if condition="$_POST['memory'] eq 0">512MB<else/><{$Think.post.memory}>GB</if><br/>  				
+  				带宽：<{$Think.post.daikuans}>Mbps(固定带宽)<br/>
+  				操作系统：<{$Think.post.xitong}><br/>  				
+			    </td>
+  	  			<td><{$Think.post.time}>个月</td>
+  	  			<td>¥<{$Think.post.unit}></td>
+  	  			<td><{$Think.post.num}>台</td>
+  	  			<td></td>
+  	  			<td>¥<{$Think.post.countPrice}></td>
+  	  		</tr>
+  	  		</table>  	  		
+  	  	</div>
+  	  	<p style='color:red;'>
+重要提醒：订单对应可开发票的类型和抬头为您在用户中心-<a href="">发票信息管理</a>中设置的信息
+</p>
+  	  	<p> 订单金额<span class='monery'>¥<{$Think.post.countPrice}></span></p>
+   
+    <!-- 表单区域 -->
+   
+          
+  	  	<p>
+          <a href='<{:U('payWay',array('order'=>$oid))}>'><input type='button' class='submit' value='去支付'/></a>
+        </p>
+   
+     <!-- 表单区域结束 -->
+
+  	  	<p><input type='checkbox' name='xieyi' />《云服务器ECS服务条款》</p>
+  	  	
+  	  </div>
+
+  	</div>
+  </div>
+  <!-- 主体内容结束 -->
+
+  <include file='Common:bottom'/>
+
+</body>
+</html>	

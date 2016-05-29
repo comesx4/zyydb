@@ -1,0 +1,96 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+<head>
+	<meta http-equiv="Content-Type" content="text/html;charset=UTF-8" />
+	<title></title>
+	<link href="__ROOT__/Public/Bootstrap/css/bootstrap.min.css" rel="stylesheet">
+	<link rel="stylesheet" href="__PUBLIC__/Css/header.css" />
+	<link rel="stylesheet" href="__PUBLIC__/Css/left.css" /> 	
+	<link rel="stylesheet" href="__PUBLIC__/Css/server.css" />
+	<!--[if lt IE 9]>
+	    <script src="//cdn.bootcss.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      	<script src="//cdn.bootcss.com/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->   
+    <script src="//cdn.bootcss.com/jquery/1.11.3/jquery.min.js"></script>    
+	<script src="__ROOT__/Public/Bootstrap/js/bootstrap.min.js"></script>
+	<script type="text/javascript" src='__PUBLIC__/Js/left.js'></script>
+	<script type="text/javascript" src='__PUBLIC__/Js/common.js'></script>
+	<script type="text/javascript" src='__PUBLIC__/Js/host_index.js'></script>
+    <script type="text/javascript">
+    	
+    </script>
+</head>
+<body>
+	<!-- ========头部========= -->
+	<include file='Common:header'/>
+	<!-- ==========头部 end=========== -->
+
+	<!-- =========主体内容======= -->
+	<div id='main'>
+		<!-- 左半部分 -->
+		<include file='Common:left'/>
+		
+		<!-- 右半部分 -->
+		<div class='main-right'>
+			<div class='position'>
+				<span class='glyphicon glyphicon-home'></span> <a href="">会员中心</a>/ <a href="">云服务器</a>  <a href=""><span class='glyphicon glyphicon-refresh'></span></a>
+			</div>
+
+			<div class='living'>
+				<!-- 导航 -->			
+				<div class='nav'>
+					<ul>				
+						<li  <if condition="MODULE_NAME eq 'Host'">class='on'</if>>
+							<a href="">实例</a>
+						</li>						
+					</ul>
+				</div>
+			<form action='<{:U('livingOperation')}>' method='post'>
+				<div class='content'>
+					<div class='controller'>
+						<button type="button" name='new' class="btn btn-info upgrade">升级到高防</button>
+					
+					</div>
+
+					<table class='table table-hover'>
+						<tr>
+							<th><input type='checkbox' name='ids' value='1'/></th>
+							<th>外网IP</th>
+							<th>CPU</th>
+							<th>内存</th>
+							<th>带宽</th>
+							<th>状态</th>
+							<th>到期时间</th>
+						</tr>
+					<foreach name='data' item='v'>
+							<tr  tid='<{$v.tid}>' class='goods'>
+							<td>
+								<input lid = '<{$v.id}>' status='<{$v.status}>' type='checkbox' class='tid' name='id[]' value='<{$v.tid}>'/>
+							</td>
+							<td><{$v.wan_ip}></td>
+							<td><{$v.cpu}></td>
+							<td><{$v.memory}></td>
+							<td><{$v.band}></td>
+							<td><{$v.status|goods_status=$v['gid'],###}></td>
+							<td><{$v.end|date='Y-m-d H:i',###}></td>
+						</tr>
+					</foreach>
+					<tr>
+						<td colspan='9' align='center'><{$fpage}></td>
+					</tr>
+					</table>
+				</div>
+			</form>
+			</div>		
+
+			<!-- <div class='info'>		
+			</div> -->
+		</div>	
+
+		</div>	
+	</div>
+   <!-- =========主体内容 end======= -->
+
+
+</body>
+</html>

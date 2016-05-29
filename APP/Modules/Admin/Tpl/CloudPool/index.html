@@ -1,0 +1,62 @@
+<include file="Common:header"/>
+	    <table class="table table-condensed table-hover" <if condition="$isSort">data-sort="true"</if>>
+        <thead>
+            <tr class='active'>
+                <td colspan="2" class="td-left">
+                <authority>
+                	<a class="btn btn-success" href="<{:U('add')}>">添加存储池</a>
+                </authority>
+                </td>
+                <td colspan="6" class="td-right">
+                	<div class="page-code"><{$fpage}></div>
+                </td>
+            </tr>
+        </thead>
+        
+        <tbody>
+            <tr>
+                <th data-sort="true" data-field="id">ID</th>
+				<th data-sort="true" data-field="ip_gateway_id">名称</th>
+				<th data-sort="true" data-field="ip">标识</th>
+                <th data-sort="true" data-field="status">状态</th>
+                 <th>备注</th>
+                <th>操作</th>
+            </tr>
+
+        <foreach name="data" item="row">
+            <tr>
+                <td><{$row.id}></td>
+				<td><{$row.pool_name}></td>
+				<td title="<{$row.remark}>"><{$row.code}></td>
+                <td>
+                    <switch name='$row["status"]'>
+                        <case vlaue='1'>开启中</case>
+                        <case vlaue='2'>已关闭</case>
+                    </switch>
+                </td>
+                <td><{$row.remark}></td>
+                <td>
+                <authority>
+                    <a class="btn-icon" href="<{:U('update',array('id'=>$row['id']))}>"><i class="fa fa-edit"></i>编辑</a>
+                </authority>
+                <authority>
+                    <a class="btn-icon" onclick='return confirm('确认删除?');' href="<{:U('delete',array('id'=>$row['id']))}>"><i class="fa fa-times"></i>删除</a>
+                </authority>
+                </td>
+            </tr>
+        </foreach>
+            
+        </tbody>
+        
+        <tfoot>
+            <tr class='active'>
+                <td colspan="8" class="td-right">
+                	<div class="page">
+                        <div class="page-info"><{$pageInfo}></div>
+                        <div class="page-code"><{$fpage}></div>
+                   </div>
+                </td>
+            </tr>
+        </tfoot>
+    </table>
+<include file="Common:footer"/>

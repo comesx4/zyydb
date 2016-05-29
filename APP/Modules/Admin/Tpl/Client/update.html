@@ -1,0 +1,37 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+<head>
+    <meta http-equiv="Content-Type" content="text/html;charset=UTF-8" />
+    <title>添加客户</title>
+    <link rel="stylesheet" href="__PUBLIC__/Css/Common.css" />   
+  
+<body>
+	<form  action='<{:U('updateClient')}>' enctype='multipart/form-data' method='post'>
+		<table class='table'>
+			<tr>
+				<td>客户名称:</td>
+				<td><input type='text' name='name' value='<{$stmt.name}>' /></td>
+			</tr>
+			
+			<tr>
+				<td>链接:</td>
+				<td><input type='text'  name='href' value='<{$stmt.href}>' /></td>
+			</tr>
+			<tr>
+				<td>图标:</td>
+				<td><input type='file' class='file' name='img' value='' /></td>
+				<input type='hidden' name='id' value='<{$stmt.id}>'/>
+			</tr>
+			<tr>
+				<td>所属分类</td>
+				<td><{$cat}></td>
+			</tr>
+			<tr>
+				<td colspan='2'><input type='submit' class='submit' value='修改' /></td>
+				
+			</tr>
+
+		</table>
+	</form>
+</body>
+</html>

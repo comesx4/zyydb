@@ -1,0 +1,15 @@
+<include file='Common:header'/>
+	<form action='<{:U('Logo/uploadLogo')}>' method='post' enctype='multipart/form-data'>
+		<table class='table'>
+			<tr>
+				<td>LOGO图片</td>
+				<td><img width='60' src='__ROOT__/Uploads/Logo/<{$Think.config.logo}>' /></td>
+				<td><input type='file'  class='file' name='file' value=''s/></td>
+			</tr>
+			<tr>
+				<td colspan='3'><input type='submit' class='submit' value='修改'/></td>
+				
+			</tr>
+		</table>
+	</form>
+<include file='Common:footer'/>

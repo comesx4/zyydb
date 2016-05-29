@@ -1,0 +1,122 @@
+<include file='Common:header'/>
+    <style type="text/css">
+        ul li{
+            float: left;
+            width: 48%;
+            margin:0 1%;
+        }
+        table{
+            clear: both;
+        }
+    </style>
+
+<script type="text/javascript">
+    $(function(){
+        $('.rule').click(function(){
+            $('.xml').val($(this).attr('rule'));
+            $('.remark').val($(this).attr('remark'));
+        });
+
+        /*
+            @der 发送命令
+        */
+        $('.sendCommand').click(function(){
+            var server_ip = $('input[name=server_ip]').val();
+            var xml       = $('.xml').val();
+
+            $.ajax({
+                type    : 'POST',
+                url     : '<{:U('sendCommand')}>',
+                async   : false,
+                data    : {server_ip,server_ip,xml:xml},
+                success : function(data){
+                    if (data == 0) {
+                        alert('服务器IP有误');
+                    } else {
+                        $('.modal-body').html(data);
+                        $('#exampleModal').modal();
+                    }
+                }
+
+            });
+            
+            return false;
+        });
+    });
+</script>  
+
+<form action='<{:U('sendCommand')}>' method='post'>
+    <div style='background:#fff;margin:10px 0;overflow:hidden;padding:10px 0;' class='command-list'>
+        <ul>
+            <foreach name='data' item='v'>
+                <li>
+                    <label remark='<{$v.remark}>' rule = '<{$v.rule}>' class='rule'>
+                        <input type='radio' name='command_id' value='<{$v.id}>'/>
+                        <{$v.id}>、<{$v.name}>(<{$v.title}>)
+                        <foreach name='v.tag' item='vs'>
+                            &nbsp;<span style='color:<{$vs.color}>'><{$vs.name}></span>
+                        </foreach>
+                    </label>
+                </li>
+            </foreach>
+        </ul>
+    </div>
+
+	<table class="table table-condensed table-hover table-active">
+        <thead>
+            <tr class='active'>
+                <td  colspan="2"><a class="btn btn-info" href="<{:U('index')}>">测试命令</a></td>
+            </tr>
+        </thead>
+        
+        <tbody>
+            <tr>
+                <td class='first' >服务器IP：</td>
+                <td><input type="text" name="server_ip"  placeholder=""/></td>
+            </tr>
+           
+            <tr>
+                <td class='first' >发送数据：</td>
+                <td>
+                    <textarea class='xml' name='xml'></textarea>
+                </td>
+            </tr>
+            
+            <tr>
+                <td class='first' >备注/说明：</td>
+                <td>
+                    <textarea class="remark" name="remark" maxlength="2048" placeholder="1.用于服务器启动"></textarea>
+                </td>
+            </tr>
+        </tbody>
+        
+        <tfoot>
+            <tr>
+                <td class='first' ></td>
+                <td>
+                	<input class="btn btn-success sendCommand"  type="submit" value="测  试"/>
+                    
+               </td> 
+           </tr>
+        </tfoot>
+    </table>
+</form>
+
+<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <h4 class="modal-title" id="exampleModalLabel">测试结果</h4>
+      </div>
+      <div class="modal-body">
+        
+      </div>
+      <div class="modal-footer">
+        <button type="button" data-dismiss="modal" class="btn btn-primary">关闭</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<include file='Common:footer'/

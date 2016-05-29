@@ -1,0 +1,185 @@
+<include file="Common:header"/> 
+    <link rel="stylesheet" href="__PUBLIC__/Css/details.css" />  
+<body>
+<form action='<{:U('turn')}>' method='post'>
+    <table class='table'>
+        <th colspan='2'>工单详情</th>
+        <tr>
+            <td class='first'>转部门:</td>
+            <td><{$checkbox}></td>
+        </tr>
+        <tr>
+            <input type='hidden' name='wid' value='<{$wo.id}>'/>
+            <td></td>
+            <td colspan='2'>
+                <input class="btn btn-success" type="submit" value="转部门"/>
+                <a class="btn btn-default" href="<{:U('index')}>">取 消</a>
+            </td>
+        </tr>
+    </table>
+</form>
+
+<!-- 增加工单记录 start-->
+<form action='<{:U('add_record')}>' method='post'>
+<table class='table'>
+    <th colspan='2'>增加工单记录</th>
+    <tr>
+        <td class='first'>记录：</td>
+        <td><input type='input' name='record' value=''/></td>
+    </tr>
+    <tr>
+        <input type='hidden' name='wid' value='<{$wo['id']}>'/>
+        <td></td>
+        <td colspan='2'>
+            <input class="btn btn-success" type="submit" value="保存"/>
+                <a class="btn btn-default" href="<{:U('index')}>">取 消</a>
+        </td>
+    </tr>
+</table>
+</form>
+<!-- 增加工单记录 end-->
+
+<!-- 客服服务信息 start-->
+<table class='table'>
+    <tr class='active'><th colspan='5'>用户已购买的服务</th></tr>
+    <tr>
+        <th>服务名称</th>
+        <th>购买时间</th>
+        <th>到期时间</th>
+        <th>状态</th>
+        <th>描述</th>
+    </tr>
+    <foreach name='service' item='v'>
+        
+        <tr>            
+            <td><{$v.title}></td>
+            <td><{$v.createTime|date='Y-m-d H:i',###}></td>
+            <td><if condition="$v.endTime eq 0">单次服务<else/><{$v.endTime|date='Y-m-d H:i',###}></if></td>
+            <td>
+                <switch name="v.status">
+                      <case value='0'>开通中</case>
+                      <case value='1'>已到期</case>
+                </switch>
+            </td>
+            <td><{$v.remark}></td>
+        </tr>       
+    </foreach>
+</table>
+
+<!-- 客服服务信息 end -->
+
+ <!-- 工单记录 start-->
+ <table class='table'>
+    <tr class='active'><th colspan='2'>工单记录</th></tr>
+       <tr>
+           <th width='20%'>时间</th>
+           <th width='10%'>管理员</th>
+           <th>信息</th>
+       </tr>
+       <foreach name='record' item='v'>
+           <tr>
+               <td><{$v.time|date='Y-m-d H:i:s',###}></td>
+               <td><{$v.adminname}></td>
+               <td><{$v.record}></td>
+           </tr>
+     </foreach>
+ </table>
+ <!-- 工单记录 end-->
+    
+    <h3>沟通记录</h3>
+	<!-- 沟通记录 start -->
+	<div class="take">
+	 	<dl>
+             <dt><img src="__ROOT__/Uploads/Face/face1.jpg" /></dt>
+             <dd><span class='hei'>问题描述：</span><{$wo.title}>
+                <if condition="!empty($wo['remark'])"><br/><{$wo.remark}></if>
+             </dd>
+             <if condition="!empty($img)">
+                 <dd>
+                    <foreach name='img' item='v'>
+                      <a href="__ROOT__/Uploads/Scence/<{$v.img}>">查看图片</a>&nbsp;
+                    </foreach>
+                </dd>
+             </if>
+             <dd class='date'><{$wo.time|date='Y-m-d H:i:s',###}></dd>
+         </dl>
+        <foreach name='reply' item='v'>
+             <dl>
+                <if condition="$v['type'] eq 0">
+                    <dt><img src="/aliyun/Uploads/Face/face1.jpg" /></dt>
+                     <dd><{$v.title}></dd>
+                <else/>
+                    <dt><img src="/aliyun__ROOT__/Public/Images/xiaolian.png" /></dt>
+                     <dd>客服专员：<{$v.title}></dd>
+                </if>
+                 
+                 <if condition="!empty($v['woreply_img'])">
+                     <dd>
+                        <foreach name='v.woreply_img' item='vs'>
+                          <a href="/aliyun/Uploads/Scence/<{$vs.img}>">查看图片</a>&nbsp;
+                        </foreach>
+                    </dd>
+                 </if>
+                
+                 <dd class='date'><{$v.time|date='Y-m-d H:i:s',###}></dd>
+             </dl>
+        </foreach>
+
+        <if condition="!empty($advice)">
+             <dl>
+                 <dt><img src="/aliyun/Uploads/Face/face1.jpg" /></dt>
+                 <dd><{$advice.0}></dd>
+                 <dd class='date'><{$adviceTime|date='Y-m-d H:i:s',###}></dd>
+            </dl>
+             <dl>
+                 <dt><img src="/aliyun/Uploads/Face/face1.jpg" /></dt>
+                 <dd><{$advice.1}></dd>
+                 <dd class='date'><{$adviceTime|date='Y-m-d H:i:s',###}></dd>
+            </dl>
+        </if>
+        <p class='fpage'><{$fpage}></p>
+	</div>
+	<!-- 沟通记录 end --> 
+ 
+
+  <form action='<{:U('reply')}>' method='post'>
+        <div class='reply'>
+            <div>
+			<p><label for='s2'>同时结束该次会话</label><input id='s2' type='checkbox' name='status' value='2'/>
+               <label for='s3'>同时邮件提醒</label><input id='s3' type='checkbox' name='email' value='1'/></p>
+ <if condition="$showorder"> 
+     <table class="table table-condensed table-hover " >         
+        <tr>	
+        <th>机房</th>
+        <th>服务状态</th>
+        <th>机柜号</th>
+        <th>IP</th>
+        <th>起始时间</th>
+        <th>结束时间</th> 
+    </tr>
+    <tr>
+        <td><{$roomlist}><input type='hidden' name='orderid' value='<{$wo.orderid}>'/></td>
+          <td><{$status}></td>
+        <td><input type='text' name='cabinetID' value='<{$oinfo.cabinetID}>'/></td>
+        <td><input type='text' name='IP' value='<{$oinfo.IP}>'/></td>
+        <td>  <input id="min_date" placeholder='起始时间' <if condition="$oinfo.startday gt 0"> value="<{$oinfo.startday|date='Y-m-d',###}>" <else />  value="" </if> class="laydate-icon length2" type='text' name='min-date' />
+           
+	<td>-<input id='max_date' placeholder='结束时间'  <if condition="$oinfo.endday gt 0"> value="<{$oinfo.endday|date='Y-m-d',###}>" <else />  value="" </if> class="laydate-icon length2" type='text' name='max-date' /></td>
+      	
+</tr>
+        </table>
+</if>
+			<p><textarea name='title'></textarea></p>
+
+			<input type='hidden' name='wid' value='<{$wo.id}>'/>
+			<p><input class='submit' type='submit' value='回复'/></p>
+
+		</div>
+	</div>
+  </form>
+	
+	
+    
+	
+</body>
+</html>

@@ -1,0 +1,225 @@
+
+#main .main-inner{
+	padding-top:40px;
+	float: left;
+	overflow: hidden;
+	width: 81%;
+	margin-left:1%;
+}
+#main .main-inner .content-img{
+	position:relative;	
+	overflow: hidden;
+	float: left;	
+	width:100%;
+	height:240px;
+}
+#main .main-inner .content-img .leri{
+	height:240px;
+	width:6000px;
+    position: absolute;
+	left:0;
+}
+#main .main-inner .content-img .leri img{
+	height:240px;
+	
+	float: left;
+	
+}
+#main .main-inner .content-img ul{
+	position: absolute;
+	float: left;
+	bottom:12px;
+	left:30%;
+	border:none;
+}
+#main .main-inner .content-img ul li{
+	float: left;
+	display:inline-block;
+	width:10px;
+	height:10px;
+	background: pink;
+	margin:0 10px;	
+	border-radius:20px;
+	cursor:pointer;
+	border: solid 5px pink;
+}
+#main .main-inner .content-img ul li.to{
+	background: #fff;
+	border: solid 5px #fff;
+}
+#main .main-inner .limit-content{	
+	width: 100%;
+	float: left;
+	padding-top:20px;
+}
+#main .main-inner .limit-content .limit-left{
+	padding-top:30px;
+	float: left;
+	width: 80%;
+	height:100%;
+
+	margin-right:2%;
+
+
+}
+#main .main-inner .limit-content .limit-left .intro-box{
+	background:url('../Images/jxfw.png') no-repeat left center;
+	height:120px;
+	padding-left:25%;
+	border-bottom:1px solid #ccc;
+	clear:both;
+}
+#main .main-inner .limit-content .limit-left .intro-box h2{
+	margin-bottom:30px;
+}
+#main .main-inner .limit-content .limit-left .path{
+	float: left;
+	width: 100%;
+	padding-top:10px;
+	margin-bottom:20px;
+
+}
+#main .main-inner .limit-content .limit-left .path p{
+	padding:10px 0;
+	font-size:14px;
+}
+#main .main-inner .limit-content .limit-left .path dl{
+	float:left;
+	text-align:center;
+}
+#main .main-inner .limit-content .limit-left .path dl dt img{
+}
+#main .main-inner .limit-content .limit-left .path dl dd{
+}
+#main .main-inner .limit-content .limit-left .path .goto{
+	background:url('../Images/goto.png') no-repeat left center;
+	float: left;
+	width: 120px;
+	height:80px;
+}
+#main .main-inner .limit-content .limit-left .topic{
+	float: left;
+	width: 100%;
+
+
+}
+#main .main-inner .limit-content .limit-left .topic h2{
+	background: #F5F5F5;
+	border-left:2px solid #00A2C9;
+	height:40px;
+	line-height: 40px;
+	padding-left:10px;
+	font-weight:500;	
+}
+#main .main-inner .limit-content .limit-left .topic dl{
+	 float:left;
+	 text-align:center;
+	 width:33%;
+	 padding:20px 0;
+	 color:#999;
+
+}
+#main .main-inner .limit-content .limit-left .topic dl span{
+	color:#666;
+
+}
+#main .main-inner .limit-content .limit-left .topic dl span.price{
+	color:red;
+}
+
+
+#main .main-inner .limit-content .limit-left .topic dl dt img{
+
+}
+#main .main-inner .limit-content .limit-left .topic dl dd{
+	margin:10px 0;
+}
+
+#main .main-inner .limit-content .limit-left .topic dl dd a{
+	display: inline-block;
+	background: #00A2C9;
+	color:#fff;
+	height:22px;
+	width:90px;
+	line-height: 22px;
+    border: none;
+    border-radius: 4px;
+}
+
+#main .main-inner .limit-content .limit-right{
+	padding-top:30px;
+	float: left;		
+	width: 18%;
+	height:100%;
+	position: relative;
+}
+#main .main-inner .limit-content .limit-right .right-fix{
+	float: left;
+	width:100%;
+	position:relative;
+}
+#main .main-inner .limit-content .limit-right .right-fix a{
+	color:#00A2CA;
+}
+#main .main-inner .limit-content .limit-right .right-fix a.butifo{
+	display: inline-block;
+	background: #00A2C9;
+	border: none;
+	border-radius: 4px;
+	width: 100%;
+	height: 40px;
+	color:#fff;
+	line-height: 40px;
+	text-align: center;
+	font-size:15px;
+
+}
+#main .main-inner .limit-content .limit-right .right-fix .service{
+	border:1px solid #EEEEEE;
+	padding:15px;
+	margin:15px 0;
+
+}
+#main .main-inner .limit-content .limit-right .right-fix .service dl{
+
+}
+#main .main-inner .limit-content .limit-right .right-fix .service dl dt{
+	font-size:15px;
+	padding-bottom:15px;
+	border-bottom:1px dotted #ccc;
+
+}
+#main .main-inner .limit-content .limit-right .right-fix .service dl dt a{
+	font-size:13px;
+	float:right;
+
+}
+#main .main-inner .limit-content .limit-right .right-fix .service dl dd{
+	margin:8px 0;
+
+}
+#main .main-inner .limit-content .limit-right .right-fix .mutual{
+    border:1px solid #EEEEEE;
+	padding:15px;
+	margin:15px 0;
+}
+#main .main-inner .limit-content .limit-right .right-fix .mutual ul{
+
+}
+#main .main-inner .limit-content .limit-right .right-fix .mutual ul li{
+
+}
+a.button{
+	background: #00A2C9;
+	padding:8px 0;
+	width:90px;
+	color:#fff;
+	border: none;
+	border-radius:4px;
+    display:inline-block;
+    text-align: center;
+}
+
+
+
+

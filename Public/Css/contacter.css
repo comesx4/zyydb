@@ -1,0 +1,71 @@
+*{
+	margin:0;
+	padding:0;
+	font-size:12px;
+}
+body{
+	min-width:1000px;
+}
+div.main{
+	width:100%;
+	height:980px;
+	background:#fff;
+}
+
+div.main div.main-right{
+	margin-left:2%;
+	margin-top:2%;
+	float:left;
+	width:65%;
+	height:80%;
+	border:1px solid #ccc;
+	border-radius:4px;
+	padding:2%;
+	background:url('../Images/userinfobackground.png') repeat-x;
+}
+div.main div.main-right h3{
+	font-size:15px;
+	padding-bottom:10px;
+	border-bottom:1px solid #ccc;
+	margin-bottom:10px;
+
+}
+div.main div.main-right table{
+	width:100%;
+	border:none;
+	margin:0;
+	padding:0;
+}
+div.main div.main-right table tr.one{
+background:#ccc url('../Images/th.png') repeat-x 0 0;
+}
+div.main div.main-right table tr.tbspacer td{
+	height:20px;
+	background:#fff;
+}
+div.main div.main-right table th{
+	text-align:left;
+	
+	height:35px;
+	line-height: 35px;
+
+}
+div.main div.main-right table td{
+	width:20%;
+	height:40px;
+	background:#F7F9FB;
+}
+div.main div.main-right table td input{
+	border:1px solid #ccc;
+	border-radius:5px;
+	height:30px;
+	width:80%;
+}
+li.for{
+	background:#fff;
+}
+
+
+
+
+

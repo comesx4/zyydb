@@ -1,0 +1,143 @@
+root { 
+    display: block;
+}
+body{
+    margin: 0;
+    padding: 0;
+    font-size: 12px;
+    font: 12px/18px "微软雅黑",Helvetica,Arial,Verdana,"宋体";
+    position: relative;
+}
+div,p{
+    margin: 0;
+    padding: 0;
+}
+input, textarea, button{
+    font: 12px/18px "微软雅黑",Helvetica,Arial,Verdana,"宋体";
+    border: 1px solid #e3e4e9;
+    color: #666666;
+}
+input,img,label {
+    vertical-align: middle;
+}
+input[type="password"]:focus, input[type="text"]:focus, select:focus, textarea:focus {
+    border-color: #f60;
+}
+a{
+    text-decoration: none;
+}
+
+ul,dl,dd,dt{
+    margin: 0;
+    padding: 0;
+}
+li{
+    list-style-type: none;
+}
+.waper{
+    width: 1200px;
+    margin: 0 auto;
+    position: relative;
+}
+.mt5{
+    margin-top: 5px;
+}
+.mt10{
+    margin-top: 10px;
+}
+.mt15{
+    margin-top: 15px;
+}
+.mt20{
+    margin-top: 10px;
+}
+.mt30{
+    margin-top: 30px;
+}
+
+.mb5{
+    margin-bottom: 5px;
+}
+.mb10{
+    margin-bottom: 10px;
+}
+.mb15{
+    margin-bottom: 15px;
+}
+.mb20{
+    margin-bottom: 10px;
+}
+.mb30{
+    margin-bottom: 30px;
+}
+
+.ml5{
+    margin-left: 5px;
+}
+.ml10{
+    margin-left: 10px;
+}
+.ml15{
+    margin-left: 15px;
+}
+.ml20{
+    margin-left: 10px;
+}
+.ml30{
+    margin-left: 30px;
+}
+
+.mr5{
+    margin-right: 5px;
+}
+.mr10{
+    margin-right: 10px;
+}
+.mr15{
+    margin-right: 15px;
+}
+.mr20{
+    margin-right: 10px;
+}
+.mr30{
+    margin-right: 30px;
+}
+.clear{
+    clear: both;
+}
+.page {
+    height: 50px;
+    line-height: 30px;
+    position: relative;
+}
+.pagelist {
+    border: 1px solid #e3e3e3;
+    border-radius: 4px;
+    position: absolute;
+    left: auto;
+    right: 0;
+    top: 10px;
+}
+.page a, .page b {
+    border-right: 1px solid #e3e3e3;
+    float: left;
+    margin-right: -1px;
+    padding: 0 8px;
+}
+.page b {
+    background: none repeat scroll 0 0 #ffefe5;
+    border: 1px solid #ffd9bf;
+    color: #ff6600;
+    font-weight: normal;
+    margin: -1px 0;
+    padding: 0 10px;
+}
+.page input {
+    display: none;
+}
+
+.totpage{
+    position: absolute;
+    left: 0;
+    top: -5px;
+}

@@ -1,0 +1,96 @@
+<!--顶部头-->
+	<div class="ay-global-topbar hidden">
+		<div class="y-topbar-row">
+			<div class='left'>
+                <if condition='$Think.session.id eq null'>
+                欢迎上云，<a href="<{:U('Login/index')}>">请登录&nbsp;|&nbsp;</a><a href="<{:U('Login/register')}>">注册</a>
+                <else/>
+                <span class='name showdiv'><{$Think.session.username}>
+                    <userinfo>
+                    <div class='userinfo div'>
+                        <dl>
+                            <dt>
+                                <a href="<{:U('User/index')}>">
+                            <if condition="$user['face'] neq ''">
+                                 <img width='40' src='__ROOT__/Uploads/Face/<{$user.face}>'/>
+                            <else/>
+                              <img src='__PUBLIC__/Images/face.png'/>
+                            </if>
+                              </a>
+                            </dt>
+                            <dd class='qqq' style='color:#FFCC00;'>￥<{$user.money}></dd>
+                            <dd><a href="<{:U('User/recharge')}>">充值</a></dd>
+                        </dl>
+                        <ul>                          
+                            <li><a href="<{:U('Login/loginOut')}>">退出</a></li>
+                        </ul>
+
+                    </div>
+                  </userinfo>
+
+                </span>
+                </if>                        
+            </div>			
+                    <div class='right'>
+                        <ul>
+                            <li> | <a href="javascript:window.external.AddFavorite('http://http://zyy.yjcom.com.cn/','<{:C('WEBSITE_SET.SITE_NAME')}>')">收藏本站</a></li>                                
+                            <li>|&nbsp;<a href="<{:U('Help/index')}>">帮助中心</a></li>
+                            <if condition='$Think.session.id neq null'>
+                                <li>|&nbsp;<a href="<{:U('Login/loginOut')}>">退出</a> | </li>
+                               
+                                <li>&nbsp;<a href="<{:U('User/index')}>">用户中心</a></li>
+                                <!--<li>|&nbsp;<a target='_blank' href="<{:U('console/Server/index')}>">管理控制台</a></li>-->
+                            </if>
+                            <li><{:welcoming()}></li>
+                        </ul>
+                    </div>
+		</div>
+	</div>
+	<!--顶部头结束-->
+
+	<!--顶部导航栏-->
+        <div id='header-wrap' class="y-row">	
+		<div class='header-inner'>
+			<div class='left'>
+			    <img height='30' src='__PUBLIC__/default/Images/logo2.jpg'/>                     
+      
+                            <div id="navbar" class="navbar-collapse collapse">
+                                <ul class='nav navbar-nav'>
+                                    <li <if condition="MODULE_NAME eq 'Index'">class='active'</if>><a href="<{:U('Index/index')}>">首页</a></li>
+                                    <li class="dropdown <if condition="MODULE_NAME eq 'About'">active</if>">
+                                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">公司介绍 <span class="caret"></span></a>
+                                        <ul class="dropdown-menu">
+                                            <li><a href="<{:U('About/index')}>">公司介绍</a></li>
+                                            <li><a href="<{:U('About/product')}>">产品介绍</a></li>
+                                            <li><a href="<{:U('About/anli')}>">成功案例</a></li>
+                                            <li><a href="<{:U('About/jifang')}>">机房介绍</a></li>                 
+                                        </ul>                                        
+                                    </li>                                  
+                                    <li <if condition="MODULE_NAME eq 'Pinfo' && ACTION_NAME eq 'dj'">class='active'</if>><a href="<{:U('Pinfo/dj')}>">单机租用托管</a></li>
+                                 <li <if condition="MODULE_NAME eq 'Pinfo' && ACTION_NAME eq 'zg'">class='active'</if>><a href="<{:U('Pinfo/zg')}>">整柜租用托管</a></li>
+                                <li <if condition="MODULE_NAME eq 'Pinfo' && ACTION_NAME eq 'pf'">class='active'</if>><a href="<{:U('Pinfo/pf')}>">普防</a></li>
+                             <li <if condition="MODULE_NAME eq 'Pinfo' && ACTION_NAME eq 'gf'">class='active'</if>><a href="<{:U('Pinfo/gf')}>">高防</a></li>                                 
+                                    <li  <if condition="MODULE_NAME eq 'Cuxiao'">class='active'</if>><a href="<{:U('Cuxiao/index')}>">促俏活动</a></li> 
+                                       <li class="dropdown">
+                                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">会员中心<span class="caret"></span></a>
+                                        <ul class="dropdown-menu">
+                                            <if condition='$Think.session.id eq null'>
+                                                <li><a href="<{:U('Login/index')}>">会员登录</a></li>
+                                                <li><a href="<{:U('Login/register')}>">用户注册</a></li>
+                                                <li><a href="#">立刻订购</a></li> 
+                                                <else/>
+                                                <li><a href="<{:U('User/index')}>">用户中心</a></li> 
+                                                 <li><a href="<{:U('User/dindan')}>">立刻订购</a></li> 
+                                                <li><a href="<{:U('Login/loginOut')}>">退出</a></li>
+                                            </if>
+                                        </ul>                                        
+                                    </li>
+                                </ul>
+
+                            </div>
+                        </div>		   
+		</div>
+	</div>
+        
+        
+	<!--导航栏结束-->

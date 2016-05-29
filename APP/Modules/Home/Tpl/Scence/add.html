@@ -1,0 +1,131 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+<head>
+  <meta http-equiv="Content-Type" content="text/html;charset=UTF-8" />
+  <title>阿里云</title>
+   <link rel='stylesheet' href='__PUBLIC__/Css/scence-left.css' />
+  <link rel="stylesheet" href="__PUBLIC__/Css/scenceAdd.css" />
+  <link rel='stylesheet' href='__PUBLIC__/Css/max-header.css' />
+  <link rel='stylesheet' href='__PUBLIC__/Css/nav.css' />
+  <link rel='stylesheet' href='__PUBLIC__/Css/bottom.css' />
+  <js file='__PUBLIC__/Js/jquery-1.7.2.min.js'/>
+  <js file='__PUBLIC__/Js/nav.js'/>
+  <js file='__PUBLIC__/Js/scenceAdd.js'/>
+  <js file='__PUBLIC__/Js/bottom.js'/>
+  <js file='__PUBLIC__/Js/addFile.js'/>
+  <script type="text/javascript">
+        var getAttr='<{:U('get_attr')}>';
+    
+  </script>
+  
+  
+</head>
+<body>
+  <!--顶部头-->
+ <include file='Common:p-header'/>
+  <!--顶部头结束-->
+  
+  <!--头部公共部分-->
+  <include file='Common:nav'/>
+  <!--头部公共部分结束--> 
+
+
+    <!--主题内容-->
+	<div id='main'>
+		<div class='y-row'>
+			
+      <!--左半部分-->
+      <include file='Common:scence-left'/>
+      <!--左半部分结束-->
+	        
+	        <!--右半部分-->
+			<div class='main-right'>
+			
+                <form action='<{:U('scenceSubmit')}>' method='post' enctype='multipart/form-data'>
+                <div id="uc-resolve-form" >
+                
+                	<div class='uc-resolve-panel'>
+                       <!-- 问题选择 start-->
+                      <dl>
+                            <dt><span>*</span>选择常见问题:</dt>
+                            <dd class='problem'>
+                        <foreach name='data' item='v'>
+                            <span>
+                                <input type='radio' cid='<{$v.id}>' id='n<{$v.id}>' class='type' name='类型' value='<{$v.cat}>'/>
+                                <label for='n<{$v.id}>' ><{$v.cat}></label>
+                            </span>
+
+                        </foreach>
+                            </dd>
+                      </dl>
+                        <!-- 问题选择 end-->
+
+                        <if condition="!empty($title)">
+                            <dl>
+                                <dt></dt>
+                                <dd><{$title}></dd>
+                            </dl>
+                        </if>
+                    
+                    <if condition="!empty($form)">
+                            <{$form}>
+                    </if>
+
+                		<dl class='prev'>
+                			<dt><span>*</span>问题描述：</dt>
+                			<dd><textarea cols='60' rows='5' name='title'></textarea> </dd>
+                		</dl>
+
+
+                		<dl>
+                			<dt class='require'><span>*</span>联系手机：</dt>
+                			<dd><input class='text' type='text' name='phone' value='<{$tele}>'/></dd>
+                		</dl>
+                		<dl>
+                			<dt></dt>
+                			<dd>接收短信提醒：<input checked type='radio' name='time' value='1' />每日9:00-18:00
+                			<input type='radio' name='time' value='2' />任何时间
+                			<input type='radio' name='time' value='3' />从不接收
+                		</dd>
+                		</dl>
+
+                		<dl>
+                			<dt class='require'><span>*</span>联系邮箱：</dt>
+                			<dd><input class='text' type='text' name='email' value='<{$Think.session.username}>'/></dd>
+                		</dl>
+
+                		<dl>
+                			<dt>上传附件</dt>
+                			<dd class='file'><input type='file' name='img[]' value='附件上传'/>
+                          <span class='addFile'>增加一个</span>
+                      </dd>
+                		</dl>
+
+                		<dl>
+                			<dt></dt>
+                			<dd>可上传3个附件,每个附件大小不得超过2M.附件支持的格式有:'jpg', 'bmp', 'png', 'gif','txt','rar','zip','doc','docx','ini','conf','eml','pdf'</dd>
+                		</dl>
+
+                		<dl>
+                			<dt></dt>
+                            <input type='hidden' name='cid' value='<{$id}>'/>
+                			<dd><input type='submit' class='submit'  value='提交'/></dd>
+                		</dl>
+                		
+                	</div>
+
+                </div>
+                </form>
+            
+
+				
+		    </div>
+		 <!--右半部分结束-->
+		</div>
+	</div>
+	
+
+	<include file='Common:bottom' />
+	<!--主题内容结束-->
+</body>
+</html>

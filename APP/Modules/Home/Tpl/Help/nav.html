@@ -1,0 +1,109 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+<head>
+  <meta http-equiv="Content-Type" content="text/html;charset=UTF-8" />
+  <title><{:makwebtitle()}></title>
+  <link rel='stylesheet' href='__PUBLIC__/Css/bottom.css' />
+  <link rel='stylesheet' href='__PUBLIC__/Css/max-header.css' />
+  <link rel='stylesheet' href='__PUBLIC__/Css/help-header.css' />
+  <link rel='stylesheet' href='__PUBLIC__/Css/help-left.css' />
+  <link rel='stylesheet' href='__PUBLIC__/Css/help-nav.css' />
+  <js file='__PUBLIC__/Js/jquery-1.7.2.min.js'/>
+  <js file='__PUBLIC__/Js/nav.js'/> 
+  <js file='__PUBLIC__/Js/bottom.js'/> 
+  <js file='__PUBLIC__/Js/help-left.js'/>   
+</head>
+<body>
+
+
+<!--顶部头-->
+<include file='Common:p-header'/>
+  <!--顶部头结束-->
+ 
+ <!-- 顶部公共部分 -->
+  <include file='Common:help-header'/>
+  <!-- 顶部公共部分结束 -->
+
+  <!-- 主体内容 -->
+  <div id='mian'>
+    <div class='y-row'>
+
+        <!-- 左半部分 -->
+        <include file='Common:help-left'/>
+        <!-- 左半部分结束 -->
+
+         <!-- 右半部分 -->
+        <div class='main-right'>
+            <div class='cat'>
+                
+               <foreach name='cats' item='v'>
+                   <if condition='$key eq 0'><{$v.cat}>
+
+                    <elseif condition="$key eq 1"/>
+                    <a href="<{:U('Help/nav',array('id'=>$v['id'],'pid'=>$v['id']))}>"><{$v.cat}></a>        
+                   
+                    <else/>
+                    <a href="<{:U('Help/nav',array('id'=>$v['id'],'pid'=>$v['pid']))}>"><{$v.cat}></a>
+
+                  </if> <if condition="$key lt $sum"> > </if>
+             </foreach>
+
+            </div>
+
+            <!-- 热点问题 -->
+            <div class='section'>
+                 <div class='title'><h2>热点问题</h2></div>
+
+                 <foreach name='section' item='v'>
+                 <a href="<{:U('Help/helpShow',array('id'=>$v['cid'],'pid'=>$v['pid'],'hid'=>$v['id']))}>"> <{$v.title}> </a>
+                 </foreach>
+               
+            </div>
+            <!-- 热点问题结束 -->
+
+            <!-- 快速入口 -->
+            <div class='fast'>
+                 <div class='title'><h2>快速入口</h2></div>
+                
+                <foreach name='fast' item='v'>
+                     <dl>
+                        <dt><{$v.cat}></dt>
+
+                        <if condition="!empty($v['chid'])">
+                             <foreach name='v.chid' item='vs'>
+                               <dd><a href="<{:U('Help/helpList',array('id'=>$vs['id'],'pid'=>$v['id']))}>"><{$vs.cat}></a></dd>
+                             </foreach>
+                        <else/>
+                        
+                        <dd><a href="<{:U('Help/helpList',array('id'=>$vs['id'],'pid'=>$v['id']))}>"><{$v.cat}></a></dd>
+                        
+                        </if>
+                     
+                       
+                     </dl>
+                </foreach>
+
+              
+              
+            </div>
+            <!-- 快速入口结束 -->
+        
+
+
+        </div>
+     
+
+        <!-- 右半部分结束 -->
+
+
+    </div>
+  </div>
+  <!-- 主体内容结束 -->
+
+  <include file='Common:bottom'/>
+
+
+ 
+
+</body>
+</html>	

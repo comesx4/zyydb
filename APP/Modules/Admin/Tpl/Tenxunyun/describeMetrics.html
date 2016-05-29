@@ -1,0 +1,32 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+<head>
+    <meta http-equiv="Content-Type" content="text/html;charset=UTF-8" />
+    <title>监控参数</title>
+    <link rel="stylesheet" href="__PUBLIC__/Css/Common.css" />     
+  
+<body>
+	<form name='form' action='<{:U('index')}>' method='post'>
+	<table class='table'>
+		<tr>
+			<th>名字空间</th>
+			<th>指标名称</th>
+			<th>指标中文名称</th>
+			<th>单位</th>
+			<th>单位中文名称</th>
+		</tr>
+	<foreach name='data.metricSet' item='v'>
+		<tr>
+			<td><{$v.namespace}></td>
+			<td><{$v.metricName}></td>
+			<td><{$v.metricCname}></td>
+			<td><{$v.unit}></td>
+			<td><{$v.unitCname}></td>	
+		</tr>
+	</foreach>
+	   
+	</table>
+    </form>
+	
+</body>
+</html

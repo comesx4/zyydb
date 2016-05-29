@@ -1,0 +1,238 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+<head>
+	<meta http-equiv="Content-Type" content="text/html;charset=UTF-8" />
+	<title></title>
+    <link rel="stylesheet" href="__PUBLIC__/Css/home-header.css" />
+    <link rel="stylesheet" href="__PUBLIC__/Css/m-left.css" />
+	<link rel="stylesheet" href="__PUBLIC__/Css/serviceDatailed.css" />
+    <link rel="stylesheet" href="__PUBLIC__/Css/bottom.css" />
+	<script type="text/javascript" src="__PUBLIC__/Js/jquery-1.7.2.min.js"></script>
+	<script type="text/javascript" src="__PUBLIC__/Js/mirroring.js"></script>
+    <script type="text/javascript" src="__PUBLIC__/Js/serviceDatailed.js"></script>
+    <script type="text/javascript" src="__PUBLIC__/Js/home-header.js"></script>
+    <script type="text/javascript" src="__PUBLIC__/Js/bottom.js"></script>
+    <script type="text/javascript">
+        getPrice='<{:U('getPrice')}>';
+
+    </script>
+</head>
+<body>  
+	<!-- 顶部公共部分 -->
+ 
+	<include file='Common:home-header'/>
+	
+    <!-- 顶部公共结束 -->
+   
+    <!-- 主体内容 -->
+    <div id='main'>
+       <div class='ver-cont y-row'>
+         <div class='main-content y-row'>
+             
+             <!-- 左半部分 -->
+             <include file='Common:m-left'/>
+             <!-- 左半部分结束 -->
+
+             <!-- 中间部分 -->
+             <div class='main-inner'>
+                 <div class='level'>
+                     <a href="">服务与定制开发</a> >
+                     <span>环境配置</span>
+                 </div>
+                 
+                 <!-- 信息描述 -->
+                <div class='intruduction'>
+                     <dl>
+                         <dt><img src="__PUBLIC__/Images/ruanjianyun.png" /></dt>
+                         <dd><a class='h1' href=""><{$service.title}></a></dd>
+                         <dd><{$service.remark}></dd>
+                         <dd>成交次数：<span><{$service.num}></span> 评分： <span class='appraise'>4.5分</span> （<a href="">287条评论</a>）</dd>
+                     </dl>
+                    
+                </div>
+                <!-- 信息描述 end -->
+                
+                <!-- 产品参数 -->
+                <div class='ng-scope'>
+                    <div class='ng-left'>
+                        <dl>
+                            <dt>交付时间：</dt>
+                            <dd><{$service.payTime}>天</dd>
+                        </dl>
+                        <dl>
+                            <dt>质保时间：</dt>
+                            <dd><{$service.warrantyTime}>天</dd>
+                        </dl>
+                        <dl>
+                            <dt>试用linux版本：</dt>
+                            <dd><{$service.os}></dd>
+                        </dl>
+                        <dl>
+                            <dt>依托云产品：</dt>
+                            <dd><{$service.goods}></dd>
+                        </dl>
+                            
+                    </div>
+
+                <form action='<{:U('shopping/order')}>' method='post'>
+                    <div class='ng-right'>
+                    <input type='hidden' id='serveice_id' name='service_id' value='<{$service.id}>'/>
+                    
+                    <input type='hidden' id='price' name='price' value='<{$service.price}>'/>
+                        <dl>
+                            <dt>规格：</dt>
+                            <dd>
+                                <ul class='spec'>
+                                    <foreach name='spec' item='v'>
+                                        <if condition="$key eq 0">
+                                            <li sid='<{$v.id}>' class='down' ><{$v.spec}></li>
+                                            <input type='hidden' id='spec_id' name='spec_id' value='<{$v.id}>'/>
+                                        <else/>
+                                            <li sid='<{$v.id}>'  ><{$v.spec}></li>
+                                        </if>
+                                   </foreach>
+                                </ul>
+                            </dd>
+                        </dl>
+
+                        <dl>
+                             <dt>订购周期：</dt>
+                             <dd>
+                                 <ul>
+                                     <li class='down'>单次</li>
+                                 </ul>
+                             </dd>
+                        </dl>
+                    
+                    
+                        <dl class='type1'>
+                            <dt>价格：</dt>
+                            <dd>￥<span class='money price'><{$service.price}></span></dd>
+                        </dl>
+                        <dl class='type2'>
+                            <dt>价格：</dt>
+                            <dd><span class='no-money'>￥1000.00</span></dd>
+                        </dl>
+                        <dl class='type2'>
+                            <dt>促销：</dt>
+                            <dd><em>限时折扣</em>￥<span class='discount price'>99.00</span></dd>
+                        </dl>
+                
+                        <dl>
+                            <dt>&nbsp;</dt>
+                            <dd><input type='submit' value='立即购买'/></dd>
+                        </dl>
+                            
+                    </div>
+                </form>
+                </div>
+                <!-- 产品参数 end -->
+
+                <!-- 介绍部分 --> 
+                <div class='introduce'>
+                     <h1>服务详情</h1>
+                      <{$introduce}>
+                     </div>
+
+                      <!-- 法律申明及用户评价 -->
+                <h1>阿里云法律声明</h1>
+                     <span class='padd zhinan'>阿里云镜像平台对商户提供使用的镜像不拥有任何权利，其知识产权归该镜像合法拥有者所有。<a href="">更多声明>></a></span>
+
+                     <h1>用户评价</h1>
+                     <div class='appraise'>
+                         <dl>
+                            <dt><i>al****@163.com</i> 评分：<em class='pingfen'>5分</em> <span>2015-04-07 14:05</span></dt>
+                            <dd>该用户业务太忙了没时间评价!</dd>
+                         </dl>
+
+                         <dl>
+                            <dt><i>al****@163.com</i> 评分：<em class='pingfen'>5分</em> <span>2015-04-07 14:05</span></dt>
+                            <dd>该用户业务太忙了没时间评价!</dd>
+                         </dl>
+
+                         <dl>
+                            <dt><i>al****@163.com</i> 评分：<em class='pingfen'>5分</em> <span>2015-04-07 14:05</span></dt>
+                            <dd>该用户业务太忙了没时间评价!</dd>
+                         </dl>
+
+                         <dl>
+                            <dt><i>al****@163.com</i> 评分：<em class='pingfen'>5分</em> <span>2015-04-07 14:05</span></dt>
+                            <dd>该用户业务太忙了没时间评价!</dd>
+                         </dl>
+
+                         <dl>
+                            <dt><i>al****@163.com</i> 评分：<em class='pingfen'>5分</em> <span>2015-04-07 14:05</span></dt>
+                            <dd>该用户业务太忙了没时间评价!</dd>
+                         </dl>
+
+                         <dl>
+                            <dt><i>al****@163.com</i> 评分：<em class='pingfen'>5分</em> <span>2015-04-07 14:05</span></dt>
+                            <dd>该用户业务太忙了没时间评价!</dd>
+                         </dl>
+
+                         <dl>
+                            <dt><i>al****@163.com</i> 评分：<em class='pingfen'>5分</em> <span>2015-04-07 14:05</span></dt>
+                            <dd>该用户业务太忙了没时间评价!</dd>
+                         </dl>
+
+                         <dl>
+                            <dt><i>al****@163.com</i> 评分：<em class='pingfen'>5分</em> <span>2015-04-07 14:05</span></dt>
+                            <dd>该用户业务太忙了没时间评价!</dd>
+                         </dl>
+
+                         <p>
+                            这是放分页的地方
+                         </p>
+                     </div>
+                <!-- 法律申明及用户评价 end -->
+                </div>
+                <!-- 介绍部分 end -->
+
+
+              
+              
+             </div>
+             <!-- 中间部分 end -->
+
+             <!-- 右半部分 -->
+             <div class='main-right'>
+                <ul>
+                    <li>服务商：<a href="">杭州云集通信科技有限公司</a></li>
+                    <li>在线客服：<a href=""><img src="__PUBLIC__/Images/alww.png"></a></li>
+                    <li>在线客服：<a href=""><img src="__PUBLIC__/Images/alww.png"></a></li>
+                    <li>在线客服：<a href=""><img src="__PUBLIC__/Images/halww.png"></a></li>
+                    <li>在线客服：<a href=""><img src="__PUBLIC__/Images/alww.png"></a></li>
+                    <li>在线客服：<a href=""><img src="__PUBLIC__/Images/alww.png"></a></li> 
+                    <li>在线时间：09:00--18:00</li>
+                    <li>电话：</li>
+                    <li>4008-060-700转17号分机</li>
+                    <li>4008-060-700转18号分机</li>
+                    <li>邮箱：</li>
+                    <li>netcn@chinaccnet.cn </li>
+
+                </ul>
+
+             </div>
+             <!-- 右半部分 end -->
+
+          
+         </div>
+         <!-- 最右边的白色部分 -->
+                  <div id='max-right'>                    
+                  </div>
+
+                  <!-- 最右边白色部分结束 -->
+
+       </div>
+
+    </div>
+    <!-- 主体内容结束 -->
+
+    <include file='Common:bottom'/>
+
+
+ 
+    
+
+
+    </script>

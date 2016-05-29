@@ -1,0 +1,182 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+<head>
+	<meta http-equiv="Content-Type" content="text/html;charset=UTF-8" />
+	<title>全部镜像</title>
+	<link href="__ROOT__/Public/Bootstrap/css/bootstrap.min.css" rel="stylesheet">
+	<link rel="stylesheet" href="__PUBLIC__/Css/header.css" />
+	<link rel="stylesheet" href="__PUBLIC__/Css/left.css" /> 	
+	<link rel="stylesheet" href="__PUBLIC__/Css/server.css" />
+	<!--[if lt IE 9]>
+	    <script src="//cdn.bootcss.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      	<script src="//cdn.bootcss.com/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->   
+    <script src="//cdn.bootcss.com/jquery/1.11.3/jquery.min.js"></script>    
+	<script src="__ROOT__/Public/Bootstrap/js/bootstrap.min.js"></script>
+	<script type="text/javascript" src='__PUBLIC__/Js/left.js'></script>
+	<script type="text/javascript" src='__PUBLIC__/Js/common.js'></script>
+	<script type="text/javascript" src='__PUBLIC__/Js/mirroring_index.js'></script>
+	<script type="text/javascript">
+		var	info_delete 	 = '<{:U('deleteImage')}>';
+		var indexHref		 = '<{:U('index')}>';
+		var response_timer   = '<{:U('getStatus')}>';
+	</script>
+</head>
+<body>
+	<!-- ========头部========= -->
+	<include file='Common:header'/>
+	<!-- ==========头部 end=========== -->
+
+	<!-- =========主体内容======= -->
+	<div id='main'>
+		<!-- 左半部分 -->
+		<include file='Common:left'/>
+		
+		<!-- 右半部分 -->
+		<div class='main-right'>
+			<div class='position'>
+				<span class='glyphicon glyphicon-home'></span> <a href="">会员中心</a>/ <a href="">云服务器</a>  <a href=""><span class='glyphicon glyphicon-refresh'></span></a>
+			</div>
+
+			<div class='living'>
+				<!-- 导航 -->
+				<include file='Common:server_nav'/>
+		
+				<div class='content'>
+					<div class='controller'>
+						<button  type="button" class="btn btn-info reName">改名</button>
+						<button  type="button" class="btn btn-danger delete">删除</button>
+
+					<form name='search-form' action='' method='get'>
+						<span  class='alert-search '>
+							<div class='show-search '>
+								<span class="glyphicon glyphicon-search"></span>
+								<span class='milide'>搜索其实很简单</span>
+								<span class='glyphicon glyphicon-triangle-bottom'></span>
+							</div>
+						
+							<!-- 搜索弹出框 -->
+							<div style='display:none;' class='search'>
+								
+								<div class='all-input'>
+									<p>
+										<label>镜像名:</label>
+										<input type='text' name='mirroring_name' value='<{$tmp['mirroring_name']}>'/>
+									</p>
+
+									<p>
+										<label>操作系统:</label>
+										<input type='text' name='os_name' value='<{$tmp['os_name']}>'/>
+									</p>
+
+									<p>
+										<label>状态:</label>
+										<select name='status'>
+											<option <if condition="$tmp['status'] eq ''">selected</if> value=''>--请选择--</option>
+											<option <if condition="$tmp['status'] eq 1">selected</if> value='1'>创建成功</option>
+											<option <if condition="$tmp['status'] eq -1">selected</if> value='-1'>创建中</option>
+											<option <if condition="$tmp['status'] eq 2">selected</if> value='2'>创建失败</option>
+										</select>
+									</p>
+								</div>
+								
+								<div class='all-button'>
+									<p>
+										<input class='btn btn-info submit-search'  type='submit' name='submit' value='搜索'/>
+										<input onclick="window.location=indexHref;" class='btn btn-warning' type='button' name='empty' value='清空'/>
+									</p>
+								</div>
+							</div>
+						</span>
+						
+					</form>
+					</div>
+
+					<table class='table table-hover'>
+						<tr>
+							<th><input type='checkbox' name='ids' value='1'/></th>
+							<th>镜像名称</th>						
+							<th>操作系统</th>
+						
+							<th>系统盘默认大小</th>
+							<th>状态</th>						
+							<th>创建时间</th>
+						</tr>
+					<foreach name='mirroring' item='v'>
+							<tr  tid='<{$v.tid}>' class='goods'>
+							<td>
+								<input <if condition="$v['status'] eq 0">class='continue tid' disabled<else/>class='tid'</if>  type='checkbox' name='id[]' value='<{$v.id}>'/>
+							</td>
+							<td><{$v.image_name}></td>
+							<td><{$v.name}></td>
+							<td><{$v.default_size}>M</td>
+							<td class='status'>
+								<in name="v.status" value="0">
+									<img src='__PUBLIC__/Images/wait.gif'>
+								</in>
+								<if condition="$v['status'] eq 0 || $v['status'] eq 3">
+									创建中...
+								<elseif condition="$v['status'] eq 1"/>
+									创建成功
+								<else/>
+									创建失败
+								</if>
+							</td>
+							<td><{$v.time|date='Y-m-d H:i',###}></td>
+						</tr>
+					</foreach>
+					<tr>
+						<td colspan='9' align='center'><{$fpage}></td>
+					</tr>
+					</table>
+				</div>
+			
+			</div>		
+
+			<!-- <div class='info'>		
+			</div> -->
+		</div>	
+
+		</div>	
+	</div>
+   <!-- =========主体内容 end======= -->
+
+
+
+
+<!-- 改名弹出框 -->
+<form action='<{:U('reName')}>' method='post'>
+<div class="modal fade" id="reName" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <h4 class="modal-title" id="exampleModalLabel">快照改名</h4>
+      </div>
+      <div class="modal-body">
+          <div class="form-group">
+          	<h4>您已选择<span style='color:red'class='server_sum'>2</span>个镜像</h4>	
+          </div>
+          <div class="form-group">
+            <label for="newName"  class="control-label">新镜像名称:</label>
+            <input type="text" placeholder='1-16个字符' name='newName' class="form-control" id="newName">
+          </div>
+        
+      </div>
+      <div class='server_id'>
+      	
+      </div>
+      <div class="modal-footer">
+      	<span class='error' style='color:red;margin-right:20px;'></span>
+        <button type="button" class="btn btn-default" data-dismiss="modal">取消</button>
+        <button type="submit" class="btn btn-primary rename_submit">确定</button>
+      </div>
+    </div>
+  </div>
+</div>
+</form>
+
+
+
+</body>
+</html>

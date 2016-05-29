@@ -1,0 +1,93 @@
+
+#main .main-right #uc-resolve-form .uc-resolve-panel{
+     background: #F8F8F8;
+     padding-left:3%;
+     padding-bottom:30px;
+     border:1px solid #ccc;
+     overflow: hidden;
+}
+#main .main-right #uc-resolve-form .uc-resolve-panel input.text{
+    width:220px;
+    height:30px;
+    border:1px solid #ccc;
+    border-radius: 4px;
+    padding-left:5px;
+}
+#main .main-right #uc-resolve-form .uc-resolve-panel .submit{
+	width:190px;
+	height:30px;
+	border:1px solid #6FACD7;
+	background: #fff;
+	border-radius: 4px;
+	cursor: pointer;
+	color: #6FACD7;
+
+}
+
+#main .main-right #uc-resolve-form .uc-resolve-panel dl{
+	float: left;
+	width: 100%;
+	padding:5px 0;
+	
+}
+#main .main-right #uc-resolve-form .uc-resolve-panel dl dd.file input{
+	float: left;
+	clear: left;
+	
+}
+#main .main-right #uc-resolve-form .uc-resolve-panel dl dd.file span{
+	color:#9CDDF5;
+	cursor: pointer;
+	float: left;
+
+}
+#main .main-right #uc-resolve-form .uc-resolve-panel dl dd span.error{
+	color:red;
+	padding-left:18px;
+	background: url('../Images/unchecked.gif') no-repeat left center;
+	margin-left:7px;
+}
+#main .main-right #uc-resolve-form .uc-resolve-panel dl dt{
+	float: left;
+	display: inline-block;
+	width: 13%;	
+	height:30px;
+	line-height: 30px;
+	text-align: right;
+	margin-right:2%;
+}
+#main .main-right #uc-resolve-form .uc-resolve-panel dl dt span{
+	color:red;
+	padding-right:3px;
+	font-size: 14px;
+}
+#main .main-right #uc-resolve-form .uc-resolve-panel dl dd{
+	line-height: 30px;
+	float: left;
+	width: 83%;
+	color: #000;
+}
+#main .main-right #uc-resolve-form .uc-resolve-panel dl dd.problem span{
+	display: inline-block;
+	float: left;
+	width: 50%;
+
+}
+#main .main-right #uc-resolve-form .uc-resolve-panel dl dd span.checkbox{
+	float: left;
+	width: 100%;
+}
+#main .main-right #uc-resolve-form .uc-resolve-panel dl dd span.checkbox label{
+    padding-left:5px;
+} 
+#main .main-right #uc-resolve-form .uc-resolve-panel dl dd span.radio{
+	float: left;
+	margin-right:15px;
+}
+#main .main-right #uc-resolve-form .uc-resolve-panel dl dd span.radio input{
+	position: relative;
+	top:2px;
+}
+#main .main-right #uc-resolve-form .uc-resolve-panel dl dd span.radio label{
+	 padding-left:5px;
+}

@@ -1,0 +1,20 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : 2016-3-2, 10:18:55
+    Author     : 范利丰
+   输入验证时公用样式
+*/
+span.error{
+	background : url(../Images/unchecked.gif) no-repeat 0 0;
+	padding-left: 16px;
+	margin-left: 8px;
+	color: #f00;
+}
+span.succ{
+	background : url(../Images/checked.gif) no-repeat 0 0;
+	margin-left: 8px;
+}

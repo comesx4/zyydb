@@ -1,0 +1,117 @@
+<include file="Common:header"/>
+
+<form action='<{:U('save')}>' method='post'>
+    <table class="table table-condensed table-hover table-active">
+        <thead>
+            <tr class="active">
+                <td colspan="2">
+                    <a class="btn btn-info" href="<{:U('index')}>">机房服务器列表</a>
+                </td>
+            </tr>
+        </thead>
+        
+        <tbody>
+		    <tr>
+                <td class='first'>状态：</td>
+                <td>
+					<select name='status'>
+                        <option <if condition="$data['status'] eq 0 ">selected</if> value='0'>库存</option>
+                        <option <if condition="$data['status'] eq 1 ">selected</if> value='1'>已上架</option>
+                        <option <if condition="$data['status'] eq 2 ">selected</if> value='2'>已发走</option>
+                    </select>
+				</td>
+            </tr>
+            <tr>
+                <td class='first'>类型：</td>
+                <td>
+                    <select name='type'>
+                        <option <if condition="$data['type'] eq 0 ">selected</if> value='0'>存储服务器</option>
+                        <option <if condition="$data['type'] eq 1 ">selected</if> value='1'>母服务器</option>
+                        <option <if condition="$data['type'] eq 2 ">selected</if> value='2'>租用</option>
+                        <option <if condition="$data['type'] eq 3 ">selected</if> value='3'>托管</option>
+                    </select>
+                </td>
+            </tr>
+            
+            <tr>
+                <td class='first'>所属机房：</td>
+                <td>
+                    <{$region}>
+                </td>
+            </tr>
+            
+            <tr>
+                <td class='first'>服务器名称：</td>
+                <td><input type='text' name='server_name' value='<{$data.server_name}>'/></td>
+            </tr>
+
+            <tr>
+                <td class='first'>服务器编号：</td>
+                <td><input type='text' name='server_code' value='<{$data.server_code}>'/></td>
+            </tr>
+
+            <tr>
+                <td class='first'>CPU：</td>
+                <td><input type='text' name='cpu' value='<{$data.cpu}>'/></td>
+            </tr>
+
+            <tr>
+                <td class='first'>内存：</td>
+                <td><input type='text' name='memory' value='<{$data.memory}>'/></td>
+            </tr>
+
+            <tr>
+                <td class='first'>硬盘：</td>
+                <td><input type='text' name='disk' value='<{$data.disk}>'/></td>
+            </tr>
+
+            <tr>
+                <td class='first'>网卡：</td>
+                <td><input type='text' name='network' value='<{$data.network}>'/></td>
+            </tr>
+
+            <tr>
+                <td class='first'>其他硬件：</td>
+                <td><input type='text' name='other' value='<{$data.other}>'/></td>
+            </tr>
+            
+            <tr>
+                <td class='first'>尺寸：</td>
+                <td><input type='text' name='size' value='<{$data.size}>'/></td>
+            </tr>
+
+            <tr>
+                <td class='first'>快递单号：</td>
+                <td><input type='text' name='express_code' value='<{$data.express_code}>'/></td>
+            </tr>
+
+            <tr>
+                <td class='first'>机器所有者：</td>
+                <td><input type='text' name='owner' value='<{$data.owner}>'/></td>
+            </tr>
+
+            <tr>
+                <td class='first'>机柜位置：</td>
+                <td><input type='text' name='position' value='<{$data.position}>'/></td>
+            </tr>
+            <tr>
+                <td class='first'>备注：</td>
+                <td>
+                    <textarea class="command" name="remark" maxlength="2048" placeholder=""><{$data.remark}></textarea>
+                </td>
+            </tr>
+        </tbody>
+        
+        <tfoot>
+            <tr>
+                <td class='first'></td>
+                <td>
+                    <input type='hidden' name='id' value='<{$data.id}>' />
+                	<input class="btn btn-success" type="submit" value="保 存"/>
+                    <a class="btn btn-default" href="<{:U('index')}>">取 消</a>
+               </td> 
+           </tr>
+        </tfoot>
+    </table>
+</form>
+<include file="Common:footer"/>

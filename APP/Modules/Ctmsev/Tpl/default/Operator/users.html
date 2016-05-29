@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head> 
+        <include file='Common:header'/>
+        <title><{$title|makeTitle}></title>
+        <script type="text/javascript" language="javascript">
+        var localized = new Array(
+        "<{$Think.lang.pending_table_speak}>",
+                    "<{$Think.lang.pending_table_view}>",
+                    "<{$Think.lang.pending_table_ban}>",
+                    "<{$Think.lang.pending_menu_show}>",
+                    "<{$Think.lang.pending_menu_hide}>",
+                    "<{$Think.lang.pending_popup_notification}>"
+                    );
+            var updaterOptions = {
+                url: "<{:U('/Operator/getajax')}>",
+                wroot: "",
+                agentservl: "/operator/agent.php",
+                noclients: "<{$Think.lang.clients_no_clients}>",
+                havemenu: 1,
+                showpopup: "<{$showpopup}>"
+            };       
+        </script>
+        <js file="__PUBLIC__/default/js/users.js" />
+    </head>   
+    <body>
+        <include file='Common:top'/>
+        <div class="container">
+            <div class="row row-offcanvas row-offcanvas-right">
+                <div class="col-xs-12 col-sm-9"> 
+                    <div>
+<div id="togglediv">
+    <a href="#" id="togglemenu">togglemenu</a>
+</div><{$Think.lang.clients_intro}>
+<br/><{$Think.lang.clients_how_to}>
+</div>
+<br/>
+                    
+                    
+                    <div class="row">                       
+                           <h2 class="sub-header"><{$Think.lang.page_agents_title}></h2>                           
+                           <a href='/operator/operator.php' title="<{$Think.lang.page_agents_new_agent}>">
+		<{$Think.lang.page_agents_new_agent}></a>
+                           
+          <div class="table-responsive" style="height: 800px">
+              <table class="table table-striped" >
+                  <thead>
+                      <tr>
+                          <th class="first"><{$Think.lang.pending_table_head_name}></th>
+                          <th><{$Think.lang.pending_table_head_contactid}></th>
+                          <th><{$Think.lang.pending_table_head_state}></th>
+                          <th><{$Think.lang.pending_table_head_operator}></th>
+                          <th><{$Think.lang.pending_table_head_total}></th>
+                          <th><{$Think.lang.pending_table_head_waittime}></th>
+                          <th><{$Think.lang.pending_table_head_etc}></th>
+                      </tr>
+                  </thead>
+                  <tbody>
+                    
+                          <tr class="inchat" id="thr4"><td class="visitor" id="name"><table class="inner"><tbody><tr><td><a title="点选与访客对谈" onclick="this.newWindow = window.open('/operator/agent.php?thread=4', 'ImCenter4', 'toolbar=0,scrollbars=0,location=0,status=1,menubar=0,width=640,height=480,resizable=1');this.newWindow.focus();this.newWindow.opener=window;return false;" href="/operator/agent.php?thread=4" target="_blank">天上</a></td><td class="icon"><a title="点选与访客对谈" onclick="this.newWindow = window.open('/operator/agent.php?thread=4', 'ImCenter4', 'toolbar=0,scrollbars=0,location=0,status=1,menubar=0,width=640,height=480,resizable=1');this.newWindow.focus();this.newWindow.opener=window;return false;" href="/operator/agent.php?thread=4" target="_blank"><img width="15" height="15" alt="点选与访客对谈" src="/images/tbliclspeak.gif" border="0"></a></td></tr></tbody></table></td><td align="center" class="visitor" id="contid"><a title="GeoLocation" onclick="if(navigator.userAgent.toLowerCase().indexOf('opera') != -1 &amp;&amp; window.event.preventDefault) window.event.preventDefault();this.newWindow = window.open('http://api.hostip.info/get_html.php?ip=127.0.0.1', 'ip127.0.0.1', 'width=440,height=100,toolbar=0,scrollbars=0,location=0,status=1,menubar=0,resizable=1');this.newWindow.focus();this.newWindow.opener=window;return false;" href="http://api.hostip.info/get_html.php?ip=127.0.0.1" target="_blank">127.0.0.1</a></td><td align="center" class="visitor" id="state">对谈中</td><td align="center" class="visitor" id="op">系统管理员</td><td align="center" class="visitor" id="time">68:16:26</td><td align="center" class="visitor" id="wait">-</td><td align="center" class="visitor" id="etc"><table class="inner"><tbody><tr><td>Firefox 45.0</td></tr></tbody></table></td></tr>
+                              
+                         <tr id="tprio"><td colspan="7">   </td></tr>
+                      <tr id="tprioend"><td colspan="7"></td></tr>
+
+                      <tr id="twait"><td colspan="7"></td></tr>
+                      <tr id="twaitend"><td colspan="7"></td></tr>
+
+                      <tr id="tchat"><td colspan="7"></td></tr>
+                      <tr id="tchatend"><td colspan="7"></td></tr>
+
+                      <tr><td id="statustd" colspan="7" height="30">Loading....</td></tr>
+                  </tbody>
+            </table>
+          </div>
+                        
+                        
+                    </div><!--/row-->
+                </div><!--/.col-xs-12.col-sm-9-->
+                <div class="right">
+                     <include file='Common:right'/>
+                </div>
+               
+            </div><!--/row-->
+
+            <hr>
+
+
+                <include file='Common:bottom'/>
+        </div><!--/.container-->
+        
+        </body>
+</html>

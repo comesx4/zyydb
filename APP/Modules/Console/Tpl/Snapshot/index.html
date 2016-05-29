@@ -1,0 +1,337 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+<head>
+	<meta http-equiv="Content-Type" content="text/html;charset=UTF-8" />
+	<title></title>
+	<link href="__ROOT__/Public/Bootstrap/css/bootstrap.min.css" rel="stylesheet">
+	<link rel="stylesheet" href="__PUBLIC__/Css/header.css" />
+	<link rel="stylesheet" href="__PUBLIC__/Css/left.css" /> 	
+	<link rel="stylesheet" href="__PUBLIC__/Css/server.css" />
+	<!--[if lt IE 9]>
+	    <script src="//cdn.bootcss.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      	<script src="//cdn.bootcss.com/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->   
+    <script src="//cdn.bootcss.com/jquery/1.11.3/jquery.min.js"></script>    
+	<script src="__ROOT__/Public/Bootstrap/js/bootstrap.min.js"></script>
+	<script type="text/javascript" src='__PUBLIC__/Js/left.js'></script>
+	<script src="__PUBLIC__/Js/common.js"></script>
+	<script type="text/javascript" src='__PUBLIC__/Js/snapshot_index.js'></script>
+	<script type="text/javascript">
+		var createSnap = '<{:U('createSnap')}>';
+		var sendInformation  = '<{:U('Server/sendInformation')}>';
+    	var sendInformation2 = '<{:U('Server/sendEmail')}>';
+    	var checkVerify		 = '<{:U('Server/checkVerify')}>';
+    	var checkVerify2	 = '<{:U('Server/checkEmail')}>';
+    	var createImage		 = '<{:U('createImage')}>';
+    	var response_timer   = '<{:U('getSnapStatus')}>';
+    	var	info_delete 	 = '<{:U('deleteSnap')}>';
+    	var indexHref		 = '<{:U('index')}>';
+    	var publicPath	     = '__PUBLIC__';
+	</script>
+
+</head>
+<body>
+	<!-- ========头部========= -->
+	<include file='Common:header'/>
+	<!-- ==========头部 end=========== -->
+
+	<!-- =========主体内容======= -->
+	<div id='main'>
+		<!-- 左半部分 -->
+		<include file='Common:left'/>
+		
+		<!-- 右半部分 -->
+		<div class='main-right'>
+			<div class='position'>
+				<span class='glyphicon glyphicon-home'></span> <a href="">会员中心</a>/ <a href="">云服务器</a>  <a href=""><span class='glyphicon glyphicon-refresh'></span></a>
+			</div>
+
+			<div class='living'>
+				<!-- 导航 -->
+				<include file='Common:server_nav'/>
+			
+				<div class='content'>
+					<div class='controller'>
+						<button  type="button" class="btn btn-info reName">改名</button>
+						<button  type="button" class="btn btn-info rollback">回滚快照</button>
+						<button  type="button" class="btn btn-info createImage">创建镜像</button>
+						<button  type="button" class="btn btn-danger delete">删除快照</button>
+
+					<form name='search-form' action='' method='get'>
+						<span  class='alert-search '>
+							<div class='show-search '>
+								<span class="glyphicon glyphicon-search"></span>
+								<span class='milide'>搜索其实很简单</span>
+								<span class='glyphicon glyphicon-triangle-bottom'></span>
+							</div>
+						
+							<!-- 搜索弹出框 -->
+							<div style='display:none;' class='search'>
+								
+								<div class='all-input'>
+									<p>
+										<label>硬盘标识:</label>
+										<input type='text' name='disk_code' value='<{$tmp['disk_code']}>'/>
+									</p>
+									
+									<p>
+										<label>硬盘别名:</label>
+										<input type='text' name='disk_name' value='<{$tmp['disk_name']}>'/>
+									</p>
+
+									<p>
+										<label>快照标识:</label>
+										<input type='text' name='snap_code' value='<{$tmp['snap_code']}>'/>
+									</p>
+									
+									<p>
+										<label>快照别名:</label>
+										<input type='text' name='snap_name' value='<{$tmp['snap_name']}>'/>
+									</p>
+
+									<p>
+										<label>状态:</label>
+										<select name='status'>
+											<option value='' <if condition="$tmp['status'] eq ''">selected</if>>--请选择--</option>
+											<option <if condition="$tmp['status'] eq 1">selected</if>  value='1'>创建成功</option>
+											<option <if condition="$tmp['status'] eq -1">selected</if> value='-1'>创建中</option>
+											<option<if condition="$tmp['status'] eq 2">selected</if>   vlaue='2'>创建失败</option>
+										</select>
+									</p>
+								</div>
+								
+								<div class='all-button'>
+									<p>
+										<input class='btn btn-info submit-search'  type='submit' name='submit' value='搜索'/>
+										<input onclick="window.location=indexHref;" class='btn btn-warning' type='button' name='empty' value='清空'/>
+									</p>
+								</div>
+							</div>
+						</span>
+						
+					</form>
+					</div>
+
+					<table class='table table-hover'>
+						<tr>
+							<th><input type='checkbox' name='ids' value='1'/></th>
+							<th>所属服务器</th>						
+							<th>所属云磁盘</th>
+							<th>名称</th>
+							<th>标识</th>
+							<th>状态</th>						
+							<th>创建时间</th>
+						</tr>
+					<foreach name='snap' item='v'>
+							<tr  tid='<{$v.tid}>' class='goods'>
+							<td>
+								<input <if condition="$v['status'] eq 0">class='continue tid' disabled</if> class='tid' type='checkbox' name='id[]' value='<{$v.id}>'/>
+							</td>
+							<td>
+								<{$v.server_name}>
+								(<if condition="$v['server_alias']">
+									<{$v.server_alias}>
+								<else/>
+									未命名
+								</if>)
+							</td>
+							<td>
+								<{$v.disk_code}>
+								(<if condition="$v['disk_name']">
+									<{$v.disk_name}>
+								<else/>
+									未命名
+								</if>)
+							</td>
+							<td>
+								<if condition="$v['snap_name']">
+									<{$v.snap_name}>
+								<else/>
+									未命名
+								</if>
+							</td>
+							<td><{$v.snap_code}></td>
+							<td class='status'>
+								<in name="v.status" value="0">
+									<img src='__PUBLIC__/Images/wait.gif'>
+								</in>
+								<switch name='v.status'>
+									<case value='0'>创建中</case>
+									<case value='1'>创建成功</case>
+									<case value='2'>创建失败</case>
+								</switch>
+							
+							</td>
+							<td><{$v.time|date='Y-m-d H:i',###}></td>
+						</tr>
+					</foreach>
+					<tr>
+						<td colspan='9' align='center'><{$fpage}></td>
+					</tr>
+					</table>
+				</div>
+			
+			</div>		
+
+			<!-- <div class='info'>		
+			</div> -->
+		</div>	
+
+		</div>	
+	</div>
+   <!-- =========主体内容 end======= -->
+
+<!-- 创建镜像弹出框 -->
+<form action='<{:U('createImage')}>' method='post'>
+<div class="modal fade" id="createImage" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <h4 class="modal-title" id="exampleModalLabel">创建镜像</h4>
+      </div>
+      <div class="modal-body">
+         
+          <div class="form-group">
+            <label for="newName"  class="control-label">新镜像名称:</label>
+            <input type="text" placeholder='1-16个字符' name='newName' class="form-control" id="newName">
+          </div>
+        
+      </div>
+     
+      <div class="modal-footer">
+      	<span class='error' style='color:red;margin-right:20px;'></span>
+      	<input type='hidden' name='snap_id' class='cloud_snap_id' value='0'/>
+        <button type="button" class="btn btn-default" data-dismiss="modal">取消</button>
+        <button type="submit" class="btn btn-primary rename_submit">确定</button>
+      </div>
+    </div>
+  </div>
+</div>
+</form>
+
+
+<!-- 改名弹出框 -->
+<form action='<{:U('reName')}>' method='post'>
+<div class="modal fade" id="reName" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <h4 class="modal-title" id="exampleModalLabel">快照改名</h4>
+      </div>
+      <div class="modal-body">
+          <div class="form-group">
+          	<h4>您已选择<span style='color:red'class='server_sum'>2</span>个快照</h4>	
+          </div>
+          <div class="form-group">
+            <label for="newName"  class="control-label">新快照名称:</label>
+            <input type="text" placeholder='1-16个字符' name='newName' class="form-control" id="newName">
+          </div>
+        
+      </div>
+      <div class='server_id'>
+      	
+      </div>
+      <div class="modal-footer">
+      	<span class='error' style='color:red;margin-right:20px;'></span>
+        <button type="button" class="btn btn-default" data-dismiss="modal">取消</button>
+        <button type="submit" class="btn btn-primary rename_submit">确定</button>
+      </div>
+    </div>
+  </div>
+</div>
+</form>
+
+<!-- 回滚提示弹出框 -->
+<div class="modal fade" id="rollback" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <h4 class="modal-title" id="exampleModalLabel">回滚快照</h4>
+      </div>
+      <div style='overflow:hidden;' class="modal-body">
+          <div class="form-group">
+			<div style='float:left;font-size:40px;color:#FE990E;margin-right:15px;position:relative;top:10px;'>
+				<span class='glyphicon glyphicon-exclamation-sign'></span>
+			</div>
+          	<h5 style='float:left;width:90%;'>
+          		<span class='prompt'>您确定要进行回滚吗？</span><br/>
+          		<p style='padding-top:15px;font-weight:700;'>磁盘上该时刻之后的数据将被清除。请谨慎操作！</p>
+          	</h5>
+          
+          </div>
+         
+        
+      </div>
+   
+      <div class="modal-footer">
+      	<span class='error' style='color:red;margin-right:20px;'></span>
+        <button type="button" class="btn btn-default" data-dismiss="modal">取消</button>
+        <button type="button" class="btn btn-primary nextStep">下一步</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<!-- 回滚验证弹出框 -->
+<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <h4 class="modal-title" id="exampleModalLabel">回滚快照</h4>
+      </div>
+      <ul class="nav nav-tabs checkType">
+		  <li role="presentation" class="active"><a>手机验证</a></li>
+		  <li role="presentation"><a>邮箱验证</a></li>
+	  </ul>
+	  <!-- 手机验证 -->
+	<form class='form'  action='<{:U('rollbackSnap')}>' method='post'>
+      <div class="modal-body">         
+          <div class="form-group">
+          		<label for="recipient-name" class="control-label">短信验证码（<{$Think.session.userinfo.telephone|infoMd5=###}>）:</label>
+            	<input placeholder='短信验证码' type="text" name='code' class="form-control code1" id="recipient-name">
+          </div>
+       	
+      </div>
+
+      <div class="modal-footer">
+	      	<span id='errorMsg1' style='color:red;margin-right:20px;'></span>
+	      	<input type='hidden' name='snap_id' value='0'/>
+	      	<input type='hidden' name='type' value='0' />
+	      	<button id='information1' type='button' style='float:left;' class='btn btn-default'>获取验证码</button>
+	        <button type="button" class="btn btn-default" data-dismiss="modal">取消</button>
+	        <button type="submit" id='handerPwd1' class="btn btn-primary">确定</button>
+      </div>
+	</form>	
+	<!-- 邮箱验证 -->
+	<form class='form' style='display:none;' action='<{:U('rollbackSnap')}>' method='post'>
+       <div  class="modal-body">
+        
+          <div class="form-group">
+          		<label for="recipient-name2" class="control-label">邮箱验证码（<{$Think.session.uname|infoMd5=###}>）:</label>
+            	<input placeholder='邮箱验证码'  type="text" name='code' class="form-control code2" id="recipient-name2">
+          </div>
+       
+      </div>
+
+      <div class="modal-footer">
+	      	<span id='errorMsg2' style='color:red;margin-right:20px;'></span>
+	      	<input type='hidden' name='snap_id' value='0'/>
+	      	<input type='hidden' name='type' value='1' />
+	      	<button id='information2' type='button' style='float:left;' class='btn btn-default'>获取验证码</button>
+	        <button type="button" class="btn btn-default" data-dismiss="modal">取消</button>
+	        <button type="submit" id='handerPwd2' class="btn btn-primary">确定</button>
+      </div>
+  </form>
+      
+    </div>
+  </div>
+</div>
+
+
+</body>
+</html>

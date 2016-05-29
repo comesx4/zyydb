@@ -1,0 +1,216 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+<head>
+	<meta http-equiv="Content-Type" content="text/html;charset=UTF-8" />
+	<title></title>
+    <link rel="stylesheet" href="__PUBLIC__/Css/home-header.css" />
+
+	<link rel="stylesheet" href="__PUBLIC__/Css/mirrInfo.css" />
+    <link rel="stylesheet" href="__PUBLIC__/Css/bottom.css" />
+
+	<script type="text/javascript" src="__PUBLIC__/Js/jquery-1.7.2.min.js"></script>
+ 	<script type="text/javascript" src="__PUBLIC__/Js/mirrInfo.js"></script>
+    <script type="text/javascript" src="__PUBLIC__/Js/home-header.js"></script>
+    <script type="text/javascript" src="__PUBLIC__/Js/bottom.js"></script>
+    <script type="text/javascript">
+          var getPrice='<{:U('get_price')}>';
+          var mirrHref='<{:U('Product/buy')}>?mid=<{$Think.get.id}>';
+
+    </script>
+</head>
+<body>  
+	<!-- 顶部公共部分 --> 
+	<include file='Common:home-header'/>	
+    <!-- 顶部公共结束 -->
+
+    <!-- 主体内容 -->
+    <div class='y-row' id='main'>
+	    <div id='main-cents'>
+
+	    	<!-- 左半部分 -->
+	    	<div id='main-left'>
+	    		
+	    		<div class='remark'>
+	    			 <h1><img src="__ROOT__/Uploads/mirroring/<{$mirr.img}>" /></h1>
+	    			 <dl>
+	    			 	<dt><{$mirr.name}></dt>
+	    			 	<dd class='pf'>3.9分</dd>
+	    			 	<dd>服务商：<a href=""><{$mirr.source}></a> 在线客服： <{$mirr.custom}></dd>
+	    			 	<dd>操作系统：<span><{$mirr.os}></span> ECS实例规格推荐： <span><{$mirr.recom}></span> </dd>
+	    			 	<dd>支持：<a href=''>ECS免费体验</a>可用地域：<span><{$city}></span> </dd>
+	    			 </dl>
+	    		</div>
+
+ 
+               <div class='goods-info'>
+               	    <h1>产品信息</h1>
+               	    <!-- 产品信息 -->
+               	    <{$content}>
+
+               	    <!-- 产品信息结束 -->
+               	
+
+               	    <h1>阿里云法律声明</h1>
+               	     <span class='padd zhinan'>阿里云镜像平台对商户提供使用的镜像不拥有任何权利，其知识产权归该镜像合法拥有者所有。<a href="">更多声明>></a></span>
+
+               	     <h1>用户评价</h1>
+               	     <div class='appraise'>
+               	     	 <dl>
+               	     	 	<dt><i>al****@163.com</i> 评分：<em class='pingfen'>5分</em> <span>2015-04-07 14:05</span></dt>
+               	     	 	<dd>该用户业务太忙了没时间评价!</dd>
+               	     	 </dl>
+
+               	     	 <dl>
+               	     	 	<dt><i>al****@163.com</i> 评分：<em class='pingfen'>5分</em> <span>2015-04-07 14:05</span></dt>
+               	     	 	<dd>该用户业务太忙了没时间评价!</dd>
+               	     	 </dl>
+
+               	     	 <dl>
+               	     	 	<dt><i>al****@163.com</i> 评分：<em class='pingfen'>5分</em> <span>2015-04-07 14:05</span></dt>
+               	     	 	<dd>该用户业务太忙了没时间评价!</dd>
+               	     	 </dl>
+
+               	     	 <dl>
+               	     	 	<dt><i>al****@163.com</i> 评分：<em class='pingfen'>5分</em> <span>2015-04-07 14:05</span></dt>
+               	     	 	<dd>该用户业务太忙了没时间评价!</dd>
+               	     	 </dl>
+
+               	     	 <dl>
+               	     	 	<dt><i>al****@163.com</i> 评分：<em class='pingfen'>5分</em> <span>2015-04-07 14:05</span></dt>
+               	     	 	<dd>该用户业务太忙了没时间评价!</dd>
+               	     	 </dl>
+
+               	     	 <dl>
+               	     	 	<dt><i>al****@163.com</i> 评分：<em class='pingfen'>5分</em> <span>2015-04-07 14:05</span></dt>
+               	     	 	<dd>该用户业务太忙了没时间评价!</dd>
+               	     	 </dl>
+
+               	     	 <dl>
+               	     	 	<dt><i>al****@163.com</i> 评分：<em class='pingfen'>5分</em> <span>2015-04-07 14:05</span></dt>
+               	     	 	<dd>该用户业务太忙了没时间评价!</dd>
+               	     	 </dl>
+
+               	     	 <dl>
+               	     	 	<dt><i>al****@163.com</i> 评分：<em class='pingfen'>5分</em> <span>2015-04-07 14:05</span></dt>
+               	     	 	<dd>该用户业务太忙了没时间评价!</dd>
+               	     	 </dl>
+
+               	     	 <p>
+               	     	 	这是放分页的地方
+               	     	 </p>
+               	     </div>
+               </div>
+                
+
+	    	</div>
+	    	<!-- 左半部分结束 -->
+   
+    <form action='<{:U('Shopping/index')}>' method='post'>
+    	<input type='hidden' name='goods' value=''/>
+    	<input type='hidden' name='xitong' value='<{$mirr.id}>'/> 
+	    	<!-- 右半部分 -->
+	    	<div id='main-right'>
+	    		<div id='right-fixed'>
+	    			
+	    			<div class='logo'>
+	    				<foreach name='goods' item='v'>
+	    		 	 	<img value='<{$v.id}>' <if condition="$key eq 0">class='goodsType down'<else/>class='goodsType'</if> title='<{$v.goods}>' src="__ROOT__/Uploads/Goods/<{$v.img}>" />
+	    				</foreach>
+	    			</div>
+
+	    			<dl>
+	    				<dt>镜像版本：</dt>
+	    				<dd class='fudong'>
+	    					<span class='banben'><{$mirr.new}></span>
+	    					<div class='hidden'>
+	    						<span><{$mirr.new}></span>	    					
+	    					</div>
+	    				</dd>
+	    			</dl>
+	    			<input type='hidden' name='version' value='1' />
+
+	    			
+	                <foreach name='gcity' item='v'>   
+		    			<dl <if condition="$key eq 0"> class='isCity'<else/>class='isCity hidden'</if>>
+		    				<dt style='width:100%;'>所在地域：</dt>
+		    				<dd class='button1 city'>
+		    					<foreach name='v.city'  item='vs'>
+		    						<button type='button' value='<{$vs.id}>' <if condition="$key eq 0"> class='down'</if>><{$vs.city}></button>
+		    					</foreach>
+		    					
+		    				</dd>
+		    			</dl>
+		    		</foreach>
+
+	    			<div class="line-dot"> </div>
+
+	    			<h3>新购ESC配置</h3>
+	    			<input type='hidden' name='city' vlaue=''/>
+	    			<dl>
+	    				<dt>推荐配置：</dt>
+	    				<dd  class='fudong'>
+	    					<span style='width:300px;' class='banben'>请选择套餐</span>
+	    					<div style='width:307px;' class='hidden'>	 
+	    					<foreach name='groom' item='v'>   						
+	    						<span value='<{$key}>'><{$v.gather|ltrim=###}></span>
+	    					</foreach>
+	    						
+	    					</div>
+	    				</dd>
+	    			</dl>
+	    			<input type='hidden' name='type' value=''/>
+
+	    				<dl>
+	    				<dt>购买时长：</dt>
+	    				<dd class='button1 button2'>
+	    					<button value='1' type='button' class='down'>单月</button>
+	    					<button value='3' type='button'>季度</button>
+	    					<button value='6' type='button'>半年</button>
+	    					<button value='12' type='button'>一年</button>
+	    				</dd>
+	    			</dl>
+	    			<input type='hidden' name='time' value='1'/>
+                    
+                    <p>所有配置都免费赠送系统盘，且开通云盾服务</p>
+	    			<div class="line-dot"> </div>
+
+	    			<p>金额：<span id='price'>￥0 </span> （镜像<span>0元</span>+云服务器 <span class='price'>0元</span>）</p>
+	    			<input type='hidden' id='countPrice' name='countPrice' vluae=''/>
+
+	    			<p>
+	    				 <input type='checkbox' name=''value=''/>同意 <a href="">《镜像使用协议》 </a>
+	    			</p>
+
+	    			<p>
+	    				<input type='submit' class='button buy' value='立即购买'/><a class='button free' >自选ECS配置</a>
+	    			</p>
+	    			
+	    			<p>
+	    				<a href="">订阅到我的镜像 </a>
+	    			</p>
+
+	    			<div class="line-dot"> </div>
+
+	    			<p>
+	    				已有ECS的用户请前往 <a href="">管理控制台</a> 更换系统盘 
+	    			</p>
+
+
+	    			
+	    		</div>
+
+
+	    	</div>
+	    	<!-- 右半部分结束 -->
+
+    </form>
+	    </div>
+
+    </div>
+    <!-- 主体内容结束 -->
+
+    <include file='Common:bottom'/>
+
+
+</body>
+</html>

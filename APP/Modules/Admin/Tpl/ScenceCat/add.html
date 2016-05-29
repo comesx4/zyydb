@@ -1,0 +1,56 @@
+<include file="Common:header"/>
+    <script type="text/javascript" src='__PUBLIC__/Js/scenceCat.js'></script>
+    
+<form action='<{:U('insert')}>' method='post' enctype='multipart/form-data'>
+	<table class="table table-condensed table-hover table-active">
+        <thead>
+            <tr class="active">
+                <td colspan="2">
+                    <a class="btn btn-info" href="<{:U('index')}>">工单分类列表</a>
+                </td>
+                <td colspan="12"></td>
+            </tr>
+        </thead>
+		<tr>
+			<td class='first'>上级分类:</td>
+			<td><{$cat}></td>
+		</tr>
+		<tr class='nname'>
+			<td class='first'>分类名称:</td>
+			<td><input type='text' name='cat[]' /><span style='cursor:pointer;'  class='ad'>添加</span></td>
+		</tr>
+		<tr class='two'>
+			 <td class='first'>所属用户组:</td>
+			 <td><{$checkbox}></td>
+		</tr>		
+		<tr class='two'>
+			<td class='first'>分类LOGO:</td>
+			<td><input type='file' name='img' class='file'/>（只有2级分类才支持LOGO）</td>
+		</tr>
+		<tr class='two'>
+			<td class='first'>分类类型:</td>
+			<td>系统型<input type='radio' checked name='type' value='0'/> 
+				非系统型<input type='radio' name='type' value='1'/>
+                收费型<input type='radio' name='type' value='2'/>
+				（只有2级分类才有类型）</td>
+		</tr>
+		<tr class='two'>
+			<td class='first'>描述:</td>
+			<td><textarea name='remark'></textarea></td>
+		</tr>
+		<tr>
+			<td class='first'>排序:</td>
+			<td><input type='text' name='sort' value='0' /></td>
+		</tr>
+		 <tfoot>
+            <tr>
+                <td class='first'></td>
+                <td>
+                	<input class="btn btn-success" type="submit" value="保 存"/>
+                    <a class="btn btn-default" href="<{:U('index')}>">取 消</a>
+               </td> 
+           </tr>
+        </tfoot>
+    </table>
+</form>
+<include file="Common:footer"/>

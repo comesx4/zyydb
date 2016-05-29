@@ -1,0 +1,92 @@
+<include file="Common:header"/>
+
+<form action='<{:U('insert')}>' method='post'>
+    <table class="table table-condensed table-hover table-active">
+        <thead>
+            <tr class="active">
+                <td colspan="2">
+                    <a class="btn btn-info" href="<{:U('index')}>">服务器租用列表</a>
+                </td>
+            </tr>
+        </thead>
+        
+        <tbody>
+            <tr>
+                <td class='first'>服务器名称：</td>
+                <td>
+                    <input placeholer='服务器名称' type='text' name='name' value=''/>
+                </td>
+            </tr>
+              <tr> <td class='first'>租用类型：</td>
+                <td><{$zytypelist}>
+		</td> </tr>
+		 <tr> <td class='first'>设备型号：</td>
+                <td><input placeholer='设备型号' type='text' name='modeid' value=''/>
+		</td> </tr>
+                 
+                  <tr> <td class='first'>操作系统：</td>
+                <td><{$oplist}>
+		</td> </tr>
+                  
+                   <tr> <td class='first'>U数：</td>
+                <td><input placeholer='U数' type='text' name='Unumber' value=''/>
+		</td> </tr>
+                   
+                   
+                    <tr> <td class='first'>线路类型：</td>
+                <td><{$linelist}>
+		</td> </tr>
+                    
+                   
+                     
+                      <tr> <td class='first'>带宽：</td>
+                <td><input placeholer='带宽数值' type='text' name='band' value=''/>
+		</td> </tr>
+                 
+             <tr>
+                <td class='first'>CPU：</td>
+                <td>
+                    <input placeholer='CPU' type='text' name='cpu' value=''/>
+                </td>
+            </tr>
+             <tr>
+                <td class='first'>内存(单位G,0为512M)：</td>
+                <td>
+                    <input placeholer='内存数值' type='text' name='memory' value=''/>
+                </td>
+            </tr>
+             <tr>
+                <td class='first'>硬盘：</td>
+                <td>
+                    <input placeholer='硬盘数值' type='text' name='disk' value=''/>
+                </td>
+            </tr>
+            <tr>
+                <td class='first'>价钱：</td>
+                <td>
+                    <input type='text' name='price' placehloder='套餐价格' value=''/>
+                </td>
+            </tr>
+            <tr>
+                <td class='first'>排序：</td>
+                <td>
+                    <input type='text' name='sort' placehloder='排序' value='1'/>
+                </td>
+            </tr>
+                <tr> <td class='first'>上架状态：</td>
+                <td><{$online}>
+		</td> </tr>
+        </tbody>
+        
+        <tfoot>
+            <tr>
+                <td class='first'></td>
+                <td>
+                    <input class="btn btn-success" type="submit" value="保 存"/>
+                    <a class="btn btn-default" href="<{:U('index')}>">取 消</a>
+               </td> 
+           </tr>
+        </tfoot>
+    </table>
+</form>
+<include file="Common:footer"/>

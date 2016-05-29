@@ -1,0 +1,156 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+<head>
+  <meta http-equiv="Content-Type" content="text/html;charset=UTF-8" />
+   <title><{:C('WEBSITE_SET')['SITE_TITLE']}></title>
+   <link rel='stylesheet' href='__PUBLIC__/Css/scence-left.css' />
+  <link rel="stylesheet" href="__PUBLIC__/Css/selectType.css" />
+  <link rel='stylesheet' href='__PUBLIC__/Css/max-header.css' />
+  <link rel='stylesheet' href='__PUBLIC__/Css/nav.css' />
+  <link rel='stylesheet' href='__PUBLIC__/Css/bottom.css' />
+  <js file='__PUBLIC__/Js/jquery-1.7.2.min.js'/>
+  <js file='__PUBLIC__/Js/nav.js'/>
+  <js file='__PUBLIC__/Js/scence.js'/>
+  <js file='__PUBLIC__/Js/bottom.js'/>
+  <js file='__PUBLIC__/Js/addFile.js'/>
+  <script type="text/javascript">
+      var getScence='<{:U('getScence')}>';
+      var orInc='<{:U('orInc')}>';
+  </script>
+  
+  
+</head>
+<body>
+<!--顶部头-->
+ <include file='Common:p-header'/>
+  <!--顶部头结束-->
+  
+  <!--头部公共部分-->
+  <include file='Common:nav'/>
+  <!--头部公共部分结束--> 
+  	
+
+    <!--主题内容-->
+	<div id='main'>
+		<div class='y-row'>
+      
+			<!--左半部分-->
+      <include file='Common:scence-left'/>
+      <!--左半部分结束-->
+	        
+	        <!--右半部分-->
+			<div class='main-right'>
+				 <div class='title'><h1><{$scenceCat}>类问题</h1><a href="<{:U('scence/selectType')}>">返回修改类型</a></div>
+                
+                <div class='select'>
+                	 <h2>请选择具体问题</h2>
+
+                	 <div class='select-left'>
+                        <foreach name='data' item='v'>
+                    	 	<dl>
+                    	 		<dt <if condition="empty($v['chid'])">sid='<{$v.id}>' class='se-lb get-sc'<else/>class='se-lb'</if> ><{$v.cat}>类问题</dt>
+                                <foreach name='v.chid' item='vs'>
+                    	 		    <dd class='y-chid' sid='<{$vs.id}>'><{$vs.cat}>问题</dd>            	 	
+                                </foreach>
+                    	 	</dl>
+                        </foreach>
+                	 
+                	 </div>
+                	 <div class='select-right'>
+                	 	<span class='hidden'>请问你的具体问题是什么</span>
+                	 	<ul class='right-list'>
+                	 
+                	 	</ul>
+                	 </div>
+                	
+                </div>
+
+                <div id="uc-recommend" class='hidden'>
+                	<h4>我们建议您可以使用以下方法解决</h4>
+                	<div class="uc-resolve-panel">
+                        <h3>如何申请发票</h3>
+                        <div id='anwer'>                    		
+                    		<p>我们只能针对您消费过的订单开具发票。</p>
+
+    						<p>发票申请请登录用户中心-发票管理申请。</p>
+
+    						<p>只需简单三步即可完成索取过程：填写或启用发票信息-选择需要开票的订单或月账单-</p>
+    						<p>确认发票信息和寄送地址，我方会在您申请之后3个工作日内由百世汇通快递免费邮寄 。</p>
+
+    						<p>具体申请方法可参考http://help.aliyun.com/view/13439101.html</p>
+                       </div>
+
+						
+                	</div>
+
+
+                </div>
+
+
+                <h4 class='uc-desc'>没有找到您需要的答案?您也可以直接<a style='cursor:pointer;' class='no' >提交工单</a></h4>
+                
+                <form action='<{:U('scenceSubmit')}>' method='post' enctype='multipart/form-data'>
+                <div id="uc-resolve-form" class='hidden'>
+                	<h4>提交工单：</h4>
+                	<div class='uc-resolve-panel'>
+                		<if condition="!empty($form)">
+                            <{$form}>
+                        </if>
+
+                		<dl>
+                			<dt>问题描述</dt>
+                			<dd><textarea cols='60' rows='5' name='title'></textarea> </dd>
+                		</dl>
+
+                		<dl>
+                			<dt>联系手机</dt>
+                			<dd><input type='text' name='phone' value='<{$tele}>'/></dd>
+                		</dl>
+                		<dl>
+                			<dt></dt>
+                			<dd>接收短信提醒：<input checked type='radio' name='time' value='1' />每日9:00-18:00
+                			<input type='radio' name='time' value='2' />任何时间
+                			<input type='radio' name='time' value='3' />从不接收
+                		</dd>
+                		</dl>
+
+                		<dl>
+                			<dt>联系邮箱</dt>
+                			<dd><input type='text' name='email' value='<{$Think.session.username}>'/></dd>
+                		</dl>
+
+                		<dl>
+                			<dt>上传附件</dt>
+                			<dd class='file'><input type='file' name='img[]' value='附件上传'/>
+                                <span class='addFile'>增加一个</span>
+                            </dd>
+                		</dl>
+
+                		<dl>
+                			<dt></dt>
+                			<dd >可上传3个附件,每个附件大小不得超过2M.附件支持的格式有:'jpg', 'bmp', 'png', 'gif'</dd>
+                		</dl>
+
+                		<dl>
+                			<dt></dt>
+                            <input type='hidden' name='cid' value='<{$Think.get.id}>'/>
+                			<dd><input type='submit' class='submit'  value='提交'/></dd>
+                		</dl>
+                		
+                	</div>
+
+                </div>
+                </form>
+            
+
+				
+		    </div>
+		 <!--右半部分结束-->
+		</div>
+	</div>
+	
+
+	<include file='Common:bottom' />
+	<!--主题内容结束-->
+</body>
+</html>

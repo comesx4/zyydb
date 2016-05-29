@@ -1,0 +1,190 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+<head>
+    <meta http-equiv="Content-Type" content="text/html;charset=UTF-8" />
+    <title>后台管理中心</title>
+    <link rel="stylesheet" href="__PUBLIC__/Css/index.css" />
+   
+    <script type="text/javascript" src='__PUBLIC__/Js/jquery-1.8.2.min.js'></script>
+   
+    <script type="text/javascript" src='__PUBLIC__/Js/index.js'></script>
+    <base target="iframe" />
+</head>
+<body>
+	<!-- 头部 -->
+	<div class='header'>
+		<p>
+			后台管理中心
+			<span>欢迎您<{$Think.session.username}>&nbsp;&nbsp;<a target='_top' href="<{:U('Login/loginOut')}>">退出</a></span>
+		<em><foreach name='top' item='v'><button type='button' cid='<{$v.id}>'><{$v.cat}></foreach></em>
+		</p>
+
+
+	</div>
+	<!-- 头部结束 -->
+
+	<!-- 左半部分 -->
+	<div class='left'>
+		<ul class='list'>
+			<foreach name='data' key='keys' item='v'>
+
+				<foreach name='v' key='name' item='vs'>
+					<if condition="!empty($vs)">
+					
+						<li class='bin<{$keys}>' ><span class='jia'><{$name}></span>
+							<ul class='list-ul'>	
+							    <foreach name='vs' item='vr'>				
+									<li><a href="<{:U($vr['title'])}>"><{$vr.remark}></a></li>
+								</foreach>
+							</ul>
+						</li>
+					</if>
+		        </foreach>
+			</foreach>
+			
+		<!-- 	<li ><span class='jia'>管理员管理</span>
+				<ul class='list-ul'>
+					<li><a href="<{:U('User/add')}>">添加管理员</a></li>
+					<li><a href="<{:U('User/index')}>">管理员列表</a></li>
+					<li><a href="<{:U('User/addGroup')}>">添加用户组</a></li>
+					<li><a href="<{:U('User/Group')}>">用户组列表</a></li>
+					<li><a href="<{:U('User/addNode')}>">添加应用</a></li>
+					<li><a href="<{:U('User/node')}>">应用列表</a></li>
+					<li><a href="<{:U('NodeCat/add')}>">添加类别</a></li>
+					<li><a href="<{:U('NodeCat/index')}>">类别列表</a></li>
+				</ul>
+
+			</li>
+			<li  ><span class='jia'>用户管理</span>
+				<ul class='list-ul'>					
+					<li><a href="<{:U('Index/userList')}>">用户列表</a></li>
+				</ul>
+			</li>
+			<li style='display:none;' ><span class='jia'>导航管理</span>
+				<ul class='list-ul'>
+					<li><a href='<{:U('Logo/pic')}>'>图片导航管理</a></li>
+					<li><a href='<{:U('Logo/index')}>'>LOGO管理</a></li>
+				</ul>
+
+			</li>
+			<li style='display:none;' ><span class='jia'>客户管理</span>
+				<ul class='list-ul'>
+					<li><a href='<{:U('Client/addCat')}>'>添加客户分类</a></li>
+					<li><a href='<{:U('Client/cat')}>'>客户分类列表</a></li>
+					<li><a href='<{:U('Client/add')}>'>添加客户</a></li>
+					<li><a href='<{:U('Client/index')}>'>客户列表</a></li>
+				</ul>
+			</li>
+			<li style='display:none;' ><span class='jia'>问题管理</span>
+				<ul class='list-ul'>
+					<li><a href='<{:U('Index/problemAdd')}>'>添加问题</a></li>
+					<li><a href='<{:U('Index/problem')}>'>问题列表</a></li>
+					
+				</ul>
+			</li>
+			<li ><span class='jia'>产品管理</span>
+				<ul class='list-ul'>
+					<li><a href='<{:U('GoodsCat/add')}>'>添加产品分类</a></li>
+					<li><a href='<{:U('GoodsCat/index')}>'>产品分类列表</a></li>
+					<li><a href='<{:U('Goods/add')}>'>添加产品</a></li>
+					<li><a href='<{:U('Goods/index')}>'>产品列表</a></li>					
+					<li><a href='<{:U('GoodsAttr/add')}>'>添加属性</a></li>
+					<li><a href='<{:U('GoodsAttr/index')}>'>属性列表</a></li>
+					<li><a href='<{:U('CssCustom/add')}>'>添加样式</a></li>
+					<li><a href='<{:U('CssCustom/index')}>'>样式列表</a></li>				
+				</ul>
+			</li>
+			<li ><span class='jia'>产品价格管理</span>
+				<ul class='list-ul'>
+					<li><a href='<{:U('City/add')}>'>添加城市</a></li>
+					<li><a href='<{:U('City/index')}>'>城市列表</a></li>
+					<li><a href='<{:U('Performance/add')}>'>添加性能</a></li>
+					<li><a href='<{:U('performance/index')}>'>性能列表</a></li>				
+					<li><a href='<{:U('GoodsPrice/add')}>'>定制价格</a></li>
+					<li><a href='<{:U('GoodsPrice/index')}>'>价格列表</a></li>
+					<li><a href='<{:U('Sale/add')}>'>添加打折</a></li>
+					<li><a href='<{:U('Sale/index')}>'>打折列表</a></li>
+							
+				</ul>
+			</li>
+			<li ><span class='jia'>分类管理</span>
+				<ul class='list-ul'>
+					<li><a href='<{:U('MirroringCat/add')}>'>添加分类</a></li>
+					<li><a href='<{:U('MirroringCat/index')}>'>分类列表</a></li>
+				</ul>
+			</li>
+			<li ><span class='jia'>镜像管理</span>
+				<ul class='list-ul'>
+					<li><a href='<{:U('Mirroring/add')}>'>添加镜像</a></li>
+					<li><a href='<{:U('Mirroring/index')}>'>镜像列表</a></li>		
+					<li><a href='<{:U('Os/add')}>'>添加操作系统</a></li>
+					<li><a href='<{:U('Os/index')}>'>操作系统列表</a></li>
+					<li><a href='<{:U('Source/add')}>'>添加服务商</a></li>
+					<li><a href='<{:U('Source/index')}>'>服务商列表</a></li>
+					<li><a href='<{:U('MirroringInfo/add')}>'>添加镜像信息</a></li>
+					<li><a href='<{:U('MirroringInfo/index')}>'>镜像信息列表</a></li>
+					<li><a href='<{:U('Logo/add')}>'>添加推荐配置</a></li>
+					<li><a href='<{:U('Logo/groom')}>'>推荐配置列表</a></li>
+
+
+				</ul>
+			</li>
+		
+			<li ><span class='jia'>订单管理</span>
+				<ul class='list-ul'>
+					<li><a href='<{:U('Order/index')}>'>订单列表</a></li>
+					<li><a href='<{:U('Order/goods')}>'>用户产品列表</a></li>					
+				</ul>
+			</li>
+			<li ><span class='jia'>帮助中心</span>
+				<ul class='list-ul'>
+					<li><a href='<{:U('HelpCat/add')}>'>添加分类</a></li>
+					<li><a href='<{:U('HelpCat/index')}>'>分类列表</a></li>
+					<li><a href='<{:U('Help/add')}>'>添加问题</a></li>	
+					<li><a href='<{:U('Help/index')}>'>问题列表</a></li>
+									
+				</ul>
+			</li>
+
+			<li ><span class='jia'>系统工单管理</span>
+				<ul class='list-ul'>
+					<li><a href='<{:U('ScenceCat/add')}>'>添加分类</a></li>
+					<li><a href='<{:U('ScenceCat/index')}>'>分类列表</a></li>
+					<li><a href='<{:U('Scence/add')}>'>添加系统工单</a></li>
+					<li><a href='<{:U('Scence/index')}>'>工单列表</a></li>
+					<li><a href='<{:U('ScenceAttr/add')}>'>添加工单属性</a></li>
+					<li><a href='<{:U('ScenceAttr/index')}>'>工单属性列表</a></li>
+				</ul>
+			</li>
+			<li ><span class='jia'>用户工单管理</span>
+				<ul class='list-ul'>
+					<li><a href='<{:U('Wo/index')}>'>工单列表</a></li>
+					<li><a href='<{:U('Wo/recycle')}>'>工单回收站</a></li>
+					<li><a href='<{:U('Wo/avg')}>'>计算工单时间</a></li>
+			
+				</ul>
+			</li>
+			<li ><span class='jia'>服务管理</span>
+				<ul class='list-ul'>
+					<li><a href='<{:U('Service/add')}>'>添加服务</a></li>
+					<li><a href='<{:U('Service/index')}>'>服务列表</a></li>
+					<li><a href='<{:U('ServiceSpec/add')}>'>添加服务规格</a></li>
+					<li><a href='<{:U('ServiceSpec/index')}>'>服务规格列表</a></li>
+					<li><a href='<{:U('ServiceIntroduce/add')}>'>添加服务介绍</a></li>
+					<li><a href='<{:U('ServiceIntroduce/index')}>'>服务介绍列表</a></li>
+			
+				</ul>
+			</li> -->
+		</ul>
+    
+		
+	</div>
+	<!-- 左半部分结束 -->
+
+	<!-- 右半部分 -->
+	<div class='right'>
+		<iframe src='<{:U('welcome')}>' name='iframe' />
+	</div>
+	<!-- 右半部分结束 -->
+</body>
+</html>

@@ -1,0 +1,158 @@
+<include file='Common:header'/>
+<!-- 搜索部分 -->
+<form action='' method='get'>
+    <div class='search'>
+        <div class='search-header'>
+            <h5 style='float:left;'>搜索其实很简单</h5>
+            <div class='hide-search' style='float:right;cursor:pointer;margin-right:20px;line-height:40px;'><span style='font-size:11px;' class='glyphicon glyphicon-chevron-up '></span>隐藏</div>
+        </div>
+        
+        <div class='search-inner'>
+           <dl>
+                <dt>类型：</dt>
+                <dd>
+                    <select name='type'>
+                        <option <if condition="$tmp['type'] eq -1">selected</if> value='-1'>--请选择--</option>
+                        <option <if condition="$tmp['type'] eq 0">selected</if> value='0'>操作系统</option>
+                        <option <if condition="$tmp['type'] eq 1">selected</if> value='1'>公共镜像</option>
+                        <option <if condition="$tmp['type'] eq 2">selected</if> value='2'>自定义镜像</option>
+                    </select>       
+                </dd>
+            </dl>
+            
+            <dl>
+                <dt>状态：</dt>
+                <dd>
+                    <select name='status'>
+                        <option <if condition="$tmp['status'] eq -1">selected</if> value='-1'>--请选择--</option>
+                        <option <if condition="$tmp['status'] eq 0">selected</if> value='0'>关闭</option>
+                        <option <if condition="$tmp['status'] eq 1">selected</if> value='1'>运行</option>
+                        <option <if condition="$tmp['status'] eq 2">selected</if> value='2'>脱离关系请求失败</option>
+                        <option <if condition="$tmp['status'] eq 3">selected</if> value='3'>创建了快照</option>
+                        <option <if condition="$tmp['status'] eq 4">selected</if> value='4'>创建快照失败</option>
+                        <option <if condition="$tmp['status'] eq 5">selected</if> value='5'>脱离关系失败</option>
+                        <option <if condition="$tmp['status'] eq 6">selected</if> value='6'>保护失败</option>
+                    </select>       
+                </dd>
+            </dl>
+
+            <dl>
+                <dt>标识：</dt>
+                <td><input type='text' name='image_code' value='<{$tmp.image_code}>'/></td>
+            </dl>
+
+            <dl>
+                <dt>快照标识：</dt>
+                <td><input type='text' name='image_snap_code' value='<{$tmp.image_snap_code}>'/></td>
+            </dl>
+
+            <dl>
+                <dt>系统类型：</dt>
+                <td><input type='text' name='os_code' value='<{$tmp.os_code}>'/></td>
+            </dl>
+
+            <dl>
+                <dt>端口：</dt>
+                <td><input type='text' name='default_port' value='<{$tmp.default_port}>'/></td>
+            </dl>
+
+            <dl>
+                <dt>时间范围：</dt>
+                <dd>
+                   <input id="min_date" placeholder='开始时间' value='<{$tmp.min_start_time}>' class="laydate-icon length2" type='text' name='min_start_time' />
+                    -<input id='max_date' placeholder='结束' class="laydate-icon length2" value='<{$tmp.max_start_time}>' type='text' name='max_start_time' />
+                </dd>
+            </dl>
+            
+        </div>
+
+        <div class='search-bottom'>
+            <p style='float:right;margin-right:10px;'>
+                <a class='btn btn-danger' href="<{:U()}>">清空</a>
+                <input type='submit' name='search' class='btn btn-primary' value='搜索' />
+            </p>
+        </div>
+    </div>
+</form>
+
+    <table class="table table-condensed table-hover " >
+        <thead>
+            <tr class='active'>
+                <td  colspan="2" >
+                    <a class="btn btn-success" href="<{:U('add')}>">添加镜像</a>
+                </td>
+                <td colspan="12">
+                    <div class="page-code"><{$fpage}></div>
+                </td>
+            </tr>
+        </thead>
+		<tr>
+			<th>ID</th>
+			<th>类型</th>
+			<th>标识</th>			
+			<th>对应快照标识</th>
+            <th>系统类型</th>
+			<th>存储池</th>
+			<th>端口</th>
+            <th>状态</th>
+			<th>uid</th>		
+            <th>创建时间</th>					
+			<th>操作</th>
+		</tr>
+	<foreach name='data' item='v'>
+		<tr>
+			<td><{$v.id}></td>
+			<td>
+                <switch name='v.type'>
+                    <case value='0'>操作系统</case>
+                    <case value='1'>公共镜像</case>
+                    <case value='2'>自定义镜像</case>
+                    <case value='3'>暂不上架</case>
+                </switch>
+            </td>
+			<td><{$v.image_code}></td>			
+			<td><{$v.image_snap_code}></td>
+            <td><{$v.os_code}></td>
+			<td><{$v.image_pool}></td>
+            <td>
+                <switch name='v.status'>
+                    <case value='0'>关闭</case>
+                    <case value='1'>运行中</case>
+                    <case value='2'>脱离请求失败</case>
+                    <case value='3'>创建了快照</case>
+                    <case value='4'>创建快照失败</case>
+                    <case value='5'>脱离关系失败</case>
+                    <case value='6'>保护失败</case>
+                </switch>
+            </td>
+			<td><{$v.default_port}></td>
+			<td><{$v.uid}></td>			
+		    <td><{$v.time|date='Y-m-d H:i',###}></td>
+			<td>
+                <a  href="<{:U('update',array('id'=>$v['id']))}>">[修改]</a>
+                <if condition="$v['type'] eq 2">
+                    <a onclick="return confirm('确定删除?')" href="<{:U('deleteCustomImage',array('id'=>$v['id']))}>">[删除]</a>
+                <else/>
+                    <a onclick="return confirm('确定删除?')" href="<{:U('del',array('id'=>$v['id']))}>">[删除]</a>
+                </if>
+                
+            </td>			
+		</tr>
+	</foreach>
+	   
+	 <tfoot>
+            <tr class='active'>
+            	<td colspan='1'>
+            		<input type='submit' class='submit' name='submit' value='排序'/>
+            	</td>
+                <td colspan="10" class="td-right">
+                    <div class="page">
+                        <div class="page-info"><{$pageInfo}></div>
+                        <div class="page-code"><{$fpage}></div>
+                   </div>
+                </td>
+            </tr>
+        </tfoot>
+    </table>
+
+<include file='Common:footer'/>

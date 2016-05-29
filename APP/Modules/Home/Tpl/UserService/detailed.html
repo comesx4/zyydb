@@ -1,0 +1,122 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+<head>
+  <meta http-equiv="Content-Type" content="text/html;charset=UTF-8" />
+<title><{$stitle|makwebtitle}></title>
+  <link rel="stylesheet" href="__PUBLIC__/Css/userinfo-left.css" />
+  <link rel="stylesheet" href="__PUBLIC__/Css/order.css" />
+  <link rel="stylesheet" href="__PUBLIC__/Css/user-service.css" />
+  <link rel='stylesheet' href='__PUBLIC__/Css/max-header.css' />
+  <link rel='stylesheet' href='__PUBLIC__/Css/nav.css' />
+  <link rel='stylesheet' href='__PUBLIC__/Css/bottom.css' />
+  <js file='__PUBLIC__/Js/jquery-1.7.2.min.js'/>
+  <js file='__PUBLIC__/Js/nav.js'/> 
+  
+  <js file='__PUBLIC__/Js/bottom.js'/>
+
+</head>
+<body>
+ <div class='body'>
+  <!--顶部头-->
+ <include file='Common:p-header'/>
+  <!--顶部头结束-->
+  
+  <!--头部公共部分-->
+  <include file='Common:nav'/>
+  <!--头部公共部分结束-->	
+
+
+
+    <!--主题内容-->
+	<div class='main'>
+		<!--左半部分-->
+			<include file='Common:userService-left'/>
+		<!--左半部分结束-->
+
+        <!--右半部分-->
+		<div class='main-right'>
+			<h3>服务详情</h3>
+            <div class="ayorder-box">
+            	<if condition="$service['status'] eq 0">
+                <!-- 服务开启时 -->
+	            	 <dl>
+	            	 	<dt><img src="__PUBLIC__/Images/gg.png"></dt>
+	            	 	<dd class='red'>产品状态：应用已开通。</dd>
+	            	 	<dd>
+		            	 	<if condition="$service['endTime'] neq 0 and $service['isSubmit'] neq 0">
+		            	 		您已提交了工单，可以<a href="<{:U('Scence/scenceInfo',array('id'=>$servce['isSubmit']))}>">查看工单</a>或者继续<a href="<{:U('Scence/service',array('per'=>$service['per']))}>">提交工单</a>处理您的问题。
+		            	 	<elseif condition="$service['endTime'] eq 0 and $service['isSubmit'] neq 0"/>
+	                            您已提交了工单，可以<a href="<{:U('Scence/scenceInfo',array('id'=>$servce['isSubmit']))}>">查看工单</a>处理您的问题。
+		            	 	<else/>
+	                            您已购买了服务，可以<a href="<{:U('Scence/service',array('per'=>$service['per']))}>">提交工单</a>处理您的问题。
+	                        
+		            	 	</if>
+	            	 	</dd>
+	            	 	<dd>
+	            	 		<if condition="$service['isSubmit'] neq 0">
+	            	 			<a class='button' href="<{:U('Scence/scenceInfo',array('id'=>$service['isSubmit']))}>">查看工单</a>
+	            	 		<else/>
+	            	 			<a class='button' href="<{:U('Scence/service',array('per'=>$service['per']))}>">提交工单</a>
+	            	 		</if>
+	            	 		或进入<a href="<{:U('UserService/index')}>">服务列表</a></dd>
+	            	 </dl>
+                
+	            <else/>
+	            <!-- 服务到期时 -->
+	             <dl>
+	            	 	<dt><img src="__PUBLIC__/Images/gg.png"></dt>
+	            	 	<dd class='red'>产品状态：服务已到期。</dd>
+	            	 	<dd>		            	 	
+	                            您的服务已到期，可以<a href="<{:U('UserService/renew',array('id'=>$service['id']))}>">续费</a>激活您的服务。	                       
+	            	 	</dd>
+	            	 	<dd>
+            	 			<a class='button' href="<{:U('UserService/renew',array('id'=>$service['id']))}>">续费</a>
+            	 		
+            	 			或进入<a href="<{:U('UserService/index')}>">服务列表</a></dd>
+	            	 </dl>
+            	</if>
+            </div>
+            <div class='minute'>
+			<div class='order-head'><h4>服务详情</h4></span>
+			</div>
+
+			<div class='zdg'>
+				<div class='lt'>服务购买时间：<{$service.createTime|date='Y-m-d H:i:s',###}></div>
+				<div class='rt'>到期时间：<if condition="$service['endTime'] neq 0"><{$service.endTime|date='Y-m-d H:i:s',###}><else/>单次</if>  </div>
+			</div>
+
+			<table class='table'>
+				<tr>
+					<th>服务名称</th>
+					
+					<th>状态</th>	
+					
+					<th>描述</th>
+						<th width='3%'></th>				
+					<th>备注</th>
+				</tr>
+				<tr>
+					<td width='20%'><{$service.title}></td>
+					<td>
+						<switch name='$v["status"]'>
+			       	   	    <case vlaue='0'>开通中</case>
+			       	   	    <case vlaue='1'>已到期</case>
+			       	   </switch>
+					</td>					
+					<td style='text-indent:30px;' width='35%'><{$service.info}></td>
+					<td></td>
+					<td><{$service.remark}></td>
+				</tr>
+			</table>
+		</div>
+
+		</div>
+	</div>
+	 <!--底部版权-->
+	<include file='Common:bottom' />
+	<!--底部版权结束-->
+
+	
+	
+</body>
+</html>

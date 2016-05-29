@@ -1,0 +1,275 @@
+
+#main .main-right .title{
+	float: left;
+	width: 100%;
+	height:15px;
+	border-bottom: 1px solid #ccc;
+	margin-bottom:35px;
+}
+#main .main-right .title h1{
+	float: left;
+	background: #fff;
+	padding-right:5px;	
+}
+#main .main-right .title a{
+	display: inline-block;
+	float: right;
+	background: #fff;
+	height:30px;
+	width:90px;
+	line-height: 30px;
+}
+#main .main-right .uc-laq{
+	float: left;
+	width: 100%;
+}
+#main .main-right .uc-laq h2{
+	font-size: 12px;
+	margin-bottom: 20px;
+}
+#main .main-right .uc-laq dl{
+	float: left;
+	width: 31%;
+	height:120px;
+	margin-right: 1%;
+	margin-bottom:45px;
+	color: #666;
+}
+#main .main-right .uc-laq dl dt{
+	float: left;
+}
+#main .main-right .uc-laq dl dt img{
+}
+#main .main-right .uc-laq dl dd.type{
+	font-size: 18px;
+	font-weight: 700;
+	padding:5px 0;
+}
+#main .main-right .uc-laq dl dd{
+	padding:5px 0;
+	width: 80%;
+	float: right;
+}
+
+
+
+/*这是scence部分*/
+#main .main-right .select{
+	width: 85%;
+	float: left;
+}
+#main .main-right .select h2{
+	font-size: 14px;
+	margin-bottom:20px;
+	
+}
+
+#main .main-right .select .select-left{
+	height:150px;
+	overflow-x:hidden;
+	overflow-y:scroll;
+	width: 50%;
+	float: left;
+	border:1px solid #ccc;
+	border-right:none;
+	padding-top:20px;
+
+
+}
+#main .main-right .select .select-left dl{
+	padding-left: 10px;
+}
+#main .main-right .select .select-left dl dt{
+	font-weight:700;
+	color: #00A2CA;
+	background: url('../Images/lanxia.png') no-repeat left center;
+	
+	cursor:pointer;
+	padding:5px 0;
+	padding-left: 20px;
+}
+#main .main-right .select .select-left dl dd{
+	display: none;
+	padding:5px 0;
+	padding-left: 25px;
+	cursor: pointer;
+}
+#main .main-right .select .select-left dl dd.down,#main .main-right .select .select-right ul li.down{
+    background:#EAFBFF;
+}
+#main .main-right .select .select-right{
+	padding-top:20px;
+	height:150px;
+	overflow-x:hidden;
+	overflow-y:scroll;
+	float: left;
+	width: 49.5%;
+	border:1px solid #ccc;
+	border-left:none;
+
+}
+#main .main-right .select .select-right span,#main .main-right .select .select-right ul{
+	margin-left: 20px;
+}
+#main .main-right .select .select-right span{
+	color: #ccc;
+
+}
+#main .main-right .select .select-right ul{
+
+}
+#main .main-right .select .select-right ul li{
+	padding:4px 0;
+	cursor: pointer;
+}
+#main .main-right .select .select-right ul li:hover,#main .main-right .select .select-left dl dd:hover{
+	background: #F8F8F8
+}
+#main .main-right #uc-recommend,#main .main-right #uc-resolve-form{
+	clear: both;
+	width: 85%;
+	overflow: hidden;
+
+}
+#main .main-right #uc-recommend .uc-resolve-panel{
+	border:1px solid #ccc;
+	background: #F8F8F8;
+	padding: 15px;
+
+}
+#main .main-right #uc-recommend  h4{
+	padding:15px 0;
+
+}
+#main .main-right #uc-recommend .uc-resolve-panel h3{
+	margin-bottom:15px;
+}
+#main .main-right #uc-recommend .uc-resolve-panel .bot-btns{
+	padding-top:20px;
+	padding-bottom:10px;
+	text-align: right;
+}
+#main .main-right #uc-recommend .uc-resolve-panel .bot-btns span{
+	display: inline-block;
+	width: 90px;
+	height:25px;
+	line-height: 25px;
+	background: #00A2CA;
+	color: #fff;
+	margin-right: 3px;
+	text-align: center;
+	border-top: none;
+	border-radius:4px;
+	cursor: pointer;
+}
+#main .main-right #uc-recommend .uc-resolve-panel .bot-btns span.no{
+	width: 120px;
+	background: #fff;
+	border:1px solid #00A2CA;
+	color: #00A2CA;
+}
+
+#main .main-right #uc-resolve-form{
+
+}
+#main .main-right #uc-resolve-form .uc-resolve-panel{
+     background: #F8F8F8;
+     padding-left:3%;
+     padding-bottom:30px;
+     padding-top:15px;
+     border:1px solid #ccc;
+     overflow: hidden;
+}
+#main .main-right #uc-resolve-form .uc-resolve-panel input[type=text]{
+    width:220px;
+    height:30px;
+    border:1px solid #ccc;
+    border-radius: 4px;
+    padding-left:5px;
+}
+#main .main-right #uc-resolve-form .uc-resolve-panel .submit{
+	width:190px;
+	height:30px;
+	border:1px solid #6FACD7;
+	background: #fff;
+	border-radius: 4px;
+	cursor: pointer;
+	color: #6FACD7;
+
+}
+#main .main-right #uc-resolve-form  h4{
+	padding-top:20px;
+    margin-bottom:15px;
+    font-size: 14px;
+}
+#main .main-right #uc-resolve-form .uc-resolve-panel dl{
+	float: left;
+	width: 100%;
+	padding:5px 0;
+	
+}
+#main .main-right #uc-resolve-form .uc-resolve-panel dl dt{
+	float: left;
+	display: inline-block;
+	width: 10%;	
+	height:30px;
+	line-height: 30px;
+}
+#main .main-right #uc-resolve-form .uc-resolve-panel dl dd{
+	line-height: 30px;
+	float: left;
+	width: 88%;
+	color: #000;
+}
+#main .main-right #uc-resolve-form .uc-resolve-panel dl dd span.error{
+	color:red;
+	padding-left:18px;
+	background: url('../Images/unchecked.gif') no-repeat left center;
+	margin-left:7px;
+}
+#main .main-right #uc-resolve-form .uc-resolve-panel dl dd.file input{
+	float: left;
+	clear: left;
+	
+}
+#main .main-right #uc-resolve-form .uc-resolve-panel dl dd.file span{
+	color:#9CDDF5;
+	cursor: pointer;
+	float: left;
+
+}
+
+#main .main-right #uc-resolve-form .uc-resolve-panel dl dd.problem span{
+	display: inline-block;
+	float: left;
+	width: 50%;
+
+}
+#main .main-right #uc-resolve-form .uc-resolve-panel dl dd span.checkbox{
+	float: left;
+	width: 100%;
+}
+#main .main-right #uc-resolve-form .uc-resolve-panel dl dd span.checkbox label{
+    padding-left:5px;
+} 
+#main .main-right #uc-resolve-form .uc-resolve-panel dl dd span.radio{
+	float: left;
+	margin-right:15px;
+}
+#main .main-right #uc-resolve-form .uc-resolve-panel dl dd span.radio input{
+	position: relative;
+	top:2px;
+}
+#main .main-right #uc-resolve-form .uc-resolve-panel dl dd span.radio label{
+	 padding-left:5px;
+}
+#main .main-right h4.uc-desc{
+	clear: both;
+	padding:15px 0;
+}
+
+
+
+
+
+

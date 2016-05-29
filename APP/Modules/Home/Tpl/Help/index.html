@@ -1,0 +1,427 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+<head>
+  <meta http-equiv="Content-Type" content="text/html;charset=UTF-8" />
+  <title><{:makwebtitle()}></title>
+  <link rel='stylesheet' href='__PUBLIC__/Css/bottom.css' />
+  <link rel='stylesheet' href='__PUBLIC__/Css/max-header.css' />
+
+  <link rel='stylesheet' href='__PUBLIC__/Css/help-header.css' />
+  <link rel='stylesheet' href='__PUBLIC__/Css/help-left.css' />
+  <link rel='stylesheet' href='__PUBLIC__/Css/help.css' />
+  <js file='__PUBLIC__/Js/jquery-1.7.2.min.js'/>
+  <js file='__PUBLIC__/Js/nav.js'/> 
+  <js file='__PUBLIC__/Js/bottom.js'/> 
+  <js file='__PUBLIC__/Js/help.js'/>   
+</head>
+<body>
+
+
+<!--顶部头-->
+<include file='Common:p-header'/>
+  <!--顶部头结束-->
+ 
+ <!-- 顶部公共部分 -->
+  <include file='Common:help-header'/>
+  <!-- 顶部公共部分结束 -->
+
+  <!-- 主体内容 -->
+  <div id='mian'>
+    <div class='y-row'>
+
+        <!-- 左半部分 -->
+<div class='main-left'>   
+
+           <div class='max-width'>
+                <div class='hnavbar'>
+                  <helpAll>
+                     <dl>
+                        <dt><{$v.cat}></dt>
+                        <foreach name='v.chid' item='vs'>
+                            <if condition="!empty($vs['chid'])">
+                             <dd class='ding dian' value='<{$vs.id}>'><{$vs.cat}></dd>
+                             <else/>
+                              <dd><a href="<{:U('Help/helpList',array('id'=>$vs['id'],'pid'=>$vs['id']))}>"><{$vs.cat}></a></dd>
+
+                           </if>
+                        </foreach>
+                     
+
+                     </dl>
+                  </helpAll>
+                   
+                </div>
+                 
+                 <!-- 中间层 -->
+                <div class='hnavbar hnavbar1 '>              
+                  <helpAll>
+                   
+                        <foreach name='v.chid' item='vs'>
+                           
+                         <if condition="!empty($vs['chid'])">  
+                             <dl value='<{$vs.id}>' class='hidden'>
+                             <dt><{$vs.cat}></dt>
+                             <dd><a href="<{:U('Help/nav',array('id'=>$vs['id'],'pid'=>$vs['id']))}>">热点问题&知识点导航</a></dd>
+                                 
+                                 <foreach name='vs.chid' item='vm'>
+                                  
+                                   <if condition="!empty($vm['chid'])">
+                                   
+                                   <dd value='<{$vm.id}>' class='zhong dian'><{$vm.cat}></dd>
+                                   
+                                   <else/>
+                                  
+                                  <dd class='none'><a href="<{:U('Help/helpList',array('id'=>$vm['id'],'pid'=>$vs['id']))}>"><{$vm.cat}></a></dd>
+
+                                  </if>
+
+                                 </foreach>
+                             </dl>
+                          </if>
+                            
+                        </foreach>
+                     
+
+                
+                   </helpAll>
+                 
+                </div>
+                <!-- 中间层结束 -->
+                
+                <!-- 最右边 -->
+                <div class='hnavbar hnavbar1'>
+                  <helpAll>
+                   
+                      <foreach name='v.chid' item='vs'> 
+                      
+                           <foreach name='vs.chid' item='vm'>
+                                  <dl value='<{$vm.id}>' class='hidden'>
+                                    <dt><{$vm.cat}></dt>
+                                    <dd><a href="<{:U('Help/nav',array('id'=>$vm['id'],'pid'=>$vm['id']))}>">热点问题&知识点导航</a></dd>
+                                      <?php
+                                      foreach($vm['chid'] as $vr){
+                                              
+                                       echo "<dd><a href='".U('Help/helpList',array('id'=>$vr['id'],'pid'=>$vm['id']))."'>{$vr['cat']}</a></dd>";
+                                                 
+                                      }
+
+                                      ?>
+                                   
+
+                                </dl>
+                         
+
+                           </foreach>
+                          
+                      </foreach>
+                   
+
+              
+                  </helpAll>
+
+                  
+                 
+                </div>
+                <!-- 最右边结束 -->
+            </div>
+
+            
+        </div>
+        <!-- 左半部分结束 -->
+
+         <!-- 右半部分 -->
+        <div class='main-right'>
+        
+        <if condition="!empty($_SESSION['username'])">
+          <!-- 用户登录信息 -->
+            <div class="logined">
+                <div class='logined-left'>
+                    <dl>
+                       <dt>
+                        <if condition="$user['face']">
+                        <img src="__ROOT__/Uploads/Face/<{$users.face}>">
+                        <else/>
+                        <img src="__ROOT__/Uploads/Face/face1.jpg">
+                        </if>
+                      </dt>
+                       <dd>Hi,<{$users.name}></dd>
+                       <dd>账号：<{$users.name}></dd>
+                       <dd>快捷入口：<a href="">选型推荐</a><a href="">合同申请</a><a href="">索取发票</a><a href="">备案</a></dd>
+                    </dl>
+                  
+                </div>
+               
+                <div class='logined-right'>
+                     <span>您可能会遇到的问题</span><br/>
+                     <a href="">云服务器购买须知</a>
+                     <a href="">云服务器购买须知</a>
+                     <a href="">云服务器购买须知</a>
+                     <a href="">云服务器购买须知</a>
+                     <a href="">云服务器购买须知</a>
+                     <a href="">云服务器价格总览</a>
+                  
+                </div>
+            </div>
+            <!-- 用户登录信息结束 -->
+
+            <else/>
+            <div class='message'><i>i</i>亲爱的用户，您可以<a href="<{:U('Login/index')}>">登录</a>查看您可能会遇到的问题和操作。</div>
+          </if>
+
+            <!-- 热点问题开始 -->
+            <div class='section'>
+                <div class='title'>
+                    <h2>热点问题</h2>                  
+                </div>
+
+                <ul>
+                  <li class='one'>
+                      <h2>云产品及服务</h2>
+                      <a href="">重新初始化磁盘（原重置磁...</a>
+                      <a href="">重新初始化磁盘（原重置磁...</a>
+                      <a href="">重新初始化磁盘（原重置磁...</a>
+                      <a href="">重新初始化磁盘（原重置磁...</a>
+                      <a href="">重新初始化磁盘（原重置磁...</a>
+                      <a href="">重新初始化磁盘（原重置磁...</a>
+                      <a href="">重新初始化磁盘（原重置磁...</a>
+                      <a href="">重新初始化磁盘（原重置磁...</a>
+                      <a href="">重新初始化磁盘（原重置磁...</a>
+                      <a href="">重新初始化磁盘（原重置磁...</a>                    
+
+                  </li>
+                   <li>
+                      <h2>财务问题</h2>
+                        <a href="">企业账号操作说明</a> 
+                        <a href="">企业账号操作说明</a> 
+                        <a href="">企业账号操作说明</a> 
+                        <a href="">企业账号操作说明</a> 
+                        <a href="">企业账号操作说明</a>    
+
+                  </li>
+                  <li>
+                      <h2>备案问题</h2>
+                        <a href="">企业账号操作说明</a> 
+                        <a href="">企业账号操作说明</a> 
+                        <a href="">企业账号操作说明</a> 
+                        <a href="">企业账号操作说明</a> 
+                        <a href="">企业账号操作说明</a>    
+
+                  </li>
+                  <li>
+                      <h2>会员账号</h2>
+                        <a href="">企业账号操作说明</a> 
+                        <a href="">企业账号操作说明</a> 
+                        <a href="">企业账号操作说明</a> 
+                        <a href="">企业账号操作说明</a> 
+                        <a href="">企业账号操作说明</a>    
+
+                  </li>
+
+                </ul>
+
+            </div>
+            <!-- 热点问题结束 --> 
+
+            <!-- 新手向导 -->
+            <div class='wizard'>
+                <div class='title'><h2>新手向导</h2></div>
+
+                <div class='box'>
+                    <ul>
+                      <li class='down'>产品购买</li>
+                      <li>RDS配置</li>
+                      <li>OSS配置</li>
+                      <li>备案</li>
+                    </ul>
+
+                    <div class='bd'>
+                       <dl>
+                          <dt><img src="__PUBLIC__/Images/xuanxing.png"></dt>
+                          <dd class='type'>购买选型</dd>
+                          <dd><a href="">云服务器价格总览</a></dd>
+                          <dd><a href="">如何选择适合我的云服务器</a></dd>
+                          <div class='dotted'></div>
+                       </dl>
+
+                       <dl>
+                          <dt><img src="__PUBLIC__/Images/xuanxing.png"></dt>
+                          <dd class='type'>购买选型</dd>
+                          <dd><a href="">云服务器价格总览</a></dd>
+                          <dd><a href="">如何选择适合我的云服务器</a></dd>
+                          <div class='dotted'></div>
+                       </dl>
+
+                       <dl>
+                          <dt><img src="__PUBLIC__/Images/xuanxing.png"></dt>
+                          <dd class='type'>购买选型</dd>
+                          <dd><a href="">云服务器价格总览</a></dd>
+                          <dd><a href="">如何选择适合我的云服务器</a></dd>
+                          <div class='dotted'></div>
+                       </dl>
+
+                       <dl>
+                          <dt><img src="__PUBLIC__/Images/xuanxing.png"></dt>
+                          <dd class='type'>购买选型</dd>
+                          <dd><a href="">云服务器价格总览</a></dd>
+                          <dd><a href="">如何选择适合我的云服务器</a></dd>
+                          <div class='dotted'></div>
+                       </dl>
+
+                       <dl>
+                          <dt><img src="__PUBLIC__/Images/xuanxing.png"></dt>
+                          <dd class='type'>购买选型</dd>
+                          <dd><a href="">云服务器价格总览</a></dd>
+                          <dd><a href="">如何选择适合我的云服务器</a></dd>
+
+                       </dl>
+                      
+                    </div>
+
+                      <div class='bd hidden'>
+                       <dl>
+                          <dt><img src="__PUBLIC__/Images/xuanxing.png"></dt>
+                          <dd class='type'>购买选型</dd>
+                          <dd><a href="">云服务器价格总览</a></dd>
+                          <dd><a href="">如何选择适合我的云服务器</a></dd>
+                          <div class='dotted'></div>
+                       </dl>
+
+                       <dl>
+                          <dt><img src="__PUBLIC__/Images/xuanxing.png"></dt>
+                          <dd class='type'>创建</dd>
+                          <dd><a href="">云服务器价格总览</a></dd>
+                          <dd><a href="">如何选择适合我的云服务器</a></dd>
+                          <div class='dotted'></div>
+                       </dl>
+
+                       <dl>
+                          <dt><img src="__PUBLIC__/Images/xuanxing.png"></dt>
+                          <dd class='type'>数据导入</dd>
+                          <dd><a href="">云服务器价格总览</a></dd>
+                          <dd><a href="">如何选择适合我的云服务器</a></dd>
+                          <div class='dotted'></div>
+                       </dl>
+
+                       <dl>
+                          <dt><img src="__PUBLIC__/Images/xuanxing.png"></dt>
+                          <dd class='type'>购买选型</dd>
+                          <dd><a href="">云服务器价格总览</a></dd>
+                          <dd><a href="">如何选择适合我的云服务器</a></dd>
+                          <div class='dotted'></div>
+                       </dl>
+
+                       <dl>
+                          <dt><img src="__PUBLIC__/Images/xuanxing.png"></dt>
+                          <dd class='type'>购买选型</dd>
+                          <dd><a href="">云服务器价格总览</a></dd>
+                          <dd><a href="">如何选择适合我的云服务器</a></dd>
+
+                       </dl>
+                      
+                    </div>
+                     <div class='bd hidden'>
+                       <dl>
+                          <dt><img src="__PUBLIC__/Images/xuanxing.png"></dt>
+                          <dd class='type'>OSS优势</dd>
+                          <dd><a href="">云服务器价格总览</a></dd>
+                          <dd><a href="">如何选择适合我的云服务器</a></dd>
+                          <div class='dotted'></div>
+                       </dl>
+
+                       <dl>
+                          <dt><img src="__PUBLIC__/Images/xuanxing.png"></dt>
+                          <dd class='type'>创建</dd>
+                          <dd><a href="">云服务器价格总览</a></dd>
+                          <dd><a href="">如何选择适合我的云服务器</a></dd>
+                          <div class='dotted'></div>
+                       </dl>
+
+                       <dl>
+                          <dt><img src="__PUBLIC__/Images/xuanxing.png"></dt>
+                          <dd class='type'>数据导入</dd>
+                          <dd><a href="">云服务器价格总览</a></dd>
+                          <dd><a href="">如何选择适合我的云服务器</a></dd>
+                          <div class='dotted'></div>
+                       </dl>
+
+                       <dl>
+                          <dt><img src="__PUBLIC__/Images/xuanxing.png"></dt>
+                          <dd class='type'>购买选型</dd>
+                          <dd><a href="">云服务器价格总览</a></dd>
+                          <dd><a href="">如何选择适合我的云服务器</a></dd>
+                          <div class='dotted'></div>
+                       </dl>
+
+                       <dl>
+                          <dt><img src="__PUBLIC__/Images/xuanxing.png"></dt>
+                          <dd class='type'>购买选型</dd>
+                          <dd><a href="">云服务器价格总览</a></dd>
+                          <dd><a href="">如何选择适合我的云服务器</a></dd>
+
+                       </dl>
+                      
+                    </div>
+
+                     <div class='bd hidden'>
+                       <dl>
+                          <dt><img src="__PUBLIC__/Images/xuanxing.png"></dt>
+                          <dd class='type'>备案</dd>
+                          <dd><a href="">云服务器价格总览</a></dd>
+                          <dd><a href="">如何选择适合我的云服务器</a></dd>
+                          <div class='dotted'></div>
+                       </dl>
+
+                       <dl>
+                          <dt><img src="__PUBLIC__/Images/xuanxing.png"></dt>
+                          <dd class='type'>创建</dd>
+                          <dd><a href="">云服务器价格总览</a></dd>
+                          <dd><a href="">如何选择适合我的云服务器</a></dd>
+                          <div class='dotted'></div>
+                       </dl>
+
+                       <dl>
+                          <dt><img src="__PUBLIC__/Images/xuanxing.png"></dt>
+                          <dd class='type'>数据导入</dd>
+                          <dd><a href="">云服务器价格总览</a></dd>
+                          <dd><a href="">如何选择适合我的云服务器</a></dd>
+                          <div class='dotted'></div>
+                       </dl>
+
+                       <dl>
+                          <dt><img src="__PUBLIC__/Images/xuanxing.png"></dt>
+                          <dd class='type'>购买选型</dd>
+                          <dd><a href="">云服务器价格总览</a></dd>
+                          <dd><a href="">如何选择适合我的云服务器</a></dd>
+                          <div class='dotted'></div>
+                       </dl>
+
+                       <dl>
+                          <dt><img src="__PUBLIC__/Images/xuanxing.png"></dt>
+                          <dd class='type'>购买选型</dd>
+                          <dd><a href="">云服务器价格总览</a></dd>
+                          <dd><a href="">如何选择适合我的云服务器</a></dd>
+
+                       </dl>
+                      
+                    </div>
+                </div>
+            </div>
+            <!-- 新手向导结束 -->
+
+        </div>
+     
+
+        <!-- 右半部分结束 -->
+
+
+    </div>
+  </div>
+  <!-- 主体内容结束 -->
+
+  <include file='Common:bottom'/>
+
+
+ 
+
+</body>
+</html>	

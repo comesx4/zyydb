@@ -1,0 +1,8 @@
+  <div class="col-sm-3 col-md-2 sidebar">
+          <ul class="nav nav-sidebar">
+              <li <if condition="$actionname eq 'mdetail'"> class="active" </if>><a href="<{$tmp|U = 'mdetail',###}>">用资料资</a></li>
+            <li <if condition="$actionname eq 'morder'"> class="active" </if>> <a  href="<{$tmp|U = 'morder',###}>">用户订单</a></li>
+            <li <if condition="$actionname eq 'mgoods'"> class="active"</if>> <a  href="<{$tmp|U = 'mgoods',###}>">用户产品</a></li>
+            <li <if condition="$actionname eq 'mservers'"> class="active" </if>><a  href="<{$tmp|U = 'mservers',###}>">用户服务</a></li>
+          </ul>       
+        </div>

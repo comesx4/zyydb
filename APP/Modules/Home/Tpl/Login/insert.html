@@ -1,0 +1,59 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+<head>
+	<meta http-equiv="Content-Type" content="text/html;charset=UTF-8" />
+	<title>用户注册</title>
+	<link rel="stylesheet" href="__PUBLIC__/Css/register.css" />
+	<link rel="stylesheet" href="__PUBLIC__/Css/header.css" />
+	<link rel="stylesheet" href="__PUBLIC__/Css/bottom.css" />
+	<js file='__PUBLIC__/Js/jquery-1.7.2.min.js'/>
+	<js file='__PUBLIC__/Js/jquery-validate.js'/>
+
+	<script src="__PUBLIC__/Js/bottom.js" type="text/javascript"></script>
+
+	</head>
+<body>
+	<!--==========头部==========-->
+	<include file='Common:header'/>
+	<span class="login-tip">已有账号？&nbsp;&nbsp;<a href="<{:U('index')}>">立即登录</a></span>
+	<div class="reg-iframe">
+	<div class="page lang-zh-S">
+	<div class='steps'>
+		<ul>
+			<li>
+				<i>1</i>
+				<span >设置用户名</span>
+			</li>
+			<li>
+				<i>2</i>
+				<span>填写账户信息</span>
+			</li>
+			<li>
+				<i>3</i>
+				<span style='color:red;font-weight:700'>注册成功</span>
+			</li>
+		</ul>
+		
+	</div>
+	
+	<div class='from-group'>
+		<p>
+			<label>登陆名:</label><input type='text' name='username' disabled style='background:#ccc;' value='<{$user.username}>'/><input type='hidden' name='username' value='<{$user.username}>' />
+	    </p>
+	
+	
+	
+	</div>
+	<div class='zun' style="text-aling:center;line-height: 18px;font-size:12px; margin-top:25px;">
+      
+
+    </div>
+
+  </div>
+    </div>
+
+    <include file='Common:bottom'/>
+</body>
+  
+
+</html>

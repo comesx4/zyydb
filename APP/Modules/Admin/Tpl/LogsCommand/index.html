@@ -1,0 +1,131 @@
+<include file='Common:header'/>
+<!-- 搜索部分 -->
+<form action='' method='get'>
+    <div class='search'>
+        <div class='search-header'>
+            <h5 style='float:left;'>搜索其实很简单</h5>
+            <div class='hide-search' style='float:right;cursor:pointer;margin-right:20px;line-height:40px;'><span style='font-size:11px;' class='glyphicon glyphicon-chevron-up '></span>隐藏</div>
+        </div>
+        
+        <div class='search-inner'>
+            <dl>
+                <dt>命令名：</dt>
+                <dd>
+                    <input  placeholder='用户名' type='text' value='<{$tmp.title}>' name='title' />
+                </dd>
+            </dl>
+           <dl>
+                <dt>用户ID：</dt>
+                <dd>
+                    <input style='width:60px;' placeholder='用户ID' type='text' value='<{$tmp.user_id}>' name='user_id' />
+                </dd>
+            </dl>
+
+            <dl>
+                <dt>用户IP：</dt>
+                <dd>
+                    <input  placeholder='用户IP' type='text' value='<{$tmp.client_ip}>' name='client_ip' />
+                </dd>
+            </dl>
+
+            <dl>
+                <dt>服务器IP：</dt>
+                <dd>
+                    <input  placeholder='服务器IP' type='text' value='<{$tmp.server_ip}>' name='server_ip' />
+                </dd>
+            </dl>
+
+            <dl>
+                <dt>处理时间：</dt>
+                <dd>
+                    <input id="min_date" placeholder='开始时间' value='<{$tmp.min_start_time}>' class="laydate-icon length2" type='text' name='min_start_time' />
+                    -<input id='max_date' placeholder='结束' class="laydate-icon length2" value='<{$tmp.max_start_time}>' type='text' name='max_start_time' />
+                </dd>
+            </dl>
+            
+            <dl>
+                <dt>状态：</dt>
+                <dd>
+                    <select name='status'>
+                        <option <if condition="$tmp['status'] eq -1">selected</if> value='-1'>--请选择--</option>
+                        
+                        <option <if condition="$tmp['status'] eq 0">selected</if> value='0'>失败</option>
+
+                        <option <if condition="$tmp['status'] eq 1">selected</if> value='1'>成功</option>
+                    </select>
+                </dd>
+            </dl>
+        </div>
+
+        <div class='search-bottom'>
+            <p style='float:right;margin-right:10px;'>
+                <a class='btn btn-danger' href="<{:U()}>">清空</a>
+                <input type='submit' name='search' class='btn btn-primary' value='搜索' />
+            </p>
+        </div>
+    </div>
+</form>
+
+    <table class="table table-condensed table-hover " >
+        <thead>
+            <tr class='active'>
+                <td  colspan="2" >
+                    <a class="btn btn-success" href="">命令日志</a>
+                </td>
+                <td colspan="8">
+                    <div class="page-code"><{$fpage}></div>
+                </td>
+            </tr>
+        </thead>
+        
+        <tbody>
+            <tr>
+                <th data-sort="true" data-field="id">ID</th>
+                <th data-sort="true" data-field="type">命令名</th>
+                <th class="th-left" data-sort="true" data-field="name">用户ID</th>
+                <th data-sort="true" data-field="status">用户IP</th>
+                <th class="th-left" data-sort="true" data-field="remark">服务器IP</th>
+                <th data-sort="true" data-field="time">操作</th>
+                <th data-sort="true" data-field="time">状态</th>
+                <th data-sort="true" data-field="time">处理时间</th>
+                <th data-sort="true" data-field="time">记录时间</th>
+                <th data-sort="true" data-field="time">操作</th>             
+            </tr>
+
+            <foreach name="data" item="row">
+            <tr>
+                <td><{$row.id}></td>
+                <td><{$row.title}></td>
+                <td><{$row.user_id}></td>
+                <td><{$row.client_ip}></td>
+                <td><{$row.server_ip}></td>
+                <td><{$row.operate}></td>
+                <td>
+                    <switch name='row.status'>
+                        <case value='1'>成功</case>
+                        <case value='0'>失败</case>
+                    </switch>
+                </td>
+                <td><{$row.process_time}></td>
+                <td><{$row.time|date='Y-m-d H:i:s',###}></td>
+                <td>
+                    <a href="<{:U('detail',array('id' => $row['id']))}>">详情</a>
+                </td>
+            </tr>
+            </foreach>
+            
+        </tbody>
+        
+        <tfoot>
+            <tr class='active'>
+                <td colspan="10" class="td-right">
+                    <div class="page">
+                        <div class="page-info"><{$pageInfo}></div>
+                        <div class="page-code"><{$fpage}></div>
+                   </div>
+                </td>
+            </tr>
+        </tfoot>
+    </table>
+
+<include file='Common:footer'/>

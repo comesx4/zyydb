@@ -1,0 +1,138 @@
+<include file="Common:header"/>
+
+<form action='<{:U('insert')}>' method='post'>
+    <table class="table table-condensed table-hover table-active">
+        <thead>
+            <tr class="active">
+                <td colspan="2">
+                    <a class="btn btn-info" href="<{:U('index')}>">服务介绍列表</a>
+                </td>
+                <td colspan="12"></td>
+            </tr>
+        </thead>
+		<tr>
+			<td class='first'>所属服务:</td>
+			<td><{$service}></td>
+		</tr>		
+		<tr>
+			<td class='first'>介绍内容:</td>
+			<td>
+				<textarea style='width:800px;height:350px;' name='introduce'><div class='table'>
+                         <h2>温馨提醒：<span>在你成功购买后，请别忘记进入“服务监管“-“提交需求”以便为您及时处理问题，非常感谢！</span></h2>
+                         <table>
+                             <tr>
+                                 <th>名称</th>
+                                 <td>云产品日常代维护服务</td>
+                             </tr>
+                             <tr>
+                                 <th>质保时间</th>
+                                 <td>1天（如按“单月购买、季度购买、半年购买、按年购买”，服务质保时间被包含在与服务商品名称同等含义的自然日服务时长内）
+                                 </td>
+                             </tr>
+                             <tr>
+                                 <th>所需时间</th>
+                                 <td>1-7个自然日（用户全程需做配合），如按“单月购买、季度购买、半年购买、按年购买”，用户则可享有与服务商品名称同等含义的自然日服务时长，并可与我司从新签订服务保障协议。<span>例如：单月购买，代维护服务时长为30个自然日，可按照不限次数，不限服务类别，1单多个问题的服务标准执行。</span>
+                                 </td>
+                             </tr>
+                             <tr>
+                                 <th>价格</th>
+                                 <td>45元/台/次（服务完成之日起，质保7天，<span>1单多个问题。</span>）<br/>
+                                    单月购买价格：1000元/台（不限次数，不限服务类别，<span>1单多个问题。</span>）<br/>
+                                    季度购买价格：2800元/台（不限次数，不限服务类别，<span>1单多个问题。</span>）<br/>
+
+                                    半年购买价格：5400元/台（不限次数，不限服务类别，<span>1单多个问题。</span>）<br/>
+                                    按年购买价格：10000元/台（不限次数，不限服务类别，<span>1单多个问题。</span>）<br/>
+                                </td>
+                             </tr>
+                             <tr>
+                                 <th>服务说明</th>
+                                 <td> 
+                                        一．站点设置：
+                                        1. Memcache 安装 <br/>
+                                        2. 伪静态设置<br/>
+                                        3. 开启设置 gzip<br/>
+                                        4. 网站 301 跳转重定向设置<br/>
+                                        5. 检查并排除 php，asp.net 等环境故障<br/>
+                                        6. 设置 php mysql 环境<br/>
+                                        7. 配置站点.net 环境<br/>
+                                        8. 服务器重装后恢复网站配置，数据库配置<br/>
+                                        9. Curl 安装和开启<br/>
+                                        10. GD 库的安装和开启<br/>
+                                        11. Openssl 的安装和开启<br/>
+                                        12. Zend Optimizer 的安装<br/>
+                                        13. Webadmin 和 cpanel 控制面板的安装<br/>
+                                        14. Iis6.0，iis7.0 的安装<br/><br/><br/>
+
+                                        二．数据库设置：<br/>
+                                        1. 备份数据库<br/>
+                                        2. 导入数据库、还原数据库<br/>
+                                        3. 数据库不能启动等排查<br/>
+                                        4. 重置数据库密码<br/>
+                                        5. 安装，重装 mssql2000/2005（重装不含恢复数据库）<br/>
+                                        6. Mysql 恢复数据库<br/>
+                                        7. 周期备份站点程序、数据库等重要数据<br/>
+
+                                        三．系统设置：<br/>
+                                        1. 磁盘分区<br/>
+                                        2. 设置安全策略<br/>
+                                        3. 清理磁盘垃圾<br/>
+                                        4. 协助用户打开关闭端口<br/>
+                                        5. Cpu 一直跑满，内存资源耗尽排查<br/>
+                                        6. 协助用户查找站点错误（500,502,503）<br/>
+                                        7. 服务器安装组件 dll 注册<br/>
+                                        8. 协助用户修复系统漏洞<br/>
+                                        9. vncserver 的安装<br/>
+                                        10. Gcc，g++的安装<br/>
+                                        11. 根据程序要求设置程序安全策略<br/>
+                                        12. 包含程序漏洞、木马排除的服务内容<br/><br/><br/>
+
+                                        四．环境与软件安装排查：<br/>
+                                        1. Windows(IIS、PHP、MYSQL、MSSQL、.NET、Zend、FTP) 的安装<br/>
+                                        2. Linux(Nginx/Apache、MYSQL、PHP、Zend、Memcached、FTP)安装<br/>
+                                        3. 系统各项参数调优、WEB 环境优化<br/>
+                                        4. 实时监控服务器状态、故障第一时间人工排障、降低故障时间（非阿里云产品底层故障）<br/>
+                                        5. 7x24 小时程序、系统工程师快速响应服务，第一时间解决您的难题<br/>
+                                        6. 一些授权软件例如SQL server/serv-<br/>u/oracle等，需要您提供该商业授权,我司才能为您操作安装<br/>
+                                        五．解决方案提供：<br/>
+                                        1. 网站/应用流量、性能分析<br/>
+                                        2. 基于阿里云 ECS/RDS/OSS/Cache 提供解决方案<br/>
+                                        3. 低成本高可用架构部署执行<br/>
+                                        4. 针对大流量社区论坛提供阿里云架构解决方案<br/>
+                                        5. 利用多机负载、附件分离、缓存等实现高可用部署<br/>  
+                                 </td>
+                             </tr>
+                             <tr>
+                                 <th>注意事项</th>
+                                 <td>仅适用于购买了阿里云云服务器的客户，在本产品质保期间，只提供用户所订购的产品服务内容。
+
+                                    友情提醒：<span>按单次购买服务的用户，提交的每个服务订单只能处理上述问题的其中一个类别，如需解决多个问题，请遵循1单1个问题的原则购买。（按“单月购买、季度购买、半年购买、按年购买”的用户除外）</span>
+                                </td>
+                             </tr>
+                             <tr>
+                                 <th>售后服务</th>
+                                 <td>
+                                     旺旺：yunjiservice<br/>
+                                    邮箱：netcn@chinaccnet.cn<br/>
+                                    电话：400-806-0700
+                                 </td>
+                             </tr>
+                         </table>
+			</textarea>
+		</td>
+		</tr>
+		<tr>
+			<td class='first'>排序:</td>
+			<td><input type='text' name='sort' value='1'/></td>
+		</tr>
+		<tfoot>
+            <tr>
+                <td class='first'></td>
+                <td>
+                    <input class="btn btn-success" type="submit" value="保 存"/>
+                    <a class="btn btn-default" href="<{:U('index')}>">取 消</a>
+               </td> 
+           </tr>
+        </tfoot>
+    </table>
+</form>
+<include file="Common:footer"/>

@@ -1,0 +1,160 @@
+.input-mini {
+	width:30px;
+}
+.input-medium {
+	width:80px;
+}
+.input-big {
+	width:280px;
+}
+.input-long {
+	width : 400px;
+}
+.radio {
+	height:auto;
+}
+* {
+	margin:0;
+	padding:0;
+	font-size: 13px;
+	
+}
+
+a {
+	color:#3A66B0;
+	text-decoration:none;
+}
+a.btn{
+	font-size: 13px !important;
+}
+a:hover{
+	color : #670768;
+}
+img {
+	border:none;
+}
+body {
+	background:#080808;
+}
+#top {
+	width:100%;
+	height:52px;
+	background-color:#000;
+}
+#top a {
+	float: left;
+}
+#top .home {
+	float: right;
+	color:#3A66B0;
+	margin:20px 50px 0 0;
+}
+#top .home:hover {
+	color:#670768;
+}
+input {
+	border:1px solid #ccc;
+	min-height:16px;
+	line-height:16px;
+	padding:5px;
+	border-radius: 4px;
+}
+input.sort{
+	width:30px;
+}
+input.file{
+	border:none;
+	height:auto;
+}
+input.submit{
+	border:none;
+	cursor:pointer;
+	height:30px;
+	color:#fff;
+	padding:0 20px;
+	background:#43BFE3;
+	border-radius: 4px;
+}
+#main {
+	width:100%;
+	height:500px;
+	background: url('../Images/login_body.jpg') repeat-x;
+}
+#login {
+	width: 450px;
+	height: 300px;
+	margin: 0 auto;
+	display: none;
+	color:#444;
+}
+#login .user_logo {
+	width: 410px;
+	height: 32px;
+	line-height: 32px;
+	background:url('../Images/userbg.png') no-repeat;
+	padding:10px 10px 10px 30px;
+}
+#login .user_logo b {
+	background:url('../Images/userlogo.png') no-repeat left;
+	font-size: 20px;
+	text-indent: 38px;
+	display: block;
+}
+#login .login_form {
+	width:400px;
+	height: auto;
+	background-color:#f5f5f5;
+	padding:25px 25px 0 25px;
+}
+#login .login_form p {
+	width:400px;
+	padding-bottom: 10px;
+}
+#login .login_form p label {
+	display: block;
+	height:26px;
+	line-height: 26px;
+}
+#login .login_form .verify {
+	padding-top: 10px;
+	width:240px;
+}
+#login .login_form .verify span {
+	display:inline-block;
+	height:26px;
+	line-height: 26px;
+}
+#login .login_form .verify img {
+	cursor: pointer;
+	float: right;
+	_float:none;
+	margin-top:1px;
+}
+#login .login_form .login_btn {
+	text-align: center;
+	padding-bottom: 0;
+	margin-top: 25px;
+}
+.loginbg {
+	width : 80px;
+	height: 46px;
+	border: none;
+	cursor: pointer;
+	background: url(../Images/lgbtn.png) no-repeat 0 0;
+}
+.tologin {
+	background-position: 0 -46px;
+}
+/*CSS3 INPUT获取焦点时效果*/
+textarea:focus,
+select:focus,
+input[type="text"]:focus,
+input[type="password"]:focus {
+    border-color: rgba(82, 168, 236, 0.8);
+    outline: 0;
+    outline: thin dotted \9;
+    /* IE6-9 */
+    -webkit-box-shadow: inset 0 1px 1px rgba(0,0,0,.075), 0 0 8px rgba(82,168,236,.6);
+    -moz-box-shadow: inset 0 1px 1px rgba(0,0,0,.075), 0 0 8px rgba(82,168,236,.6);
+    box-shadow: inset 0 1px 1px rgba(0,0,0,.075), 0 0 8px rgba(82,168,236,.6);
+}

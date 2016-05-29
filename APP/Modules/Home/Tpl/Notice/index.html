@@ -1,0 +1,41 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+<head>
+    <title><{$stitle|makwebtitle}></title>
+ <include file='Common:com-header'/>
+    <link rel='stylesheet' href='__PUBLIC__/Css/notice.css' />  
+<body>
+    <!-- 顶部公共部分 -->
+    <include file='Common:home-header'/>
+    <!-- 顶部公共结束 -->
+    <div class='back'>
+        <img src="__ROOT__/Uploads/Goods/55d5951010a45.jpg">
+    </div>
+
+    <div class='body-content y-row'>
+        <include file='Common:notice-left'/>
+
+        <div class='right'>
+
+            <div class='right-list'>
+            <foreach name='data' item='v'>
+                <dl>
+                    <dt><a href="<{:U($href,array('id' => $v['id'],'pid' => $_GET['pid']))}>"><{$v.title}></a></dt>
+                    <dd>发表于<{$v.create_time|date='Y-m-d H:i:s',###}> 来源：<{$v.source}></dd>
+                    <dd><{$v.content|htmlspecialchars_decode=###|repacle_content=###}></dd>
+                </dl>
+            </foreach>
+            </div>
+            
+            <!-- 底部信息 -->
+            <div class='right-bottom'>
+                <p><{$fpage}></p>
+            </div>
+            <!-- 底部信息end -->
+        </div>
+    </div>
+
+
+    <include file='Common:bottom'/>
+</body>
+</html>

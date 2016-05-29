@@ -1,0 +1,51 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+<head>
+    <meta http-equiv="Content-Type" content="text/html;charset=UTF-8" />
+    <title>添加问题</title>
+    <link rel="stylesheet" href="__PUBLIC__/Css/common.css" />   
+    <script type="text/javascript" src='__PUBLIC__/Js/jquery-1.8.2.min.js'></script>
+    <script src='__PUBLIC__/Js/index.js' type="text/javascript"></script>
+    <script  type="text/javascript">
+    var problemDel='<{:U('problemDel')}>';
+    </script>
+    <!-- 调用百度文本编辑器 -->
+    <{$ueditor}>
+   
+</head>
+<body >
+	<form action='<{:U('problem')}>' method='post' >
+	<table class='table'>
+		 <tr>
+                <td colspan="2" class="td-left">
+                <authority>
+                	<a class="btn btn-add" href="<{:U('add')}>">添加问题</a>
+                </authority>
+                </td>
+                <td colspan="5" class="td-right">
+                	<div class="page-code"><{$fapge}></div>
+                </td>
+        </tr>
+		<tr>
+			<th>ID</th>
+			<th>标题</th>
+			<th>排序</th>
+			<th>操作</th>
+		</tr>
+		<foreach name='problem' item='v'>
+		<tr>
+			<td><{$v.id}></td>
+			<td><{$v.title}></td>
+			<td><input type='text' name='<{$v.id}>' value='<{$v.sort}>' /></td>
+			<td><a href="<{:U('update',array('id'=>$v['id']))}>">修改</a><a cid='<{$v.id}>' class='del'></a></td>
+			
+		</tr>
+	   </foreach>
+	   <tr>
+	   	<td colspan='4'><input type='submit'name='submit' class='submit' value='排序' /></td>
+	   </tr>
+		
+	</table>
+   </form>
+</body>
+</html>

@@ -1,0 +1,151 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+<head>
+  <include file='Common:p-meta'/>
+<title><{$stitle|makwebtitle}></title>
+  <link rel="stylesheet" href="__PUBLIC__/Css/info.css" />
+   <link rel="stylesheet" href="__PUBLIC__/Css/jsmssage.css" />
+  <js file='__PUBLIC__/Js/info.js'/>
+  <script type="text/javascript">
+		var setuserinfo = '<{:U('setinfo')}>';	
+</script>
+</head>
+<body>
+  <!--顶部头-->
+ <include file='Common:p-header'/>
+  <!--顶部头结束-->
+  
+  <!--头部公共部分-->
+  <include file='Common:nav'/>
+  <!--头部公共部分结束--> 
+  
+
+    <!--主题内容-->
+	<div class='main'>
+		<!--左半部分-->
+		<include file='Common:userinfo-left'/>
+		<!--左半部分结束-->
+         <form id="setinfo"  name='setinfo' method='post'>
+         <!-- 右半部分-->
+		<div class='main-right'>
+			<h3>基本资料</h3>
+			<div class='y-tip'>
+				<span>请完善以下信息，方便我们更好的为您服务</span>
+			</div>
+			<h3 class='no-border'>基本信息</h3>
+			<dl>
+				<dt><span>*</span>会员身份：</dt>
+				<dd><input type='radio' name='accountType' <if condition='$info["accountType"]'>
+                     checked='true'
+				</if> value='1'/>企业</dd>
+				<dd><input type='radio' name='accountType'<if condition='!$info["accountType"]'>
+                     checked='true'
+				</if>  value='0'/>个人</dd>
+			</dl>
+			<dl>
+				<dt><span>*</span>姓名/企业名称：</dt>
+				<dd class='truename'><input type='text' name='trueName' value='<{$info.trueName}>'/></dd>
+				
+			</dl>
+                        <dl>
+				<dt><span>*</span>身份证号/营业执照：</dt>
+				<dd class='truename'><input type='text' name='UIDx' value='<{$info.UIDx}>'/></dd>
+				
+			</dl>
+			<h3 class='no-border'>业务信息</h3>
+			<dl>
+				<dt><span>*</span>主要行业应用：</dt>
+				<dd >
+					<select name='work'>
+						 <option <if condition="$info['work'] eq '通讯社交'"> selected </if>        value='通讯社交'>通讯社交</option>
+						 <option <if condition="$info['work'] eq '在线音视频'"> selected </if>            value='在线音视频'>在线音视频</option>
+						 <option <if condition="$info['work'] eq '新闻阅读'"> selected </if>               value='新闻阅读'>新闻阅读</option>
+						 <option <if condition="$info['work'] eq '社区/论坛/博客'"> selected </if>          value='社区/论坛/博客'>社区/论坛/博客</option>
+						 <option <if condition="$info['work'] eq '地图/旅游出行'"> selected </if>           value='地图/旅游出行'>地图/旅游出行</option>
+						 <option <if condition="$info['work'] eq '教育学习'"> selected </if>             value='教育学习'>教育学习</option>
+						 <option <if condition="$info['work'] eq '健康医疗'"> selected </if>           value='健康医疗'>健康医疗</option>
+						 <option <if condition="$info['work'] eq '个人金融理财'"> selected </if>           value='个人金融理财'>个人金融理财</option>
+					
+					</select>
+				</dd>
+				
+			</dl>
+			<dl>
+				<dt><span>*</span>主营业务：</dt>
+				<dd class='biz'><input type='text' name='biz' value='<{$info.biz}>'/></dd>
+				
+			</dl>
+			<dl>
+				<dt>网址：</dt>
+				<dd class='biz'><input type='text' name='website' value='<{$info.website}>'/></dd>
+				
+			</dl>
+                        <dl>
+				<dt>备案号：</dt>
+				<dd class='biz'><input type='text' name='ICP' value='<{$info.ICP}>'/></dd>				
+			</dl>
+                           <dl>
+				<dt>文网文证：</dt>
+				<dd class='biz'><input type='text' name='WICP' value='<{$info.WICP}>'/></dd>
+				
+			</dl>
+                        
+			<h3 class='no-border'>个人联系信息</h3>
+                        <dl>
+				<dt><span>*</span>国家/地区：</dt>
+				<dd class='biz'><input type='text' name='country' value='<{$info.country}>'/></dd>
+				
+			</dl>
+                          <dl>
+				<dt><span>*</span>省份：</dt>
+				<dd class='biz'><input type='text' name='province' value='<{$info.province}>'/></dd>
+				
+			</dl>
+			<dl>
+				<dt><span>*</span>城市：</dt>
+				<dd class='biz'><input type='text' name='location' value='<{$info.location}>'/></dd>
+				
+			</dl>
+			<dl>
+				<dt>街道地址：</dt>
+				<dd class='biz'><input type='text' name='address' value='<{$info.address}>'/></dd>
+				
+			</dl>
+			<dl>
+				<dt>固定电话：</dt>
+				<dd class='biz'><input type='text' name='phone' value='<{$info.phone}>'/></dd>
+				
+			</dl>
+			<dl>
+				<dt>传真：</dt>
+				<dd class='biz'><input type='text' name='fax' value='<{$info.fax}>'/></dd>
+				
+			</dl>
+                        <dl>
+				<dt>QQ：</dt>
+				<dd class='biz'><input type='text' name='QQ' value='<{$info.QQ}>'/></dd>
+				
+			</dl>
+                        <dl>
+				<dt>邮政编码：</dt>
+				<dd class='biz'><input type='text' name='ZIPCode' value='<{$info.ZIPCode}>'/></dd>
+				
+			</dl>
+			<dl>
+				<dt>&nbsp;</dt>
+				<dd class='submit'><input type='button' value='保存'/></dd>
+				
+			</dl>
+		     
+			
+			
+		</div>
+	</div>
+	 <!--右半部分结束-->
+	</form>
+	
+
+	<include file='Common:bottom' />
+	<!--主题内容结束-->
+</body>
+</html>

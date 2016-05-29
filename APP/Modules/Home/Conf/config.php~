@@ -1,0 +1,25 @@
+<?php
+return array(
+   'TMPL_TEMPLATE_SUFFIX'=>'.html',//更改模板文件后缀名
+
+/*'TMPL_PARSE_STRING'=>array(           //添加自己的模板变量规则
+	'__CSS__'=>'/tpz'.__ROOT__.'/APP/Modules/Home/Public/Css',
+	'__JS__'=>'/tpz'.__ROOT__.'/APP/Modules/Home/Public/Js',
+	'__Public__'=>'/tpz'.__ROOT__.'/APP/Modules/Home/Public',
+),*/
+'APP_AUTOLOAD_PATH'=>'@.TagLib',//自定义标签的文件夹位置@代表当前应用
+'TAGLIB_BUILD_IN'=>'Cx,Hd',//Cx代表核心标签库是必须加的，Hd代表你自定义标签的文件名	
+'HTML_CACHE_ON'=>false,//开关静态模板缓存
+'HTML_CACHE_RULES'=>array(
+'Show:index'=>array('{:module}_{:action}__{id}',60),//键是要缓存的控制器
+),
+'LOAD_EXT_CONFIG'=>'system',//扩展配置文件
+//设置S函数的缓存方式，默认是文件缓存 
+'DATA_CACHE_TYPE'=>'Memcache',
+'MEMCACHE_HOST'=>'127.0.0.1',
+'MEMCACHE_PORT'=>11211,
+
+
+
+);
+

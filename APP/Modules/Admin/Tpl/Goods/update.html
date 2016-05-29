@@ -1,0 +1,89 @@
+<include file="Common:header"/>
+
+<form action='<{:U('save')}>' method='post' enctype='multipart/form-data'>
+	<table class="table table-condensed table-hover table-active">
+		 <thead>
+            <tr class="active">
+                <td colspan="2">
+                    <a class="btn btn-info" href="<{:U('index')}>">产品列表</a>
+                </td>
+            </tr>
+        </thead>
+		<tr>
+			<td>所属产品</td>
+			<td><{$cat}></td>
+		</tr>
+		<tr>
+			<td>是否审核</td>
+			<td><input type='radio' <if condition="$goods['goodstype'] eq 0">checked</if> name='goodstype' value='0'/>否<input type='radio' <if condition="$goods['goodstype'] eq 1">checked</if>  name='goodstype' value='1'/>是</td>
+		</tr>
+		<tr>
+			<td>产品名称</td>
+			<td><input type='text' name='goods' value='<{$goods.goods}>' /></td>
+		</tr>
+		<tr>
+			<td>表名</td>
+			<td><input type='text' name='table_name' value='<{$goods.table_name}>' /></td>
+		</tr>
+		<tr>
+			<td>是否上架</td>
+			<td><input type='radio' checked name='grounding' value='0'/>否<input type='radio' checked name='grounding' value='1'/>是</td>
+		</tr>
+		<tr>
+			<td>产品LOGO</td>
+			<td><input type='file' class='file' name='img' /></td>
+		</tr>		
+		<tr>
+			<td>产品介绍图</td>
+			<td><input type='file' class='file' name='introduction_img' /></td>
+		</tr>	
+		<tr>
+			<td>
+				<input type='hidden' name='id' value='<{$goods.id}>'/>
+				<input class="btn btn-success" type="submit" value="保 存"/>
+		        <a class="btn btn-default" href="<{:U('index')}>">取 消</a>
+			</td>
+			
+		</tr>
+
+	</table>
+</form>
+
+<!-- 产品属性部分 -->
+<foreach name='attr' item='v'>
+<form action='<{:U('saveAttr')}>' method='post'>
+<table class="table table-condensed table-hover table-active">
+	<tr>
+		<th colspan='2'><{$v.attr}></th>
+	</tr>
+	<tr>
+		<td>属性名称</td>
+		<td><input type='text' name='attr' value='<{$v.attr}>' /></td>
+	</tr>
+	<tr>
+		<td>属性内容</td>
+		<td><textarea style='width:800px;height:260px;' name='content'><{$v.content}></textarea></td>
+	</tr>
+	<tr>
+		<td>是否为标题</td>
+		<td><input type='radio' <if condition="$v['istitle']">checked</if> name='istitle' value='1' />是<input type='radio' <if condition="!$v['istitle']">checked</if>  name='istitle' value='0' />否</td>
+	</tr>
+	<tr>
+		<td>排序</td>
+		<td><input type='text' name='sort' value='<{$v.sort}>'/></td>
+	</tr>
+	<tr>
+		<td>
+			<input type='hidden' name='id' value='<{$v.id}>' />
+			<input class="btn btn-success" type="submit" value="保 存"/>
+	        <a class="btn btn-default" href="<{:U('index')}>">取 消</a>
+		</td>
+		
+	</tr>
+
+</table>
+</form>
+<!-- 产品属性结束 -->
+</foreach>
+	
+<include file="Common:footer"/>

@@ -1,0 +1,93 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+<head>
+  <meta http-equiv="Content-Type" content="text/html;charset=UTF-8" />
+<title><{$stitle|makwebtitle}></title>
+   <link rel='stylesheet' href='__PUBLIC__/Css/userinfo-left.css' />
+  <link rel="stylesheet" href="__PUBLIC__/Css/contacter.css" />
+  <link rel='stylesheet' href='__PUBLIC__/Css/max-header.css' />	
+  <link rel='stylesheet' href='__PUBLIC__/Css/nav.css' />
+  <link rel='stylesheet' href='__PUBLIC__/Css/bottom.css' />
+  <js file='__PUBLIC__/Js/jquery-1.7.2.min.js'/>
+  <js file='__PUBLIC__/Js/nav.js'/>
+  <js file='__PUBLIC__/Js/user.js'/>
+  <js file='__PUBLIC__/Js/bottom.js'/>
+  <script type="text/javascript">
+    var setContacter='<{:U('setContacter')}>';
+    var deleteContacter='<{:U('deleteContacter')}>';
+
+  </script>
+
+  
+</head>
+<body>
+  <!--顶部头-->
+ <include file='Common:p-header'/>
+  <!--顶部头结束-->
+  
+  <!--头部公共部分-->
+  <include file='Common:nav'/>
+  <!--头部公共部分结束--> 
+  
+
+    <!--主题内容-->
+	<div class='main'>
+		<!--左半部分-->
+		<include file='Common:userinfo-left'/>
+		<!--左半部分结束-->
+        
+        <!--右半部分-->
+		<div class='main-right'>
+			<h3>联系方式</h3>
+			<table >
+				<tr class='one'>
+					<th>姓名</th>
+					<th>邮箱</th>
+					<th>手机</th>
+					<th>职位</th>
+					<th>操作</th>
+
+				</tr>
+				<foreach name='contacter' item='v'>
+				<tr>
+					<td class='info'><{$v.name}></td>
+					<td class='info'><{$v.email}></td>
+					<td class='info'><{$v.phone}></td>
+					<td class='info'><{$v.position}></td>
+					<td><a class='save' style='cursor:pointer;margin-right:10px;' cid='<{$v.id}>'>修改</a><a class='delete-contacter' style='cursor:pointer;' cid='<{$v.id}>'>删除</a></td>
+
+				</tr>
+			    </foreach>
+
+				<tr class="tbspacer">
+                    <td colspan="5">&nbsp;</td>
+                </tr>
+                <tr>
+					<td class='info'><input type='text' name='username' placeholder='姓名' value=''/></td>
+					<td class='info'> <input type='text' name='email' placeholder='邮箱' value=''/></td>
+					<td class='info'><input type='text' name='phone' placeholder='手机' value=''/></td>
+					<td class='info'>
+						<select name='position'>
+							<option value="">请选择职位</option>
+                            <option value="技术负责人">技术负责人</option>
+                            <option value="运维负责人">运维负责人</option>
+                            <option value="项目负责人">项目负责人</option>
+                            <option value="财务负责人">财务负责人</option>
+                            <option value="CEO">CEO</option>
+                            <option value="其它">其它</option>
+						</select>
+
+					</td>
+					<td><input style='cursor:pointer;' type='button' class='add-contacter' value='添加' /></td>
+
+				</tr>
+			</table>
+			
+	</div>
+	 <!--右半部分结束-->
+	
+
+	<include file='Common:bottom' />
+	<!--主题内容结束-->
+</body>
+</html>

@@ -1,0 +1,177 @@
+div.uc-content{
+	margin-top:20px;
+	height:auto;
+	width:989px;
+
+}
+div.uc-content div.uc-user{
+	width:100%;
+	border:1px solid #ccc;
+	padding:5px;
+	height:97px;
+	clear:both;
+	font-size:14px;
+    margin-bottom:20px;
+
+}
+div.uc-content div.uc-user a{
+	font-size:14px;
+}
+div.uc-content div.uc-user div.uc-userface{
+	float:left;
+}
+div.uc-content div.uc-user div.uc-userinfo{
+	float:left;
+	height:100%;
+	width:60%;
+	padding-left:15px;
+	line-height:48px;
+
+}
+div.uc-content div.uc-user div.uc-userinfo div.uc-top{
+	padding-left:15px;
+	height:50%;
+	width:100%;
+	border-bottom:1px dashed #ccc;
+
+}
+div.uc-content div.uc-user div.uc-userinfo .img{
+    display:inline-block;
+	width:30px;
+}
+div.uc-content div.uc-user div.uc-userinfo div.uc-top label.telephone{
+	
+	background:url('../Images/telephone.png') no-repeat left center;
+}
+div.uc-content div.uc-user div.uc-userinfo div.uc-top label.shiming{
+	
+	background:url('../Images/shiming.png') no-repeat left center;
+}
+div.uc-content div.uc-user div.uc-userinfo div.uc-bottom{
+	height:50%;
+	padding-left:15px;
+	width:100%;
+	font-size:12px;
+}
+div.uc-content div.uc-user div.uc-userinfo div.uc-bottom span{
+	margin:0 10px;
+}
+div.uc-content div.uc-user div.uc-userinfo div.uc-bottom span.niwen{
+	width:15px;
+	background:url('../Images/niwen.png') no-repeat left center;
+	margin:0 1px;
+}
+div.uc-content div.uc-user div.uc-userinfo div.uc-bottom span.xufei{
+	
+	background:url('../Images/xufei.png') no-repeat left center;
+	margin:0 1px;
+
+}
+div.uc-content div.uc-user div.uc-userinfo div.uc-bottom span.zhifu{
+	
+	background:url('../Images/zhifu.png') no-repeat left center;
+	margin:0 1px;
+
+}
+div.uc-content div.uc-user  div.uc-right{
+	float:right;
+	position:relative;
+	top:70px;
+	font-size:12px;
+	margin-right:10px;
+
+}
+div.uc-content div.uc-account{
+	height:203px;
+	margin-bottom:20px;
+	border:1px solid #ccc;
+
+
+}
+div.uc-content div.uc-account div.uc-account-info{
+	padding:16px;
+	width:71.5%;
+	border-bottom:1px solid #ccc;
+	float:left;
+	overflow:hidden;	
+}
+div.uc-content div.uc-account div.uc-account-info div.uc-bottom{
+	line-height:50px;
+	height:50px;
+}
+div.uc-content div.uc-account div.uc-account-info a.recharge{
+	float:left;
+	margin-left:20px;
+	position:relative;
+	top:8px;
+}
+div.uc-content div.uc-account div.uc-account-info a button{
+	border:none;
+	display:inline-block;
+	width:65px;
+	background:#00A2CA;
+	color:#fff;
+	height:30px;
+	border-radius:4px;
+}
+div.uc-content div.uc-account div.uc-account-info span{
+	float:left;
+}
+div.uc-content div.uc-account div.uc-account-info span.money{
+	color:#FF945C;
+	font-size:22px;
+	font-weight:700;
+	position:relative;
+	top:5px;
+	
+}
+div.uc-content div.uc-account div.uc-account-info span.blance{
+	font-size:40px;
+	margin-left:10px;
+	color:#FF945C;
+}
+div.uc-content div.uc-account div.uc-account-info ul{
+	float:left;
+}
+div.uc-content div.uc-account div.uc-account-info ul li{
+	float:left;
+	padding:0 10px;
+}
+div.uc-content  div.uc-app-list{
+	height:94px;
+	line-height:94px;
+	text-align:center;
+	width:75%;
+	font-size:14px;
+	float:left;
+}
+div.uc-content  div.uc-app-list span.app-title{
+	background:url('../Images/i.png')no-repeat left center;
+	padding-left:25px;
+}
+div.uc-content  div.uc-user-meg{
+	height:204px;
+	width:24.7%;
+	border-left:1px solid #ccc;
+	overflow:hidden;
+	float:right;
+}
+div.uc-content  div.uc-user-meg dl{
+	padding:13px 0 10px 14px;
+	width:100%;
+	height:22%;
+
+
+}
+div.uc-content  div.uc-user-meg dl dt{
+    float:left;
+    font-size:39px;
+    color:#A7A7A7;
+    margin-right:15px;
+    font-weight:700;
+
+}
+
+div.uc-content  div.uc-user-meg dl.border{
+	border-bottom:1px solid #ccc;
+}

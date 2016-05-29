@@ -1,0 +1,28 @@
+<head>
+    <meta http-equiv="Content-Type" content="text/html;charset=UTF-8" />
+    <title>用户组列表</title>
+    <link rel="stylesheet" href="__PUBLIC__/Css/node.css" />
+   
+
+    
+</head>
+<body>
+	<foreach name='node' item='v'>
+		<h3><{$v.name}>[<{$v.remark}>]<a href="<{:U('addNode',array('pid'=>$v['id'],'level'=>2))}>">(添加控制器)</a><a href="<{:U('updateNode',array('id'=>$v['id'],'pid'=>$v['pid'],'level'=>$v['level']))}>">修改</a><a  onclick='return confirm("确定删除?");' href="<{:U('delNode',array('node_id'=>$v['id']))}>">删除</a></h3>
+		
+
+		<foreach name='v.node' item='data'>
+			<dl>
+			<dt><{$data.name}>[<{$data.remark}>]<a href="<{:U('addNode',array('pid'=>$data['id'],'level'=>3))}>">(添加方法)</a><a href="<{:U('updateNode',array('id'=>$data['id'],'pid'=>$data['pid'],'level'=>$data['level']))}>">修改</a><a onclick='return confirm("确定删除?");' href="<{:U('delNode',array('node_id'=>$data['id']))}>">删除</a></dt>
+			<foreach name='data.node' item='values'>
+				<dd><span><{$values.name}>[<{$values.remark}>]</span><a href="<{:U('updateNode',array('id'=>$values['id'],'pid'=>$values['pid'],'level'=>$values['level']))}>">修改</a><a onclick='return confirm("确定删除?");' href="<{:U('delNode',array('node_id'=>$values['id']))}>">删除</a></dd>
+			</foreach>
+			</dl>
+		</foreach>
+
+		
+	</foreach>
+
+
+</body>
+</html>

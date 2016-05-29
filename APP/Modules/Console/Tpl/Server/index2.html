@@ -1,0 +1,114 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+<head>
+	<meta http-equiv="Content-Type" content="text/html;charset=UTF-8" />
+	<title></title>
+	<link href="__ROOT__/Public/Bootstrap/css/bootstrap.min.css" rel="stylesheet">
+	<link rel="stylesheet" href="__PUBLIC__/Css/header.css" />
+	<link rel="stylesheet" href="__PUBLIC__/Css/left.css" /> 	
+	<link rel="stylesheet" href="__PUBLIC__/Css/server.css" />
+	<!--[if lt IE 9]>
+	    <script src="//cdn.bootcss.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      	<script src="//cdn.bootcss.com/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->   
+    <script src="//cdn.bootcss.com/jquery/1.11.3/jquery.min.js"></script>    
+	<script src="__ROOT__/Public/Bootstrap/js/bootstrap.min.js"></script>
+	<script type="text/javascript" src='__PUBLIC__/Js/left.js'></script>
+	<script type="text/javascript" src='__PUBLIC__/Js/server_index.js'></script>
+    <script type="text/javascript">
+    	var data  = [<{$data|implode=',',###}>];
+    	var time  = '<{$time}>';    	
+    	var pointInterval = 86400*1000;
+    	var requestAction = '<{:U('chart_data')}>';
+    	var requestType = 1;
+		var timeType	= 2;
+		var dimensions_value = '<{$living.0.instance_id}>';
+	</script>
+</head>
+<body>
+	<!-- ========头部========= -->
+	<include file='Common:header'/>
+	<!-- ==========头部 end=========== -->
+
+	<!-- =========主体内容======= -->
+	<div id='main'>
+		<!-- 左半部分 -->
+		<include file='Common:left'/>
+		
+		<!-- 右半部分 -->
+		<div class='main-right'>
+			<div class='position'>
+				<span class='glyphicon glyphicon-home'></span> <a href="">会员中心</a>/ <a href="">云服务器</a>  <a href=""><span class='glyphicon glyphicon-refresh'></span></a>
+			</div>
+
+			<div class='living'>
+				<!-- 导航 -->
+				<include file='Common:server_nav'/>
+				
+				<div class='content'>
+					<dl>
+						<dt>概览</dt>
+						<dd>全部实例：<{$sum}>	</dd>
+						<dd>运行中：<{$run}></dd>
+						<dd>即将过期：<{$expired}>	</dd>
+					</dl>
+					<a href=""><button type="button" class="btn btn-info">续费管理</button></a>
+				</div>
+			</div>
+	
+			<div class='info'>
+				<!-- 选择参数 -->
+				<div class='detail'>
+					<div class="dropdown">
+						<button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+						    	<{$living.0.instance_name}>
+						 	<span class="caret"></span>
+						</button>
+						<ul class="dropdown-menu host" aria-labelledby="dropdownMenu1">
+							<foreach name='living' item='v'>
+						    	<li><a dimensions_value='<{$v.instance_id}>' href="#"><{$v.instance_name}></a></li>
+						    </foreach>
+						    
+						</ul>
+					</div>	
+
+					<div class="btn-group requestType" role="group" aria-label="...">
+					  	<button value='1' type='button' class="btn btn-primary">CPU使用情况</button>
+					  	<button value='2' type='button' class="btn btn-default">内存使用情况</button>
+					  	<button value='3' type='button' class="btn btn-default">流量使用情况</button>
+					  	<button value='4' type='button' class="btn btn-default">磁盘使用情况</button>
+
+					
+					</div>
+
+					<div class="btn-group btn-group2 timeType" role="group" aria-label="...">
+					  	<button value='1' type='button' class="btn btn-default">实时</button>
+					  	<button value='2' type='button' class="btn btn-primary">7天</button>
+					  	<button value='3' type='button' class="btn btn-default">15天</button>
+					  	<button value='4' type='button' class="btn btn-default">30天</button>
+
+					 
+					</div>
+				</div>
+
+				<!-- 图表 -->
+				<div class='chart'>
+					<script src="__PUBLIC__/Js/highcharts.js"></script>
+					<script src="__PUBLIC__/Js/exporting.js"></script>
+
+					<div id="container" style="min-width: 310px; height: 400px; margin: 0 auto"></div>
+				</div>
+			</div>
+		
+			<p class='more-detail'><span class='glyphicon glyphicon-menu-down'></span> 数据明细</p>
+		</div>	
+	</div>
+   <!-- =========主体内容 end======= -->
+
+   <!-- 提示框 -->
+   <div id='position'>
+   		加载中...
+   </div>
+
+</body>
+

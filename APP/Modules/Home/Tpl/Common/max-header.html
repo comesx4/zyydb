@@ -1,0 +1,53 @@
+<!-- 最顶部的公共部分 -->
+<div class="ay-global-topbar">
+    <div class="y-topbar-row">
+      <div class='left'>
+             <if condition='empty($_SESSION["username"])'>
+              欢迎上云，<a href='<{:U('Login/index')}>'>请登录&nbsp;|&nbsp;
+              <else/>
+                <span class='name showdiv'><{$Think.session.username}>
+                    <userinfo>
+                    <div class='userinfo div'>
+                        <dl>
+                            <dt>
+                              <a href="<{:U('User/index')}>">
+                              <if condition="$user['face'] neq ''">
+                                 <img width='40' src='__ROOT__/Uploads/Face/<{$user.face}>'/>
+                                <else/>
+                              <img src='__PUBLIC__/Images/face.png'/>
+                              </if>
+                            </a>
+                            </dt>
+                            <dd style='color:#FFCC00;'>￥<{$user['money']}></dd>
+                            <dd><a href='<{:U('User/recharge')}>'>充值</a> </dd>
+                        </dl>
+                        <ul>
+                            <li>续费</li>
+                            <li>消息中心</li>
+                            <li>可用代金劵</li>
+                            <li>未支付订单</li>
+                            <li>备案系统</li>
+                            <li>提交工单</li>
+                            <li><a href='<{:U('Login/loginOut')}>'>退出</a></li>
+                        </ul>
+
+                    </div>
+                  </userinfo>
+
+                </span>
+              </if>
+                <a href="<{:U('/Home/index')}>">返回首页</a>
+               
+            </div>
+      
+      <div class='right'>
+       
+        <ul>
+          <li>|&nbsp;<a href="<{:U('User/index')}>">用户中心</a></li>
+         <!-- <li>|&nbsp;<a target='_blank' href="<{:U('console/Server/index')}>">管理控制台</a></li>-->          
+          <li>&nbsp;<a href="<{:U('Help/index')}>">帮助中心</a></li> 
+         <!--  <li style='background:#008AB0 url("__PUBLIC__/Images/fangda.png") no-repeat left 45%;cursor:pointer;width:9%;float:left;'>&nbsp;</li> -->
+        </ul>
+      </div>
+    </div>
+  </div>

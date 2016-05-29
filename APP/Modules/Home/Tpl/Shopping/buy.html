@@ -1,0 +1,73 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+<head>
+  <meta http-equiv="Content-Type" content="text/html;charset=UTF-8" />
+ <title><{$stitle|makwebtitle}></title>
+  <link rel='stylesheet' href='__PUBLIC__/Css/bottom.css' />
+  <link rel='stylesheet' href='__PUBLIC__/Css/p-header.css' />
+  <link rel='stylesheet' href='__PUBLIC__/Css/max-header.css' />
+  <link rel='stylesheet' href='__PUBLIC__/Css/payWay.css' />
+  <link rel='stylesheet' href='__PUBLIC__/Css/shopping-buy.css' />
+  <js file='__PUBLIC__/Js/jquery-1.7.2.min.js'/>
+  <js file='__PUBLIC__/Js/nav.js'/> 
+  <js file='__PUBLIC__/Js/bottom.js'/>  
+  
+</head>
+<body>
+
+<!--顶部头-->
+<include file='Common:p-header'/>
+	<!--顶部头结束-->
+
+  <!-- 产品名称 -->
+  <div class="y-page-title">
+    <div class='y-row '>
+           <div class='title'>
+               <h2>支付成功</h2>
+               <span>关联产品：<a href="">独立云磁盘</a> <span>其他产品</span></span>
+           </div>
+
+     </div>
+  </div>
+  <!-- 产品名称结束 -->
+  
+  <!-- 主体内容 -->
+  <div id='main'>
+  	  <div id='main-content' >
+        <div class='y-how'>
+  	  	<div id='fix' >
+      	  	<div class="uc-process">
+      	  		<ul>
+      	  			<li class='finish'>确认订单</li>
+      	  			<li class='finish'>支付</li>
+      	  			<li class='down'>支付成功</li>
+      	  		</ul>
+      	  	</div>
+       
+            <div class='fix-top'>
+                <h3>交易成功! <span>本次支付金额￥<{$pinfo.price}></span></h3>
+          
+                 <div class='buy-info'>
+                    <dl class='success'>
+                        <dt>交易成功！</dt>
+                        <dd><{$pinfo.info}></dd>                        
+                        <dd>本次交易成功，您还可以：<a href="<{$href}>">查看产品</button>&nbsp;&nbsp;<a href="<{:U('order/index')}>">查看订单</a></dd>
+                    </dl>
+                 </div>
+                  
+            </div>
+      
+        </div>
+        </form>
+  	</div>
+  </div>
+  <!-- 主体内容结束 -->
+  <div style='display:none;' id='quereng'> 
+    <div class='q-header'><h1>支付情况</h1></div>
+    <div class='boo'><button class='shua'>支付成功</button><button class='shua'>遇到问题？</button></div>
+  </div>
+
+  <include file='Common:bottom'/>
+
+</body>
+</html>	

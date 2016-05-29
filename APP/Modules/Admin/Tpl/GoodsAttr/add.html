@@ -1,0 +1,47 @@
+<include file="Common:header"/>
+	 <script type="text/javascript" src='__PUBLIC__/Js/addAttr.js'></script>
+    <script>
+    	var getChange='<{:U('getChange')}>';
+    </script>
+
+<form action='<{:U('insert')}>' method='post'>
+    <table class="table table-condensed table-hover table-active">
+        <thead>
+            <tr class="active">
+                <td colspan="2">
+                    <a class="btn btn-info" href="<{:U('index')}>">属性列表</a>
+                </td>
+            </tr>
+        </thead>
+		<tr>
+			<td class='first'>所属产品</td>
+			<td><{$goods}></td>
+		</tr>
+		<tr>
+			<td class='first'>属性名称</td>
+			<td><input type='text' name='attr' />&nbsp;&nbsp;选择一个属性：<{$css}></td>
+		</tr>
+		<tr>
+			<td class='first'>属性内容</td>
+			<td><textarea style='width:800px;height:300px;' name='content'></textarea></td>
+		</tr>
+		<tr>
+			<td class='first'>是否为标题</td>
+			<td><input type='radio' name='istitle' value='1' />是<input type='radio' checked name='istitle' value='0' />否</td>
+		</tr>
+		<tr>
+			<td class='first'>排序</td>
+			<td><input type='text' name='sort' value='1'/></td>
+		</tr>
+		 <tfoot>
+            <tr>
+                <td class='first'></td>
+                <td>
+                	<input class="btn btn-success" type="submit" value="保 存"/>
+                    <a class="btn btn-default" href="<{:U('index')}>">取 消</a>
+               </td> 
+           </tr>
+        </tfoot>
+    </table>
+</form>
+<include file="Common:footer"/>

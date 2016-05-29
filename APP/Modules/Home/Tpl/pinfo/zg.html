@@ -1,0 +1,147 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+<head>
+    <title><{$stitle|makwebtitle}></title>
+    <include file='Common:com-header'/>
+    <link rel="stylesheet" href="__PUBLIC__/Css/about.css"/>
+    <link rel="stylesheet" href="__PUBLIC__/Css/zg.css"/>
+    <style type="text/css">
+        .htype a {
+            width: 162px;
+        }
+
+        .site_list ul {
+            height: 652px;
+            margin-top: -1px;
+        }
+
+        .site_list ul li {
+            width: 285px;
+            height: 623px
+        }
+    </style>
+    <script type="text/javascript">
+        function rashow(n){
+            
+            var allmenu = document.getElementsByClassName("con_tab");
+            for (var i = 0; i < allmenu.length; i++) {
+                allmenu[i].style.display = "none";
+            }
+            
+            var menu = document.getElementById("con_tab_" + n);
+            if (null != menu)
+                menu.style.display = "block";
+            
+            var alltab = document.getElementsByClassName("tab");
+            for (var i = 0; i < alltab.length; i++) {
+                alltab[i].className = "tab";   
+            }
+            
+            var tab = document.getElementById("tab_" + n);
+            if (null != tab)
+                tab.className = "tab current";   
+        }
+    </script>
+</head>
+<body>
+<div id='body'>
+    <!-- 顶部公共部分 -->
+    <include file='Common:home-header'/>
+    <!-- 顶部公共结束 -->
+
+    <div id='slides'>
+        <div style="background-color:#fff6dd;padding:0;text-align: center;" class="tab-pannel">
+            <img src="__ROOT__/Uploads/Logo/<{$Think.config.img2}>">
+        </div>
+    </div>
+
+
+    <div class='body-content'>
+
+        <div class="y-row content-wrapper">
+            <include file='Common:host-left'/>
+            <div class='content-right'>
+                <div class='nav-wei'>
+                    <ul>
+                        <li><a target='_self' href="<{:U('/index/index')}>">首页</a></li>
+                        <li><a target='_self' href="<{:U('/pinfo/zg')}>">整柜租用托管</a></li>
+                    </ul>
+                </div>
+                <div class='right-main'>
+                    <div class='fiexd'>
+                        <div class="clear"></div>
+                        <div class="w_1200">
+                            <h3 class="paoti3">整柜服务器租用</h3>
+                        </div>
+                        <div class="all_100">
+                            <div class="w_1200 jg_nav">
+                                <div class="jg_nav">
+                                    <ul class="tg_nav tg_nav2">
+                                        <?php $cur_set = false;?>
+                                        <foreach name="city" item="c">
+                                            <li onclick="rashow(<{$c.id}>);" id="tab_<{$c.id}>" <?php if (!$cur_set){echo 'class="tab current"'; $cur_set=true;} else {echo 'class="tab"';}?>>
+                                                <a href="javascript:void(0);"><{$c.city}></a>
+                                            </li>
+                                        </foreach>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="clear"></div>
+                        <?php $cur_set = false;?>
+                        <foreach name="city" item="c">
+                            <ul class="con_tab" id="con_tab_<{$c.id}>" style="display: <?php if (!$cur_set){echo 'block'; $cur_set=true;} else {echo 'none';}?>">
+                                <foreach name="data" item="d">
+                                    <if condition="$c.id eq $d.location ">
+                                    <li>
+                                        <div class="w_1200 zy_con">
+                                            <ul>
+                                                <li>
+                                                    <div class="zy_conl">
+                                                        <p><{$d.name}></p>
+                                                        <img src="__PUBLIC__/Images/pinfo/zg.png" class="ser_img"
+                                                             alt="服务器租用">
+
+                                                    </div>
+                                                    <div class="zy_conc">
+
+                                                        <p>CPU：<{$d.cpu}></p>
+                                                        <p>内存：<{$d.memory}></p>
+                                                        <p>硬盘：<{$d.disk}></p>
+                                                        <p>带宽：<{$d.band}></p>
+                                                        <p>规格：<{$d.size}></p>
+                                                    </div>
+                                                    <div class="zy_cond">
+                                                        <p>流量：BGP百兆端口流量费：<span style="float:right"><{$d.flow_bgp_port}>元/月</span></p>
+                                                        <p style="margin-left:42px">BGP流量费：<span style="float:right"><{$d.flow_bgp}>元/月</span></p>
+                                                        <p style="margin-left:42px">静态百兆端口流量费：<span style="float:right"><{$d.flow_static_port}>元/月<span></p>
+                                                        <p style="margin-left:42px">静态流量费：<span style="float:right"><{$d.flow_static}>元/月<span></p>
+                                                        <p>价格：<span style="float:right;color:red;"><{$d.price}>元/月</span></p>
+                                                    </div>
+                                                    <div class="zy_conr">
+                                                        <!-- <p>年付：<span>4590</span>元起</p> -->
+                                                    </div>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                        <div class="clear"></div>
+                                    </li>
+                                    </if>
+                                </foreach>
+                            </ul>
+                        </foreach>
+                        <div style="widht:100%;height:80px;"></div>
+                        <div class="clear"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!--底部版权开始-->
+<include file='Common:bottom'/>
+<!--底部版权结束-->
+</body>
+</html>
+

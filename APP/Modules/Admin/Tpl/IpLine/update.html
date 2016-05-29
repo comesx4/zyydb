@@ -1,0 +1,62 @@
+<include file="Common:header"/>
+
+<form action='<{:U('save')}>' method='post'>
+    <table class="table table-condensed table-hover table-active">
+        <thead>
+            <tr class="active">
+                <td colspan="2">
+                    <a class="btn btn-info" href="<{:U('index')}>">IP线路列表</a>
+                </td>
+            </tr>
+        </thead>
+        
+        <tbody>
+            <tr>
+                <td class='first'>机房区域：</td>
+                <td><{$region}></td>
+            </tr>
+
+            <tr>
+                <td class='first'>线路名称：</td>
+                <td><input type="text" name="line_name" maxlength="32" placeholder="线路名称" value='<{$data.line_name}>'/></td>
+            </tr>
+			<tr>
+                <td class='first'>线路唯一标识：</td>
+                <td><input type="text" name="line_code" maxlength="32" placeholder="线路唯一标识" value='<{$data.line_code}>'/></td>
+            </tr>
+			<tr>
+                <td class='first'>线路类型：</td>
+                <td>
+                    <input type="radio" <if condition="$data['line_type'] eq 1">checked</if> name="line_type" value="1" />云虚机 
+                    <input type="radio" <if condition="$data['line_type'] eq 2">checked</if>  name="line_type"  value="2" /> 云服务器 
+                    <input type="radio" <if condition="$data['line_type'] eq 3">checked</if>  name="line_type" value="3" /> 共用
+                </td>
+            </tr>
+			<tr>
+                <td class='first'>状态：</td>
+                <td>
+                    <input type="radio" <if condition="$data['status'] eq 1">checked</if>  name="status" value="1" />开启 
+                    <input type="radio" <if condition="$data['status'] eq 0">checked</if>  name="status" value="0" />关闭
+                </td>
+            </tr>
+            <tr>
+                <td class='first'>备注：</td>
+                <td>
+                    <textarea class="command" name="remark" maxlength="2048" placeholder=""><{$data.remark}></textarea>
+                </td>
+            </tr>
+        </tbody>
+                    
+        <tfoot>
+            <tr>
+                <td class='first'></td>
+                <td>
+                    <input type='hidden' name='id' value='<{$data.id}>'/>
+                    <input class="btn btn-success" type="submit" value="保 存"/>
+                    <a class="btn btn-default" href="<{:U('index')}>">取 消</a>
+               </td> 
+           </tr>
+        </tfoot>
+    </table>
+</form>
+<include file="Common:footer"/>

@@ -1,0 +1,39 @@
+<include file="Common:header"/>
+    <{$content}>
+	<script type="text/javascript" src='__PUBLIC__/Js/help.js'></script>
+    <script type="text/javascript">
+    var get_info='<{:U('get_info')}>';
+    </script>
+<form action='<{:U('insert')}>' method='post'>
+	<table class="table table-condensed table-hover table-active">
+        <thead>
+            <tr class="active">
+                <td colspan="2">
+                    <a class="btn btn-info" href="<{:U('index')}>">问题列表</a>
+                </td>
+            </tr>
+        </thead>
+		<tr>
+			<td class='first'>所属分类:</td>
+			<td class='addCat'> <{$cat}></td>
+		</tr>
+		<tr>
+			<td class='first'>标题:</td>
+			<td><input type='text' name='title' value=''/></td>
+		</tr>
+		<tr class='nname'>
+			<td class='first'>答案:</td>
+			<td><textarea name='anwer' id='content'></textarea></td>
+		</tr>				
+		  <tfoot>
+            <tr>
+                <td class='first'></td>
+                <td>
+                	<input class="btn btn-success" type="submit" value="保 存"/>
+                    <a class="btn btn-default" href="<{:U('index')}>">取 消</a>
+               </td> 
+           </tr>
+        </tfoot>
+    </table>
+</form>
+<include file="Common:footer"/>

@@ -1,0 +1,18 @@
+/*
+常用的公公样式定义
+*/
+/* 
+    Created on : 2016-3-9, 10:39:19
+    Author     : 范利丰
+*/
+
+span.error{
+	background : url(../Images/unchecked.gif) no-repeat 0 0;
+	padding-left: 16px;
+	margin-left: 8px;
+	color: #f00;
+}
+span.succ{
+	background : url(../Images/checked.gif) no-repeat 0 0;
+	margin-left: 8px;
+}

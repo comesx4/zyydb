@@ -1,0 +1,110 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+<head>
+  <meta http-equiv="Content-Type" content="text/html;charset=UTF-8" />
+  <title><{:makwebtitle()}></title>
+  <link rel='stylesheet' href='__PUBLIC__/Css/bottom.css' />
+  <link rel='stylesheet' href='__PUBLIC__/Css/max-header.css' />
+  <link rel='stylesheet' href='__PUBLIC__/Css/help-header.css' />
+  <link rel='stylesheet' href='__PUBLIC__/Css/help-left.css' />
+  <link rel='stylesheet' href='__PUBLIC__/Css/help-nav.css' />
+  <js file='__PUBLIC__/Js/jquery-1.7.2.min.js'/>
+  <js file='__PUBLIC__/Js/nav.js'/> 
+  <js file='__PUBLIC__/Js/bottom.js'/> 
+  <js file='__PUBLIC__/Js/help-left.js'/>
+  
+  <script type="text/javascript">
+ 
+      $(function(){
+        $('.button').click(function(){
+            var sis=$(this).attr('sis');
+
+            $.post('<{:U('history')}>',{'type':sis,'id':'<{$data.id}>'},function(data){
+                 $('.button').attr('disabled',true).css({'background':'#ccc','border':'none','color':'#fff'});
+                 alert('谢谢您的评价！');
+
+            });
+
+        });
+
+      });
+  </script> 
+
+</head>
+<body>
+
+
+<!--顶部头-->
+<include file='Common:p-header'/>
+  <!--顶部头结束-->
+ 
+ <!-- 顶部公共部分 -->
+  <include file='Common:help-header'/>
+  <!-- 顶部公共部分结束 -->
+
+  <!-- 主体内容 -->
+  <div id='mian'>
+    <div class='y-row'>
+
+        <!-- 左半部分 -->
+        <include file='Common:help-left'/>
+        <!-- 左半部分结束 -->
+         
+         <!-- 右半部分 -->
+        <div class='main-right'>
+            <div class='cat'>
+
+             <foreach name='cats' item='v'>
+                   <if condition='$key eq 0'><{$v.cat}>
+
+                    <elseif condition="$key eq 1"/>
+                    <a href="<{:U('Help/nav',array('id'=>$v['id'],'pid'=>$v['id']))}>"><{$v.cat}></a>
+
+                  
+                    <elseif condition="$key eq $sum"/>
+                    <a href="<{:U('Help/helpList',array('id'=>$v['id'],'pid'=>$v['pid']))}>"><{$v.cat}></a>
+
+                    <else/>
+                    <a href="<{:U('Help/nav',array('id'=>$v['id'],'pid'=>$v['pid']))}>"><{$v.cat}></a>
+
+                  </if> <if condition="$key lt $sum"> > </if>
+             </foreach>
+
+            </div>
+            
+            <div class='help-content'>
+                 <h2><{$data.title}></h2>
+                    <{$data.anwer}>
+            </div>
+
+            <div class='history'>
+               <span>该回答是否解决了您的问题
+                <button type='button' sis='good' class='yes button'>有用</button>
+                <button type='button' sis='poor' class='no button'>没用</button>
+              </span>
+            </div>
+
+            <div class='relative-problem'>
+              <h3>相关问题：</h3>
+              <foreach name='related' item='v'>
+                 <a href="<{:U('Help/helpShow',array('id'=>$v['cid'],'pid'=>$v['pid'],'hid'=>$v['id']))}>"><{$v.title}></a>
+              </foreach>
+              
+            </div>
+        </div>
+     
+
+        <!-- 右半部分结束 -->
+
+
+    </div>
+  </div>
+  <!-- 主体内容结束 -->
+
+  <include file='Common:bottom'/>
+
+
+ 
+
+</body>
+</html>	

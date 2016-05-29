@@ -1,0 +1,31 @@
+<div class='main-left'>
+                 <h2>工具与镜像</h2>
+                 <ul>
+                    <mleft>  
+                        <li><span class='font'><{$v.cat}></span>
+                            <dl class='product'>                            
+                                <dd ><a  class='tt' href="<{$v.index}>">首页</a></dd>
+                               
+                                <foreach name='v.mirr' item='value'>    
+                                    <dd <if condition="$value['id'] eq $_GET['id']">class='down'</if>><a class='tt' href="<{$v.href}>/<{$value.id}>"><{$value.cat}></a>
+                                       
+                                        <if condition="$value['mirr']">
+                                            <ul class='cat hidden'>
+                                            <foreach name='value.mirr' item='vs'>
+
+                                                <li <if condition="$vs['id'] eq $_GET['id']">class='down'</if>><a class='tt' href="<{$v.href}>/<{$vs.id}>"><{$vs.cat}></a></li>
+                                           </foreach>   
+                                            </ul>
+                                        </if>
+                                        
+
+                                    </dd>
+                                   
+                                </foreach>
+                            </dl>
+                        </li>
+                    </mleft>
+                   
+                </ul>
+
+             </div>

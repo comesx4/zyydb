@@ -1,0 +1,114 @@
+<include file="Common:header"/>
+	<link rel="stylesheet" href="__PUBLIC__/Css/mirroring.css" />   
+	
+    <script type="text/javascript" src='__PUBLIC__/Js/mirroring.js'></script>
+    <script type="text/javascript">
+        var insert='<{:U('insert')}>';
+        var insertOs='<{:U('insertOs')}>';
+    </script>
+<form action='<{:U('insert')}>' method='post' enctype='multipart/form-data'>
+	<table class="table table-condensed table-hover table-active">
+        <thead>
+            <tr class="active">
+                <td colspan="2">
+                    <a class="btn btn-info" href="<{:U('index')}>">镜像列表</a>
+                </td>
+            </tr>
+        </thead>
+		<tr>
+			<td class='first'>类型</td>
+			<td>
+				<select name='type'>
+					<option  value='1'>镜像</option>
+					<option  value='0'>操作系统</option>					
+				</select>
+			</td>
+		</tr>
+		<tr  class='jx'>
+			<td class='first'>所属分类</td>
+			<td><{$cat}></td>
+		</tr>
+		<tr  class='jx'>
+			<td class='first'>所属产品</td>
+			<td><{$goods}></td>
+		</tr>
+		<tr >
+			<td class='first'>操作系统:</td>
+			<td  width='90%'><{$os}></td>
+		</tr>	
+		<tr class='jx'>
+			<td class='first'>服务商</td>
+			<td><{$source}></td>
+		</tr>	
+		<tr class='jx'>
+			<td class='first'>镜像名称</td>
+			<td><input type='text' name='name' /></td>
+		</tr  class='jx'>
+		<tr>
+			<td class='first'>镜像标识</td>
+			<td><input type='text' name='image_code' /></td>
+		</tr>
+		<tr>
+			<td class='first'>镜像存储池</td>
+			<td><input type='text' name='image_pool' value='cloud' /></td>
+		</tr>
+		<tr>
+			<td class='first'>默认端口</td>
+			<td><input type='text' name='default_port' value='' /></td>
+		</tr>
+		<tr >
+			<td class='first'>快照标识</td>
+		    <td><input type='text' name='image_snap_code' value=''/></td>
+		</tr>
+		<tr >
+			<td class='first'>默认大小</td>
+			<td><input type='text' name='default_size' value='20480'  />M</td>
+		</tr>
+		<tr>
+			<td class='first'>是否插入数据库</td>
+			<td>
+				<label><input type='radio' checked name='isCreate' value='1'/>仅插入数据库</label>
+				<label><input type='radio' name='isCreate' value='2'/>通过接口创建</label>
+			</td>
+		</tr>
+			<tr>
+			<td class='first'>状态</td>
+			<td>
+				<label><input type='radio' checked name='status' value='1'/>开启</label>
+				<label><input type='radio' name='status' value='0'/>关闭</label>
+			</td>
+		</tr>
+		<tr >
+			<td class='first'>镜像版本</td>
+		    <td><input type='text' name='new' value='V1.0'/></td>
+		</tr>			
+		<tr class='jx'>
+			<td class='first'>推荐配置</td>
+			<td><input type='text' name='recom' value='' /></td>
+		</tr>
+		<tr class='jx'>
+			<td class='first'>镜像图标</td>
+			<td><input type='file' class='file' name='img'  /></td>
+		</tr>
+
+	<!-- 	<tr class='jx'>
+			<td>价钱</td>
+			<td><input type='text' name='price' value='0.00' /></td>
+		</tr> -->		
+		<tr class='jx'>
+			<td class='first'>集成软件</td>
+			<td><input type='text' name='gather' value='' /></td>
+		</tr>
+		
+		<tfoot>
+            <tr>
+                <td class='first'></td>
+                <td>
+                	<input class="btn btn-success" type="submit" value="保 存"/>
+                    <a class="btn btn-default" href="<{:U('index')}>">取 消</a>
+               </td> 
+           </tr>
+        </tfoot>
+    </table>
+</form>
+<include file="Common:footer"/>

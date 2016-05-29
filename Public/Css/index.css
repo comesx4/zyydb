@@ -1,0 +1,55 @@
+
+
+  .carousel-fade {
+    width: 100% !important;
+}
+
+div.carousel-fade a.left {
+    width: 26px;
+    height: 60px;
+    position: absolute;
+    cursor: pointer;
+    display: block;
+    background: url(../images/icon/leftArrow.png);
+    top: 250px;
+    left: 50px;
+}
+div.carousel-fade a.right {
+    width: 26px;
+    height: 60px;
+    position: absolute;
+    cursor: pointer;
+    display: block;
+    background: url(../images/icon/rightArrow.png);
+    top: 250px;
+    right: 50px;
+}
+
+
+div.bannerImg {
+    width: 100%;
+    max-width: 1250px;
+    height: 564px;
+    margin: 0 auto;
+}
+
+/*轮播图片切换效果*/
+    .carousel-fade .carousel-inner .item{  
+        opacity:0;  
+        -webkit-transition-property:opacity ;  
+        -moz-transition-property:opacity ;  
+        -ms-transition-property:opacity ;  
+        -o-transition-property:opacity ;  
+        transition-property:opacity ;
+    }
+    .carousel-fade .carousel-inner .active{  
+        opacity: 1;
+    }
+    .carousel-fade .carousel-inner .active.left,.carousel-fade .carousel-inner .active.right{  
+        left: 0;  
+        opacity: 0;
+    }
+    .carousel-fade .carousel-inner .next.left,.carousel-fade .carousel-inner .prev.right {
+        opacity: 1;
+    }
+/*轮播图片切换效果*/

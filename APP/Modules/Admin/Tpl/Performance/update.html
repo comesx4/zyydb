@@ -1,0 +1,73 @@
+<include file="Common:header"/>
+   <script>
+	    window.onload=function(){
+	    	var neng=document.getElementById('duan');
+	    	var sele=document.getElementById('select');
+	        var is=1;
+	    	duan.onclick=function(){
+	    		if(is==1){
+	                sele.style.display='inline-block';
+	                is=0;
+	    		}else{
+	                sele.style.display='none';
+	                 is=1;
+	    		}
+	    	}
+
+	    }
+    </script>
+
+	<form  action='<{:U('save')}>'  method='post'>
+		<table class="table table-condensed table-hover table-active">
+        <thead>
+            <tr class="active">
+                <td colspan="2">
+                    <a class="btn btn-info" href="<{:U('index')}>">性能列表</a>
+                </td>
+            </tr>
+        </thead>
+			<tr>
+				<td class='first'>所属产品:</td>
+				<td><{$cat}></td>
+			</tr>
+			<tr>
+				<td class='first'>性能名称:</td>
+				<td><input type='text' name='name' value='<{$per.name}>' /></td>
+			</tr>
+			<tr>
+				<td class='first'>性能描述:</td>
+				<td><input type='text' name='remark' value='<{$per.remark}>' /></td>			
+			</tr>
+			<tr>
+				<td class='first'>性能标识:</td>
+				<td width='80%'><input type='text' name='title' value='<{$per.title}>' />
+					<input id='duan' style='margin-left:10px;' type='checkbox' name='is' value='1'/>
+					<label for='duan'>同时添加字段</label>
+					<select style='display:none;' name='type' id='select'>
+						
+						<option value='int(10)'>int(10)</option>
+						<option value='char(56)'>char(56)</option>
+						<option value='varchar(56)'>(varchar56)</option>
+					
+					</select>
+
+				</td>			
+			</tr>
+			<tr>
+				<td class='first'>排序:</td>
+				<td><input type='text'  name='sort' value='<{$per.sort}>' /></td>
+			</tr>
+				
+			<tfoot>
+            <tr>
+                <td class='first'></td>
+                <td>
+                	<input type='hidden' name='id' value='<{$per.id}>'/>
+                	<input class="btn btn-success" type="submit" value="保 存"/>
+                    <a class="btn btn-default" href="<{:U('index')}>">取 消</a>
+               </td> 
+           </tr>
+        </tfoot>
+    </table>
+</form>
+<include file="Common:footer"/>

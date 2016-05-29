@@ -1,0 +1,315 @@
+
+a{
+	color: #1CA8DD;
+}
+
+div.home-notice{
+	background:#E5E5E5;
+	font-size: 12px;
+	height:34px;
+
+	line-height:34px;
+
+}
+div.home-notice a{
+	color:#666666;
+
+}
+div.home-notice div.y-span3{
+	float:left;
+	margin-right:2%;
+
+}
+div.home-notice div.y-span3 span.icon{
+	display:inline-block;
+	width:22px;
+	background:url('../Images/laba.png') no-repeat;
+	position:relative;
+	top:5px;
+	left:12px;
+}
+div.home-products{
+	
+	margin-bottom:30px;
+	position:relative;
+	width:100%;
+	height:280px;
+}
+.explain h1,.explain h2{
+	text-align: center;
+	font-weight: 500;
+	margin: 20px 0px;
+    font-size: 30px;
+}
+.explain h2{
+	 font-size: 20px;
+	color: #666;
+}
+div.home-products div.join{
+	width:100%;
+	height:100%;
+	float:left;
+	border:1px solid #ccc;
+	position: relative;
+	overflow: hidden;
+	margin-bottom: 20px;
+}
+div.home-products div.join div.left{
+	width:22px;
+	height:100%;
+	background:url('../Images/left2.png') no-repeat;
+	float:left;
+	cursor:pointer;
+	position: absolute;
+	left: 0;
+	top:39%;
+	z-index: 3;
+}
+div.home-products div.join div.left:hover{
+	background:url('../Images/left1.png') no-repeat;
+}
+div.home-products div.join div.right{
+	background:red;
+	width:28px;
+	height:100%;
+	background:url('../Images/right2.png') no-repeat;
+	right: 0;
+	position: absolute;
+	top:39%;
+	cursor:pointer;	
+	z-index: 3;
+}
+div.home-products div.join div.right:hover{
+	background:url('../Images/right1.png') no-repeat;
+}
+div.home-products div.join dl{
+	position:relative;
+	float:left;
+	width:25%;
+	height:100%;
+	text-align:center;
+	border-right:none;
+	padding:20px 0px;
+	padding-bottom: 0;
+	overflow:hidden;
+	border-right:1px solid #ccc;
+	margin-right: -1px;
+}
+div.home-products div.join dl:hover{
+	background: #f0f3f6;
+}
+div.home-products div.join dl dt{
+	font-weight:700;
+	font-size: 14px;
+	margin-bottom:15px;
+}
+div.home-products div.join dl dd{
+	font-size:12px;
+	color:#666;
+	padding:8px 0;
+
+}
+div.home-products div.join dl dd.one{
+	margin-top:12px;
+	font-size:14px;
+	color:#000;
+	font-weight:500;
+	color:#fff;
+	cursor:pointer;
+
+}
+div.home-products div.join dl dd button,div.home-products dl.first dd.one button{
+	border:medium none;
+	border:none;
+	width:120px;
+	height:30px;
+	background:#1CA8DD;
+	border-radius:4px;
+	padding:1px;
+	cursor:pointer;
+	color:#fff;
+
+}
+div.home-products div.join dl dd button:hover,div.home-products dl.first dd.one button:hover{
+  background:#00A2CA;
+  color:#FFF;
+
+}
+
+div.client{
+
+	position: relative;
+	padding: 20px 0;
+	height:300px;
+	clear:both;
+	background: url('../Images/bj.jpg') no-repeat 10% 100%;
+	margin-bottom: 20px;
+}
+div.client .client_image{
+	overflow: hidden;
+}
+div.client .client_image ul{
+	overflow: hidden;
+	width: 92%;
+	margin-left: 5%;
+}
+div.client .client_image ul li{
+	background: #fff;
+	height:90px;
+	width: 12%;
+	text-align: center;
+	vertical-align: middle;
+	display: table-cell;
+}
+div.client .client_image ul li.tab{
+	background: no-repeat;
+	width: 3%;
+}
+div.client .client_image ul li img{	
+
+	vertical-align:middle;
+}
+div.client ul.change{
+	overflow: hidden;
+	position: absolute;
+	left:45%;
+	bottom:10%;
+}
+div.client ul.change li{
+	display:inline-block;
+	cursor:pointer;
+	width:50px;
+	height:6px;
+	background:#fff;
+	text-align:center;
+	line-height:30px;
+}
+div.client ul.change li.on{
+	background:#1CA8DD;
+}
+div.dynamic{
+	overflow: hidden;
+	padding: 20px 0;
+	height:200px;
+}
+div.dynamic .dynamic-left{
+	float: left;
+	width: 50%
+}
+div.dynamic .dynamic-left h3{
+	font-weight: 500;
+	margin-bottom: 25px;
+}
+div.dynamic .dynamic-left ul li{
+	margin:9px 0;
+	width: 80%;
+	font-size: 13px;
+}
+div.dynamic .dynamic-left ul li em{
+	float: right;
+}
+div.dynamic .dynamic-right{
+	height: 100%;
+	float: left;
+	width: 50%;
+	background: url('../Images/ad.png') no-repeat;
+}
+div.home-title{
+	height:20px;
+	border-bottom:1px solid #ccc;
+	margin-bottom:40px;
+
+}
+
+div.home-title h1{
+	float:left;
+	background:#fff;
+	top:3px;
+	position: relative;
+	font-size:25px;
+
+}
+div.home-title div.right{
+	position:relative;
+	top:12px;
+	width:10%;
+	text-align:center;
+	float:right;
+	background:#fff;
+
+}
+
+
+div.home-approve{
+	height:160px;
+	margin-bottom:20px;
+	clear:both;
+	border-bottom:1px dashed #ccc;
+}
+div.home-approve dl{
+	width:22%;
+	font-size:12px;
+	float:left;
+	margin-right:2%;
+
+
+
+}
+div.home-approve dl dt{
+float:left;
+margin-right:10px;
+}
+div.home-video{
+	background:url('../Images/guanyuyun.jpg') no-repeat center center;
+	height:220px;
+	
+}
+div.home-video ul{
+	padding-top:62px;
+	text-align:center;
+}
+div.bottom{
+	text-align:center;
+	padding-top:30px;
+	height:auto;
+	padding-bottom:20px;
+	
+	float:left;
+	width:100%;
+}
+div.bottom div.help{
+	width:14%;
+	float:left;
+	margin-left:2%;
+	font-size:12px;
+
+
+}
+div.bottom div.help h4{
+	margin-bottom:10px;
+}
+div.bottom div.help ul{
+	color:#00ACD7;
+}
+div.bottom div.help ul li{
+	margin-top:5px;
+}
+
+
+
+.y-row {
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 1200px;
+    min-width: 1000px;
+}
+.hidden{
+	display:none;
+}
+
+
+div.client ul.classify li.show{
+	background:#fff;
+	border:none;
+	border-top:3px solid #00A2CA;
+}

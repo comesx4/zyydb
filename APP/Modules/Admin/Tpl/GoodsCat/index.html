@@ -1,0 +1,73 @@
+<include file='Common:header'/>
+<!-- 搜索部分 -->
+<form action='' method='get'>
+    <div class='search'>
+        <div class='search-header'>
+            <h5 style='float:left;'>搜索其实很简单</h5>
+            <div class='hide-search' style='float:right;cursor:pointer;margin-right:20px;line-height:40px;'><span style='font-size:11px;' class='glyphicon glyphicon-chevron-up '></span>隐藏</div>
+        </div>
+        
+        <div class='search-inner'>
+           <dl>
+                <dt>用户名称：</dt>
+                <dd>
+                    <input style='width:60px;' placeholder='用户名' type='text' value='<{$tmp.username}>' name='username' />
+                </dd>
+            </dl>
+            <dl>
+                <dt>时间范围：</dt>
+                <dd>
+                    <input id="min_date" placeholder='开始时间' value='<{$tmp.min-date}>' class="laydate-icon length2" type='text' name='min-date' />
+                    -<input id='max_date' placeholder='结束' class="laydate-icon length2" value='<{$tmp.max-date}>' type='text' name='max-date' />
+                </dd>
+            </dl>
+            
+            <dl>
+                <dt>地址：</dt>
+                <dd><input type='text' name='name' value='<{$tmp.name}>' /></dd>
+            </dl>
+        </div>
+
+        <div class='search-bottom'>
+            <p style='float:right;margin-right:10px;'>
+                <a class='btn btn-danger' href="<{:U()}>">清空</a>
+                <input type='submit' name='search' class='btn btn-primary' value='搜索' />
+            </p>
+        </div>
+    </div>
+</form>
+
+    <table class="table table-condensed table-hover " >
+        <thead>
+            <tr class='active'>
+                <td  colspan="2" >
+                    <a class="btn btn-success" href="<{:U('add')}>">添加产品分类</a>
+                </td>
+                <td colspan="8">
+                    <div class="page-code"><{$fpage}></div>
+                </td>
+            </tr>
+        </thead>
+		<tr>
+			<th>ID</th>
+			<th>名称</th>
+			<th>排序</th>
+			<th>操作</th>
+		</tr>
+	<foreach name='cat' item='v'>
+		<tr>
+			<td><{$v.id}></td>
+			<td><{$v.cat}></td>
+			<td><input type='text' name='<{$v.id}>' value='<{$v.sort}>'/></td>
+			<td><a href="<{:U('update',array('id'=>$v['id']))}>">[修改]</a><a class='del' onclick="return confirm('确认删除？');" href='<{:U('del',array('id'=>$v['id']))}>'>[删除]</a></td>
+		</tr>
+	</foreach>
+	    <tr class='first'>
+	    	<td colspan='4'>
+	    		<input type='submit' class='submit' name='submit' value='排序'/>
+	    	</td>
+	    </tr>
+	</table>
+    </form>
+
+<include file='Common:footer'/>

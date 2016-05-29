@@ -1,0 +1,140 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+<head>
+  <meta http-equiv="Content-Type" content="text/html;charset=UTF-8" />
+<title><{$stitle|makwebtitle}></title>>
+  <link rel="stylesheet" href="__PUBLIC__/Css/userinfo-left.css" />
+  <link rel="stylesheet" href="__PUBLIC__/Css/order.css" />
+  <link rel='stylesheet' href='__PUBLIC__/Css/max-header.css' />
+  <link rel='stylesheet' href='__PUBLIC__/Css/nav.css' />
+   <link rel='stylesheet' href='__PUBLIC__/Css/service-renew.css' />
+  <link rel='stylesheet' href='__PUBLIC__/Css/bottom.css' />
+  <js file='__PUBLIC__/Js/jquery-1.7.2.min.js'/>
+  <js file='__PUBLIC__/Js/nav.js'/> 
+  <js file='__PUBLIC__/Js/serviceDatailed.js'/> 
+  <js file='__PUBLIC__/Js/bottom.js'/>
+  <script type="text/javascript">
+        getPrice='<{:U('Service/getPrice')}>';
+  </script>
+
+
+</head>
+<body>
+  <!--顶部头-->
+ <include file='Common:p-header'/>
+  <!--顶部头结束-->
+  
+  <!--头部公共部分-->
+  <include file='Common:nav'/>
+  <!--头部公共部分结束--> 
+
+
+    <!--主题内容-->
+	<div class='main'>
+		<!--左半部分-->
+      <include file='Common:userService-left'/>
+    <!--左半部分结束-->
+
+        <!--右半部分-->
+		<div class='main-right'>
+			<h3>服务续费</h3>
+         <!-- 信息描述 -->
+                <div class='intruduction'>
+                     <dl>
+                         <dt><img src="__PUBLIC__/Images/ruanjianyun.png" /></dt>
+                         <dd><a class='h1' href=""><{$service.title}></a></dd>
+                         <dd><{$service.remark}></dd>
+                         <dd>成交次数：<span><{$service.num}></span> 评分： <span class='appraise'>4.5分</span> （<a href="">287条评论</a>）</dd>
+                     </dl>
+                    
+                </div>
+                <!-- 信息描述 end -->
+                
+                <!-- 产品参数 -->
+                <div class='ng-scope'>
+                    <div class='ng-left'>
+                        <dl>
+                            <dt>交付时间：</dt>
+                            <dd><{$service.payTime}>天</dd>
+                        </dl>
+                        <dl>
+                            <dt>质保时间：</dt>
+                            <dd><{$service.warrantyTime}>天</dd>
+                        </dl>
+                        <dl>
+                            <dt>试用linux版本：</dt>
+                            <dd><{$service.os}></dd>
+                        </dl>
+                        <dl>
+                            <dt>依托云产品：</dt>
+                            <dd><{$service.goods}></dd>
+                        </dl>
+                            
+                    </div>
+
+                <form action='<{:U('createOrder')}>' method='post'>
+                    <div class='ng-right'>
+                    <input type='hidden' id='serveice_id' name='service_id' value='<{$service.id}>'/>
+                    <input type='hidden'  name='id' value='<{$id}>'/>
+                    <input type='hidden' id='price' name='price' value='<{$service.price}>'/>
+                        <dl>
+                            <dt>规格：</dt>
+                            <dd>
+                                <ul class='spec'>
+                                    <foreach name='spec' item='v'>
+                                        <if condition="$key eq 0">
+                                            <li sid='<{$v.id}>' class='down' ><{$v.spec}></li>
+                                            <input type='hidden' id='spec_id' name='spec_id' value='<{$v.id}>'/>
+                                        <else/>
+                                            <li sid='<{$v.id}>'  ><{$v.spec}></li>
+                                        </if>
+                                   </foreach>
+                                </ul>
+                            </dd>
+                        </dl>
+
+                        <dl>
+                             <dt>订购周期：</dt>
+                             <dd>
+                                 <ul>
+                                     <li class='down'>单次</li>
+                                 </ul>
+                             </dd>
+                        </dl>
+                    
+                    
+                        <dl class='type1'>
+                            <dt>价格：</dt>
+                            <dd>￥<span class='money price'><{$service.price}></span></dd>
+                        </dl>
+                        <dl class='type2'>
+                            <dt>价格：</dt>
+                            <dd><span class='no-money'>￥1000.00</span></dd>
+                        </dl>
+                        <dl class='type2'>
+                            <dt>促销：</dt>
+                            <dd><em>限时折扣</em>￥<span class='discount price'>99.00</span></dd>
+                        </dl>
+                
+                        <dl>
+                            <dt>&nbsp;</dt>
+                            <dd><input type='submit' value='立即续费'/></dd>
+                        </dl>
+                            
+                    </div>
+                </form>
+                </div>
+                <!-- 产品参数 end -->
+		
+			
+			
+		</div>
+	</div>
+	 <!--底部版权-->
+	<include file='Common:bottom' />
+	<!--底部版权结束-->
+
+	
+	
+</body>
+</html>

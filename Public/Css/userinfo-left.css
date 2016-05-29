@@ -1,0 +1,36 @@
+div.main div.main-left{
+	width:20%;
+	background:#F3F3F3;
+	float:left;
+	height:100%;
+}
+div.main div.main-left ul{
+	float:right;
+	padding-top:20px;
+	width: 60%;
+	overflow: hidden;
+}
+div.main div.main-left ul li{
+	height:35px;
+	/*width:120px;*/
+	line-height:35px;
+	margin:8px 0;	
+	
+}
+div.main div.main-left ul li.two a{
+	background:#fff;
+	border-left:2px solid #00A2CA;
+	width: 100%;
+}
+
+div.main div.main-left ul li a {
+	display: inline-block;
+	width: 100%;
+    padding-left: 7px;
+	height:100%;
+}
+div.main div.main-left ul li a:hover{
+	border-left:2px solid #00A2CA;
+	background: #fff;
+
+}

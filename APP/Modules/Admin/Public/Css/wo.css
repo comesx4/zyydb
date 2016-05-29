@@ -1,0 +1,33 @@
+.serach {
+	clear: both;
+	margin-bottom: 15px;
+	overflow: hidden;
+}
+.serach dl {
+    float: left;
+    margin-right: 2%;
+}
+.serach dl dt {
+    float: left;
+    line-height: 25px;
+}
+.serach dl dd {
+    float: left;
+}
+.serach dl dd input {
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    height: 25px;
+    width: 120px;
+    padding:0;
+}
+.serach .submit {
+	background: none repeat scroll 0 0 #fff;
+	border: 1px solid #00a2ca;
+	border-radius: 4px;
+	color: #00a2ca;
+	cursor: pointer;
+	display: inline-block;
+	height: 25px;
+	width: 100px;
+}

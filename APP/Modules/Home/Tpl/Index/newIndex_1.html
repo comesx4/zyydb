@@ -1,0 +1,323 @@
+  <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+<head>
+    <title><{$stitle|makwebtitle}></title>
+ <include file='Common:com-header'/>
+  <link rel="stylesheet" href="__PUBLIC__/Css/index_1.css" /> 
+  <link rel="stylesheet" href="__PUBLIC__/Css/index.css" /> 
+</head>
+<body>
+   <div id='body'>
+  <!-- 顶部公共部分 -->
+    <include file='Common:home-header'/>
+    <!-- 顶部公共结束 -->
+
+  <!--图片轮播-->
+  <div id="myCarousel" class="carousel slide carousel-fade"  data-ride="carousel" data-interval="2000">
+   <!-- 轮播（Carousel）指标 -->
+   <ol class="carousel-indicators">
+      <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+      <li data-target="#myCarousel" data-slide-to="1"></li>
+      <li data-target="#myCarousel" data-slide-to="2"></li>
+      <li data-target="#myCarousel" data-slide-to="3"></li>
+      <li data-target="#myCarousel" data-slide-to="4"></li>
+      <li data-target="#myCarousel" data-slide-to="5"></li>
+      <li data-target="#myCarousel" data-slide-to="6"></li>
+   </ol>   
+   <!-- 轮播（Carousel）项目 -->
+   <div class="carousel-inner">
+      
+      <div class="item active"  style="background:#201f2d">
+          <div class="bannerImg" style="background:url('__PUBLIC__/Images/home/banner_img1.jpg') no-repeat center center"> 
+              <div class="carousel-caption">标题 1</div>                  
+          </div>
+      </div>
+      <div class="item"  style="background:#201f2d">
+          <div class="bannerImg" style="background:url('__PUBLIC__/Images/home/banner_img2.jpg') no-repeat center center"> 
+              <div class="carousel-caption">标题 2</div>                  
+          </div>
+      </div>
+    <div class="item"  style="background:#201f2d">
+          <div class="bannerImg" style="background:url('__PUBLIC__/Images/home/banner_img3.jpg') no-repeat center center"> 
+              <div class="carousel-caption">标题 3</div>                  
+          </div>
+      </div>
+       <div class="item"  style="background:#201f2d">
+          <div class="bannerImg" style="background:url('__PUBLIC__/Images/home/banner_img4.jpg') no-repeat center center"> 
+              <div class="carousel-caption">标题 4</div>                  
+          </div>
+      </div>
+        <div class="item"  style="background:#201f2d">
+          <div class="bannerImg" style="background:url('__PUBLIC__/Images/home/banner_img5.jpg') no-repeat center center"> 
+              <div class="carousel-caption">标题 5</div>                  
+          </div>
+      </div>
+        <div class="item"  style="background:#201f2d">
+          <div class="bannerImg" style="background:url('__PUBLIC__/Images/home/banner_img6.jpg') no-repeat center center"> 
+              <div class="carousel-caption">标题 6</div>                  
+          </div>
+      </div>
+        <div class="item"  style="background:#201f2d">
+          <div class="bannerImg" style="background:url('__PUBLIC__/Images/home/banner_img7.jpg') no-repeat center center"> 
+              <div class="carousel-caption">标题 7</div>                  
+          </div>
+      </div>
+   </div>
+   <!-- 轮播（Carousel）导航 -->
+   <a class="carousel-control left" href="#myCarousel" 
+      data-slide="prev"> </a>
+   <a class="carousel-control right" href="#myCarousel" 
+      data-slide="next"> </a>
+</div>
+  <!--图片轮播结束-->
+
+  <!--公告区域-->
+  <div class="home-notice">
+    <foreach name='notice' item='v'>
+    <div class="y-span3 ">                
+                <span class="icon icon-bullhorn">&nbsp;</span>
+                <span>·</span>                
+            <a href="<{:U('Notice/detail',array('id' => $v['id']))}>" target="" class="home-grey">
+                <span class="date">[<{$v.create_time|date='Y-m-d',###}>]</span>
+                <{$v.title}>
+            </a>
+    </div>
+  </foreach>     
+        <div class="y-span3 ">
+            <img width="260" style="max-width:100%;position:relative;top:10px" src="http://gtms04.alicdn.com/tps/i4/TB153fzFVXXXXc.XpXXGdSuUVXX-520-24.png">
+        </div>
+  </div>
+  <!--公告区域结束-->
+
+    <!--服务开通-->
+    <div class="home-products y-row">
+      <div class='explain'>
+          <h1>产品与解决方案，顶尖的服务</h1>
+          <h2>浏览我们的产品与解决方案，并了解<a href="">智御云</a>能为你做什么</h2>
+          
+      </div>
+      <div class='join'>
+          
+          <dl class='hover'>
+               <dd class=''><img src='__PUBLIC__/Images/cc.png' /></dd>
+           <dt>云服务器ECS</dt>          
+           <dd class=''>弹性伸缩,快速部署网站或应用</dd>
+               <dd class=''><span>按峰值带宽：0.9元Mbps/天起</span></dd>
+               <dd class=''><button>查看详情</button></dd>
+        
+          </dl>
+          <dl class='hover'>
+               <dd class=''><img src='__PUBLIC__/Images/cc.png' /></dd>
+               <dt>云服务器ECS</dt>            
+               <dd class=''>弹性伸缩,快速部署网站或应用</dd>
+               <dd class=''><span>按峰值带宽：0.9元Mbps/天起</span></dd>
+               <dd class=''><button>查看详情</button></dd>
+            
+            </dl>
+            <dl class='hover'>
+               <dd class=''><img src='__PUBLIC__/Images/cc.png' /></dd>
+               <dt>云服务器ECS</dt>            
+               <dd class=''>弹性伸缩,快速部署网站或应用</dd>
+               <dd class=''><span>按峰值带宽：0.9元Mbps/天起</span></dd>
+               <dd class=''><button>查看详情</button></dd>
+            
+            </dl>
+            <dl class='hover'>
+               <dd class=''><img src='__PUBLIC__/Images/cc.png' /></dd>
+               <dt>云服务器ECS</dt>            
+               <dd class=''>弹性伸缩,快速部署网站或应用</dd>
+               <dd class=''><span>按峰值带宽：0.9元Mbps/天起</span></dd>
+               <dd class=''><button>查看详情</button></dd>
+            
+            </dl>  
+        </div>
+  
+    </div>
+    <!--服务开通结束-->
+
+    <!--我们的客户-->
+    <div class='client'>
+    <div class='y-row '>
+       <div class='explain'>
+          <h1>客户案例</h1>
+          <h2>凭借强大的技术力量和平台优势，我们越来越多的行业伙伴展开了合作，携手打造共赢互利的美好前景。</h2>
+          
+          <div class='client_image'>
+            <ul>  
+                <li><img src="__PUBLIC__/Images/zyy.png"></li>
+                <li class='tab'>&nbsp;</li>
+                <li ><img src="__PUBLIC__/Images/zyy.png"></li>
+                <li class='tab'>&nbsp;</li>
+                <li ><img src="__PUBLIC__/Images/zyy.png"></li>
+                <li class='tab'>&nbsp;</li>
+                <li ><img src="__PUBLIC__/Images/zyy.png"></li>
+                <li class='tab'>&nbsp;</li>
+                <li ><img src="__PUBLIC__/Images/zyy.png"></li>
+
+            </ul>
+
+            <ul class='hidden'>  
+                <li><img src="__PUBLIC__/Images/zyy.png"></li>
+                <li class='tab'>&nbsp;</li>
+                <li ><img src="__PUBLIC__/Images/zyy.png"></li>
+                <li class='tab'>&nbsp;</li>
+                <li ><img src="__PUBLIC__/Images/zyy.png"></li>
+                <li class='tab'>&nbsp;</li>
+                <li ><img src="__PUBLIC__/Images/zyy.png"></li>
+                <li class='tab'>&nbsp;</li>
+                <li ><img src="__PUBLIC__/Images/zyy.png"></li>
+
+            </ul>
+          </div>
+          <ul class='change'>
+              <li class='on'></li>
+              <li></li>
+          </ul>
+      </div>
+    </div>
+    </div>
+
+    
+    <!--
+    <div class='dynamic y-row'>
+        <div class='dynamic-left'>
+             <h3>公司动态</h3>
+            <ul>
+              <foreach name='dynamic' item='v'>
+                  <li><a href="<{:U('Notice/dynamicDetail',array('id' => $v['id'],'pid'=>$v['cid']))}>"><{$v.title}></a> <em><{$v.create_time|date='Y-m-d',###}></em></li>
+              </foreach>
+            
+            </ul>
+        </div>
+
+        <div class='dynamic-right'>
+
+        </div>
+    </div>-->
+    <div class='home-approve y-row'>
+        <div class='home-title' style='clear:both;'>
+               <h1>我们的优势</h1>
+               <div class='right'>
+                    <a href='' target='_blank'>更多>>></a>
+               </div>
+        </div>
+        <dl>
+            <dt><img src='__PUBLIC__/Images/yunanquan.png' /></dt>
+            <dd>全球首家获得云安全国际认证金牌（CSA STAR Certification）的云服务供应商</dd>
+        </dl>
+        <dl>
+            <dt><img src='__PUBLIC__/Images/yunanquan.png' /></dt>
+            <dd>全球首家获得云安全国际认证金牌（CSA STAR Certification）的云服务供应商</dd>
+        </dl>
+        <dl>
+            <dt><img src='__PUBLIC__/Images/yunanquan.png' /></dt>
+            <dd>全球首家获得云安全国际认证金牌（CSA STAR Certification）的云服务供应商</dd>
+        </dl>
+        <dl>
+            <dt><img src='__PUBLIC__/Images/yunanquan.png' /></dt>
+            <dd>全球首家获得云安全国际认证金牌（CSA STAR Certification）的云服务供应商</dd>
+        </dl>
+
+
+    </div>
+    <div class='home-approve y-row'>
+        <dl style='width:14%'>
+            <dt style='font-size:57px;'>100</dt>
+            <dd style='margin-top:18px;font-size:14px;'>倍</dd>
+            <dd style='font-size:14px;'>故障赔偿</dd>
+        </dl>
+        <dl style='width:14%'>
+            <dt style='font-size:57px;'>7</dt>
+            <dd style='margin-top:18px;font-size:14px;'>*24小时</dd>
+            <dd style='font-size:14px;'>售后支持</dd>
+        </dl>
+        <dl style='width:14%'>
+            <dt style='font-size:57px;'>5</dt>
+            <dd style='margin-top:18px;font-size:14px;'>天</dd>
+            <dd style='font-size:14px;'>无理由退款</dd>
+        </dl>
+        <dl style='width:14%'>
+            <dt style='font-size:57px;'>0</dt>
+            <dd style='margin-top:18px;font-size:14px;'>元</dd>
+            <dd style='font-size:14px;'>免费体验</dd>
+        </dl>
+        <dl style='width:14%'>
+            <dt style='font-size:57px;'>0</dt>
+            <dd style='margin-top:18px;font-size:14px;'>元</dd>
+            <dd style='font-size:14px;'>免费快速备案</dd>
+        </dl>
+        <dl style='width:14%'>
+            <dt style='font-size:57px;'>0</dt>
+            <dd style='margin-top:18px;font-size:14px;'>元</dd>
+            <dd style='font-size:14px;'>免费镜像服务</dd>
+        </dl>
+
+    </div>
+  
+
+    <!--帮助-->
+    <div class='bottom'>
+        <div class='help'>
+            <h4>新手指南</h4>
+            <ul>
+                <li>新手专区</li>
+                <li>免费体验</li>
+                <li>金牌服务</li>
+                <li>备案专区</li>
+                <li>索取发票</li>
+            </ul>
+        </div>
+        <div style='width:20%;' class='help'>
+            <h4>服务与支持</h4>
+            <ul>
+                <li> 预约售前服务  工作日  (5x8小时) </li>
+                <li> 售后咨询  0571-85025885  (7x24小时) </li>
+                <li>论坛</li>
+                <li>帮主中心</li>
+                <li>智御云咨询</li>
+            </ul>
+        </div>
+        <div class='help'>
+            <h4>用户中心</h4>
+            <ul>
+                <li>管理控制台</li>
+                <li>备案管理</li>
+                <li>订单管理</li>
+                <li>会员管理</li>
+                <li>续费管理</li>
+            </ul>
+        </div>
+        <div class='help'>
+            <h4>其他</h4>
+            <ul>
+                <li>线下活动</li>
+                <li>《凌云》期刊</li>
+                <li>开发者大会</li>
+                <li>建议反馈</li>
+                <li>廉正举报</li>
+                <li>互联网不良信息举报</li>
+                <li>云公益</li>
+           
+            </ul>
+        </div>
+        <div class='help'>
+            <h4>关注智御云</h4>
+            <ul style='text-align:center;'>
+                <li>智御云微博</li>
+                <li>如何进行银行电汇</li>
+              <!--   <li style='background:url("__PUBLIC__/Images/guanzhualiyun.png") no-repeat 0 -56px;height:120px;width:84px;position:relative;left:25%;'>&nbsp;</li> -->
+            </ul>
+        </div>
+
+
+    </div>
+    <!--帮助结束-->
+
+    <!--底部版权开始-->
+    <include file='Common:bottom'/>
+    <!--底部版权结束-->
+
+  </div>
+</body>
+</html>
+

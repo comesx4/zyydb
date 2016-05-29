@@ -1,0 +1,52 @@
+
+ <div class="col-xs-6 col-sm-3 sidebar-offcanvas" id="sidebar">
+     <div class="list-title"> <h2><{$Think.lang.right_main}></h2></div>
+          <div class="list-group">
+              
+              <a  class="list-group-item <if condition="MODULE_NAME eq 'Operator' && ACTION_NAME eq 'index'">active</if>" href="<{:U('operator/index')}>"> <{$Think.lang.topMenu_main}></a>
+               <a  class="list-group-item <if condition="MODULE_NAME eq 'Operator' && ACTION_NAME eq 'users'">active</if>" href="<{:U('operator/users')}>"> <{$Think.lang.topMenu_users}>
+                    <span class="small">(<{$Think.lang.topMenu_users_nomenu}>)</span></a> 
+               <a  class="list-group-item <if condition="MODULE_NAME eq 'Operator' && ACTION_NAME eq 'users'">active</if>" href='/operator/history.php'> <{$Think.lang.page_analysis_search_title}></a>
+                <a  class="list-group-item <if condition="MODULE_NAME eq 'Operator' && ACTION_NAME eq 'users'">active</if>" href='/operator/statistics.php'> <{$Think.lang.statistics_title}></a>
+                <a  class="list-group-item <if condition="MODULE_NAME eq 'Operator' && ACTION_NAME eq 'users'">active</if>" href='/operator/blocked.php'>
+                        <{$Think.lang.menu_blocked}></a>
+        
+          </div>
+        </div>
+ <div class="col-xs-6 col-sm-3 sidebar-offcanvas" id="sidebar">
+     <div class="list-title"><h2><{$Think.lang.right_administration}></h2></div>
+          <div class="list-group">
+            <a class="list-group-item <if condition="MODULE_NAME eq 'Operator' && ACTION_NAME eq 'users'">active</if>" href='/operator/canned.php'>
+                        <{$Think.lang.menu_canned}></a> 
+
+                 <a class="list-group-item <if condition="MODULE_NAME eq 'Operator' && ACTION_NAME eq 'users'">active</if>" href='/operator/getcode.php'>
+                        <{$Think.lang.leftMenu_client_gen_button}></a> 
+                 <a class="list-group-item <if condition="MODULE_NAME eq 'Operator' && ACTION_NAME eq 'users'">active</if>" href='/operator/operators.php'>
+                        <{$Think.lang.leftMenu_client_agents}>
+                    </a> 
+
+                 <a class="list-group-item <if condition="MODULE_NAME eq 'Operator' && ACTION_NAME eq 'users'">active</if>" href='/operator/groups.php'>
+                        <{$Think.lang.menu_groups}>
+                    </a> 
+
+                 <a class="list-group-item <if condition="MODULE_NAME eq 'Operator' && ACTION_NAME eq 'users'">active</if>" href='/operator/settings.php'>
+                        <{$Think.lang.leftMenu_client_settings}>
+                    </a> 
+                 <a class="list-group-item <if condition="MODULE_NAME eq 'Operator' && ACTION_NAME eq 'users'">active</if>" href='/operator/translate.php'>
+                        <{$Think.lang.menu_translate}></a> 
+                 <a class="list-group-item <if condition="MODULE_NAME eq 'Operator' && ACTION_NAME eq 'users'">active</if>" href='/operator/updates.php'>
+                        <{$Think.lang.menu_updates}>
+                    </a> 
+                 <a class="list-group-item <if condition="MODULE_NAME eq 'Operator' && ACTION_NAME eq 'users'">active</if>" href='/operator/operator.php?op='>
+                        <{$Think.lang.menu_profile}></a> 
+          </div>
+        </div>
+
+ <div class="col-xs-6 col-sm-3 sidebar-offcanvas" id="sidebar">
+     <div class="list-title"><h2><{$Think.lang.right_other}></h2></div>
+          <div class="list-group">
+                <a class="list-group-item <if condition="MODULE_NAME eq 'Operator' && ACTION_NAME eq 'users'">active</if>" href='http://web.dns-w.cn'>HELP</a>
+                <a class="list-group-item <if condition="MODULE_NAME eq 'Operator' && ACTION_NAME eq 'users'">active</if>" href='/operator/logout.php'>
+                        <{$Think.lang.topMenu_logoff}></a>
+          </div>
+        </div>

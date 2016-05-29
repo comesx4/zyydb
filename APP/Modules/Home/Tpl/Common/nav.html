@@ -1,0 +1,27 @@
+
+
+  <!--用户操作导航-->
+  <div class='uc-nv '>
+      <div class="y-row uc-layer hidden">
+        <div class='left'>
+           <h3>用户中心</h3>
+           
+        </div>
+        <div class='right'>
+          <ul>
+            <li <if condition="MODULE_NAME eq 'User' and ACTION_NAME eq 'index' ">class='on' </if>><a href='<{:U('User/index')}>'>首页</a></li>
+            <li <if condition="MODULE_NAME eq 'UserGoods'">class='on' </if>><a href="<{:U('UserGoods/index')}>">我的产品</a></li>
+            <li <if condition="MODULE_NAME eq 'UserService'">class='on' </if>><a href="<{:U('UserService/index')}>">我的服务</a></li>
+            <li <if condition="MODULE_NAME eq 'Order'">class='on' </if>><a href="<{:U('Order/index')}>">我的订单</a></li>
+            <li <if condition="MODULE_NAME eq 'User' and ACTION_NAME eq 'account'">class='on' </if>><a href="<{:U('User/account')}>">账户管理</a></li>
+            <li <if condition="MODULE_NAME eq 'User' and ACTION_NAME eq 'userinfo'">class='on' </if>><a href="<{:U('User/userinfo')}>">会员中心</a></li>
+            <!-- <li ><a href="">备案管理</a></li> -->
+           
+           <!--  <li><a href="">消息中心</a></li> -->
+            <li <if condition="MODULE_NAME eq 'Scence'">class='on' </if>><a href="<{:U('Scence/index')}>">售后服务</a></li>
+          </ul>
+
+        </div>
+      </div>
+  </div>
+  <!--用户操作导航结束-->

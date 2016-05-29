@@ -1,0 +1,44 @@
+<include file="Common:header"/>
+	<script type="text/javascript" src='__PUBLIC__/Js/goodsPrice.js'></script> 
+    <script>
+      var getPer='<{:U('getPer')}>';
+    </script>
+
+<form action='<{:U('insert')}>' method='post'>
+    <table class="table table-condensed table-hover table-active">
+        <thead>
+            <tr class="active">
+                <td colspan="2">
+                    <a class="btn btn-info" href="<{:U('index')}>">价格列表</a>
+                </td>
+            </tr>
+        </thead>
+
+
+		<tr>
+			<td class='first'>所属产品:</td>
+			<td><{$goodsList}></td>
+		</tr>
+		<tr class='city first'>
+			<td class='first'>所属城市:</td>
+			<td><{$city}></td>			
+		</tr>
+	<foreach name='per' item='v'>
+		<tr class='demo'>
+			<td class='first'><{$v.remark}>:</td>
+			<td><input type='text' name='<{$v.id}>' value=''/></td>
+		</tr>
+	</foreach>
+		
+	  <tfoot>
+            <tr>
+                <td class='first'></td>
+                <td>
+                	<input class="btn btn-success" type="submit" value="保 存"/>
+                    <a class="btn btn-default" href="<{:U('index')}>">取 消</a>
+               </td> 
+           </tr>
+        </tfoot>
+    </table>
+</form>
+<include file="Common:footer"/>

@@ -1,0 +1,235 @@
+*{
+	margin:0;
+	padding:0;
+	font-size:12px;
+}
+body{
+	min-width:1000px;
+}
+div.main{
+	width:100%;
+	height:700px;
+	background:#fff;
+}
+
+div.main div.main-right{
+	margin-left:2%;
+	margin-top:2%;
+	float:left;
+	width:65%;
+	height:80%;
+	border:1px solid #ccc;
+	border-radius:4px;
+	padding:2%;
+	background:url('../Images/userinfobackground.png') repeat-x;
+}
+div.main div.main-right h3{
+	font-size:15px;
+	padding-bottom:10px;
+	border-bottom:1px solid #ccc;
+	margin-bottom:10px;
+
+}
+div.main div.main-right dl{
+    width:90%;
+    margin-left:2%;
+    float:left;
+    padding-bottom:20px;
+    border-bottom:1px dashed #ccc;
+    margin-bottom:20px;
+
+}
+div.main div.main-right dl dt{
+	float:left;
+	margin-right:13%;	
+}
+
+div.main div.main-right dl dt ul{
+	text-align:center;	
+}
+div.main div.main-right dl dd{
+	padding:10px 0;
+}
+div.main div.main-right dl dd.username span{
+	color:#F89727;
+
+}
+div.main div.main-right div.secure-level{
+	clear:both;
+	width:85%;
+	height:40px;	
+	background:#FAFAFA;
+	border:4px solid #F0F0F0;
+	padding:3%;
+	text-align:center;
+	line-height:40px;
+
+
+
+
+}
+div.main div.main-right ul.secure-status{
+
+}
+div.main div.main-right ul.secure-status li{
+}
+div.main div.main-right ul.secure-status li dl.first{
+	border:none;
+
+}
+div.main div.main-right ul.secure-status li dl dt{
+	float:left;
+	position:relative;
+	top:12px;
+	font-size:14px;
+	margin-right:6%;
+
+}
+div.main div.main-right ul.secure-status li dl dd{
+	float:left;
+}
+div.main div.main-right ul.secure-status li dl dd.content{
+	width:60%;
+	margin-left:0;
+	margin-right:4%;
+
+}
+div.main div.main-right ul.secure-status li dl dd.success{
+	background:url('../Images/checked.gif') no-repeat left center;
+	padding-left:15px;
+	margin-right:10px;
+}
+div.main div.main-right ul.secure-status li dl dd.error{
+	background:url('../Images/unchecked.gif') no-repeat left center;
+	padding-left:15px;
+	margin-right:10px;
+}
+
+div#setface{
+	border:4px solid #E2E2E2;
+	position:absolute;
+	width:800px;
+	height:350px;
+	border-radius:4px;
+	background:#fff;
+	top:120px;
+	left:100px;
+	z-index:4;
+	display:none;
+}
+div#setface div#setface-top{
+	background:url('../Images/setface.png') 0 -87px;
+	height:42px;
+	width:100%;
+	
+
+}
+div#setface div#setface-top ul{
+	float:left;
+	height:100%;
+
+
+}
+div#setface div#setface-top ul li{
+	float:left;
+	width:110px;
+	height:42px;
+	text-align:center;
+	font-size:14px;
+	line-height:42px;
+	cursor:pointer;
+	color:#666;
+	border-right:1px solid #ccc;
+
+}
+div#setface div#setface-top ul li:hover{
+	background:#fff;
+}
+div#setface div#setface-top span.close{
+	display:inline-block;
+	width:30px;
+	height:30px;
+	float:right;
+	background:url('../Images/close.png') no-repeat left 68%;
+	cursor:pointer;
+}
+div#setface div.setface-content{
+	width:97.5%;
+
+	height:288px;
+	padding:10px;
+
+}
+div#setface div.setface-content div.setface-small{
+ height:120px;
+ text-align:center;
+ padding:40px;
+ border-bottom:1px dashed #ccc;
+ 
+}
+div#setface div.setface-content div.setface-small P{
+	margin:15px 0;
+	font-size:13px;
+	color:#999999;
+
+}
+div#setface div.setface-content div.buttons{
+	text-align:center;
+	padding:30px 0 0 30px;
+	clear:both;
+
+}
+div#setface div.setface-content div.buttons input{
+	background:#FFC500;
+	display:inline-block;
+	width:60px;
+	border:none;
+	color:#fff;
+	height:30px;
+	border-radius:4px;
+	cursor:pointer;
+}
+div#setface div.setface-content div.setavatar-container{
+	widows: 80%;
+	float:left;
+	margin-left:30px;
+	height:auto;
+	padding:3%;
+	border-bottom:1px dashed #ccc;
+}
+div#setface div.setface-content div.setavatar-container p{
+	font-size:14px;
+	margin-bottom:15px;
+}
+div#setface div.setface-content div.setavatar-container div.setface-pic{
+	height:130px;
+	background:#EEEEEE;
+	width:540px;
+	overflow:auto;
+	float:left;
+}
+div#setface div.setface-content div.setavatar-container div.setface-pic img{
+	float:left;
+	padding:4px;
+	cursor:pointer;
+
+}
+div#setface div.setface-content div.setavatar-container div.setface-pic img.border{
+	background:pink;
+
+
+}
+div#setface div.setface-content div.setavatar-container dl{
+	float:right;
+	text-align:center;
+	font-size:14px;
+	margin-left:20px;
+}
+.hidden{
+	display:none;
+}
+
+
+
+
+

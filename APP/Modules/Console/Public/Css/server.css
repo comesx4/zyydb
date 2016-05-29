@@ -1,0 +1,152 @@
+#main .main-right .position{	
+	height:30px;
+	margin:20px 0;
+}
+#main .main-right .position span:first-child{
+	margin-right: 6px;
+}
+#main .main-right .position span.glyphicon-refresh{
+	float: right;
+	margin-right: 30px;
+}
+#main .main-right .living{
+	background: #fff;
+	float: left;
+	width: 100%;
+	border:1px solid #ddd;
+	margin-bottom: 20px;
+}
+
+#main .main-right .living .nav ul{
+	overflow: hidden;
+	border-bottom:1px solid #ddd;
+}
+#main .main-right .living .nav ul li{
+	float: left;
+	height:55px;
+	width: 140px;
+	text-align: center;
+	line-height: 55px;
+	border-left: 1px solid #ddd;
+}
+#main .main-right .living .nav ul li:first-child{
+	border:none;
+}
+#main .main-right .living .nav ul li:last-child{
+	border-right: 1px solid #ddd;
+}
+#main .main-right .living .nav ul li.on{
+	border-top:2px solid #2381E9;
+	color: #337AB7;
+	margin-bottom:-2px;
+
+}
+#main .main-right .living .nav ul li a{
+	display: inline-block;
+	width: 100%;
+	height:100%;
+}
+#main .main-right .living .content{
+	float: left;
+	width: 100%;			
+}
+#main .main-right .living .content > a{
+	float: right;
+	margin-right:2%;
+	position: relative;
+	top:10px;
+}
+#main .main-right .living .content dl{
+	float: left;
+	width: 85%;
+	padding-left: 10%;
+	margin:20px 0;
+}
+#main .main-right .living .content dl dt{
+	float: left;
+	margin-right:15px;
+}
+#main .main-right .living .content dl dd{
+	float: left;
+	margin-right:15%;
+}
+#main .main-right .living .content .goods-detail dl{
+	width: 33%;
+}
+#main .main-right .info{
+	background: #fff;
+	overflow: hidden;
+	padding:10px;
+	border:1px solid #ddd;
+}
+#main .main-right .info .detail{
+	height:40px;
+	line-height: 35px;
+}
+#main .main-right .info .detail .dropdown{
+	float: left;
+	margin-right: 4%;
+}
+#main .main-right .info .detail .btn-group{
+	float: left;
+}
+#main .main-right .info .detail .btn-group2{
+	float: right;
+}
+#main .main-right p.more-detail{
+	padding:10px 0;
+	color: #666;
+	text-align: center;
+}
+
+/*实例信息部分*/
+#main .main-right .info dl.server-detail{
+	float: left;
+	margin:5px 0;
+	width:27%;
+	margin-left:5%;
+	font-size: 13px;
+}
+#main .main-right .info dl.server-detail dt{
+	float: left;
+	font-weight: 500;
+	width: 20%;
+	text-align: right;
+	margin-right: 5px;
+}
+
+/*实例操作部分*/
+#main .main-right .living .content .controller{
+	float: left;
+	width: 100%;
+	padding-bottom:15px;
+	position: relative;
+}
+#main .main-right .living .content .controller button{
+	float: left;
+	margin:0;
+	margin-left: 10px;
+}
+#main .main-right .living .content .controller .show{
+	float: left;
+}
+
+/*重置密码导航*/
+.modal-content .nav{
+	padding: 15px;
+	padding-bottom: 0;
+}
+/*重装系统的系统列表*/
+/*.os_type ul{
+	overflow: hidden;
+}
+.os_type ul li{
+	float: left;
+	width: 50%;
+	font-size: 13px;
+	padding:5px 0;
+	cursor:pointer;
+}
+.os_type ul li:hover,.os_type ul li.on{
+	color: #337AB7;
+}*/

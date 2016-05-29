@@ -1,0 +1,12 @@
+<!--左半部分-->
+		<div class='main-left'>
+			<ul>
+				<li>账户管理</li>
+				<li <if condition="ACTION_NAME  eq account || ACTION_NAME  eq recharge || ACTION_NAME  eq success"> class='two'</if>><a  href="<{:U('User/account')}>">我的账户</a></li>
+				<li><a href="<{:U('Order/bill')}>">充值明细</a></li>
+				<!--<li><a href="<{:U('User/contacter')}>">代金劵管理</a></li>-->
+
+			</ul>
+			
+		</div>
+<!--左半部分结束-->

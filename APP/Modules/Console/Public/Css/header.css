@@ -1,0 +1,68 @@
+*{
+	margin:0;
+	padding:0;
+}
+body{
+	min-width: 1000px;
+	font-size: 12px;
+	font-family: '微软雅黑';
+	font-color:#666;
+
+}
+ul{
+	list-style: none;
+}
+#header{
+	width: 100%;
+	overflow: hidden;
+	height:55px;	
+	line-height: 55px;
+	border-bottom: 1px solid #ddd;
+	background: #fff;
+}
+#header .logo{
+	background: #2381e9;
+	width: 15%;
+	float: left;
+	height:100%;
+	margin-right: 1%;
+}
+#header .header-left{
+	float: left;
+}
+#header .header-left strong{
+	padding-left: 10px;
+}
+#header .header-right{
+	float: right;
+}
+#header .header-right ul{
+	
+}
+#header .header-right ul li{
+	float: left;
+	border-left: 1px solid #ccc;
+	width: 75px;
+	text-align: center;
+
+}
+#header .header-right ul li span{
+	font-size: 15px;
+}
+#header .header-right ul li.user{
+	width: auto;
+	position: relative;
+	padding:0 10px 0 50px;
+}
+#header .header-right ul li.user img{
+	left: 6px;
+	top:6px;
+	position: absolute;
+	height:40px;
+	width: 40px;
+}
+
+#header .header-right ul li.no-border{
+	border-left: none;
+	width: 50px;	
+}

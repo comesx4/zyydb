@@ -1,0 +1,45 @@
+<include file="Common:header"/>
+
+<form action='<{:U('insert')}>' method='post'>
+    <table class="table table-condensed table-hover table-active">
+        <thead>
+            <tr class="active">
+                <td colspan="2">
+                    <a class="btn btn-info" href="<{:U('index')}>">产品分类列表</a>
+                </td>
+            </tr>
+        </thead>
+		<tr>
+			<td class='first'>分类名称:</td>
+			<td><input type='text' name='cat' /></td>
+		</tr>
+		<tr>
+			<td class='first'>拥有续费参数:</td>
+			<td>
+                <input type='checkbox' id='cpu' name='name[]' value='cpu'/><label for='cup'>CPU</label>
+                <input type='checkbox' id='city' name='name[]' value='city'/><label for='city'>地域</label>
+                <input type='checkbox' id='memory' name='name[]' value='memory'/><label for='memory'>内存</label>
+                <input type='checkbox' id='disk' name='name[]' value='disk'/><label for='disk'>硬盘</label>
+                <input type='checkbox' id='band' name='name[]' value='band'/><label for='band'>带宽</label>
+			</td>
+		</tr>	
+		<tr>
+			<td class='first'>表名:</td>
+			<td><input type='text' name='table_name' value='ali_' /></td>
+		</tr>
+		<tr>
+			<td class='first'>排序:</td>
+			<td><input type='text' name='sort' value='0' /></td>
+		</tr>
+	 <tfoot>
+            <tr>
+                <td class='first'></td>
+                <td>
+                	<input class="btn btn-success" type="submit" value="保 存"/>
+                    <a class="btn btn-default" href="<{:U('index')}>">取 消</a>
+               </td> 
+           </tr>
+        </tfoot>
+    </table>
+</form>
+<include file="Common:footer"/>

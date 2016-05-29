@@ -1,0 +1,123 @@
+<include file="Common:header"/>
+
+<form action='<{:U('save')}>' method='post'>
+    <table class="table table-condensed table-hover ">
+        <thead>
+            <tr class="active">
+                <td colspan="2">
+                    <a class="btn btn-info" href="<{:U('index')}>">服务器列表</a>
+                </td>
+                <td colspan="12"></td>
+            </tr>
+        </thead>
+
+        <tbody>
+		    <tr>
+                <td class='first'>常用操作：</td>
+                <td colspan = '5'>
+                <if condition="$data['status'] eq 2">
+					<a href="<{:U('serverOperation',array('type' => 3 , 'name' => $data['name']))}>" class='btn btn-primary'>重启</a>
+
+                    <a href="<{:U('serverOperation',array('type' => 2 , 'name' => $data['name']))}>" class='btn btn-primary'>关机</a>
+                    <a href="<{:U('resetPassword',array('name' => $data['name']))}>" class='btn btn-primary'>重置密码</a>
+                </if>
+                 <if condition="$data['status'] eq 4">
+                    <a href="<{:U('serverOperation',array('type' => 1 , 'name' => $data['name']))}>" class='btn btn-primary'>开机</a>
+                    <a href="<{:U('updateAttribute',array('id' => $data['id'],'type' => 2 , 'prevValue' => $data['cpu']))}>" class='btn btn-primary'>修改CPU</a>
+
+                    <a href="<{:U('updateAttribute',array('id' => $data['id'],'type' => 3 , 'prevValue' => $data['memory']))}>" class='btn btn-primary'>修改内存</a>
+
+                </if>
+                    <a href="<{:U('updateAttribute',array('id' => $data['id'],'type' => 1 , 'prevValue' => $data['band']))}>" class='btn btn-primary'>修改带宽</a>
+                    
+				</td>
+            </tr>
+            <tr>
+                <td class='first'>服务器名称:</td>
+                <td><{$data.name}></td>
+
+                <td class='first'>状态:</td>
+                <td><{:goods_status( 1,$data['status'])}></td> 
+
+                <td class='first'>母服务器IP:</td>
+                <td><{$data.server_ip}></td>
+            </tr>
+            <tr>
+                <td class='first'>外网IP:</td>
+                <td><{$data.wan_ip}></td>
+
+                <td class='first'>内网IP:</td>
+                <td><{$data.lan_ip}></td> 
+                    
+                <td class='first'>端口:</td>
+                <td><{$data.port}></td>
+            </tr>
+            <tr>
+                <td class='first'>登陆密码:</td>
+                <td><{$data.password}></td>
+
+                <td class='first'>CPU:</td>
+                <td><{$data.cpu}>核</td> 
+
+                <td class='first'>内存:</td>
+                <td>
+                    <if condition="$data.memory eq 0">
+                        512M
+                    <else/>
+                        <{$data.memory}>G
+                    </if>
+                </td>
+            </tr>
+			<tr>
+                <td class='first'>外网上行带宽:</td>
+                <td><{$data.band}>M</td>
+
+                <td class='first'>外网下行带宽:</td>
+                <td><{$data.wan_download_bandwidth}>M</td> 
+
+                <td class='first'>内网上行带宽:</td>
+                <td><{$data.lan_upload_bandwidth}>M</td>
+            </tr>
+            <tr>
+               <td class='first'>内网下行带宽:</td>
+                <td><{$data.lan_download_bandwidth}>M</td>
+
+                <td class='first'>操作系统:</td>
+                <td><{$data.os_code}></td> 
+
+                <td class='first'>创建时间:</td>
+                <td><{$data.start|date='Y-m-d H:i',###}></td>
+            </tr>
+
+            <tr>
+               <td class='first'>到期时间:</td>
+                <td colspan='12'><{$data.end|date='Y-m-d H:i',###}></td>
+
+            </tr>
+            <tr>
+                <td class='first'>状态:</td>
+                <td colspan = '12'>
+                    <{:goods_status( 1,$data['status'],'status')}>
+                </td>
+            </tr>
+            <tr>
+                <td class='first'>备注：</td>
+                <td colspan = '12'>
+                    <textarea class="command" name="remark" maxlength="2048" placeholder=""><{$data.remark}></textarea>
+                </td>
+            </tr>
+        </tbody>
+        
+        <tfoot>
+            <tr class='active'>
+                <td class='first'></td>
+                <td colspan='12'>
+                    <input type = 'hidden' name='living_id' value='<{$data.living_id}>' />
+                	<input class="btn btn-success" type="submit" value="保 存"/>
+                    <a class="btn btn-default" href="<{:U('index')}>">取 消</a>
+               </td> 
+           </tr>
+        </tfoot>
+    </table>
+</form>
+<include file="Common:footer"/>

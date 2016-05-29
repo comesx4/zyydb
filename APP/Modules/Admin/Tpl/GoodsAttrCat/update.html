@@ -1,0 +1,33 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+<head>
+    <meta http-equiv="Content-Type" content="text/html;charset=UTF-8" />
+    <title>修改属性分类</title>
+    <link rel="stylesheet" href="__PUBLIC__/Css/common.css" />
+</head>
+<body>
+<form action='<{:U('insert')}>' method='post'>
+	<table class='table'>
+		<tr><th colspan='2'>修改属性分类</th></tr>
+		<tr>
+			<td>所属产品</td>
+			<td><{$goods}></td>
+		</tr>
+		<tr>
+			<td>分类名称</td>
+			<td><input type='text' name='attrcat' value='<{$attr.attrcat}>' /></td>
+		</tr>
+		<tr>
+			<td>排序</td>
+			<td><input type='text' name='sort' value='<{$attr.sort}>' /></td>
+		</tr>
+		<tr>
+			<input type='hidden' name='id' value='<{$attr.id}>'/>
+			<td colspan='2'><input class='submit' type='submit' value='修改分类'</td>
+		</tr>
+
+	</table>
+</form>
+	
+</body>
+</html>

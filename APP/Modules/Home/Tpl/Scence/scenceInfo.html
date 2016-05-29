@@ -1,0 +1,272 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+<head>
+  <meta http-equiv="Content-Type" content="text/html;charset=UTF-8" />
+  <title>阿里云</title>
+   <link rel='stylesheet' href='__PUBLIC__/Css/scence-left.css' />
+  <link rel="stylesheet" href="__PUBLIC__/Css/scenceInfo.css" />
+  <link rel='stylesheet' href='__PUBLIC__/Css/max-header.css' />
+  <link rel='stylesheet' href='__PUBLIC__/Css/nav.css' />
+  <link rel='stylesheet' href='__PUBLIC__/Css/bottom.css' />
+  <js file='__PUBLIC__/Js/jquery-1.7.2.min.js'/>
+  <js file='__PUBLIC__/Js/nav.js'/>
+  <js file='__PUBLIC__/Js/bottom.js'/>
+  <js file='__PUBLIC__/Js/scencelInfo.js'/>
+  <js file='__PUBLIC__/Js/addFile.js'/>
+</head>
+<body>
+<!--顶部头-->
+ <include file='Common:p-header'/>
+  <!--顶部头结束-->
+  
+  <!--头部公共部分-->
+  <include file='Common:nav'/>
+  <!--头部公共部分结束--> 
+  	
+
+    <!--主题内容-->
+	<div id='main'>
+		<div class='y-row'>
+			
+			<!--左半部分-->
+            <include file='Common:scence-left'/>
+            <!--左半部分结束-->
+            
+	    <form action="<{:U('words')}>" method='post' enctype='multipart/form-data' >  
+	        <!--右半部分-->
+			<div class='main-right'>
+				 <div class='title'><h1>工单详细</h1><a href="">返回列表</a></div>
+                
+                <!-- 导航部分 -->
+                 <div class='status'>
+                     <ul>
+                         <switch name='wo.status'>
+                            <case value='0'>
+                                 <li class='down'>待客服响应</li>                       
+                                 <li>客服处理中</li> 
+                                 <li>已确认</li>
+                                 <li>待评价</li>
+                            </case>
+                            <case value='1'>
+                                 <li class='down'>待客服响应</li>                       
+                                 <li class='down'>客服处理中</li> 
+                                 <li>待确认</li>
+                                 <li>待评价</li>
+                            </case>
+                            <case value='2'>
+                                 <li class='down'>待客服响应</li>                       
+                                 <li class='down'>客服处理中</li> 
+                                 <li class='down'>待确认</li>
+                                 <li>待评价</li>
+                            </case>
+                        </switch>
+                        
+                        <if condition="$wo['status'] eq 3 and $wo['appraise'] eq 0">
+                            <li class='down'>待客服响应</li>                       
+                            <li class='down'>客服处理中</li> 
+                            <li class='down'>已确认</li>
+                            <li style='background:#00A2CA;color:#fff;'>无评价</li>
+                        <elseif condition="$wo['status'] eq 3"/>
+                             <li class='down'>待客服响应</li>                       
+                             <li class='down'>客服处理中</li> 
+                             <li class='down'>已确认</li>
+                             <li style='background:#00A2CA;color:#fff;'>已评价</li>
+                        </if>
+
+                     </ul> 
+                     <switch name='wo.status'>
+                         <case value='0'> 
+                            <div  class='detail'>您的工单已提交,预计在<{:date('Y-m-d H:i:s',$wo['time']+C('replay'.$wo['cid']))}>左右可以得到回复<i class='atop'></i>
+                            </div>
+                         </case>
+                         <case value='1'> 
+                            <div style='left:22%;' class='detail'>客服正在处理中，预计在<{:date('Y-m-d H:i:s',$replayTime+C('submit'.$wo['cid']))}>左右可以解决您的问题<i class='atop'></i>
+                            </div>
+                         </case>
+                         <case value='2'> 
+                            <div style='left:49%;' class='detail'>实际处理时长:<{$time}><i class='atop'></i>
+                            </div>
+                         </case>                
+                     </switch>
+                     <if condition="$wo['status'] eq 3 and $wo['end'] neq 0">
+                         <div style='left:49%;' class='detail'>实际处理时长:<{$time}>分钟<i class='atop'></i>
+                        </div>
+                     </if>
+                    
+                 </div>
+
+                 <!-- 导航部分结束 -->
+
+                 <div class='workorder'>
+                     <p>问题标题: <font><{$wo.title}></font></p>
+                     <p><span>工单编号: <font><{$wo.number}></font></span>
+                     <span>提交时间: <{$wo.time|date='Y-m-d H:i:s',###}></span>
+                     <span>状态:<switch name='wo.status'>
+                                     <case value='0'>待客服接手</case>
+                                     <case value='1'>客服处理中</case>
+                                     <case value='2'>待评价</case>
+                                     <case value='3'>已关闭</case>
+
+                                </switch>
+                    </span>
+                     <if condition="$wo['status'] eq 3 and $wo['complaint'] neq 0">
+                         
+                         <a onclick="return confirm('确定删除？');" href="<{:U('del',array('id'=>$_GET['id']))}>">删除工单</a>
+                         <a>已投诉</a>
+                     </p>
+
+                    <elseif condition="$wo['status'] eq 3" />                         
+                         <a onclick="return confirm('确定删除？');" href="<{:U('del',array('id'=>$_GET['id']))}>">删除工单</a></p>
+                     <else/>
+                           <if condition="$wo['complaint'] eq 0">
+                                <a id='advice' href="">一键投诉</a>
+                            <else/>
+                                <a>已投诉</a>
+                           </if>
+                                <a onclick="return confirm('确认关闭订单？')" href="<{:U('change',array('id'=>$_GET['id'],'sta'=>3))}>">关闭工单</a></p>
+
+                     </if>
+                 </div>
+
+                 <h2>沟通记录</h2>
+                 
+                 <!-- 用户和客服沟通部分-start -->
+                 <div class='take'>
+                     <!-- 工单标题 start -->
+                     <dl>
+                         <dt><img src="__ROOT__/Uploads/Face/face1.jpg" /></dt>
+                         <dd><span class='hei'>问题描述：</span><{$wo.title}>
+                            <if condition="!empty($wo['remark'])"><br/><{$wo.remark}></if>
+                         </dd>
+                         <if condition="!empty($img)">
+                             <dd>
+                                <foreach name='img' item='v'>
+                                  <a href="__ROOT__/Uploads/Scence/<{$v.img}>">查看图片</a>&nbsp;
+                                </foreach>
+                            </dd>
+                         </if>
+                         <dd class='date'><{$wo.time|date='Y-m-d H:i:s',###}></dd>
+                     </dl>
+                     <!-- 工单标题 end-->
+                    <foreach name='reply' item='v'>
+                         <dl>
+                            <if condition="$v['type'] eq 0">
+                                <dt><img src="__ROOT__/Uploads/Face/face1.jpg" /></dt>
+                                 <dd><{$v.title}></dd>
+                            <else/>
+                                <dt><img src="__PUBLIC__/Images/xiaolian.png" /></dt>
+                                 <dd>客服专员：<{$v.title}></dd>
+                            </if>
+                             <if condition="!empty($v['woreply_img'])">
+                                 <dd>
+                                    <foreach name='v.woreply_img' item='vs'>
+                                      <a href="__ROOT__/Uploads/Scence/<{$vs.img}>">查看图片</a>&nbsp;
+                                    </foreach>
+                                </dd>
+                             </if>
+                            
+                             <dd class='date'><{$v.time|date='Y-m-d H:i:s',###}></dd>
+                         </dl>
+                    </foreach>
+                
+
+                    <if condition="!empty($advice)">
+                         <dl>
+                             <dt><img src="__ROOT__/Uploads/Face/face1.jpg" /></dt>
+                             <dd><{$advice.0}></dd>
+                             <dd class='date'><{$adviceTime|date='Y-m-d H:i:s',###}></dd>
+                        </dl>
+                         <dl>
+                             <dt><img src="__ROOT__/Uploads/Face/face1.jpg" /></dt>
+                             <dd><{$advice.1}></dd>
+                             <dd class='date'><{$adviceTime|date='Y-m-d H:i:s',###}></dd>
+                        </dl>
+                    </if>
+
+                    <div class='fpage'><{$fpage}></div>
+                  
+                   
+                     
+                 </div>
+                 
+           
+             <!-- 评价部分start    -->
+            <if condition="$wo['status'] eq 2">
+               </form>
+                <div class='words'>
+                    <form action='<{:U('appraise')}>' method='post'>
+                    <p>该回答是否解决了您的问题呢？如果没有请单击<a href="<{:U('change',array('id'=>$wo['id'],'sta'=>1))}>">继续提问</a></p>
+                    <p>您对此次服务是否满意？<input type='radio' name='appraise' checked value='1'/>满意
+                        <input type='radio' name='appraise' value='2'/>不满意
+                    </p>
+                     <input type='hidden' name='id' value='<{$Think.get.id}>' />
+                    
+                    <p>
+                   <textarea name='advice' placeholder="您的建议"></textarea>
+                    </p>
+                    <p><input class='submit' type='submit' value='评价'></p>  
+                </div>
+             
+            <!-- 评价部分end -->
+            
+            <!-- 显示评价 start -->
+            <elseif condition="$wo['status'] eq 3 and $wo['appraise'] neq 0"/>
+               <p>您对本次服务的评价:<span style='color:red;'><if condition="$wo['appraise'] eq 1">满意<else/>不满意</if></span></p>             
+
+            <!-- 显示评价 end -->
+        
+            <elseif condition="$wo['status'] neq 3"/>
+                
+                 <!-- 信息填写部分 start-->
+                 <div class='words'>
+                     <h4>留言/反馈</h4>
+                     <textarea  placeholder="此处限定1000字符" name='work'></textarea>
+
+                     <p>可上传<font color='red'>3个附件</font></p>
+                    <p>1.每个附件大小不得超过2M,附件支持的格式有:'jpg', 'bmp', 'png', 'gif'</p>
+
+                    <p>2.如您仅添加机密信息,附件也将加密处理</p>
+                    <p class='file'>
+                        <input type='file' name='img[]' /> <span class='addFile'>增加一个</span>
+                     
+                    </p>
+
+                    <input type='hidden' name='id' value='<{$Think.get.id}>' />
+                    <p class='submit'><input  type='submit' value='提交'/></p>
+                 </div>
+                
+                  <!-- 信息填写部分 end-->
+             </if>
+              
+
+				
+		    </div>
+		 <!--右半部分结束-->
+        </form>
+		</div>
+	</div>
+
+    
+    <!-- 投诉的对话框 start-->
+    <div id='complaint'>
+        <form action='<{:U('complaint')}>' method='post'>
+         <div id='title'>一键投诉<span class='close'></span></div>
+
+         <div class='content'>
+             <p>亲，抱歉让您失望了，请简单描述一下投诉内容</p>
+             <p><textarea placeholder='亲，让你不满意的是我们的服务？还是我们的产品？还是其他什么地方？您可以放心的是：投诉提交后，会有专门的处理人员与您联系处理此事。' name='title'></textarea></p>
+         </div>
+         <input type='hidden' name='id' value='<{$wo.id}>'/>
+         <div class='bottom'>
+            <input type='submit' value='提交'>
+            <input type='button' class='close' value='取消'>
+         </div>
+        </form>
+    </div>
+    <!-- 投诉的对话框 end-->
+	
+
+	<include file='Common:bottom' />
+	<!--主题内容结束-->
+</body>
+</html>

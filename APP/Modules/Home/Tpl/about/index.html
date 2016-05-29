@@ -1,0 +1,60 @@
+  <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+<head>
+    <title><{$stitle|makwebtitle}></title>
+ <include file='Common:com-header'/>
+<link rel="stylesheet" href="__PUBLIC__/Css/about.css" />  
+</head>
+<body>
+   <div id='body'>
+  <!-- 顶部公共部分 -->
+    <include file='Common:home-header'/>
+    <!-- 顶部公共结束 -->
+    
+  <div id='slides'>
+    <div style="background-color:#fff6dd;padding:0;"class="tab-pannel">
+                <img  src="__ROOT__/Uploads/Logo/<{$Think.config.img2}>" >                
+            </div>
+  </div>
+
+
+  
+   <div class='body-content'>
+
+        <div class="y-row content-wrapper">
+        <include file='Common:about-left'/>
+            <div class='content-right'>
+               <div class='nav-wei'>
+                        <ul> <li><a  target='_self' href="<{:U('/index/index')}>">首页</a></li>     
+                            <li><a  target='_self' href="<{:U('index')}>">公司介绍</a></li>                            
+                        </ul>                                   
+                </div>
+                <div class='right-main'>
+                    <div class='fiexd'>
+                  
+                    <div class='inner'>       
+                         <h2 class="blog-post-title">公司介绍</h2>
+                <p> 杭州智御网络科技有限公司成立于2014年4月，是一家致力于为企事业用户建设开放的个性化定制网络安全接入平台的高新技术企业。</p>
+  <p>公司核心技术产品是与浙江互联网应急中心合作建设的浙江省互联网网络安全接入平台。该网络安全接入平台提供的服务内容包括：网络DDoS攻击的检测和防御、信息系统入侵事件监测、IDC和BGP接入等。平台已多次为省政府门户网站防DDoS攻击提供技术支撑；并与浙江电信、浙江移动、浙江联通签订了产业合作协议。为互联网企业提供高品质IDC接入基础业务和网络安全服务等高附加值的增值业务能力。
+</p>
+                    </div>
+                   
+                </div>
+                </div>                    
+
+                </div>
+               
+            </div>
+        </div>
+
+
+    </div>
+
+    <!--底部版权开始-->
+    <include file='Common:bottom'/>
+    <!--底部版权结束-->
+
+  </div>
+</body>
+</html>
+

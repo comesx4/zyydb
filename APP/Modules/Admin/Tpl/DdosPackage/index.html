@@ -1,0 +1,71 @@
+<include file="Common:header"/>
+<form action='' method='post'> 
+    <table class="table" <if condition="$isSort">data-sort="true"</if>>
+        <thead>
+            <tr>
+                <td colspan="2" class="td-left">
+                <authority>
+                	<a class="btn btn-success" href="<{:U('add')}>">添加套餐</a>
+
+                </authority>
+                </td>
+                <td colspan="6" class="td-right">
+               
+                </td>
+            </tr>
+        </thead>
+        
+        <tbody>
+            <tr>
+                
+                <th data-sort="true" data-field="id">ID</th>
+                <th>套餐名称</th>
+                 <th>防御等级</th>
+                  <th>线路类型</th>
+                   <th>专线租用数量</th>
+		<th data-sort="true" data-field="ip_gateway_id">带宽</th>
+                <th data-sort="true" data-field="time">价格</th>
+                <th>排序</th>
+                  <th>状态</th>
+                <th>操作</th>
+            </tr>
+
+            <foreach name="data" item="row">
+            <tr>
+
+                <td><{$row.id}></td>
+                <td><{$row.name}></td>
+                <td><{$row.DefenseGrade|getkeyname='DefenseGradeList'}></td>
+                <td><{$row.LineType|getkeyname='LineList'}>                
+                </td>
+                   <td><{$row.number}></td>
+				<td><{$row.band}></td>
+				<td><{$row.price}></td>
+                <td><input type='text' name='<{$row.id}>' value='<{$row.sort}>' /></td>
+                 <td><{$row.online|getkeyname='Online'}></td>
+                <td>
+                <authority>
+                    <a class="btn-icon" href="<{:U('update',array('id'=>$row['id']))}>"><i class="fa fa-edit"></i>编辑</a>
+                </authority>
+                <authority>
+                    <a class="btn-icon del" href="<{:U('delete',array('id'=>$row['id']))}>">删除</a>
+                </authority>
+                </td>
+            </tr>
+            </foreach>
+            
+        </tbody>
+        
+        <tfoot>
+            <tr>
+                <td colspan="8" class="td-right">
+                	<div class="page">
+                        <div class="page-info"><input type='submit' class='submit' name='submit' value='排序'/></div>
+                        <div class="page-code"><{$fpage}></div>
+                   </div>
+                </td>
+            </tr>
+        </tfoot>
+    </table>
+</form>
+<include file="Common:footer"/>

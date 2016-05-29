@@ -1,0 +1,136 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+<head>
+  <meta http-equiv="Content-Type" content="text/html;charset=UTF-8" />
+ <title><{$stitle|makwebtitle}></title>
+  <link rel='stylesheet' href='__PUBLIC__/Css/bottom.css' />
+  <link rel='stylesheet' href='__PUBLIC__/Css/p-header.css' />
+  <link rel='stylesheet' href='__PUBLIC__/Css/payWay.css' />
+
+  <js file='__PUBLIC__/Js/jquery-1.7.2.min.js'/>
+  <js file='__PUBLIC__/Js/nav.js'/> 
+   <js file='__PUBLIC__/Js/float.js'/> 
+  <js file='__PUBLIC__/Js/payWay.js'/>
+   <js file='__PUBLIC__/Js/bottom.js'/>  
+  
+</head>
+<body>
+
+<!--顶部头-->
+<include file='Common:p-header'/>
+	<!--顶部头结束-->
+
+  <!-- 产品名称 -->
+  <div class="y-page-title">
+    <div class='y-row '>
+           <div class='title'>
+               <h2>确认订单</h2>
+               <span>关联产品：<a href="">独立云磁盘</a> <span>其他产品</span></span>
+           </div>
+
+     </div>
+  </div>
+  <!-- 产品名称结束 -->
+  
+  <!-- 主体内容 -->
+  <div id='main'>
+  	  <div id='main-content' >
+        <div class='y-how'>
+  	  	<div id='fix' >
+      	  	<div class="uc-process">
+      	  		<ul>
+      	  			<li class='finish'>确认订单</li>
+      	  			<li class='down'>支付</li>
+      	  			<li>支付成功</li>
+      	  		</ul>
+      	  	</div>
+       
+            <div class='fix-top'>
+        
+                    <h3>订单信息 <span>￥<{$pinfo.price}></span></h3>
+          
+                  <p>
+                    产品类型：<{$name}><br/>
+                    <{$pinfo.gname}> 数量：<{$pinfo.quantity}><br/>
+                    时长：<{$pinfo.time}><br/>
+                    <{$pinfo.info}><span>¥<{$pinfo.price}></span>
+                  </p>
+            </div>
+            <if condition="$ismoney">
+              <div class='fix-bottom'>
+                <div class='cons'>
+                    <div class='title'>
+                      <i>您当前的余额为:<font style='color:#00A2CA;display:inline-block;margin-right:15px;padding:5px 0;font-size:14px;'><if condition='$money'>￥<{$money}><else/>0.00</if></font><font style='color:red;'>您的余额不足</font>，请<a href="">充值</a></i>
+            
+                      <span>需支付<em>￥<{$pinfo.price}></em></span>
+                    </div>
+                  
+                  <!-- 支付方式选择 -->
+
+            
+
+                    <!-- 支付方式选择结束 -->
+
+                   
+
+                    
+                </div>
+                  
+            </div>  
+               <div class="submit-box">
+             <a target='_blank' class='recharge' href="<{:U('User/recharge')}>"><button class='submit'>立即充值</button></a>
+           </div>
+         
+              <else/>
+           <form action='<{:U('buy')}>' method='post'>
+            <div class='fix-bottom'>
+                <div class='cons'>
+                    <div class='title'>
+                      <i>您当前的余额为:<span style='color:red;'><if condition='$money'>￥<{$money}><else/>0.00</if></span></i>
+                  <!--     <ul class='pay'>
+                         <li class='show'>支付宝</li>
+                         <li>个人网银</li>
+                         <li>企业网银</li>
+                      </ul> -->
+                      <span>需支付<em>￥<{$pinfo.price}></em></span>
+                    </div>
+                  
+                  <!-- 支付方式选择 -->
+                    <!-- 支付方式选择结束 -->
+                </div>
+                  
+            </div> 	  	
+                   <div class="submit-box">
+                    <!-- 付款金额 -->
+                    <input type='hidden' name='price' value='0.01'/>
+                    <!-- 订单描述 -->
+                    <input type='hidden' name='WIDbody' value='云服务器'/>
+                     <!-- 商品展示地址 -->
+                 <!--    <input type='hidden' name='WIDshow_url' value='www.baidu.com'/> -->
+                     <!-- 商品订单号 -->
+                    <input type='hidden' name='WIDout_trade_no' value='<{$number}>'/>
+                     <!-- 订单名称 -->
+                    <input type='hidden' name='WIDsubject' value='我的订单名称'/>
+                     <!-- 订单描述 -->
+                    <input type='hidden' name=' WIDbody' value=''/>
+                   
+
+                      <input type='submit' onclick='return confirm("确认支付？支付后将从您账户中扣款。")' class='submit' value='确认支付'/>
+                    </div>
+
+  	      </div>
+          </if>
+        </div>
+        </form>
+  	</div>
+  </div>
+  <!-- 主体内容结束 -->
+  <div style='display:none;' id='quereng'> 
+    <div class='q-header'><h1>支付情况</h1></div>
+    <div class='boo'><button class='shua'>支付成功</button><button class='shua'>遇到问题？</button></div>
+  </div>
+
+  <include file='Common:bottom'/>
+
+</body>
+</html>	

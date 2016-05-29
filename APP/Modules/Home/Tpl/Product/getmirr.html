@@ -1,0 +1,25 @@
+ <ul>
+    <foreach name='mirr' item='v'>
+         <li>
+           <div class='li-left'>
+            <p class='one'>
+                <a class='length' target='_blank' href="<{:U('Imageproduct/mirrInfo',array('id'=>$v['id']))}>"><{$v.name}></a>
+                <select name='verion'>
+                    <option value='1'><{$v.new}></option>
+                </select>
+            </p>               
+                <p><span class='length'><{$v.source}></span></p>
+                <p><span class='length'><{$v.gather}></span></p>
+
+
+           </div>
+            <div class='li-right'>
+               <button class='send' mid='<{$v.id}>' type='button'>免费试用</button>
+               <a href="">同意《镜像使用协议》</a>
+            </div>
+           
+         </li>
+    </foreach>
+     
+       </ul>
+       <div class='fpage'><{$fpage}></div>

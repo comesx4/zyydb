@@ -1,0 +1,59 @@
+<include file="Common:header"/>
+
+   	<script type="text/javascript" src='__PUBLIC__/Js/scenceAttr.js'></script>
+<form action='<{:U('save')}>' method='post' enctype='multipart/form-data'>
+	 <table class="table table-condensed table-hover table-active">
+        <thead>
+            <tr class="active">
+                <td colspan="2">
+                    <a class="btn btn-info" href="<{:U('index')}>">工单属性列表</a>
+                </td>
+            </tr>
+        </thead>
+		<tr>
+			<td class='first'>所属工单:</td>
+			<td><{$cat}></td>
+		</tr>
+		<tr>
+			<td class='first'>类型:</td>
+			<td>
+				<select name='type'>
+					<option <if condition="$data['type'] eq 0">selected</if> value='0'>文本框</option>
+					<option <if condition="$data['type'] eq 1">selected</if> value='1'>复选框</option>
+					<option <if condition="$data['type'] eq 2">selected</if> value='2'>标题</option>
+					<option <if condition="$data['type'] eq 3">selected</if> value='3'>单选按钮</option>
+				</select>
+			</td>
+		</tr>
+        <tr>
+        	<td class='first'>标题:</td>
+        	<td><input type='text' name='title' value='<{$data.title}>'/></td>
+        </tr>
+		<tr class='nname'>
+			 <td class='first'>名称:</td>
+			 <td><textarea style='width:80%;' name='name'><{$data.name}></textarea></td>
+		</tr>	
+		<tr>
+			 <td class='first'>是否必填:</td>
+			 <td>否<input type='radio' <if condition="$data['must'] eq 0">checked</if>	 name='must' value='0' />
+			 	必填<input <if condition="$data['must'] eq 1">checked</if> type='radio' name='must' value='1' /></td>
+		</tr>			
+		<tr>
+			<td class='first'>排序:</td>
+			<td><input type='text' name='sort' value='<{$data.sort}>' /></td>
+		</tr>
+				
+			
+		 <tfoot>
+            <tr>
+                <td class='first'></td>
+                <td>
+                	<input type='hidden' name='id'  value='<{$data.id}>'/> 
+                	<input class="btn btn-success" type="submit" value="保 存"/>
+                    <a class="btn btn-default" href="<{:U('index')}>">取 消</a>
+               </td> 
+           </tr>
+        </tfoot>
+    </table>
+</form>
+<include file="Common:footer"/>

@@ -1,0 +1,42 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+<head>
+    <meta http-equiv="Content-Type" content="text/html;charset=UTF-8" />
+    <title>用户列表</title>
+    <link rel="stylesheet" href="__PUBLIC__/Css/common.css" />
+   
+    <script type="text/javascript" src='__PUBLIC__/Js/jquery-1.8.2.min.js'></script>
+    <script type="text/javascript" src='__PUBLIC__/Js/common.js'></script>
+    <script type="text/javascript">
+     var userLock='<{:U('User/userLock')}>';
+    </script>
+   
+</head>
+<body>
+	<table class='table'>
+		<tr>
+			<th>ID</th>
+			<th>账户</th>
+			<th>上次登录时间</th>
+			<th>上次登录IP</th>
+			<th>状态</th>
+			<th>注册时间</th>
+			<th>操作</th>
+		</tr>
+	<foreach name='user' item='v'>
+		<tr>
+			<td><{$v.id}></td>
+			<td><{$v.username}></td>
+			<td><{$v.time|date='Y-m-d H:i',###}></td>
+			<td><{$v.loginip}></td>
+			<td class='static'><if condition='$v["lock"] eq 1 '>锁定<else/>正常</if></td>
+			<td><{$v.register|date='Y-m-d H:i',###}></td>
+			<td><if condition='$v["lock"] eq 1 '><span style='cursor:pointer;' uid='<{$v.id}>' class='jie'>解锁</span><else/><span style='cursor:pointer;' uid='<{$v.id}>' class='suo'>锁定</span></if></td>
+		</tr>
+	</foreach>
+
+	</table>
+
+
+</body>
+</html>
