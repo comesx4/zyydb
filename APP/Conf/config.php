@@ -5,7 +5,7 @@ return array(
 'TMPL_R_DELIM'=>'}>', //修改右定界符
 'TAG_NESTED_LEVEL' =>5,
 'DB_PREFIX'=>'kz_',  //设置表前缀
-'DB_DSN'=>'mysql://root:root@localhost:3306/zyydb',//使用DSN方式配置数据库信息
+'DB_DSN'=>'mysql://root:LnAv1p2J14UoBVmn@localhost:3306/zyydb',//使用DSN方式配置数据库信息
 
 //'SHOW_PAGE_TRACE'=>true,//开启页面Trace
 'TMPL_TEMPLATE_SUFFIX'=>'.html',//更改模板文件后缀名
@@ -51,9 +51,9 @@ return array(
 "LOAD_EXT_FILE"=>"parameter",//加载公用函数
 
 //默认错误跳转对应的模板文件
-'TMPL_ACTION_ERROR' => 'Public:error',
-'TMPL_ACTION_SUCCESS' => 'Public:success',
-'TMPL_EXCEPTION_FILE' =>'./APP/Tpl/Public/maintain.html', // 定义公共错误模板 
+//'TMPL_ACTION_ERROR' => 'Public:error',
+//'TMPL_ACTION_SUCCESS' => 'Public:success',
+//'TMPL_EXCEPTION_FILE' =>'./APP/Tpl/Public/maintain.html', // 定义公共错误模板 
 
     
 );
